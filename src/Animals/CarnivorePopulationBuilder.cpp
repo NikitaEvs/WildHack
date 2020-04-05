@@ -2,39 +2,45 @@
 
 class CarnivorePopulationBuilder : public PopulationBuilder{
  private:
-  Population p;
+  std::shared_ptr<Population> p;
  public:
   CarnivorePopulationBuilder(){
-    p = Population();
+    p = std::make_shared<Population>();
   }
   void setType() override {
-    p.type = "carnivore";
+    p->type = "carnivore";
+  }
+  void setName(std::string name){
+    p->name = name;
   }
   void setAmount(int32_t a) override {
-    p.animalAmount = a * 4 / 5;
+    p->animalAmount = a * 4 / 5;
   }
   void setHealth(int32_t h) override {
-    p.health = h;
+    p->health = h;
   }
   void setProductivity(int32_t pr) override {
-    p.productivity = pr * 4 / 5;
+    p->productivity = pr * 4 / 5;
   }
   void setWellBeing(int32_t w) override {
-    p.wellBeing = w;
+    p->wellBeing = w;
   }
   void setBiologyDev(int32_t b) override {
-    p.biologyDev = std::min(b * 6 / 5, 40);
+    p->biologyDev = std::min(b * 6 / 5, 40);
   }
   void setSize(Population::param s) override {
-    p.size = s;
+    p->size = s;
   }
   void setSafety(Population::param s) override {
-    p.safety = s;
+    p->safety = s;
   }
   void setVelocity(Population::param v) override {
-    p.velocity = std::min(v * 6 / 5, 70);;
+    p->velocity = v;;
   }
   void setCover(Population::param c) override {
-    p.cover = c * 4 / 5;
+    p->cover = c;
+  }
+  std::shared_ptr<Population> getProduct(){
+    return p;
   }
 };

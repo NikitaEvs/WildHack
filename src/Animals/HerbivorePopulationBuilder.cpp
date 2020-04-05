@@ -2,39 +2,45 @@
 
 class HerbivorePopulationBuilder : public PopulationBuilder{
  private:
-  Population p;
+  std::shared_ptr<Population> p;
  public:
   HerbivorePopulationBuilder(){
-    p = Population();
+    p = std::make_shared<Population>();
   }
   void setType() override {
-    p.type = "herbivore";
+    p->type = "herbivore";
+  }
+  void setName(std::string name){
+    p->name = name;
   }
   void setAmount(int32_t a) override {
-    p.animalAmount = a;
+    p->animalAmount = a;
   }
   void setHealth(int32_t h) override {
-    p.health = h;
+    p->health = h;
   }
   void setProductivity(int32_t pr) override {
-    p.productivity = pr;
+    p->productivity = pr;
   }
   void setWellBeing(int32_t w) override {
-    p.wellBeing = w;
+    p->wellBeing = w;
   }
   void setBiologyDev(int32_t b) override {
-    p.biologyDev = b;
+    p->biologyDev = b;
   }
   void setSize(Population::param s) override {
-    p.size = s;
+    p->size = s;
   }
   void setSafety(Population::param s) override {
-    p.safety = s;
+    p->safety = s;
   }
   void setVelocity(Population::param v) override {
-    p.velocity = v;
+    p->velocity = v;
   }
   void setCover(Population::param c) override {
-    p.cover = c;
+    p->cover = c;
+  }
+  std::shared_ptr<Population> getProduct(){
+    return p;
   }
 };

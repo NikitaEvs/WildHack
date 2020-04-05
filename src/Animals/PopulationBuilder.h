@@ -1,12 +1,11 @@
 #ifndef PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
 #define PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
-
+#include <memory>
 #include "Population.h"
 class PopulationBuilder{
- private:
-  Population p;
  public:
   virtual void setType() = 0;
+  virtual void setName(std::string name) = 0;
   virtual void setAmount(int32_t a) = 0;
   virtual void setHealth(int32_t h) = 0;
   virtual void setProductivity(int32_t pr) = 0;
@@ -16,9 +15,7 @@ class PopulationBuilder{
   virtual void setSafety(Population::param s) = 0;
   virtual void setVelocity(Population::param v) = 0;
   virtual void setCover(Population::param c) = 0;
-  std::shared_ptr<Population>Population getPopulation(){
-    return std::shared_ptr<Population>(p);
-  }
+  virtual std::shared_ptr<Population> getProduct() = 0;
 };
 
 #endif //PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
