@@ -1,0 +1,47 @@
+{
+  "cell" : {
+    "water" : {
+      "waterLevel" : {
+        "mean" : 100,
+        "deviation" : 0
+      },
+      "plantsCount" : {
+        "mean" : 60,
+        "deviation" : 20
+      }
+    },
+
+    "forest" : {
+      "waterLevel" : {
+        "mean" : 50,
+        "deviation" : 20
+      },
+      "plantsCount" : {
+        "mean" : 70,
+        "deviation" : 10
+      }
+    },
+
+    "steppe" : {
+      "waterLevel" : {
+        "mean" : 10,
+        "deviation" : 5
+      },
+      "plantsCount" : {
+        "mean" : 40,
+        "deviation" : 10
+      }
+    },
+
+    "tundra" : {
+      "waterLevel" : {
+        "mean" : 25,
+        "deviation" : 5
+      },
+      "plantsCount" : {
+        "mean" : 20,
+        "deviation" : 5
+      }
+    }
+  }
+}
