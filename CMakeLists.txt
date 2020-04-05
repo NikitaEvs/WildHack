@@ -41,4 +41,4 @@ set (ANIMAL_SOURCES
         ${ANIMAL_PATH}/PopulationDirector.cpp
         ${ANIMAL_PATH}/PopulationDirector.h)
 
-add_executable(test test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES})
+add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES})
