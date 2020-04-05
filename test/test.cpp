@@ -8,8 +8,9 @@ int main() {
   CellDirector director;
   director.setBuilder(builder);
   director.makeSteppeCell();
-  Cell* waterCell = builder->getProduct();
+  std::shared_ptr<Cell> waterCell = builder->getProduct();
   std::cout << *waterCell << std::endl;
+  delete builder;
 
   return 0;
 }
