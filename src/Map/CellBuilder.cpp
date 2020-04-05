@@ -4,6 +4,10 @@ CellBuilder::CellBuilder() {
   reset();
 }
 
+CellBuilder::~CellBuilder() {
+  delete cellPtr;
+}
+
 void CellBuilder::reset() {
   cellPtr = new Cell();
 }
@@ -24,8 +28,8 @@ void CellBuilder::setWaterLevel(int32_t waterLevel) {
   cellPtr -> waterLevel = waterLevel;
 }
 
-Cell* CellBuilder::getProduct() {
+std::shared_ptr<Cell> CellBuilder::getProduct() {
   Cell *oldPtr = cellPtr;
   reset();
-  return oldPtr;
+  return std::shared_ptr<Cell>(oldPtr);
 }
