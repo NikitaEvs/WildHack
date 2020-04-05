@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 
 project(peach)
 
@@ -31,4 +31,4 @@ set (UTIL_SOURCES
         ${UTIL_PATH}/Random.cpp
         )
 
-add_executable(test test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES})
+add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES})
