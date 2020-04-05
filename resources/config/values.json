@@ -1,0 +1,283 @@
+{
+  "cell" : {
+    "water" : {
+      "waterLevel" : {
+        "mean" : 100,
+        "deviation" : 0
+      },
+      "plantsCount" : {
+        "mean" : 60,
+        "deviation" : 20
+      }
+    },
+
+    "forest" : {
+      "waterLevel" : {
+        "mean" : 50,
+        "deviation" : 20
+      },
+      "plantsCount" : {
+        "mean" : 70,
+        "deviation" : 10
+      }
+    },
+
+    "steppe" : {
+      "waterLevel" : {
+        "mean" : 10,
+        "deviation" : 5
+      },
+      "plantsCount" : {
+        "mean" : 40,
+        "deviation" : 10
+      }
+    },
+
+    "tundra" : {
+      "waterLevel" : {
+        "mean" : 25,
+        "deviation" : 5
+      },
+      "plantsCount" : {
+        "mean" : 20,
+        "deviation" : 5
+      }
+    }
+  },
+  "population" : {
+    "herbivore" : {
+      "verySmall": {
+        "maxAmount" : 1000,
+        "animalAmount" : {
+          "mean" : 500,
+          "deviation" : 20
+        },
+        "health" : {
+          "mean" : 40,
+          "deviation" : 5
+        },
+        "productivity" : {
+          "mean" : 70,
+          "deviation" : 10
+        },
+        "wellBeing" : {
+          "mean" : 50,
+          "deviation" : 5
+        },
+        "biologyDev" : {
+          "mean" : 30,
+          "deviation" : 5
+        }
+      },
+      "small" : {
+        "maxAmount" : 1000,
+        "animalAmount" : {
+          "mean" : 450,
+          "deviation" : 25
+        },
+        "health" : {
+          "mean" : 40,
+          "deviation" : 5
+        },
+        "productivity" : {
+          "mean" : 65,
+          "deviation" : 15
+        },
+        "wellBeing" : {
+          "mean" : 50,
+          "deviation" : 5
+        },
+        "biologyDev" : {
+          "mean" : 30,
+          "deviation" : 5
+        }
+      },
+      "average" : {
+        "maxAmount" : 500,
+        "animalAmount" : {
+          "mean" : 200,
+          "deviation" : 25
+        },
+        "health" : {
+          "mean" : 50,
+          "deviation" : 5
+        },
+        "productivity" : {
+          "mean" : 40,
+          "deviation" : 5
+        },
+        "wellBeing" : {
+          "mean" : 50,
+          "deviation" : 5
+        },
+        "biologyDev" : {
+          "mean" : 50,
+          "deviation" : 15
+        }
+      },
+      "big" : {
+        "maxAmount" : 100,
+        "animalAmount" : {
+          "mean" : 50,
+          "deviation" : 10
+        },
+        "health" : {
+          "mean" : 30,
+          "deviation" : 10
+        },
+        "productivity" : {
+          "mean" : 20,
+          "deviation" : 5
+        },
+        "wellBeing" : {
+          "mean" : 60,
+          "deviation" : 5
+        },
+        "biologyDev" : {
+          "mean" : 60,
+          "deviation" : 5
+        }
+      },
+      "veryBig" : {
+        "maxAmount" : 100,
+        "animalAmount" : {
+          "mean" : 40,
+          "deviation" : 5
+        },
+        "health" : {
+          "mean" : 30,
+          "deviation" : 5
+        },
+        "productivity" : {
+          "mean" : 20,
+          "deviation" : 5
+        },
+        "wellBeing" : {
+          "mean" : 60,
+          "deviation" : 5
+        },
+        "biologyDev" : {
+          "mean" : 60,
+          "deviation" : 5
+        }
+      }
+    },
+    "carnivore" : {
+      "verySmall": {
+        "maxAmount": 900,
+        "animalAmount": {
+          "mean": 500,
+          "deviation": 25
+        },
+        "health": {
+          "mean": 45,
+          "deviation": 5
+        },
+        "productivity": {
+          "mean": 65,
+          "deviation": 10
+        },
+        "wellBeing": {
+          "mean": 45,
+          "deviation": 5
+        },
+        "biologyDev": {
+          "mean": 35,
+          "deviation": 5
+        }
+      },
+      "small": {
+        "maxAmount": 900,
+        "animalAmount": {
+          "mean": 400,
+          "deviation": 20
+        },
+        "health": {
+          "mean": 45,
+          "deviation": 5
+        },
+        "productivity": {
+          "mean": 60,
+          "deviation": 10
+        },
+        "wellBeing": {
+          "mean": 45,
+          "deviation": 5
+        },
+        "biologyDev": {
+          "mean": 35,
+          "deviation": 5
+        }
+      },
+      "average": {
+        "maxAmount": 400,
+        "animalAmount": {
+          "mean": 200,
+          "deviation": 15
+        },
+        "health": {
+          "mean": 45,
+          "deviation": 10
+        },
+        "productivity": {
+          "mean": 30,
+          "deviation": 10
+        },
+        "wellBeing": {
+          "mean": 45,
+          "deviation": 10
+        },
+        "biologyDev": {
+          "mean": 55,
+          "deviation": 10
+        }
+      },
+      "big": {
+        "maxAmount": 80,
+        "animalAmount": {
+          "mean": 30,
+          "deviation": 10
+        },
+        "health": {
+          "mean": 30,
+          "deviation": 10
+        },
+        "productivity": {
+          "mean": 15,
+          "deviation": 5
+        },
+        "wellBeing": {
+          "mean": 50,
+          "deviation": 10
+        },
+        "biologyDev": {
+          "mean": 65,
+          "deviation": 5
+        }
+      },
+      "veryBig": {
+        "maxAmount": 80,
+        "animalAmount": {
+          "mean": 25,
+          "deviation": 5
+        },
+        "health": {
+          "mean": 20,
+          "deviation": 5
+        },
+        "productivity": {
+          "mean": 10,
+          "deviation": 2
+        },
+        "wellBeing": {
+          "mean": 50,
+          "deviation": 15
+        },
+        "biologyDev": {
+          "mean": 70,
+          "deviation": 5
+        }
+      }
+    }
+  }
+}
