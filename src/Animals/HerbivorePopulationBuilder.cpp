@@ -1,16 +1,16 @@
 #include "PopulationBuilder.h"
 
-class HerbivorePopulationBuilder : public PopulationBuilder{
+class HerbivorePopulationBuilder : public PopulationBuilder {
  private:
   std::shared_ptr<Population> p;
  public:
-  HerbivorePopulationBuilder(){
+  HerbivorePopulationBuilder() {
     p = std::make_shared<Population>();
   }
   void setType() override {
     p->type = "herbivore";
   }
-  void setName(std::string name){
+  void setName(std::string name) {
     p->name = name;
   }
   void setAmount(int32_t a) override {
@@ -40,7 +40,7 @@ class HerbivorePopulationBuilder : public PopulationBuilder{
   void setCover(Population::param c) override {
     p->cover = c;
   }
-  std::shared_ptr<Population> getProduct(){
+  std::shared_ptr<Population> getProduct() {
     return p;
   }
 };

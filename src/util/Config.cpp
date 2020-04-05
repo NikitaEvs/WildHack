@@ -1,11 +1,11 @@
 #include "Config.h"
 
-Config* Config::configPtr = nullptr;
+Config *Config::configPtr = nullptr;
 
 std::shared_ptr<Config> Config::getInstance() {
   if (configPtr == nullptr) {
     configPtr = new Config();
-    configPtr -> readFile();
+    configPtr->readFile();
   }
   return std::shared_ptr<Config>(configPtr);
 }
@@ -141,6 +141,7 @@ std::pair<int32_t, int32_t> Config::getHerbivoreVerySmallBiologyDev() {
   return std::make_pair(mean, deviation);
 }
 
+
 std::pair<int32_t, int32_t> Config::getHerbivoreSmallAnimalAmount() {
   int32_t mean = configJSON["population"]["herbivore"]["small"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["herbivore"]["small"]["animalAmount"]["deviation"];
@@ -172,6 +173,7 @@ std::pair<int32_t, int32_t> Config::getHerbivoreSmallBiologyDev() {
   return std::make_pair(mean, deviation);
 }
 
+
 std::pair<int32_t, int32_t> Config::getHerbivoreVeryBigAnimalAmount() {
   int32_t mean = configJSON["population"]["herbivore"]["veryBig"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["herbivore"]["veryBig"]["animalAmount"]["deviation"];
@@ -202,6 +204,7 @@ std::pair<int32_t, int32_t> Config::getHerbivoreVeryBigBiologyDev() {
 
   return std::make_pair(mean, deviation);
 }
+
 
 std::pair<int32_t, int32_t> Config::getHerbivoreBigAnimalAmount() {
   int32_t mean = configJSON["population"]["herbivore"]["big"]["animalAmount"]["mean"];
@@ -298,6 +301,7 @@ std::pair<int32_t, int32_t> Config::getCarnivoreVerySmallBiologyDev() {
   return std::make_pair(mean, deviation);
 }
 
+
 std::pair<int32_t, int32_t> Config::getCarnivoreSmallAnimalAmount() {
   int32_t mean = configJSON["population"]["carnivore"]["small"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["carnivore"]["small"]["animalAmount"]["deviation"];
@@ -329,6 +333,7 @@ std::pair<int32_t, int32_t> Config::getCarnivoreSmallBiologyDev() {
   return std::make_pair(mean, deviation);
 }
 
+
 std::pair<int32_t, int32_t> Config::getCarnivoreVeryBigAnimalAmount() {
   int32_t mean = configJSON["population"]["carnivore"]["veryBig"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["carnivore"]["veryBig"]["animalAmount"]["deviation"];
@@ -359,6 +364,7 @@ std::pair<int32_t, int32_t> Config::getCarnivoreVeryBigBiologyDev() {
 
   return std::make_pair(mean, deviation);
 }
+
 
 std::pair<int32_t, int32_t> Config::getCarnivoreBigAnimalAmount() {
   int32_t mean = configJSON["population"]["carnivore"]["big"]["animalAmount"]["mean"];

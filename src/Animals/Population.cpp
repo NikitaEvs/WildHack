@@ -1,7 +1,7 @@
 #include "Population.h"
 
 Population::Population() = default;
-Population::Population(Population const& p){
+Population::Population(Population const &p) {
   type = p.type;
   name = p.name;
   animalAmount = p.animalAmount;
@@ -16,85 +16,65 @@ Population::Population(Population const& p){
   xPos = p.xPos;
   yPos = p.yPos;
 }
-void Population::move(int32_t x, int32_t y){
+void Population::move(int32_t x, int32_t y) {
   xPos = x;
   yPos = y;
 }
-void Population::dieOut(int32_t amount){
+void Population::dieOut(int32_t amount) {
   animalAmount -= amount * animalAmount / 100;
 }
 
-std::ostream& operator << (std::ostream &os, Population &p){
+std::ostream &operator<<(std::ostream &os, Population &p) {
   std::string pSize, pSafe, pVel, pCov;
-  switch (p.size){
-    case Population::VERY_SMALL:
-      pSize = "VERY_SMALL";
+  switch (p.size) {
+    case Population::VERY_SMALL:pSize = "VERY_SMALL";
       break;
-    case Population::SMALL:
-      pSize = "SMALL";
+    case Population::SMALL:pSize = "SMALL";
       break;
-    case Population::AVERAGE:
-      pSize = "AVERAGE";
+    case Population::AVERAGE:pSize = "AVERAGE";
       break;
-    case Population::BIG:
-      pSize = "BIG";
+    case Population::BIG:pSize = "BIG";
       break;
-    case Population::VERY_BIG:
-      pSize = "VERY_BIG";
+    case Population::VERY_BIG:pSize = "VERY_BIG";
       break;
   }
 
-  switch (p.safety){
-    case Population::VERY_SMALL:
-      pSafe = "VERY_SMALL";
+  switch (p.safety) {
+    case Population::VERY_SMALL:pSafe = "VERY_SMALL";
       break;
-    case Population::SMALL:
-      pSafe = "SMALL";
+    case Population::SMALL:pSafe = "SMALL";
       break;
-    case Population::AVERAGE:
-      pSafe = "AVERAGE";
+    case Population::AVERAGE:pSafe = "AVERAGE";
       break;
-    case Population::BIG:
-      pSafe = "BIG";
+    case Population::BIG:pSafe = "BIG";
       break;
-    case Population::VERY_BIG:
-      pSafe = "VERY_BIG";
+    case Population::VERY_BIG:pSafe = "VERY_BIG";
       break;
   }
 
-  switch (p.velocity){
-    case Population::VERY_SMALL:
-      pVel = "VERY_SMALL";
+  switch (p.velocity) {
+    case Population::VERY_SMALL:pVel = "VERY_SMALL";
       break;
-    case Population::SMALL:
-      pVel = "SMALL";
+    case Population::SMALL:pVel = "SMALL";
       break;
-    case Population::AVERAGE:
-      pVel = "AVERAGE";
+    case Population::AVERAGE:pVel = "AVERAGE";
       break;
-    case Population::BIG:
-      pVel = "BIG";
+    case Population::BIG:pVel = "BIG";
       break;
-    case Population::VERY_BIG:
-      pVel = "VERY_BIG";
+    case Population::VERY_BIG:pVel = "VERY_BIG";
       break;
   }
 
-  switch (p.cover){
-    case Population::VERY_SMALL:
-      pCov = "VERY_SMALL";
+  switch (p.cover) {
+    case Population::VERY_SMALL:pCov = "VERY_SMALL";
       break;
-    case Population::SMALL:
-      pCov = "SMALL";
+    case Population::SMALL:pCov = "SMALL";
       break;
-    case Population::AVERAGE:
-      pCov = "AVERAGE";
+    case Population::AVERAGE:pCov = "AVERAGE";
       break;
-    case Population::BIG:
-      pCov = "BIG";
+    case Population::BIG:pCov = "BIG";
       break;
-    case Population::VERY_BIG:
-      pCov = "VERY_BIG";
+    case Population::VERY_BIG:pCov = "VERY_BIG";
       break;
   }
   os << p.type << " " << pSize << " " << p.name << "\n"

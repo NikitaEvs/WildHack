@@ -1,8 +1,10 @@
 #ifndef PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
 #define PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
+
 #include <memory>
 #include "Population.h"
-class PopulationBuilder{
+
+class PopulationBuilder {
  public:
   virtual void setType() = 0;
   virtual void setName(std::string name) = 0;

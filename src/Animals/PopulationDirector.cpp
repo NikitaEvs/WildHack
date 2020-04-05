@@ -3,6 +3,7 @@
 void PopulationDirector::setBuilder(std::shared_ptr<PopulationBuilder> b) {
   builder = b;
 }
+
 std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
   builder->setName(name);
   builder->setType();
@@ -27,9 +28,9 @@ std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::SMALL);
   }
-
   return builder->getProduct();
 }
+
 std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
   builder->setName(name);
   builder->setType();
@@ -81,6 +82,5 @@ std::shared_ptr<Population> PopulationDirector::makeBig(std::string name) {
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::AVERAGE);
   }
-
   return builder->getProduct();
 }

@@ -1,32 +1,32 @@
 #include "PopulationBuilder.h"
 
-class CarnivorePopulationBuilder : public PopulationBuilder{
+class CarnivorePopulationBuilder : public PopulationBuilder {
  private:
   std::shared_ptr<Population> p;
  public:
-  CarnivorePopulationBuilder(){
+  CarnivorePopulationBuilder() {
     p = std::make_shared<Population>();
   }
   void setType() override {
     p->type = "carnivore";
   }
-  void setName(std::string name){
+  void setName(std::string name) {
     p->name = name;
   }
   void setAmount(int32_t a) override {
-    p->animalAmount = a * 4 / 5;
+    p->animalAmount = a;
   }
   void setHealth(int32_t h) override {
     p->health = h;
   }
   void setProductivity(int32_t pr) override {
-    p->productivity = pr * 4 / 5;
+    p->productivity = pr;
   }
   void setWellBeing(int32_t w) override {
     p->wellBeing = w;
   }
   void setBiologyDev(int32_t b) override {
-    p->biologyDev = std::min(b * 6 / 5, 40);
+    p->biologyDev = b;
   }
   void setSize(Population::param s) override {
     p->size = s;
@@ -40,7 +40,7 @@ class CarnivorePopulationBuilder : public PopulationBuilder{
   void setCover(Population::param c) override {
     p->cover = c;
   }
-  std::shared_ptr<Population> getProduct(){
+  std::shared_ptr<Population> getProduct() {
     return p;
   }
 };
