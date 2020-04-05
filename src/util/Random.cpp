@@ -3,16 +3,26 @@
 #include <memory>
 
 Random* Random::randomPtr = nullptr;
+RandomDestroyer Random::destroyer;
+
+RandomDestroyer::~RandomDestroyer() {
+  delete instance;
+}
+
+void RandomDestroyer::initialize(Random *initInstance) {
+  instance = initInstance;
+}
 
 Random::Random() {
   generatorPtr = std::make_shared<std::mt19937>(randomDevice());
 }
 
-std::shared_ptr<Random> Random::getInstance() {
+Random& Random::getInstance() {
   if (randomPtr == nullptr) {
     randomPtr = new Random();
+    destroyer.initialize(randomPtr);
   }
-  return std::shared_ptr<Random>(randomPtr);;
+  return *randomPtr;
 }
 
 int32_t Random::randInt(int32_t minVal, int32_t maxVal) {

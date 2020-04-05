@@ -12,8 +12,6 @@
 class PopulationDirector{
  private:
   std::shared_ptr<PopulationBuilder> builder;
-  std::shared_ptr<Random> randomPtr = Random::getInstance();
-  std::shared_ptr<Config> configPtr = Config::getInstance();
 
  public:
   void setBuilder(std::shared_ptr<PopulationBuilder> b);

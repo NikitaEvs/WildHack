@@ -8,21 +8,21 @@ std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->type == "herbivore") {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getHerbivoreSmallAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getHerbivoreSmallHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getHerbivoreSmallProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getHerbivoreSmallWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getHerbivoreSmallBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallBiologyDev()));
     builder->setSize(Population::SMALL);
     builder->setSafety(Population::AVERAGE);
     builder->setVelocity(Population::SMALL);
     builder->setCover(Population::AVERAGE);
   } else {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getCarnivoreSmallAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getCarnivoreSmallHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getCarnivoreSmallProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getCarnivoreSmallWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getCarnivoreSmallBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreSmallAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreSmallHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreSmallProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreSmallWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreSmallBiologyDev()));
     builder->setSize(Population::SMALL);
     builder->setSafety(Population::AVERAGE);
     builder->setVelocity(Population::AVERAGE);
@@ -35,21 +35,21 @@ std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->type == "herbivore") {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getHerbivoreAverageAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getHerbivoreAverageHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getHerbivoreAverageProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getHerbivoreAverageWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getHerbivoreAverageBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageBiologyDev()));
     builder->setSize(Population::AVERAGE);
     builder->setSafety(Population::AVERAGE);
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::AVERAGE);
   } else {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getCarnivoreAverageAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getCarnivoreAverageHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getCarnivoreAverageProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getCarnivoreAverageWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getCarnivoreAverageBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreAverageAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreAverageHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreAverageProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreAverageWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreAverageBiologyDev()));
     builder->setSize(Population::AVERAGE);
     builder->setSafety(Population::AVERAGE);
     builder->setVelocity(Population::AVERAGE);
@@ -62,21 +62,21 @@ std::shared_ptr<Population> PopulationDirector::makeBig(std::string name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->type == "herbivore") {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getHerbivoreBigAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getHerbivoreBigHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getHerbivoreBigProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getHerbivoreBigWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getHerbivoreBigBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigBiologyDev()));
     builder->setSize(Population::BIG);
     builder->setSafety(Population::BIG);
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::BIG);
   } else {
-    builder->setAmount(randomPtr->randNormalInt(configPtr->getCarnivoreBigAnimalAmount()));
-    builder->setHealth(randomPtr->randNormalInt(configPtr->getCarnivoreBigHealth()));
-    builder->setProductivity(randomPtr->randNormalInt(configPtr->getCarnivoreBigProductivity()));
-    builder->setWellBeing(randomPtr->randNormalInt(configPtr->getCarnivoreBigWellBeing()));
-    builder->setBiologyDev(randomPtr->randNormalInt(configPtr->getCarnivoreBigBiologyDev()));
+    builder->setAmount(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreBigAnimalAmount()));
+    builder->setHealth(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreBigHealth()));
+    builder->setProductivity(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreBigProductivity()));
+    builder->setWellBeing(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreBigWellBeing()));
+    builder->setBiologyDev(Random::getInstance().randNormalInt(Config::getInstance().getCarnivoreBigBiologyDev()));
     builder->setSize(Population::BIG);
     builder->setSafety(Population::BIG);
     builder->setVelocity(Population::AVERAGE);

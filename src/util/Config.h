@@ -8,18 +8,31 @@
 
 #define configFilePath "../resources/config/values.json"
 
+class Config;
+
+class ConfigDestroyer {
+ private:
+  Config *instance;
+ public:
+  ~ConfigDestroyer();
+  void initialize(Config *initInstance);
+};
+
 class Config {
  private:
   nlohmann::json configJSON;
 
  protected:
-  Config() = default;;
+  Config() = default;
+  ~Config() {}
   static Config* configPtr;
+  static ConfigDestroyer destroyer;
+  friend class ConfigDestroyer;
 
  public:
   Config(Config &config) = delete;
   void operator = (const Config &) = delete;
-  static std::shared_ptr<Config> getInstance();
+  static Config& getInstance();
   void readFile();
 
   /* Cell variables */
