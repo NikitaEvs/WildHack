@@ -32,5 +32,5 @@ class Population {
   void dieOut(int32_t amount);
 };
 
-std::ostream& operator << (std::ostream &os, Population p);
+std::ostream& operator << (std::ostream &os, Population &p);
 #endif //PEACH_SRC_ANIMALS_POPULATION_H_

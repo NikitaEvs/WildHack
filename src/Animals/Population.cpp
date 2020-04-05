@@ -24,7 +24,7 @@ void Population::dieOut(int32_t amount){
   animalAmount -= amount * animalAmount / 100;
 }
 
-std::ostream& operator << (std::ostream &os, Population p){
+std::ostream& operator << (std::ostream &os, Population &p){
   std::string pSize, pSafe, pVel, pCov;
   switch (p.size){
     case Population::VERY_SMALL:
