@@ -15,7 +15,7 @@ class Population {
 
   std::string type;
   std::string name;
-  int32_t xPos, yPos;
+  int32_t xPos = 0, yPos = 0;
   int32_t animalAmount; //[0, 10000]
   int32_t health; //[0, 100] %
   int32_t productivity; //[0, 10] - average amount of children from one parent
@@ -28,7 +28,7 @@ class Population {
 
   Population();
   Population(Population const& p);
-  void move(int x, int y);
+  void move(int32_t x, int32_t y);
   void dieOut(int32_t amount);
 };
 

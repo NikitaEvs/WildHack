@@ -16,7 +16,7 @@ Population::Population(Population const& p){
   xPos = p.xPos;
   yPos = p.yPos;
 }
-void Population::move(int x, int y){
+void Population::move(int32_t x, int32_t y){
   xPos = x;
   yPos = y;
 }
