@@ -1,13 +1,23 @@
 #include "Config.h"
 
 Config *Config::configPtr = nullptr;
+ConfigDestroyer Config::destroyer;
 
-std::shared_ptr<Config> Config::getInstance() {
+ConfigDestroyer::~ConfigDestroyer() {
+  delete instance;
+}
+
+void ConfigDestroyer::initialize(Config *initInstance) {
+  instance = initInstance;
+}
+
+Config& Config::getInstance() {
   if (configPtr == nullptr) {
     configPtr = new Config();
     configPtr->readFile();
+    destroyer.initialize(configPtr);
   }
-  return std::shared_ptr<Config>(configPtr);
+  return *configPtr;
 }
 
 void Config::readFile() {

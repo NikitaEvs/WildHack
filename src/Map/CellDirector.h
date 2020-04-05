@@ -11,8 +11,6 @@
 class CellDirector {
  private:
   AbstractCellBuilder *builderPtr;
-  std::shared_ptr<Random> randomPtr = Random::getInstance();
-  std::shared_ptr<Config> configPtr = Config::getInstance();
 
  public:
   CellDirector() = default;
