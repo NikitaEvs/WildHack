@@ -1,5 +1,5 @@
-#ifndef SRC_CELL_H_
-#define SRC_CELL_H_
+#ifndef SRC_CELLTYPE_H_
+#define SRC_CELLTYPE_H_
 
 #include <cstdint>
 #include <string>
