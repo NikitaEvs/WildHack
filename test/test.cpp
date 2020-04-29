@@ -32,6 +32,7 @@ void generateSimpleMap() {
 }
 
 int main() {
+  /*
   auto builder = new CellTypeBuilder();
   auto jsonBuilder = new CellTypeJSONRepresentationBuilder();
 
@@ -55,14 +56,21 @@ int main() {
   std::shared_ptr<Population> p = d.makeBig("elephant");
   std::cout << *p;
 
-  generateSimpleMap();
-
   p->addMutation();
   p->applyMutation();
   std::cout << *p;
   p->addMutation();
   p->applyMutation();
   std::cout << *p;
+*/
+  Map map(10, 10);
+  map.generate();
+  for (int kI = 0; kI < 10; ++kI) {
+    for (int kJ = 0; kJ < 10; ++kJ) {
+      std::cout << map[kI][kJ]->type << " ";
+    }
+    std::cout << std::endl;
+  }
 
   return 0;
 }
