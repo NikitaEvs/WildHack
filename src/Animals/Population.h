@@ -1,8 +1,13 @@
 #ifndef PEACH_SRC_ANIMALS_POPULATION_H_
 #define PEACH_SRC_ANIMALS_POPULATION_H_
+
 #include <string>
 #include <cstdint>
 #include <iostream>
+
+#include "Mutations/LeafMutation.h"
+#include "Mutations/CompoundMutation.h"
+
 class Population {
  public:
   enum param {
@@ -12,6 +17,13 @@ class Population {
     BIG,
     VERY_BIG
   };
+
+ private:
+  CompoundMutation mutationTree;
+
+  static void switchParam(param &p, int32_t value);
+
+ public:
 
   std::string type;
   std::string name;
@@ -27,10 +39,13 @@ class Population {
   param cover;
 
   Population();
-  Population(Population const& p);
+  Population(Population const &p);
   void move(int32_t x, int32_t y);
   void dieOut(int32_t amount);
+  void addMutation();
+  void applyMutation();
+
+  friend std::ostream &operator<<(std::ostream &os, Population &p);
 };
 
-std::ostream& operator << (std::ostream &os, Population &p);
 #endif //PEACH_SRC_ANIMALS_POPULATION_H_
