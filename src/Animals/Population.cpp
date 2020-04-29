@@ -1,4 +1,21 @@
 #include "Population.h"
+#include "Random.h"
+
+void Population::switchParam(param &p, int32_t value) {
+  switch (value) {
+      case -1:
+        if(p > VERY_SMALL){
+          p = static_cast<param>(static_cast<int32_t>(p) - 1);
+        }
+        break;
+      case 1:
+        if(p < VERY_BIG){
+          p = static_cast<param>(static_cast<int32_t>(p) + 1);
+        }
+        break;
+      default:break;
+  }
+}
 
 Population::Population() = default;
 Population::Population(Population const &p) {
@@ -22,6 +39,32 @@ void Population::move(int32_t x, int32_t y) {
 }
 void Population::dieOut(int32_t amount) {
   animalAmount -= amount * animalAmount / 100;
+}
+
+void Population::addMutation() {
+  LeafMutation lm;
+  lm.health = Random::getInstance().randNormalInt(0, 5);
+  lm.productivity = Random::getInstance().randNormalInt(0, 5);
+  lm.wellBeing = Random::getInstance().randNormalInt(0, 5);
+  lm.size = Random::getInstance().randNormalInt(0, 1);
+  lm.safety = Random::getInstance().randNormalInt(0, 1);
+  lm.velocity = Random::getInstance().randNormalInt(0, 1);
+  lm.cover = Random::getInstance().randNormalInt(0, 1);
+  mutationTree.add(std::make_shared<LeafMutation>(lm));
+}
+
+void Population::applyMutation() {
+  mutationTree.getMutation();
+  health *= (100 + mutationTree.health);
+  productivity *= (100 + mutationTree.productivity);
+  wellBeing *= (100 + mutationTree.wellBeing);
+  health /= 100;
+  productivity /= 100;
+  wellBeing /= 100;
+  switchParam(size, mutationTree.size);
+  switchParam(safety, mutationTree.safety);
+  switchParam(velocity, mutationTree.velocity);
+  switchParam(cover, mutationTree.cover);
 }
 
 std::ostream &operator<<(std::ostream &os, Population &p) {
@@ -88,4 +131,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
      << "cover        " << pCov << "\n"
      << "xPos         " << p.xPos << "\n"
      << "yPos         " << p.yPos << "\n";
+  os << "MUTATIONS" << std::endl;
+  p.mutationTree.getMutation();
+  p.mutationTree.print(os);
 }

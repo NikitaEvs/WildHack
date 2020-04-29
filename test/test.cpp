@@ -57,5 +57,12 @@ int main() {
 
   generateSimpleMap();
 
+  p->addMutation();
+  p->applyMutation();
+  std::cout << *p;
+  p->addMutation();
+  p->applyMutation();
+  std::cout << *p;
+
   return 0;
 }
