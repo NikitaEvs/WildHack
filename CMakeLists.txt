@@ -46,7 +46,8 @@ set (ANIMAL_SOURCES
 		)
 
 set (ENGINE_SOURCE
-
+		${ENGINE_PATH}/GameEngine.h
+		${ENGINE_PATH}/GameEngine.cpp
 		)
 
 add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES} ${ENGINE_SOURCES})

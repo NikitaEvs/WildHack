@@ -4,6 +4,8 @@
 #include "Map/Map.h"
 #include "PopulationDirector.h"
 
+#include "Engine/GameEngine.h"
+
 #include <iostream>
 #include <string>
 
