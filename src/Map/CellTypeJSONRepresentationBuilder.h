@@ -3,17 +3,17 @@
 
 #include "json/json.hpp"
 
-#include "Cell.h"
-#include "AbstractCellBuilder.h"
+#include "CellType.h"
+#include "AbstractCellTypeBuilder.h"
 
-class CellJSONRepresentationBuilder : AbstractCellBuilder {
+class CellTypeJSONRepresentationBuilder : AbstractCellTypeBuilder {
  private:
   nlohmann::json cellJson;
 
  public:
   void reset();
-  void setType(Cell::cellType cellType) override;
-  void setClimate(Cell::climateType climateType) override;
+  void setType(CellType::cellType cellType) override;
+  void setClimate(CellType::climateType climateType) override;
   void setPlantFood(int32_t plantsCount) override;
   void setWaterLevel(int32_t waterLevel) override;
   nlohmann::json getProduct();
