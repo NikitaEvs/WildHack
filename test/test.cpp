@@ -1,15 +1,15 @@
-#include "Map/CellDirector.h"
-#include "Map/CellBuilder.h"
+#include "Map/CellTypeDirector.h"
+#include "Map/CellTypeBuilder.h"
 #include "PopulationDirector.h"
 
 #include <iostream>
 
 int main() {
-  auto builder = new CellBuilder();
-  CellDirector director;
+  auto builder = new CellTypeBuilder();
+  CellTypeDirector director;
   director.setBuilder(builder);
   director.makeSteppeCell();
-  std::shared_ptr<Cell> waterCell = builder->getProduct();
+  std::shared_ptr<CellType> waterCell = builder->getProduct();
   std::cout << *waterCell << std::endl;
   delete builder;
 

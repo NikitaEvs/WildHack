@@ -14,15 +14,15 @@ set (UTIL_PATH src/util)
 set (ANIMAL_PATH src/Animals)
 
 set (MAP_SOURCES
-        ${MAP_PATH}/AbstractCellBuilder.h
-        ${MAP_PATH}/Cell.h
-        ${MAP_PATH}/Cell.cpp
-        ${MAP_PATH}/CellBuilder.h
-        ${MAP_PATH}/CellBuilder.cpp
-        ${MAP_PATH}/CellDirector.h
-        ${MAP_PATH}/CellDirector.cpp
-        ${MAP_PATH}/CellJSONRepresentationBuilder.h
-        ${MAP_PATH}/CellJSONRepresentationBuilder.cpp
+        ${MAP_PATH}/AbstractCellTypeBuilder.h
+        ${MAP_PATH}/CellType.h
+        ${MAP_PATH}/CellType.cpp
+        ${MAP_PATH}/CellTypeBuilder.h
+        ${MAP_PATH}/CellTypeBuilder.cpp
+        ${MAP_PATH}/CellTypeDirector.h
+        ${MAP_PATH}/CellTypeDirector.cpp
+        ${MAP_PATH}/CellTypeJSONRepresentationBuilder.h
+        ${MAP_PATH}/CellTypeJSONRepresentationBuilder.cpp
         )
 
 set (UTIL_SOURCES
