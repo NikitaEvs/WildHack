@@ -12,6 +12,7 @@ include_directories(thirdparty)
 set (MAP_PATH src/Map)
 set (UTIL_PATH src/util)
 set (ANIMAL_PATH src/Animals)
+set(MUTATION_PATH src/Animals/Mutations)
 
 set (MAP_SOURCES
         ${MAP_PATH}/AbstractCellTypeBuilder.h
@@ -33,12 +34,19 @@ set (UTIL_SOURCES
         )
 
 set (ANIMAL_SOURCES
-	${ANIMAL_PATH}/CarnivorePopulationBuilder.cpp
+		${ANIMAL_PATH}/CarnivorePopulationBuilder.cpp
         ${ANIMAL_PATH}/HerbivorePopulationBuilder.cpp
         ${ANIMAL_PATH}/Population.cpp
         ${ANIMAL_PATH}/Population.h
         ${ANIMAL_PATH}/PopulationBuilder.h
         ${ANIMAL_PATH}/PopulationDirector.cpp
-        ${ANIMAL_PATH}/PopulationDirector.h)
+        ${ANIMAL_PATH}/PopulationDirector.h
+		)
 
-add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES})
+set (MUTATION_SOURCES
+		${MUTATION_PATH}/MutationComponent.h
+		${MUTATION_PATH}/LeafMutation.cpp
+		${MUTATION_PATH}/CompoundMutation.cpp
+		)
+
+add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES} ${MUTATION_SOURCES})
