@@ -12,7 +12,9 @@ include_directories(thirdparty)
 set (MAP_PATH src/Map)
 set (UTIL_PATH src/util)
 set (ANIMAL_PATH src/Animals)
-set(MUTATION_PATH src/Animals/Mutations)
+set (ENGINE_PATH src/Engine)
+set (MUTATION_PATH src/Animals/Mutations)
+
 
 set (MAP_SOURCES
         ${MAP_PATH}/AbstractCellTypeBuilder.h
@@ -24,6 +26,8 @@ set (MAP_SOURCES
         ${MAP_PATH}/CellTypeDirector.cpp
         ${MAP_PATH}/CellTypeJSONRepresentationBuilder.h
         ${MAP_PATH}/CellTypeJSONRepresentationBuilder.cpp
+	${MAP_PATH}/Map.h
+	${MAP_PATH}/Map.cpp
         )
 
 set (UTIL_SOURCES
@@ -34,19 +38,25 @@ set (UTIL_SOURCES
         )
 
 set (ANIMAL_SOURCES
-		${ANIMAL_PATH}/CarnivorePopulationBuilder.cpp
+	${ANIMAL_PATH}/CarnivorePopulationBuilder.cpp
         ${ANIMAL_PATH}/HerbivorePopulationBuilder.cpp
         ${ANIMAL_PATH}/Population.cpp
         ${ANIMAL_PATH}/Population.h
         ${ANIMAL_PATH}/PopulationBuilder.h
         ${ANIMAL_PATH}/PopulationDirector.cpp
         ${ANIMAL_PATH}/PopulationDirector.h
-		)
+	)
+
+set (ENGINE_SOURCES
+	${ENGINE_PATH}/GameEngine.h
+	${ENGINE_PATH}/GameEngine.cpp
+	)
 
 set (MUTATION_SOURCES
-		${MUTATION_PATH}/MutationComponent.h
-		${MUTATION_PATH}/LeafMutation.cpp
-		${MUTATION_PATH}/CompoundMutation.cpp
-		)
+	${MUTATION_PATH}/MutationComponent.h
+	${MUTATION_PATH}/LeafMutation.cpp
+	${MUTATION_PATH}/CompoundMutation.cpp
+	)
 
-add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES} ${MUTATION_SOURCES})
+add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES} ${MUTATION_SOURCES} ${ENGINE_SURCES})
+

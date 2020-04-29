@@ -21,6 +21,7 @@ void CellTypeJSONRepresentationBuilder::setWaterLevel(int32_t waterLevel) {
 }
 
 nlohmann::json CellTypeJSONRepresentationBuilder::getProduct() {
+  nlohmann::json copy = cellJson;
   reset();
-  return cellJson;
+  return copy;
 }
