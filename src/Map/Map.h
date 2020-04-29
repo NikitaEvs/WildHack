@@ -5,6 +5,9 @@
 #include <vector>
 
 #include "CellType.h"
+#include "CellTypeDirector.h"
+#include "CellTypeBuilder.h"
+#include "util/Random.h"
 #include "json/json.hpp"
 
 class Map {
@@ -25,6 +28,7 @@ class Map {
   void saveTo(std::ostream& out);
 
   void addCell(std::shared_ptr<CellType> &&cell, size_t row, size_t column);
+  void generate();
 };
 
 #endif //PEACH_SRC_MAP_MAP_H_

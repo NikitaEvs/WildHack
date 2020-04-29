@@ -9,8 +9,8 @@ class CellType {
  public:
     enum cellType {
       WATER,
-      FOREST,
       STEPPE,
+      FOREST,
       TUNDRA
     };
 
