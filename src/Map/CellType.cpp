@@ -1,31 +1,31 @@
-#include "Cell.h"
+#include "CellType.h"
 
-std::ostream& operator<<(std::ostream &os, const Cell &cell) {
+std::ostream& operator<<(std::ostream &os, const CellType &cell) {
   std::string cellTypeStr, climateTypeStr;
 
   switch (cell.type) {
-    case Cell::WATER:
+    case CellType::WATER:
       cellTypeStr = "WATER";
       break;
-    case Cell::FOREST:
+    case CellType::FOREST:
       cellTypeStr = "FOREST";
       break;
-    case Cell::STEPPE:
+    case CellType::STEPPE:
       cellTypeStr = "STEPPE";
       break;
-    case Cell::TUNDRA:
+    case CellType::TUNDRA:
       cellTypeStr = "TUNDRA";
       break;
   }
 
   switch (cell.climate) {
-    case Cell::HOT:
+    case CellType::HOT:
       climateTypeStr = "HOT";
       break;
-    case Cell::TEMPERATE:
+    case CellType::TEMPERATE:
       climateTypeStr = "TEMPERATE";
       break;
-    case Cell::COLD:
+    case CellType::COLD:
       climateTypeStr = "COLD";
       break;
   }

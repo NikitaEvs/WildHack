@@ -1,33 +1,33 @@
-#include "CellDirector.h"
+#include "CellTypeDirector.h"
 
-void CellDirector::setBuilder(AbstractCellBuilder *builderPtr) {
+void CellTypeDirector::setBuilder(AbstractCellTypeBuilder *builderPtr) {
   this -> builderPtr = builderPtr;
 }
 
-void CellDirector::makeWaterCell() {
-  builderPtr -> setType(Cell::cellType::WATER);
-  builderPtr -> setClimate(Cell::climateType::TEMPERATE);
+void CellTypeDirector::makeWaterCell() {
+  builderPtr -> setType(CellType::cellType::WATER);
+  builderPtr -> setClimate(CellType::climateType::TEMPERATE);
   builderPtr -> setWaterLevel(Random::getInstance().randNormalInt(Config::getInstance().getWaterWaterLevel()));
   builderPtr -> setPlantFood(Random::getInstance().randNormalInt(Config::getInstance().getWaterPlantsCount()));
 }
 
-void CellDirector::makeForestCell() {
-  builderPtr -> setType(Cell::cellType::FOREST);
-  builderPtr -> setClimate(Cell::climateType::TEMPERATE);
+void CellTypeDirector::makeForestCell() {
+  builderPtr -> setType(CellType::cellType::FOREST);
+  builderPtr -> setClimate(CellType::climateType::TEMPERATE);
   builderPtr -> setWaterLevel(Random::getInstance().randNormalInt(Config::getInstance().getForestWaterLevel()));
   builderPtr -> setPlantFood(Random::getInstance().randNormalInt(Config::getInstance().getForestPlantsCount()));
 }
 
-void CellDirector::makeSteppeCell() {
-  builderPtr -> setType(Cell::cellType::STEPPE);
-  builderPtr -> setClimate(Cell::climateType::HOT);
+void CellTypeDirector::makeSteppeCell() {
+  builderPtr -> setType(CellType::cellType::STEPPE);
+  builderPtr -> setClimate(CellType::climateType::HOT);
   builderPtr -> setWaterLevel(Random::getInstance().randNormalInt(Config::getInstance().getSteppeWaterLevel()));
   builderPtr -> setPlantFood(Random::getInstance().randNormalInt(Config::getInstance().getSteppePlantsCount()));
 }
 
-void CellDirector::makeTundraCell() {
-  builderPtr -> setType(Cell::cellType::TUNDRA);
-  builderPtr -> setClimate(Cell::climateType::COLD);
+void CellTypeDirector::makeTundraCell() {
+  builderPtr -> setType(CellType::cellType::TUNDRA);
+  builderPtr -> setClimate(CellType::climateType::COLD);
   builderPtr -> setWaterLevel(Random::getInstance().randNormalInt(Config::getInstance().getTundraWaterLevel()));
   builderPtr -> setPlantFood(Random::getInstance().randNormalInt(Config::getInstance().getTundraPlantsCount()));
 }

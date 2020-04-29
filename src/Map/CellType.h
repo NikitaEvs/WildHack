@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 
-class Cell {
+class CellType {
  public:
     enum cellType {
       WATER,
@@ -27,7 +27,7 @@ class Cell {
     cellType type;
     climateType climate;
 
-    friend std::ostream& operator << (std::ostream &os, const Cell &cell);
+    friend std::ostream& operator << (std::ostream &os, const CellType &cell);
 };
 
 #endif
