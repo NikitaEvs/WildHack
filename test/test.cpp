@@ -18,6 +18,11 @@ int main() {
   d.setBuilder(b);
   std::shared_ptr<Population> p = d.makeBig("elephant");
   std::cout << *p;
-
+  p->addMutation();
+  p->applyMutation();
+  std::cout << *p;
+  p->addMutation();
+  p->applyMutation();
+  std::cout << *p;
   return 0;
 }
