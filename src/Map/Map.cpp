@@ -140,3 +140,11 @@ void Map::generate() {
   }
   delete builder;
 }
+
+size_t Map::getHeight() {
+  return map.size();
+}
+
+size_t Map::getWidth() {
+  return map[0].size();
+}
