@@ -6,6 +6,8 @@
 
 #include "Map/Map.h"
 #include "Animals/Population.h"
+#include "util/Config.h"
+#include "util/Random.h"
 
 class GameEngine {
  private:
@@ -15,8 +17,8 @@ class GameEngine {
  public:
   GameEngine() = default;
 
-  void init(size_t height, size_t width, const std::pair<int64_t, int64_t>& center);
-
+  void generateMap();
+  void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
 };
 
 #endif //PEACH_SRC_ENGINE_GAMEENGINE_H_
