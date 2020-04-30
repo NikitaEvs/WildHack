@@ -13,7 +13,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(src)
 
-add_subdirectory(gui)
+if (GUI_BUILD)
+    add_subdirectory(gui)
+endif (GUI_BUILD)
 
 add_executable(example test/test.cpp)
 target_link_libraries(example src)
