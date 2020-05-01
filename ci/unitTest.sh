@@ -5,4 +5,4 @@ git clone https://github.com/google/googletest
 cd googletest || exit
 cmake .
 make
-make install
+sudo make install
