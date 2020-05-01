@@ -1,9 +1,12 @@
 name: gui_test
 
 push:
-  branches: [ dev ]
+  branches:
+    - master
 pull_request:
-  branches: [ master, dev ]
+  branches:
+    - master
+    - dev
 
 jobs:
   build:
