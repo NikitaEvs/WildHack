@@ -87,8 +87,8 @@ void Map::generate() {
   for (int i = 0; i < columns; ++i) {
     for (int j = 0; j < rows; ++j) {
       if (map[i][j] == nullptr) {
-        int32_t blockWidth = Random::getInstance().randInt(1, columns - i);
-        int32_t blockHeight = Random::getInstance().randInt(1, rows - j);
+        int32_t blockWidth = Random::getInstance().randInt(1, std::min(columns / 3, columns - i));
+        int32_t blockHeight = Random::getInstance().randInt(1, std::min(rows / 3, rows - j));
         switch (prevType) {
           case CellType::WATER:prevType = CellType::STEPPE;
             break;
