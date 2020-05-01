@@ -19,6 +19,7 @@ jobs:
           mkdir build
           cd build
           cmake .. -DTEST_BUILD=ON
+          make
 
       - name: Test
         run : |
