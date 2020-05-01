@@ -1,4 +1,7 @@
 # WildHack
+
+![](https://github.com/NikitaEvs/peach/workflows/unit_test/badge.svg)
+
 _Игра про животных и не только_
 
 Игровая механика описана [здесь](docs/gameplay.md)
