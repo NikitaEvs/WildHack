@@ -18,7 +18,7 @@ if (GUI_BUILD)
 endif (GUI_BUILD)
 
 if (TEST_BUILD)
-    add_subdirectory(test/gtest)
+    add_subdirectory(test/unit)
 endif(TEST_BUILD)
 
 add_executable(example test/test.cpp)

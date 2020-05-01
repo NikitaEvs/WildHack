@@ -7,9 +7,18 @@ import QtQuick.Window 2.2
 import "../colors"
 import "../string"
 
-
 ApplicationWindow {
     id: applicationWindow
+    objectName: "applicationWindow"
+
+    title: qsTr("WildHack")
+
+    Text {
+        id: canvasLoad
+        objectName: "canvasLoad"
+        visible: false
+        text: "false"
+    }
 
     visible: true
 
@@ -33,6 +42,7 @@ ApplicationWindow {
 
     Column {
         id: enterView
+        objectName: "enterView"
 
         Item {
             width: 1
@@ -62,6 +72,7 @@ ApplicationWindow {
 
         Button {
             id: offlineBtn
+            objectName: "enter"
             text: qsTr(String.offline)
             Material.background: "transparent"
             anchors.horizontalCenter: parent.horizontalCenter
@@ -73,6 +84,9 @@ ApplicationWindow {
         id: gameLayout
 
         Column {
+            id: gameColumn
+            objectName: "gameColumn"
+
             height: stack.height
             width: stack.width
 
@@ -95,6 +109,7 @@ ApplicationWindow {
 
             Canvas {
                 id: canvas
+                objectName: "canvas"
                 width: parent.width
                 height: parent.height - toolbar.height
 
@@ -103,6 +118,7 @@ ApplicationWindow {
                     var map = gui.map
 
                     drawCells(map, ctx, canvas.height / 2, canvas.width / 2, canvas.height, canvas.width)
+
                 }
 
                 Component.onCompleted: {
@@ -111,9 +127,11 @@ ApplicationWindow {
                     loadImage(String.steppe)
                     loadImage(String.tundra)
                     loadImage(String.water)
-
+                    canvasLoad.text = "true"
                 }
-                onImageLoaded: requestPaint()
+                onImageLoaded: {
+                    requestPaint()
+                }
             }
 
             Drawer {

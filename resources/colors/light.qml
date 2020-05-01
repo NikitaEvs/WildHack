@@ -4,8 +4,8 @@ import QtQuick 2.9
 QtObject {
     id: singleton
 
-    property string accent: "#82C0CC"
+    property string accent: "#242122"
     property string background: "#355360"
-    property string primary: "#9FC490"
-    property string foreground: "#BEE3DB"
+    property string primary: "#48727A"
+    property string foreground: "#c7e9f2"
 }
