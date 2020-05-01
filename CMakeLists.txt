@@ -17,5 +17,9 @@ if (GUI_BUILD)
     add_subdirectory(gui)
 endif (GUI_BUILD)
 
+if (TEST_BUILD)
+    add_subdirectory(test/gtest)
+endif(TEST_BUILD)
+
 add_executable(example test/test.cpp)
 target_link_libraries(example src)
