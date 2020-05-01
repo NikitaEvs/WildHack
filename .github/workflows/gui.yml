@@ -1,7 +1,10 @@
 name: gui_test
 
-on: push
-
+push:
+  branches: [ dev ]
+pull_request:
+  branches: [ master, dev ]
+cd
 jobs:
   build:
     runs-on: ubuntu-latest
