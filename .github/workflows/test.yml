@@ -1,0 +1,26 @@
+name: unit_tests
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name : SetupWorkspace
+        run : |
+          cd ci
+          ./unitTest.sh
+
+      - name: Build
+        run : |
+          mkdir build
+          cd build
+          cmake .. -DTEST_BUILD=ON
+
+      - name: Test
+        run : |
+          cd build/bin
+          ./gtest
