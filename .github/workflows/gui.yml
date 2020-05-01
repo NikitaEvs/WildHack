@@ -12,6 +12,7 @@ jobs:
       - name: SetupWorkspace
         run: |
           cd ci
+          ./unitTest.sh
           ./gui.sh
           ./guiTest.sh
 
