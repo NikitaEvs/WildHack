@@ -1,6 +1,7 @@
 # WildHack
 
-[![Actions Status](https://github.com/NikitaEvs/peach/workflows/unit_test/badge.svg)](https://github.com/NikitaEvs/peach/actions)
+[![Actions Status](https://github.com/NikitaEvs/peach/workflows/unit_tests/badge.svg)](https://github.com/NikitaEvs/peach/actions)
+
 [![Actions Status](https://github.com/NikitaEvs/peach/workflows/gui_test/badge.svg)](https://github.com/NikitaEvs/peach/actions)
 
 _Игра про животных и не только_
