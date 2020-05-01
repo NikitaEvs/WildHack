@@ -3,7 +3,6 @@
 #include <QQmlContext>
 
 #include "Interface/Gui.h"
-#include "util/Config.h"
 
 int main(int argc, char** argv) {
   QApplication app(argc, argv);
