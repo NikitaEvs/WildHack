@@ -9,36 +9,17 @@ include_directories(src/util)
 include_directories(src/Animals)
 include_directories(thirdparty)
 
-set (MAP_PATH src/Map)
-set (UTIL_PATH src/util)
-set (ANIMAL_PATH src/Animals)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set (MAP_SOURCES
-        ${MAP_PATH}/AbstractCellBuilder.h
-        ${MAP_PATH}/Cell.h
-        ${MAP_PATH}/Cell.cpp
-        ${MAP_PATH}/CellBuilder.h
-        ${MAP_PATH}/CellBuilder.cpp
-        ${MAP_PATH}/CellDirector.h
-        ${MAP_PATH}/CellDirector.cpp
-        ${MAP_PATH}/CellJSONRepresentationBuilder.h
-        ${MAP_PATH}/CellJSONRepresentationBuilder.cpp
-        )
+add_subdirectory(src)
 
-set (UTIL_SOURCES
-        ${UTIL_PATH}/Config.h
-        ${UTIL_PATH}/Config.cpp
-        ${UTIL_PATH}/Random.h
-        ${UTIL_PATH}/Random.cpp
-        )
+if (GUI_BUILD)
+    add_subdirectory(gui)
+endif (GUI_BUILD)
 
-set (ANIMAL_SOURCES
-	${ANIMAL_PATH}/CarnivorePopulationBuilder.cpp
-        ${ANIMAL_PATH}/HerbivorePopulationBuilder.cpp
-        ${ANIMAL_PATH}/Population.cpp
-        ${ANIMAL_PATH}/Population.h
-        ${ANIMAL_PATH}/PopulationBuilder.h
-        ${ANIMAL_PATH}/PopulationDirector.cpp
-        ${ANIMAL_PATH}/PopulationDirector.h)
+if (TEST_BUILD)
+    add_subdirectory(test/unit)
+endif(TEST_BUILD)
 
-add_executable(example test/test.cpp ${MAP_SOURCES} ${UTIL_SOURCES} ${ANIMAL_SOURCES})
+add_executable(example test/test.cpp)
+target_link_libraries(example src)

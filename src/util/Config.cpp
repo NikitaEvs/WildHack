@@ -25,6 +25,22 @@ void Config::readFile() {
   fileIn >> configJSON;
 }
 
+/* Map variables */
+
+std::pair<int32_t, int32_t> Config::getHeight() {
+  int32_t mean = configJSON["map"]["sizes"]["height"]["mean"];
+  int32_t deviation = configJSON["map"]["sizes"]["height"]["deviation"];
+
+  return std::make_pair(mean, deviation);
+}
+
+std::pair<int32_t, int32_t> Config::getWidth() {
+  int32_t mean = configJSON["map"]["sizes"]["width"]["mean"];
+  int32_t deviation = configJSON["map"]["sizes"]["width"]["deviation"];
+
+  return std::make_pair(mean, deviation);
+}
+
 /* Cell variables */
 
 /* Water */

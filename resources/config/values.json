@@ -1,4 +1,16 @@
 {
+  "map" : {
+    "sizes": {
+      "height": {
+        "mean": 7,
+        "deviation": 1
+      },
+      "width" : {
+        "mean" : 7,
+        "deviation" : 1
+      }
+    }
+  },
   "cell" : {
     "water" : {
       "waterLevel" : {

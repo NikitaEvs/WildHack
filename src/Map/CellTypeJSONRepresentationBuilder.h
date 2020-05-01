@@ -6,7 +6,7 @@
 #include "CellType.h"
 #include "AbstractCellTypeBuilder.h"
 
-class CellTypeJSONRepresentationBuilder : AbstractCellTypeBuilder {
+class CellTypeJSONRepresentationBuilder : public AbstractCellTypeBuilder {
  private:
   nlohmann::json cellJson;
 
