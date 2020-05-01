@@ -30,7 +30,7 @@ TEST(Unit, CreateCellJSON) {
   director.makeWaterCell();
   auto waterCell = builder -> getProduct();
 
-  ASSERT_EQ(waterCell["waterLevel"], 10);
+  ASSERT_EQ(waterCell["waterLevel"], 100);
 
   delete builder;
 }
