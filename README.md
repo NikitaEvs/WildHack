@@ -5,6 +5,10 @@
 
 _Игра про животных и не только_
 
+![Start view](.github/pictures/punk.png)
+
+![Cells map](.github/pictures/cells.png)
+
 Игровая механика описана [здесь](docs/gameplay.md)
 
 Запуск [примера](test/test.cpp) с генерацией клеток, популяций и карты
