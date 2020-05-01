@@ -6,23 +6,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-        - name: SetupWorkspace
-          run: |
-            cd ci
-            ./gui.sh
-            ./guiTest.sh
+      - name: SetupWorkspace
+        run: |
+          cd ci
+          ./gui.sh
+          ./guiTest.sh
 
-        - name: Build
-          run: |
-            mkdir build
-            cd build
-            cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON
-            make
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON
+          make
 
-        - name: Test
-          run: |
-            cd build/bin
-            ./gui_test
+      - name: Test
+        run: |
+          cd build/bin
+          ./gui_test
