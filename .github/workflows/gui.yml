@@ -26,4 +26,4 @@ jobs:
       - name: Test
         run: |
           cd build/bin
-          ./gui_test
+          xvfb-run ./gui_test
