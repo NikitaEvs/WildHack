@@ -6,7 +6,7 @@
 
 #include "json/json.hpp"
 
-#define configFilePath "../resources/config/values.json"
+#define configFilePath "../../resources/config/values.json"
 
 class Config;
 
@@ -34,6 +34,10 @@ class Config {
   void operator = (const Config &) = delete;
   static Config& getInstance();
   void readFile();
+
+  /* Map variables */
+  std::pair<int32_t, int32_t> getHeight();
+  std::pair<int32_t, int32_t> getWidth();
 
   /* Cell variables */
 

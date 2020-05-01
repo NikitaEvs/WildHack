@@ -29,6 +29,9 @@ class Map {
 
   void addCell(std::shared_ptr<CellType> &&cell, size_t row, size_t column);
   void generate();
+
+  size_t getHeight();
+  size_t getWidth();
 };
 
 #endif //PEACH_SRC_MAP_MAP_H_
