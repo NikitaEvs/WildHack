@@ -1,5 +1,4 @@
-#ifndef SRC_UTIL_CONFIG_H_
-#define SRC_UTIL_CONFIG_H_
+#pragma once
 
 #include <fstream>
 #include <memory>
@@ -130,5 +129,3 @@ class Config {
   std::pair<int32_t, int32_t> getHerbivoreVeryBigWellBeing();
   std::pair<int32_t, int32_t> getHerbivoreVeryBigBiologyDev();
 };
-
-#endif //SRC_UTIL_CONFIG_H_

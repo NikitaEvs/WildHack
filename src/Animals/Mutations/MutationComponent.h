@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ANIMALS_MUTATIONS_MUTATIONCOMPONENT_H_
-#define PEACH_SRC_ANIMALS_MUTATIONS_MUTATIONCOMPONENT_H_
+#pragma once
 
 #include <cstdint>
 #include <iosfwd>
@@ -19,5 +18,3 @@ class MutationComponent {
   virtual void getMutation() = 0;
   virtual void print(std::ostream &os) = 0;
 };
-
-#endif //PEACH_SRC_ANIMALS_MUTATIONS_MUTATIONCOMPONENT_H_

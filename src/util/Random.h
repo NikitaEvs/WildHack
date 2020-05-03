@@ -1,5 +1,4 @@
-#ifndef SRC_UTIL_RANDOM_H_
-#define SRC_UTIL_RANDOM_H_
+#pragma once
 
 #include <random>
 #include <memory>
@@ -34,5 +33,3 @@ class Random {
   int32_t randNormalInt(int32_t mean, int32_t deviation);
   int32_t randNormalInt(std::pair<int32_t, int32_t> params);
 };
-
-#endif //SRC_UTIL_RANDOM_H_

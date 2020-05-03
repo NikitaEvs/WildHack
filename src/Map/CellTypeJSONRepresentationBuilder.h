@@ -1,5 +1,4 @@
-#ifndef SRC_CELLJSONREPRESENTATIONBUILDER_H_
-#define SRC_CELLJSONREPRESENTATIONBUILDER_H_
+#pragma once
 
 #include "json/json.hpp"
 
@@ -18,6 +17,3 @@ class CellTypeJSONRepresentationBuilder : public AbstractCellTypeBuilder {
   void setWaterLevel(int32_t waterLevel) override;
   nlohmann::json getProduct();
 };
-
-
-#endif //SRC_CELLJSONREPRESENTATIONBUILDER_H_

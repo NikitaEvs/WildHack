@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_MAP_MAP_H_
-#define PEACH_SRC_MAP_MAP_H_
+#pragma once
 
 #include <memory>
 #include <vector>
@@ -33,5 +32,3 @@ class Map {
   size_t getHeight();
   size_t getWidth();
 };
-
-#endif //PEACH_SRC_MAP_MAP_H_

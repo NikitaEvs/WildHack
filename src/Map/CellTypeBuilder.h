@@ -1,5 +1,4 @@
-#ifndef SRC_CELLBUILDER_H_
-#define SRC_CELLBUILDER_H_
+#pragma once
 
 #include <memory>
 #include "CellType.h"
@@ -19,5 +18,3 @@ class CellTypeBuilder : public AbstractCellTypeBuilder {
   void setWaterLevel(int32_t waterLevel) override;
   std::shared_ptr<CellType> getProduct();
 };
-
-#endif //SRC_CELLBUILDER_H_

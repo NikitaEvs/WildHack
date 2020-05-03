@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ENGINE_GAMEENGINE_H_
-#define PEACH_SRC_ENGINE_GAMEENGINE_H_
+#pragma once
 
 #include <memory>
 #include <vector>
@@ -20,5 +19,3 @@ class GameEngine {
   void generateMap();
   void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
 };
-
-#endif //PEACH_SRC_ENGINE_GAMEENGINE_H_

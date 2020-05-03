@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
-#define PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_
+#pragma once
 
 #include <memory>
 #include "Population.h"
@@ -19,5 +18,3 @@ class PopulationBuilder {
   virtual void setCover(Population::param c) = 0;
   virtual std::shared_ptr<Population> getProduct() = 0;
 };
-
-#endif //PEACH_SRC_ANIMALS_POPULATIONBUILDER_H_

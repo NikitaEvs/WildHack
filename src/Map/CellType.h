@@ -1,5 +1,4 @@
-#ifndef SRC_CELLTYPE_H_
-#define SRC_CELLTYPE_H_
+#pragma once
 
 #include <cstdint>
 #include <string>
@@ -29,5 +28,3 @@ class CellType {
 
     friend std::ostream& operator << (std::ostream &os, const CellType &cell);
 };
-
-#endif

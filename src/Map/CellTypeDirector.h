@@ -1,5 +1,4 @@
-#ifndef SRC_MAP_CELLDIRECTOR_H_
-#define SRC_MAP_CELLDIRECTOR_H_
+#pragma once
 
 #include <memory>
 
@@ -21,5 +20,3 @@ class CellTypeDirector {
   void makeSteppeCell();
   void makeTundraCell();
 };
-
-#endif //SRC_MAP_CELLDIRECTOR_H_

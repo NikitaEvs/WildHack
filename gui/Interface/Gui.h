@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_GUI_GUI_H_
-#define PEACH_SRC_GUI_GUI_H_
+#pragma once
 
 #include <qt5/QtCore/QObject>
 #include <qt5/QtCore/QArgument>
@@ -30,5 +29,3 @@ class Gui : public QObject {
 
   void fillMap();
 };
-
-#endif //PEACH_SRC_GUI_GUI_H_

@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ANIMALS_POPULATION_H_
-#define PEACH_SRC_ANIMALS_POPULATION_H_
+#pragma once
 
 #include <string>
 #include <cstdint>
@@ -47,5 +46,3 @@ class Population {
 
   friend std::ostream &operator<<(std::ostream &os, Population &p);
 };
-
-#endif //PEACH_SRC_ANIMALS_POPULATION_H_
