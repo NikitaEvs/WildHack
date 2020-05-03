@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "Config.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 #include "PopulationBuilder.h"
 #include "HerbivorePopulationBuilder.cpp"
 #include "CarnivorePopulationBuilder.cpp"

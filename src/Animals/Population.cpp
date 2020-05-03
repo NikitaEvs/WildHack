@@ -1,5 +1,5 @@
 #include "Population.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 
 void Population::switchParam(param &p, int32_t value) {
   switch (value) {
@@ -43,13 +43,13 @@ void Population::dieOut(int32_t amount) {
 
 void Population::addMutation() {
   LeafMutation lm;
-  lm.health = Random::getInstance().randNormalInt(0, 5);
-  lm.productivity = Random::getInstance().randNormalInt(0, 5);
-  lm.wellBeing = Random::getInstance().randNormalInt(0, 5);
-  lm.size = Random::getInstance().randNormalInt(0, 1);
-  lm.safety = Random::getInstance().randNormalInt(0, 1);
-  lm.velocity = Random::getInstance().randNormalInt(0, 1);
-  lm.cover = Random::getInstance().randNormalInt(0, 1);
+  lm.health = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.productivity = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.wellBeing = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
   mutationTree.add(std::make_shared<LeafMutation>(lm));
 }
 

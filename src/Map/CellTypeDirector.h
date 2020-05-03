@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "Config.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 #include "AbstractCellTypeBuilder.h"
 #include "CellType.h"
 

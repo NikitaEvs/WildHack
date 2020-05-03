@@ -87,16 +87,16 @@ void Map::generate() {
   for (int i = 0; i < columns; ++i) {
     for (int j = 0; j < rows; ++j) {
       if (map[i][j] == nullptr) {
-        int32_t blockWidth = Random::getInstance().randInt(1, std::min(columns / 3, columns - i));
-        int32_t blockHeight = Random::getInstance().randInt(1, std::min(rows / 3, rows - j));
+        int32_t blockWidth = RandomGenerator::getInstance().randInt(1, std::min(columns / 3, columns - i));
+        int32_t blockHeight = RandomGenerator::getInstance().randInt(1, std::min(rows / 3, rows - j));
         switch (prevType) {
           case CellType::WATER:prevType = CellType::STEPPE;
             break;
           case CellType::STEPPE:
-            prevType = Random::getInstance().randInt(0, 1) == 1 ? CellType::WATER : CellType::FOREST;
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::WATER : CellType::FOREST;
             break;
           case CellType::FOREST:
-            prevType = Random::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE : CellType::TUNDRA;
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE : CellType::TUNDRA;
             break;
           case CellType::TUNDRA:prevType = CellType::FOREST;
             break;

@@ -6,7 +6,7 @@
 #include "CellType.h"
 #include "CellTypeDirector.h"
 #include "CellTypeBuilder.h"
-#include "util/Random.h"
+#include "util/RandomGenerator.h"
 #include "json/json.hpp"
 
 class Map {

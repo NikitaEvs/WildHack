@@ -1,8 +1,8 @@
 #include "GameEngine.h"
 
 void GameEngine::generateMap() {
-  int32_t height = Random::getInstance().randNormalInt(Config::getInstance().getHeight());
-  int32_t width = Random::getInstance().randNormalInt(Config::getInstance().getWidth());
+  int32_t height = RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHeight());
+  int32_t width = RandomGenerator::getInstance().randNormalInt(Config::getInstance().getWidth());
 
   map = std::make_shared<Map>(height, width);
   map -> generate();

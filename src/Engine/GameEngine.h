@@ -6,7 +6,7 @@
 #include "Map/Map.h"
 #include "Animals/Population.h"
 #include "util/Config.h"
-#include "util/Random.h"
+#include "util/RandomGenerator.h"
 
 class GameEngine {
  private:
