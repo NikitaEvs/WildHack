@@ -17,7 +17,8 @@ jobs:
 
       - name: GenerateDocs
         run : |
-          sudo apt-get install doxygen
+          sudo apt install doxygen
+          sudo apt install graphviz
           cd docs
           doxygen Doxyfile
 
