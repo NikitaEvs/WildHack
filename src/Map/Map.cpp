@@ -31,10 +31,10 @@ void Map::loadFrom(std::istream &file) {
   for (auto cellJSON : mapJSON["data"]) {
     std::shared_ptr<CellType> cell = std::make_shared<CellType>();
 
-    cell->type = cellJSON["cellType"];
-    cell->climate = cellJSON["climateType"];
-    cell->plantsCount = cellJSON["plantsCount"];
-    cell->waterLevel = cellJSON["waterLevel"];
+    cell -> setType(cellJSON["cellType"]);
+    cell -> setClimate(cellJSON["climateType"]);
+    cell -> setPlantsCount(cellJSON["plantsCount"]);
+    cell -> setWaterLevel(cellJSON["waterLevel"]);
 
     map[row][column] = std::move(cell);
 
@@ -58,10 +58,10 @@ void Map::saveTo(std::ostream &out) {
     for (const auto &cell : row) {
       nlohmann::json cellJSON;
 
-      cellJSON["cellType"] = static_cast<int32_t>(cell->type);
-      cellJSON["climateType"] = static_cast<int32_t>(cell->climate);
-      cellJSON["plantsCount"] = cell->plantsCount;
-      cellJSON["waterLevel"] = cell->waterLevel;
+      cellJSON["cellType"] = static_cast<int32_t>(cell -> getType());
+      cellJSON["climateType"] = static_cast<int32_t>(cell -> getClimate());
+      cellJSON["plantsCount"] = cell -> getPlantsCount();
+      cellJSON["waterLevel"] = cell -> getWaterLevel();
 
       mapJSON["data"].push_back(cellJSON);
     }

@@ -45,7 +45,7 @@ int main() {
   map.generate();
   for (int kI = 0; kI < 10; ++kI) {
     for (int kJ = 0; kJ < 10; ++kJ) {
-      std::cout << map[kI][kJ]->type << " ";
+      std::cout << map[kI][kJ] -> getType() << " ";
     }
     std::cout << std::endl;
   }

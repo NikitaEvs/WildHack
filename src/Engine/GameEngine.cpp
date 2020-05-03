@@ -17,7 +17,7 @@ void GameEngine::fillMapPattern(std::vector<std::vector<int32_t> > &cells) {
 
   for (size_t row = 0; row < map -> getHeight(); ++row) {
     for (size_t column = 0; column < map -> getWidth(); ++column) {
-      cells[row][column] = static_cast<int32_t>((*map)[row][column] -> type);
+      cells[row][column] = static_cast<int32_t>((*map)[row][column] -> getType());
     }
   }
 }

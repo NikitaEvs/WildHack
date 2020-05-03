@@ -17,7 +17,7 @@ TEST(Unit, CreateCell) {
   director.makeWaterCell();
   std::shared_ptr<CellType> waterCell = builder -> getProduct();
 
-  ASSERT_EQ(waterCell -> waterLevel, 100);
+  ASSERT_EQ(waterCell -> getWaterLevel(), 100);
 }
 
 TEST(Unit, CreateCellJSON) {
