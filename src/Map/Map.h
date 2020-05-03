@@ -10,9 +10,6 @@
 #include "json/json.hpp"
 
 class Map {
- private:
-  std::vector<std::vector<std::shared_ptr<CellType> > > map;
-
  public:
   typedef std::vector<std::vector<std::shared_ptr<CellType> > >::iterator iterator;
 
@@ -31,4 +28,8 @@ class Map {
 
   size_t getHeight();
   size_t getWidth();
+
+ private:
+  std::vector<std::vector<std::shared_ptr<CellType> > > map;
+
 };

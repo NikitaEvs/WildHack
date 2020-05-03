@@ -9,14 +9,14 @@
 #include "util/RandomGenerator.h"
 
 class GameEngine {
- private:
-  std::shared_ptr<Map> map;
-  std::vector<std::shared_ptr<Population> > populations;
-
  public:
   GameEngine() = default;
 
   void generateMap();
 
   void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
+
+ private:
+  std::shared_ptr<Map> map;
+  std::vector<std::shared_ptr<Population> > populations;
 };

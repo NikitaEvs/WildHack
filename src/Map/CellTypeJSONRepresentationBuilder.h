@@ -6,9 +6,6 @@
 #include "AbstractCellTypeBuilder.h"
 
 class CellTypeJSONRepresentationBuilder : public AbstractCellTypeBuilder {
- private:
-  nlohmann::json cellJson;
-
  public:
   void reset();
 
@@ -18,4 +15,7 @@ class CellTypeJSONRepresentationBuilder : public AbstractCellTypeBuilder {
   void setWaterLevel(int32_t waterLevel) override;
 
   nlohmann::json getProduct();
+
+ private:
+  nlohmann::json cellJson;
 };

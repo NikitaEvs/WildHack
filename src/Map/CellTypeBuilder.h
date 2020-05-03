@@ -5,9 +5,6 @@
 #include "AbstractCellTypeBuilder.h"
 
 class CellTypeBuilder : public AbstractCellTypeBuilder {
- private:
-  std::shared_ptr<CellType> cellPtr;
-
  public:
   CellTypeBuilder();
   ~CellTypeBuilder() override = default;
@@ -20,4 +17,7 @@ class CellTypeBuilder : public AbstractCellTypeBuilder {
   void setWaterLevel(int32_t waterLevel) override;
 
   std::shared_ptr<CellType> getProduct();
+
+ private:
+  std::shared_ptr<CellType> cellPtr;
 };

@@ -9,9 +9,6 @@
 #include "CellType.h"
 
 class CellTypeDirector {
- private:
-  std::shared_ptr<AbstractCellTypeBuilder> builderPtr;
-
  public:
   CellTypeDirector() = default;
   CellTypeDirector(std::shared_ptr<AbstractCellTypeBuilder> builderPtr) : builderPtr(std::move(builderPtr)){};
@@ -22,4 +19,7 @@ class CellTypeDirector {
   void makeForestCell();
   void makeSteppeCell();
   void makeTundraCell();
+
+ private:
+  std::shared_ptr<AbstractCellTypeBuilder> builderPtr;
 };

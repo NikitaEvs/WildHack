@@ -10,24 +10,15 @@
 class Config;
 
 class ConfigDestroyer {
- private:
-  Config *instance;
  public:
   ~ConfigDestroyer();
   void initialize(Config *initInstance);
+
+ private:
+  Config *instance;
 };
 
 class Config {
- private:
-  nlohmann::json configJSON;
-
- protected:
-  Config() = default;
-  ~Config() {}
-  static Config* configPtr;
-  static ConfigDestroyer destroyer;
-  friend class ConfigDestroyer;
-
  public:
   Config(Config &config) = delete;
   void operator = (const Config &) = delete;
@@ -128,4 +119,14 @@ class Config {
   std::pair<int32_t, int32_t> getHerbivoreVeryBigProductivity();
   std::pair<int32_t, int32_t> getHerbivoreVeryBigWellBeing();
   std::pair<int32_t, int32_t> getHerbivoreVeryBigBiologyDev();
+
+ private:
+  nlohmann::json configJSON;
+
+ protected:
+  Config() = default;
+  ~Config() {}
+  static Config* configPtr;
+  static ConfigDestroyer destroyer;
+  friend class ConfigDestroyer;
 };
