@@ -31,5 +31,4 @@ class Map {
 
  private:
   std::vector<std::vector<std::shared_ptr<CellType> > > map;
-
 };
