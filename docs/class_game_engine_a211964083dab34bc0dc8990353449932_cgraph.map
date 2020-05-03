@@ -1,0 +1,5 @@
+<map id="GameEngine::generateMap" name="GameEngine::generateMap">
+<area shape="rect" id="node2" href="$class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="241,5,387,32"/>
+<area shape="rect" id="node3" href="$class_random.html#a7bb9ce72103ebc2a9d6c58485f853cf1" title="Random::randNormalInt" alt="" coords="233,56,395,83"/>
+<area shape="rect" id="node4" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="246,107,382,133"/>
+</map>
