@@ -17,8 +17,8 @@ jobs:
 
       - name: GenerateDocs
         run : |
-          mv docs/Doxyfile .
           sudo apt-get install doxygen
+          cd docs
           doxygen Doxyfile
 
       - name: Deploy
