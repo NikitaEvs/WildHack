@@ -17,5 +17,6 @@ class GameEngine {
   GameEngine() = default;
 
   void generateMap();
+
   void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
 };
