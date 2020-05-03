@@ -1,0 +1,29 @@
+name: unit_tests
+
+on:
+  push:
+    branches:
+      - master
+    pull_request:
+      branches:
+        - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: GenerateDocs
+        run : |
+          mv docs/Doxyfile ..
+          sudo apt-get install doxygen
+          doxygen Doxyfile
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: docs
+          FOLDER: docs
