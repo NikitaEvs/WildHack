@@ -17,7 +17,7 @@ jobs:
 
       - name: GenerateDocs
         run : |
-          mv docs/Doxyfile ..
+          mv docs/Doxyfile .
           sudo apt-get install doxygen
           doxygen Doxyfile
 
