@@ -17,6 +17,7 @@ jobs:
 
       - name: GenerateDocs
         run : |
+          echo "Start creating a documentation ^_^"
           sudo apt install doxygen
           sudo apt install graphviz
           cd docs
