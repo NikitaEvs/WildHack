@@ -4,12 +4,8 @@ CellTypeBuilder::CellTypeBuilder() {
   reset();
 }
 
-CellTypeBuilder::~CellTypeBuilder() {
-  delete cellPtr;
-}
-
 void CellTypeBuilder::reset() {
-  cellPtr = new CellType();
+  cellPtr = std::make_shared<CellType>();
 }
 
 void CellTypeBuilder::setType(CellType::cellType cellType) {
@@ -29,7 +25,7 @@ void CellTypeBuilder::setWaterLevel(int32_t waterLevel) {
 }
 
 std::shared_ptr<CellType> CellTypeBuilder::getProduct() {
-  CellType *oldPtr = cellPtr;
+  std::shared_ptr<CellType> oldPtr = std::move(cellPtr);
   reset();
-  return std::shared_ptr<CellType>(oldPtr);
+  return oldPtr;
 }

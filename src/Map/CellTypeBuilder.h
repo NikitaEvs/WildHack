@@ -6,11 +6,11 @@
 
 class CellTypeBuilder : public AbstractCellTypeBuilder {
  private:
-  CellType *cellPtr;
+  std::shared_ptr<CellType> cellPtr;
 
  public:
   CellTypeBuilder();
-  ~CellTypeBuilder();
+  ~CellTypeBuilder() override = default;
 
   void reset();
 
