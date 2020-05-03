@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <utility>
 
 #include "Config.h"
 #include "RandomGenerator.h"
@@ -9,12 +10,12 @@
 
 class CellTypeDirector {
  private:
-  AbstractCellTypeBuilder *builderPtr;
+  std::shared_ptr<AbstractCellTypeBuilder> builderPtr;
 
  public:
   CellTypeDirector() = default;
-  CellTypeDirector(AbstractCellTypeBuilder *builderPtr) : builderPtr(builderPtr){};
-  void setBuilder(AbstractCellTypeBuilder *builderPtr);
+  CellTypeDirector(std::shared_ptr<AbstractCellTypeBuilder> builderPtr) : builderPtr(std::move(builderPtr)){};
+  void setBuilder(std::shared_ptr<AbstractCellTypeBuilder> builderPtr);
   void makeWaterCell();
   void makeForestCell();
   void makeSteppeCell();

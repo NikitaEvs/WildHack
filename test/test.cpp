@@ -12,20 +12,17 @@ int main() {
 
   CellTypeDirector director;
 
-  auto builder = new CellTypeBuilder();
+  auto builder = std::make_shared<CellTypeBuilder>();
   director.setBuilder(builder);
   director.makeSteppeCell();
   std::shared_ptr<CellType> steppeCell = builder -> getProduct();
   std::cout << *steppeCell << std::endl;
 
-  auto jsonBuilder = new CellTypeJSONRepresentationBuilder();
+  auto jsonBuilder = std::make_shared<CellTypeJSONRepresentationBuilder>();
   director.setBuilder(jsonBuilder);
   director.makeWaterCell();
   auto waterCell = jsonBuilder -> getProduct();
   std::cout << waterCell << std::endl;
-
-  delete builder;
-  delete jsonBuilder;
 
 
   std::cout << "***Create population example code***" << std:: endl;

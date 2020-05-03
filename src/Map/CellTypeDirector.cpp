@@ -1,7 +1,7 @@
 #include "CellTypeDirector.h"
 
-void CellTypeDirector::setBuilder(AbstractCellTypeBuilder *builderPtr) {
-  this -> builderPtr = builderPtr;
+void CellTypeDirector::setBuilder(std::shared_ptr<AbstractCellTypeBuilder> newBuilder) {
+  builderPtr = std::move(newBuilder);
 }
 
 void CellTypeDirector::makeWaterCell() {

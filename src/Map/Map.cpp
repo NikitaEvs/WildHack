@@ -75,7 +75,7 @@ void Map::addCell(std::shared_ptr<CellType> &&cell, size_t row, size_t column) {
 }
 
 void Map::generate() {
-  auto builder = new CellTypeBuilder();
+  auto builder = std::make_shared<CellTypeBuilder>();
   CellTypeDirector director;
   director.setBuilder(builder);
 
@@ -138,7 +138,6 @@ void Map::generate() {
       }
     }
   }
-  delete builder;
 }
 
 size_t Map::getHeight() {

@@ -12,27 +12,23 @@
 TEST(Unit, CreateCell) {
   CellTypeDirector director;
 
-  auto builder = new CellTypeBuilder();
+  auto builder = std::make_shared<CellTypeBuilder>();
   director.setBuilder(builder);
   director.makeWaterCell();
   std::shared_ptr<CellType> waterCell = builder -> getProduct();
 
   ASSERT_EQ(waterCell -> waterLevel, 100);
-
-  delete builder;
 }
 
 TEST(Unit, CreateCellJSON) {
   CellTypeDirector director;
 
-  auto builder = new CellTypeJSONRepresentationBuilder();
+  auto builder = std::make_shared<CellTypeJSONRepresentationBuilder>();
   director.setBuilder(builder);
   director.makeWaterCell();
   auto waterCell = builder -> getProduct();
 
   ASSERT_EQ(waterCell["waterLevel"], 100);
-
-  delete builder;
 }
 
 TEST(Unit, Population) {
