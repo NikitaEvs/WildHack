@@ -1,4 +1,4 @@
 <map id="PopulationDirector::makeBig" name="PopulationDirector::makeBig">
-<area shape="rect" id="node2" href="$class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="183,5,329,32"/>
-<area shape="rect" id="node3" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="188,56,324,83"/>
+<area shape="rect" id="node2" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="183,5,387,32"/>
+<area shape="rect" id="node3" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="217,56,353,83"/>
 </map>

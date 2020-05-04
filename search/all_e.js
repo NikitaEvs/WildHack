@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['randint',['randInt',['../class_random.html#ada231d6f7a64ee2a3dd8cef8b9c73993',1,'Random']]],
-  ['randnormalint',['randNormalInt',['../class_random.html#a7bb9ce72103ebc2a9d6c58485f853cf1',1,'Random::randNormalInt(int32_t mean, int32_t deviation)'],['../class_random.html#a9ea2b41c69e9978e7cdb0d29da779cc7',1,'Random::randNormalInt(std::pair&lt; int32_t, int32_t &gt; params)']]],
-  ['random',['Random',['../class_random.html',1,'Random'],['../class_random.html#acb76b49c3903a3c4fb67fd216341f08d',1,'Random::Random()'],['../class_random.html#ae9de3aba37e60da643304dbb46bbb9f9',1,'Random::Random(Random &amp;random)=delete']]],
-  ['random_2ecpp',['Random.cpp',['../_random_8cpp.html',1,'']]],
-  ['random_2eh',['Random.h',['../_random_8h.html',1,'']]],
-  ['randomdestroyer',['RandomDestroyer',['../class_random_destroyer.html',1,'RandomDestroyer'],['../class_random.html#a0a42962f6a4f599f4672ca364675b204',1,'Random::RandomDestroyer()']]],
-  ['randomdevice',['randomDevice',['../class_random.html#abb7b293e894fe1a0b2180fe8d76efabb',1,'Random']]],
-  ['randomptr',['randomPtr',['../class_random.html#a7dfba1b6c2e748ac36423be036e3d7cb',1,'Random']]],
+  ['randint',['randInt',['../class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb',1,'RandomGenerator']]],
+  ['randnormalint',['randNormalInt',['../class_random_generator.html#a7e799f3dc6ceed9113d7e1ca94b71c2d',1,'RandomGenerator::randNormalInt(int32_t mean, int32_t deviation)'],['../class_random_generator.html#a05e62be7c1f69719c670b2b6b1a4392a',1,'RandomGenerator::randNormalInt(std::pair&lt; int32_t, int32_t &gt; params)']]],
+  ['randomdestroyer',['RandomDestroyer',['../class_random_destroyer.html',1,'RandomDestroyer'],['../class_random_generator.html#a0a42962f6a4f599f4672ca364675b204',1,'RandomGenerator::RandomDestroyer()']]],
+  ['randomdevice',['randomDevice',['../class_random_generator.html#a7c2b8fad6094b312f1c38a4d60c79a1d',1,'RandomGenerator']]],
+  ['randomgenerator',['RandomGenerator',['../class_random_generator.html',1,'RandomGenerator'],['../class_random_generator.html#a974b65ceb3544e78606c6127da947f9f',1,'RandomGenerator::RandomGenerator(RandomGenerator &amp;random)=delete'],['../class_random_generator.html#ad2b3256e634878160c7d8b6e865341b2',1,'RandomGenerator::RandomGenerator()']]],
+  ['randomgenerator_2ecpp',['RandomGenerator.cpp',['../_random_generator_8cpp.html',1,'']]],
+  ['randomgenerator_2eh',['RandomGenerator.h',['../_random_generator_8h.html',1,'']]],
+  ['randomptr',['randomPtr',['../class_random_generator.html#a6d1c776fbba9693094de6049b6b3efa9',1,'RandomGenerator']]],
   ['readfile',['readFile',['../class_config.html#aee79aa142bbf8c2e2a853e43ff304d00',1,'Config']]],
   ['reset',['reset',['../class_cell_type_builder.html#a3705088cb2c2e23806f2270b538233f7',1,'CellTypeBuilder::reset()'],['../class_cell_type_j_s_o_n_representation_builder.html#af46036cf67e40976232909a83a59ae96',1,'CellTypeJSONRepresentationBuilder::reset()']]]
 ];

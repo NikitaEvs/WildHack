@@ -17,6 +17,6 @@ var annotated_dup =
     [ "Population", "class_population.html", "class_population" ],
     [ "PopulationBuilder", "class_population_builder.html", "class_population_builder" ],
     [ "PopulationDirector", "class_population_director.html", "class_population_director" ],
-    [ "Random", "class_random.html", "class_random" ],
-    [ "RandomDestroyer", "class_random_destroyer.html", "class_random_destroyer" ]
+    [ "RandomDestroyer", "class_random_destroyer.html", "class_random_destroyer" ],
+    [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ]
 ];

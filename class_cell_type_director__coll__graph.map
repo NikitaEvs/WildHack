@@ -1,3 +1,2 @@
 <map id="CellTypeDirector" name="CellTypeDirector">
-<area shape="rect" id="node2" href="$class_abstract_cell_type_builder.html" title="{AbstractCellTypeBuilder\n||+ AbstractCellTypeBuilder()\l+ ~AbstractCellTypeBuilder()\l+ setType()\l+ setClimate()\l+ setPlantFood()\l+ setWaterLevel()\l}" alt="" coords="5,5,196,156"/>
 </map>

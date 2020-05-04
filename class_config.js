@@ -1,8 +1,8 @@
 var class_config =
 [
+    [ "Config", "class_config.html#a7c276294952dc68528f364784d3acc89", null ],
     [ "Config", "class_config.html#a203168cd5d6ae62b57ce4bf7a2b8eb36", null ],
     [ "~Config", "class_config.html#a543dce59b66475c5108088ee4ce1cdfc", null ],
-    [ "Config", "class_config.html#a7c276294952dc68528f364784d3acc89", null ],
     [ "getCarnivoreAverageAnimalAmount", "class_config.html#a26015b19229fb92a72388a72cbc70c5d", null ],
     [ "getCarnivoreAverageBiologyDev", "class_config.html#aa93cf237d129c54f1bb15e9478bf42fa", null ],
     [ "getCarnivoreAverageHealth", "class_config.html#a06b6bcecab2ca1bf18cdb008d4a2ccc7", null ],

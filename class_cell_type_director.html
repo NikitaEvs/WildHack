@@ -95,7 +95,6 @@ Collaboration diagram for CellTypeDirector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director__coll__graph.png" border="0" usemap="#_cell_type_director_coll__map" alt="Collaboration graph"/></div>
 <map name="_cell_type_director_coll__map" id="_cell_type_director_coll__map">
-<area shape="rect" id="node2" href="class_abstract_cell_type_builder.html" title="{AbstractCellTypeBuilder\n||+ AbstractCellTypeBuilder()\l+ ~AbstractCellTypeBuilder()\l+ setType()\l+ setClimate()\l+ setPlantFood()\l+ setWaterLevel()\l}" alt="" coords="5,5,196,156"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -103,10 +102,10 @@ Collaboration diagram for CellTypeDirector:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad59b75e7d65a3a09391d0a7968429865"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#ad59b75e7d65a3a09391d0a7968429865">CellTypeDirector</a> ()=default</td></tr>
 <tr class="separator:ad59b75e7d65a3a09391d0a7968429865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a1a55d7ba7728889bd7ea5fb9d450a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a">CellTypeDirector</a> (<a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> *<a class="el" href="class_cell_type_director.html#a0707b67504c4728c4512f7c2907d4e81">builderPtr</a>)</td></tr>
-<tr class="separator:ae0a1a55d7ba7728889bd7ea5fb9d450a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd999e7e5fd9ab60a0290ec26972d2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#aedd999e7e5fd9ab60a0290ec26972d2b">setBuilder</a> (<a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> *<a class="el" href="class_cell_type_director.html#a0707b67504c4728c4512f7c2907d4e81">builderPtr</a>)</td></tr>
-<tr class="separator:aedd999e7e5fd9ab60a0290ec26972d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc99fb0043267e60d253b554c2874a9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e">CellTypeDirector</a> (std::shared_ptr&lt; <a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> &gt; <a class="el" href="class_cell_type_director.html#aaba342931eea74d738821ce782fa9859">builderPtr</a>)</td></tr>
+<tr class="separator:acc99fb0043267e60d253b554c2874a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b38ca841e8095d2735ddf21f56d1995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#a4b38ca841e8095d2735ddf21f56d1995">setBuilder</a> (std::shared_ptr&lt; <a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> &gt; <a class="el" href="class_cell_type_director.html#aaba342931eea74d738821ce782fa9859">builderPtr</a>)</td></tr>
+<tr class="separator:a4b38ca841e8095d2735ddf21f56d1995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c11c82989aa93a20d2c85bd0c5ea2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#ab1c11c82989aa93a20d2c85bd0c5ea2b">makeWaterCell</a> ()</td></tr>
 <tr class="separator:ab1c11c82989aa93a20d2c85bd0c5ea2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2729d0f9c767ad2018382ccd342be110"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#a2729d0f9c767ad2018382ccd342be110">makeForestCell</a> ()</td></tr>
@@ -118,8 +117,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a0707b67504c4728c4512f7c2907d4e81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#a0707b67504c4728c4512f7c2907d4e81">builderPtr</a></td></tr>
-<tr class="separator:a0707b67504c4728c4512f7c2907d4e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba342931eea74d738821ce782fa9859"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type_director.html#aaba342931eea74d738821ce782fa9859">builderPtr</a></td></tr>
+<tr class="separator:aaba342931eea74d738821ce782fa9859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -150,8 +149,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0a1a55d7ba7728889bd7ea5fb9d450a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0a1a55d7ba7728889bd7ea5fb9d450a">&#9670;&nbsp;</a></span>CellTypeDirector() <span class="overload">[2/2]</span></h2>
+<a id="acc99fb0043267e60d253b554c2874a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc99fb0043267e60d253b554c2874a9e">&#9670;&nbsp;</a></span>CellTypeDirector() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +161,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">CellTypeDirector::CellTypeDirector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> &gt;&#160;</td>
           <td class="paramname"><em>builderPtr</em></td><td>)</td>
           <td></td>
         </tr>
@@ -174,19 +173,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_director_8h_source.html#l00017">17</a> of file <a class="el" href="_cell_type_director_8h_source.html">CellTypeDirector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_director_8h_source.html#l00014">14</a> of file <a class="el" href="_cell_type_director_8h_source.html">CellTypeDirector.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cell_type_director_ae0a1a55d7ba7728889bd7ea5fb9d450a_cgraph.png" border="0" usemap="#class_cell_type_director_ae0a1a55d7ba7728889bd7ea5fb9d450a_cgraph" alt=""/></div>
-<map name="class_cell_type_director_ae0a1a55d7ba7728889bd7ea5fb9d450a_cgraph" id="class_cell_type_director_ae0a1a55d7ba7728889bd7ea5fb9d450a_cgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#aedd999e7e5fd9ab60a0290ec26972d2b" title="CellTypeDirector::setBuilder" alt="" coords="252,5,439,32"/>
+<div class="center"><img src="class_cell_type_director_acc99fb0043267e60d253b554c2874a9e_cgraph.png" border="0" usemap="#class_cell_type_director_acc99fb0043267e60d253b554c2874a9e_cgraph" alt=""/></div>
+<map name="class_cell_type_director_acc99fb0043267e60d253b554c2874a9e_cgraph" id="class_cell_type_director_acc99fb0043267e60d253b554c2874a9e_cgraph">
+<area shape="rect" id="node2" href="class_cell_type_director.html#a4b38ca841e8095d2735ddf21f56d1995" title="CellTypeDirector::setBuilder" alt="" coords="252,5,439,32"/>
 <area shape="rect" id="node3" href="class_cell_type_director.html#ab1c11c82989aa93a20d2c85bd0c5ea2b" title="CellTypeDirector::makeWaterCell" alt="" coords="236,107,455,133"/>
 <area shape="rect" id="node6" href="class_cell_type_director.html#a2729d0f9c767ad2018382ccd342be110" title="CellTypeDirector::makeForestCell" alt="" coords="235,157,455,184"/>
 <area shape="rect" id="node7" href="class_cell_type_director.html#a62b507cee42e8e58c7e645751632fcec" title="CellTypeDirector::makeSteppeCell" alt="" coords="233,208,457,235"/>
 <area shape="rect" id="node8" href="class_cell_type_director.html#a7094e939502f98835a4fbe4dcaa84cc5" title="CellTypeDirector::makeTundraCell" alt="" coords="234,56,457,83"/>
-<area shape="rect" id="node4" href="class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="505,107,652,133"/>
-<area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="511,157,647,184"/>
+<area shape="rect" id="node4" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="505,107,709,133"/>
+<area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="539,157,675,184"/>
 </map>
 </div>
 
@@ -214,8 +213,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_cgraph.png" border="0" usemap="#class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_cgraph" alt=""/></div>
 <map name="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_cgraph" id="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_cgraph">
-<area shape="rect" id="node2" href="class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="273,5,420,32"/>
-<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="279,56,415,83"/>
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="273,5,477,32"/>
+<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="307,56,443,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -223,8 +222,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_icgraph.png" border="0" usemap="#class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_icgraph" alt=""/></div>
 <map name="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_icgraph" id="class_cell_type_director_a2729d0f9c767ad2018382ccd342be110_icgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a" title="CellTypeDirector::CellType\lDirector" alt="" coords="273,5,453,47"/>
-<area shape="rect" id="node3" href="class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="311,71,416,98"/>
+<area shape="rect" id="node2" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="273,5,453,47"/>
 </map>
 </div>
 
@@ -251,8 +249,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_cgraph.png" border="0" usemap="#class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_cgraph" alt=""/></div>
 <map name="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_cgraph" id="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_cgraph">
-<area shape="rect" id="node2" href="class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="277,5,424,32"/>
-<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="283,56,419,83"/>
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="277,5,481,32"/>
+<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="311,56,447,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -260,8 +258,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_icgraph.png" border="0" usemap="#class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_icgraph" alt=""/></div>
 <map name="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_icgraph" id="class_cell_type_director_a62b507cee42e8e58c7e645751632fcec_icgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a" title="CellTypeDirector::CellType\lDirector" alt="" coords="277,5,457,47"/>
-<area shape="rect" id="node3" href="class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="315,71,420,98"/>
+<area shape="rect" id="node2" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="277,5,457,47"/>
 </map>
 </div>
 
@@ -288,8 +285,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_cgraph.png" border="0" usemap="#class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_cgraph" alt=""/></div>
 <map name="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_cgraph" id="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_cgraph">
-<area shape="rect" id="node2" href="class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="276,5,423,32"/>
-<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="281,56,417,83"/>
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="276,5,480,32"/>
+<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="310,56,446,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -297,8 +294,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_icgraph.png" border="0" usemap="#class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_icgraph" alt=""/></div>
 <map name="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_icgraph" id="class_cell_type_director_a7094e939502f98835a4fbe4dcaa84cc5_icgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a" title="CellTypeDirector::CellType\lDirector" alt="" coords="276,5,456,47"/>
-<area shape="rect" id="node3" href="class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="313,71,419,98"/>
+<area shape="rect" id="node2" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="276,5,456,47"/>
 </map>
 </div>
 
@@ -325,8 +321,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_cgraph.png" border="0" usemap="#class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_cgraph" alt=""/></div>
 <map name="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_cgraph" id="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_cgraph">
-<area shape="rect" id="node2" href="class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="272,5,419,32"/>
-<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="277,56,413,83"/>
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="272,5,476,32"/>
+<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="306,56,442,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -334,15 +330,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_icgraph.png" border="0" usemap="#class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_icgraph" alt=""/></div>
 <map name="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_icgraph" id="class_cell_type_director_ab1c11c82989aa93a20d2c85bd0c5ea2b_icgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a" title="CellTypeDirector::CellType\lDirector" alt="" coords="272,5,452,47"/>
-<area shape="rect" id="node3" href="class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="309,71,415,98"/>
+<area shape="rect" id="node2" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="272,5,452,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aedd999e7e5fd9ab60a0290ec26972d2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedd999e7e5fd9ab60a0290ec26972d2b">&#9670;&nbsp;</a></span>setBuilder()</h2>
+<a id="a4b38ca841e8095d2735ddf21f56d1995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b38ca841e8095d2735ddf21f56d1995">&#9670;&nbsp;</a></span>setBuilder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +345,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void CellTypeDirector::setBuilder </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a> &gt;&#160;</td>
           <td class="paramname"><em>builderPtr</em></td><td>)</td>
           <td></td>
         </tr>
@@ -361,9 +356,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cell_type_director_aedd999e7e5fd9ab60a0290ec26972d2b_icgraph.png" border="0" usemap="#class_cell_type_director_aedd999e7e5fd9ab60a0290ec26972d2b_icgraph" alt=""/></div>
-<map name="class_cell_type_director_aedd999e7e5fd9ab60a0290ec26972d2b_icgraph" id="class_cell_type_director_aedd999e7e5fd9ab60a0290ec26972d2b_icgraph">
-<area shape="rect" id="node2" href="class_cell_type_director.html#ae0a1a55d7ba7728889bd7ea5fb9d450a" title="CellTypeDirector::CellType\lDirector" alt="" coords="240,5,420,47"/>
+<div class="center"><img src="class_cell_type_director_a4b38ca841e8095d2735ddf21f56d1995_icgraph.png" border="0" usemap="#class_cell_type_director_a4b38ca841e8095d2735ddf21f56d1995_icgraph" alt=""/></div>
+<map name="class_cell_type_director_a4b38ca841e8095d2735ddf21f56d1995_icgraph" id="class_cell_type_director_a4b38ca841e8095d2735ddf21f56d1995_icgraph">
+<area shape="rect" id="node2" href="class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="240,5,420,47"/>
 <area shape="rect" id="node3" href="class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="277,71,383,98"/>
 </map>
 </div>
@@ -371,8 +366,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0707b67504c4728c4512f7c2907d4e81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0707b67504c4728c4512f7c2907d4e81">&#9670;&nbsp;</a></span>builderPtr</h2>
+<a id="aaba342931eea74d738821ce782fa9859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba342931eea74d738821ce782fa9859">&#9670;&nbsp;</a></span>builderPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,7 +376,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a>* CellTypeDirector::builderPtr</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_abstract_cell_type_builder.html">AbstractCellTypeBuilder</a>&gt; CellTypeDirector::builderPtr</td>
         </tr>
       </table>
   </td>
@@ -391,7 +386,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_director_8h_source.html#l00013">13</a> of file <a class="el" href="_cell_type_director_8h_source.html">CellTypeDirector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_director_8h_source.html#l00024">24</a> of file <a class="el" href="_cell_type_director_8h_source.html">CellTypeDirector.h</a>.</p>
 
 </div>
 </div>

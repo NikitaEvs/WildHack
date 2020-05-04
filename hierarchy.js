@@ -20,6 +20,6 @@ var hierarchy =
       [ "HerbivorePopulationBuilder", "class_herbivore_population_builder.html", null ]
     ] ],
     [ "PopulationDirector", "class_population_director.html", null ],
-    [ "Random", "class_random.html", null ],
-    [ "RandomDestroyer", "class_random_destroyer.html", null ]
+    [ "RandomDestroyer", "class_random_destroyer.html", null ],
+    [ "RandomGenerator", "class_random_generator.html", null ]
 ];

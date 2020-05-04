@@ -57,9 +57,9 @@ var files =
     [ "PopulationDirector.h", "_population_director_8h.html", [
       [ "PopulationDirector", "class_population_director.html", "class_population_director" ]
     ] ],
-    [ "Random.cpp", "_random_8cpp.html", null ],
-    [ "Random.h", "_random_8h.html", [
+    [ "RandomGenerator.cpp", "_random_generator_8cpp.html", null ],
+    [ "RandomGenerator.h", "_random_generator_8h.html", [
       [ "RandomDestroyer", "class_random_destroyer.html", "class_random_destroyer" ],
-      [ "Random", "class_random.html", "class_random" ]
+      [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ]
     ] ]
 ];

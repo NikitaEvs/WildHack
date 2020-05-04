@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generatorptr',['generatorPtr',['../class_random.html#a2078fc1a25d96da58b558cff2ebfb48a',1,'Random']]]
+  ['generatorptr',['generatorPtr',['../class_random_generator.html#a6e041af6baf5677971ecba8c379106e0',1,'RandomGenerator']]]
 ];
