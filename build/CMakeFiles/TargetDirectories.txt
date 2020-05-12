@@ -1,0 +1,10 @@
+/home/cat/peach/build/CMakeFiles/rebuild_cache.dir
+/home/cat/peach/build/CMakeFiles/example.dir
+/home/cat/peach/build/CMakeFiles/edit_cache.dir
+/home/cat/peach/build/src/CMakeFiles/rebuild_cache.dir
+/home/cat/peach/build/src/CMakeFiles/src.dir
+/home/cat/peach/build/src/CMakeFiles/edit_cache.dir
+/home/cat/peach/build/gui/CMakeFiles/rebuild_cache.dir
+/home/cat/peach/build/gui/CMakeFiles/gui.dir
+/home/cat/peach/build/gui/CMakeFiles/edit_cache.dir
+/home/cat/peach/build/gui/CMakeFiles/gui_autogen.dir

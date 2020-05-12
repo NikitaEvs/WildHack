@@ -15,7 +15,6 @@ void CompoundMutation::getMutation() {
     (*ch)->getMutation();
     health += (*ch)->health;
     productivity += (*ch)->productivity;
-    wellBeing += (*ch)->wellBeing;
     size += (*ch)->size;
     safety += (*ch)->safety;
     velocity += (*ch)->velocity;
@@ -26,7 +25,6 @@ void CompoundMutation::getMutation() {
 void CompoundMutation::print(std::ostream &os) {
   os << "HEALTH SHARE " << health << " / 100" << std::endl;
   os << "PRODUCTIVITY SHARE " << productivity << " / 100" << std::endl;
-  os << "WELLBEING SHARE " << wellBeing << " / 100" << std::endl;
   os << "SIZE SWITCH " << size << std::endl;
   os << "SAFETY SWITCH " << safety << std::endl;
   os << "VELOCITY SWITCH " << velocity << std::endl;

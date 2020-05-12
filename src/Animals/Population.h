@@ -20,13 +20,19 @@ class Population {
     HERBIVORE,
     CARNIVORE
   };
+  enum MutationType{
+    SIZE,
+    SAFETY,
+    VELOCITY,
+    COVER
+  };
 
-  Population() = default;
+  Population();
   Population(Population const &p) = default;
 
   void move(int32_t x, int32_t y);
   void dieOut(int32_t amount);
-  void addMutation();
+  void addMutation(MutationType type);
   void applyMutation();
 
   friend std::ostream &operator<<(std::ostream &os, Population &p);
@@ -45,8 +51,6 @@ class Population {
   void SetHealth(int32_t health);
   int32_t GetProductivity() const;
   void SetProductivity(int32_t productivity);
-  int32_t GetWellBeing() const;
-  void SetWellBeing(int32_t well_being);
   int32_t GetBiologyDev() const;
   void SetBiologyDev(int32_t biology_dev);
   ParamType GetSize() const;
@@ -68,7 +72,6 @@ class Population {
   int32_t animalAmount; //[0, 10000]
   int32_t health; //[0, 100] %
   int32_t productivity; //[0, 10] - average amount of children from one parent
-  int32_t wellBeing; //[0, 100] %
   int32_t biologyDev; //[0, 100] %
   ParamType size;
   ParamType safety;

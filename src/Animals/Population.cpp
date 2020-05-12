@@ -1,6 +1,13 @@
 #include "Population.h"
 #include "RandomGenerator.h"
 
+Population::Population() {
+  //add tree for every mutation type
+  for (int i = 0; i < 4; ++i) {
+    mutationTree.add(std::make_shared<CompoundMutation>());
+  }
+}
+
 void Population::switchParam(ParamType &p, int32_t value) {
   switch (value) {
     case -1:
@@ -25,15 +32,24 @@ void Population::dieOut(int32_t amount) {
   animalAmount -= amount * animalAmount / 100;
 }
 
-void Population::addMutation() {
+void Population::addMutation(Population::MutationType type) {
   LeafMutation lm;
+  switch(type){
+    case SIZE:
+      lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
+      break;
+    case SAFETY:
+      lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
+      break;
+    case COVER:
+      lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
+      break;
+    case VELOCITY:
+      lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
+      break;
+  }
   lm.health = RandomGenerator::getInstance().randNormalInt(0, 5);
   lm.productivity = RandomGenerator::getInstance().randNormalInt(0, 5);
-  lm.wellBeing = RandomGenerator::getInstance().randNormalInt(0, 5);
-  lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
-  lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
-  lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
-  lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
   mutationTree.add(std::make_shared<LeafMutation>(lm));
 }
 
@@ -41,10 +57,8 @@ void Population::applyMutation() {
   mutationTree.getMutation();
   health *= (100 + mutationTree.health);
   productivity *= (100 + mutationTree.productivity);
-  wellBeing *= (100 + mutationTree.wellBeing);
   health /= 100;
   productivity /= 100;
-  wellBeing /= 100;
   switchParam(size, mutationTree.size);
   switchParam(safety, mutationTree.safety);
   switchParam(velocity, mutationTree.velocity);
@@ -59,7 +73,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
     case Population::CARNIVORE:pType = "CARNIVORE";
       break;
   }
-  
+
   switch (p.size) {
     case Population::VERY_SMALL:pSize = "VERY_SMALL";
       break;
@@ -115,7 +129,6 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
      << "animalAmount " << p.animalAmount << "\n"
      << "health       " << p.health << "\n"
      << "productivity " << p.productivity << "\n"
-     << "wellBeing    " << p.wellBeing << "\n"
      << "biologyDev   " << p.biologyDev << "\n"
      << "safety       " << pSafe << "\n"
      << "velocity     " << pVel << "\n"
@@ -169,12 +182,6 @@ int32_t Population::GetProductivity() const {
 }
 void Population::SetProductivity(int32_t productivity) {
   Population::productivity = productivity;
-}
-int32_t Population::GetWellBeing() const {
-  return wellBeing;
-}
-void Population::SetWellBeing(int32_t well_being) {
-  wellBeing = well_being;
 }
 int32_t Population::GetBiologyDev() const {
   return biologyDev;
