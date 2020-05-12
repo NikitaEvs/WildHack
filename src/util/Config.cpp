@@ -422,3 +422,33 @@ std::pair<int32_t, int32_t> Config::getCarnivoreBigBiologyDev() {
 
   return std::make_pair(mean, deviation);
 }
+
+int32_t Config::getMaxAmount(Population::TypeName type, Population::ParamType size) {
+  std::string typeStr, sizeStr;
+  switch (type) {
+    case Population::CARNIVORE:
+      typeStr = "carnivore";
+      break;
+    case Population::HERBIVORE:
+      typeStr = "herbivore";
+      break;
+  }
+  switch (size) {
+    case Population::VERY_SMALL:
+      sizeStr = "verySmall";
+      break;
+    case Population::SMALL:
+      sizeStr = "small";
+      break;
+    case Population::VERY_BIG:
+      sizeStr = "veryBig";
+      break;
+    case Population::BIG:
+      sizeStr = "big";
+      break;
+    case Population::AVERAGE:
+      sizeStr = "average";
+      break;
+  }
+  return configJSON["population"][typeStr][sizeStr]["maxAmount"];
+}

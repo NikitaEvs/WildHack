@@ -4,6 +4,7 @@
 #include <memory>
 
 #include "json/json.hpp"
+#include "Population.h"
 
 #define configFilePath "../../resources/config/values.json"
 
@@ -48,6 +49,7 @@ class Config {
   std::pair<int32_t, int32_t> getTundraPlantsCount();
 
   /* Animals */
+  int32_t  getMaxAmount(Population::TypeName type, Population::ParamType size);
   /* Carnivore */
   /* very small */
   std::pair<int32_t, int32_t> getCarnivoreVerySmallAnimalAmount();
