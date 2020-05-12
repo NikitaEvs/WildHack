@@ -1,13 +1,6 @@
 #include "Population.h"
 #include "RandomGenerator.h"
 
-Population::Population() {
-  //add tree for every mutation type
-  for (int i = 0; i < 4; ++i) {
-    mutationTree.add(std::make_shared<CompoundMutation>());
-  }
-}
-
 void Population::switchParam(ParamType &p, int32_t value) {
   switch (value) {
     case -1:

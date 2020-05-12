@@ -27,7 +27,7 @@ class Population {
     COVER
   };
 
-  Population();
+  Population() = default;
   Population(Population const &p) = default;
 
   void move(int32_t x, int32_t y);
