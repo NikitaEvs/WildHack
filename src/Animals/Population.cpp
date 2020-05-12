@@ -56,8 +56,8 @@ void Population::applyLifeCircle(int32_t _xPos,
   animalAmount = animalAmount * (100 + productivity) / 100;
 
   //some game points
-  int32_t k = (productivity * (static_cast<int>(size) + static_cast<int>(cover))
-      + health * (static_cast<int>(velocity) + static_cast<int>(safety))) / 2000;
+  int32_t k = (productivity * (static_cast<int32_t>(size) + static_cast<int32_t>(cover))
+      + health * (static_cast<int32_t>(velocity) + static_cast<int32_t>(safety))) / 2000;
   biologyDev = biologyDev * (100 + k) / 100;
 }
 
