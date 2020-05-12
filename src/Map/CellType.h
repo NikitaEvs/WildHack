@@ -1,5 +1,4 @@
-#ifndef SRC_CELLTYPE_H_
-#define SRC_CELLTYPE_H_
+#pragma once
 
 #include <cstdint>
 #include <string>
@@ -20,14 +19,31 @@ class CellType {
       COLD
     };
 
-    int32_t waterLevel = 0;
-    int32_t plantsCount = 0;
-    int32_t carnivoreCount = 0;
-    int32_t herbivoreCount = 0;
-    cellType type;
-    climateType climate;
+    int32_t getWaterLevel() const;
+    void setWaterLevel(int32_t newWaterLevel);
 
-    friend std::ostream& operator << (std::ostream &os, const CellType &cell);
+    int32_t getPlantsCount() const;
+    void setPlantsCount(int32_t newPlantsCount);
+
+    int32_t getCarnivoreCount() const;
+    void setCarnivoreCount(int32_t newCarnivoreCount);
+
+    int32_t getHerbivoreCount() const;
+    void setHerbivoreCount(int32_t newHerbivoreCount);
+
+    cellType getType() const;
+    void setType(cellType newType);
+
+    climateType getClimate() const;
+    void setClimate(climateType newClimate);
+
+  friend std::ostream& operator << (std::ostream &os, const CellType &cell);
+
+ private:
+  int32_t waterLevel = 0;
+  int32_t plantsCount = 0;
+  int32_t carnivoreCount = 0;
+  int32_t herbivoreCount = 0;
+  cellType type;
+  climateType climate;
 };
-
-#endif

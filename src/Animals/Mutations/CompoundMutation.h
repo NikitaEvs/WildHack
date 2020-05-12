@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ANIMALS_MUTATIONS_COMPOUNDMUTATION_H_
-#define PEACH_SRC_ANIMALS_MUTATIONS_COMPOUNDMUTATION_H_
+#pragma once
 
 #include <vector>
 
@@ -14,5 +13,3 @@ class CompoundMutation : public MutationComponent {
   void getMutation() override;
   void print(std::ostream &os) override;
 };
-
-#endif //PEACH_SRC_ANIMALS_MUTATIONS_COMPOUNDMUTATION_H_

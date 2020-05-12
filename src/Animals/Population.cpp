@@ -1,38 +1,22 @@
 #include "Population.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 
-void Population::switchParam(param &p, int32_t value) {
+void Population::switchParam(ParamType &p, int32_t value) {
   switch (value) {
-      case -1:
-        if(p > VERY_SMALL){
-          p = static_cast<param>(static_cast<int32_t>(p) - 1);
-        }
-        break;
-      case 1:
-        if(p < VERY_BIG){
-          p = static_cast<param>(static_cast<int32_t>(p) + 1);
-        }
-        break;
-      default:break;
+    case -1:
+      if (p > VERY_SMALL) {
+        p = static_cast<ParamType>(static_cast<int32_t>(p) - 1);
+      }
+      break;
+    case 1:
+      if (p < VERY_BIG) {
+        p = static_cast<ParamType>(static_cast<int32_t>(p) + 1);
+      }
+      break;
+    default:break;
   }
 }
 
-Population::Population() = default;
-Population::Population(Population const &p) {
-  type = p.type;
-  name = p.name;
-  animalAmount = p.animalAmount;
-  health = p.health;
-  productivity = p.productivity;
-  wellBeing = p.wellBeing;
-  biologyDev = p.biologyDev;
-  size = p.size;
-  safety = p.safety;
-  velocity = p.velocity;
-  cover = p.cover;
-  xPos = p.xPos;
-  yPos = p.yPos;
-}
 void Population::move(int32_t x, int32_t y) {
   xPos = x;
   yPos = y;
@@ -43,13 +27,13 @@ void Population::dieOut(int32_t amount) {
 
 void Population::addMutation() {
   LeafMutation lm;
-  lm.health = Random::getInstance().randNormalInt(0, 5);
-  lm.productivity = Random::getInstance().randNormalInt(0, 5);
-  lm.wellBeing = Random::getInstance().randNormalInt(0, 5);
-  lm.size = Random::getInstance().randNormalInt(0, 1);
-  lm.safety = Random::getInstance().randNormalInt(0, 1);
-  lm.velocity = Random::getInstance().randNormalInt(0, 1);
-  lm.cover = Random::getInstance().randNormalInt(0, 1);
+  lm.health = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.productivity = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.wellBeing = RandomGenerator::getInstance().randNormalInt(0, 5);
+  lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
+  lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
   mutationTree.add(std::make_shared<LeafMutation>(lm));
 }
 
@@ -68,7 +52,14 @@ void Population::applyMutation() {
 }
 
 std::ostream &operator<<(std::ostream &os, Population &p) {
-  std::string pSize, pSafe, pVel, pCov;
+  std::string pSize, pSafe, pVel, pCov, pType;
+  switch (p.type) {
+    case Population::HERBIVORE:pType = "HERBIVORE";
+      break;
+    case Population::CARNIVORE:pType = "CARNIVORE";
+      break;
+  }
+  
   switch (p.size) {
     case Population::VERY_SMALL:pSize = "VERY_SMALL";
       break;
@@ -120,7 +111,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
     case Population::VERY_BIG:pCov = "VERY_BIG";
       break;
   }
-  os << p.type << " " << pSize << " " << p.name << "\n"
+  os << pType << " " << pSize << " " << p.name << "\n"
      << "animalAmount " << p.animalAmount << "\n"
      << "health       " << p.health << "\n"
      << "productivity " << p.productivity << "\n"
@@ -134,4 +125,84 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
   os << "MUTATIONS" << std::endl;
   p.mutationTree.getMutation();
   p.mutationTree.print(os);
+}
+
+
+Population::TypeName Population::GetType() const {
+  return type;
+}
+void Population::SetType(Population::TypeName type) {
+  Population::type = type;
+}
+const std::string &Population::GetName() const {
+  return name;
+}
+void Population::SetName(const std::string &name) {
+  Population::name = name;
+}
+int32_t Population::GetXPos() const {
+  return xPos;
+}
+void Population::SetXPos(int32_t x_pos) {
+  xPos = x_pos;
+}
+int32_t Population::GetYPos() const {
+  return yPos;
+}
+void Population::SetYPos(int32_t y_pos) {
+  yPos = y_pos;
+}
+int32_t Population::GetAnimalAmount() const {
+  return animalAmount;
+}
+void Population::SetAnimalAmount(int32_t animal_amount) {
+  animalAmount = animal_amount;
+}
+int32_t Population::GetHealth() const {
+  return health;
+}
+void Population::SetHealth(int32_t health) {
+  Population::health = health;
+}
+int32_t Population::GetProductivity() const {
+  return productivity;
+}
+void Population::SetProductivity(int32_t productivity) {
+  Population::productivity = productivity;
+}
+int32_t Population::GetWellBeing() const {
+  return wellBeing;
+}
+void Population::SetWellBeing(int32_t well_being) {
+  wellBeing = well_being;
+}
+int32_t Population::GetBiologyDev() const {
+  return biologyDev;
+}
+void Population::SetBiologyDev(int32_t biology_dev) {
+  biologyDev = biology_dev;
+}
+Population::ParamType Population::GetSize() const {
+  return size;
+}
+void Population::SetSize(Population::ParamType size) {
+  Population::size = size;
+}
+Population::ParamType Population::GetSafety() const {
+  return safety;
+}
+void Population::SetSafety(Population::ParamType safety) {
+  Population::safety = safety;
+}
+Population::ParamType Population::GetVelocity() const {
+  return velocity;
+}
+void Population::SetVelocity(Population::ParamType velocity) {
+  Population::velocity = velocity;
+}
+Population::ParamType Population::GetCover() const {
+  return cover;
+}
+void Population::SetCover(Population::ParamType cover) {
+  Population::cover = cover;
 }

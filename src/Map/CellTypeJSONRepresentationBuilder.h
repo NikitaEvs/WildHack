@@ -1,5 +1,4 @@
-#ifndef SRC_CELLJSONREPRESENTATIONBUILDER_H_
-#define SRC_CELLJSONREPRESENTATIONBUILDER_H_
+#pragma once
 
 #include "json/json.hpp"
 
@@ -7,17 +6,16 @@
 #include "AbstractCellTypeBuilder.h"
 
 class CellTypeJSONRepresentationBuilder : public AbstractCellTypeBuilder {
- private:
-  nlohmann::json cellJson;
-
  public:
   void reset();
+
   void setType(CellType::cellType cellType) override;
   void setClimate(CellType::climateType climateType) override;
   void setPlantFood(int32_t plantsCount) override;
   void setWaterLevel(int32_t waterLevel) override;
+
   nlohmann::json getProduct();
+
+ private:
+  nlohmann::json cellJson;
 };
-
-
-#endif //SRC_CELLJSONREPRESENTATIONBUILDER_H_

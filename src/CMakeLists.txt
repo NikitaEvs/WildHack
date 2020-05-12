@@ -23,8 +23,8 @@ set (MAP_SOURCES
 set (UTIL_SOURCES
         ${UTIL_PATH}/Config.h
         ${UTIL_PATH}/Config.cpp
-        ${UTIL_PATH}/Random.h
-        ${UTIL_PATH}/Random.cpp
+        ${UTIL_PATH}/RandomGenerator.h
+        ${UTIL_PATH}/RandomGenerator.cpp
         )
 
 set (ANIMAL_SOURCES

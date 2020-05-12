@@ -12,27 +12,23 @@
 TEST(Unit, CreateCell) {
   CellTypeDirector director;
 
-  auto builder = new CellTypeBuilder();
+  auto builder = std::make_shared<CellTypeBuilder>();
   director.setBuilder(builder);
   director.makeWaterCell();
   std::shared_ptr<CellType> waterCell = builder -> getProduct();
 
-  ASSERT_EQ(waterCell -> waterLevel, 100);
-
-  delete builder;
+  ASSERT_EQ(waterCell -> getWaterLevel(), 100);
 }
 
 TEST(Unit, CreateCellJSON) {
   CellTypeDirector director;
 
-  auto builder = new CellTypeJSONRepresentationBuilder();
+  auto builder = std::make_shared<CellTypeJSONRepresentationBuilder>();
   director.setBuilder(builder);
   director.makeWaterCell();
   auto waterCell = builder -> getProduct();
 
   ASSERT_EQ(waterCell["waterLevel"], 100);
-
-  delete builder;
 }
 
 TEST(Unit, Population) {
@@ -40,7 +36,7 @@ TEST(Unit, Population) {
   std::shared_ptr<PopulationBuilder> b = std::make_shared<HerbivorePopulationBuilder>();
   d.setBuilder(b);
   std::shared_ptr<Population> p = d.makeBig("elephant");
-  ASSERT_EQ(p -> size, Population::BIG);
+  ASSERT_EQ(p -> GetSize(), Population::BIG);
 }
 
 TEST(Unit, Mutation) {

@@ -1,25 +1,25 @@
-#ifndef SRC_MAP_CELLDIRECTOR_H_
-#define SRC_MAP_CELLDIRECTOR_H_
+#pragma once
 
 #include <memory>
+#include <utility>
 
 #include "Config.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 #include "AbstractCellTypeBuilder.h"
 #include "CellType.h"
 
 class CellTypeDirector {
- private:
-  AbstractCellTypeBuilder *builderPtr;
-
  public:
   CellTypeDirector() = default;
-  CellTypeDirector(AbstractCellTypeBuilder *builderPtr) : builderPtr(builderPtr){};
-  void setBuilder(AbstractCellTypeBuilder *builderPtr);
+  CellTypeDirector(std::shared_ptr<AbstractCellTypeBuilder> builderPtr) : builderPtr(std::move(builderPtr)){};
+
+  void setBuilder(std::shared_ptr<AbstractCellTypeBuilder> builderPtr);
+
   void makeWaterCell();
   void makeForestCell();
   void makeSteppeCell();
   void makeTundraCell();
-};
 
-#endif //SRC_MAP_CELLDIRECTOR_H_
+ private:
+  std::shared_ptr<AbstractCellTypeBuilder> builderPtr;
+};

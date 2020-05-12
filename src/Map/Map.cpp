@@ -31,10 +31,10 @@ void Map::loadFrom(std::istream &file) {
   for (auto cellJSON : mapJSON["data"]) {
     std::shared_ptr<CellType> cell = std::make_shared<CellType>();
 
-    cell->type = cellJSON["cellType"];
-    cell->climate = cellJSON["climateType"];
-    cell->plantsCount = cellJSON["plantsCount"];
-    cell->waterLevel = cellJSON["waterLevel"];
+    cell -> setType(cellJSON["cellType"]);
+    cell -> setClimate(cellJSON["climateType"]);
+    cell -> setPlantsCount(cellJSON["plantsCount"]);
+    cell -> setWaterLevel(cellJSON["waterLevel"]);
 
     map[row][column] = std::move(cell);
 
@@ -58,10 +58,10 @@ void Map::saveTo(std::ostream &out) {
     for (const auto &cell : row) {
       nlohmann::json cellJSON;
 
-      cellJSON["cellType"] = static_cast<int32_t>(cell->type);
-      cellJSON["climateType"] = static_cast<int32_t>(cell->climate);
-      cellJSON["plantsCount"] = cell->plantsCount;
-      cellJSON["waterLevel"] = cell->waterLevel;
+      cellJSON["cellType"] = static_cast<int32_t>(cell -> getType());
+      cellJSON["climateType"] = static_cast<int32_t>(cell -> getClimate());
+      cellJSON["plantsCount"] = cell -> getPlantsCount();
+      cellJSON["waterLevel"] = cell -> getWaterLevel();
 
       mapJSON["data"].push_back(cellJSON);
     }
@@ -75,7 +75,7 @@ void Map::addCell(std::shared_ptr<CellType> &&cell, size_t row, size_t column) {
 }
 
 void Map::generate() {
-  auto builder = new CellTypeBuilder();
+  auto builder = std::make_shared<CellTypeBuilder>();
   CellTypeDirector director;
   director.setBuilder(builder);
 
@@ -87,16 +87,16 @@ void Map::generate() {
   for (int i = 0; i < columns; ++i) {
     for (int j = 0; j < rows; ++j) {
       if (map[i][j] == nullptr) {
-        int32_t blockWidth = Random::getInstance().randInt(1, std::min(columns / 3, columns - i));
-        int32_t blockHeight = Random::getInstance().randInt(1, std::min(rows / 3, rows - j));
+        int32_t blockWidth = RandomGenerator::getInstance().randInt(1, std::min(columns / 3, columns - i));
+        int32_t blockHeight = RandomGenerator::getInstance().randInt(1, std::min(rows / 3, rows - j));
         switch (prevType) {
           case CellType::WATER:prevType = CellType::STEPPE;
             break;
           case CellType::STEPPE:
-            prevType = Random::getInstance().randInt(0, 1) == 1 ? CellType::WATER : CellType::FOREST;
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::WATER : CellType::FOREST;
             break;
           case CellType::FOREST:
-            prevType = Random::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE : CellType::TUNDRA;
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE : CellType::TUNDRA;
             break;
           case CellType::TUNDRA:prevType = CellType::FOREST;
             break;
@@ -138,7 +138,6 @@ void Map::generate() {
       }
     }
   }
-  delete builder;
 }
 
 size_t Map::getHeight() {
