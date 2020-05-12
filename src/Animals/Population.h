@@ -16,11 +16,11 @@ class Population {
     BIG,
     VERY_BIG
   };
-  enum TypeName{
+  enum TypeName {
     HERBIVORE,
     CARNIVORE
   };
-  enum MutationType{
+  enum MutationType {
     SIZE,
     SAFETY,
     VELOCITY,
@@ -30,8 +30,14 @@ class Population {
   Population() = default;
   Population(Population const &p) = default;
 
-  void move(int32_t x, int32_t y);
-  void dieOut(int32_t amount);
+  void applyLifeCircle(int32_t _xPos,
+                       int32_t _yPos,
+                       int32_t food,
+                       int32_t water,
+                       int32_t carnivore,
+                       int32_t herbivore,
+                       ParamType herbSize,
+                       ParamType carnSize);
   void addMutation(MutationType type);
   void applyMutation();
 

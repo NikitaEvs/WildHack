@@ -1,5 +1,6 @@
 #include "Population.h"
 #include "RandomGenerator.h"
+#include "Config.h"
 
 void Population::switchParam(ParamType &p, int32_t value) {
   switch (value) {
@@ -17,28 +18,59 @@ void Population::switchParam(ParamType &p, int32_t value) {
   }
 }
 
-void Population::move(int32_t x, int32_t y) {
-  xPos = x;
-  yPos = y;
-}
-void Population::dieOut(int32_t amount) {
-  animalAmount -= amount * animalAmount / 100;
+void Population::applyLifeCircle(int32_t _xPos,
+                                 int32_t _yPos,
+                                 int32_t food,
+                                 int32_t water,
+                                 int32_t carnivore,
+                                 int32_t herbivore,
+                                 ParamType herbSize,
+                                 ParamType carnSize) {
+  xPos = _xPos;
+  yPos = _yPos;
+
+  //if there's no food or water someone must die
+  int32_t nutrition = (food + 1.5 * water) / 250;
+  if (type == Population::TypeName::CARNIVORE) {
+    nutrition = (herbivore * 100 / Config::getInstance().getMaxAmount(HERBIVORE, herbSize) + water) / 200;
+  }
+  if (nutrition < 75) {
+    animalAmount = (animalAmount * (nutrition + 25)) / 100;
+  }
+  // carnivore animal can eat some animals from the population
+  int32_t wasEaten = carnivore * 100 / Config::getInstance().getMaxAmount(CARNIVORE, carnSize);
+  switch (velocity) {
+    case VERY_SMALL:wasEaten = wasEaten * 1 / 10;
+      break;
+    case SMALL:wasEaten = wasEaten * 1 / 5;
+      break;
+    case AVERAGE:wasEaten = wasEaten * 3 / 10;
+      break;
+    case BIG:wasEaten = wasEaten * 2 / 5;
+      break;
+    case VERY_BIG:wasEaten = wasEaten * 1 / 2;
+      break;
+  }
+  animalAmount = (animalAmount * wasEaten) / 100;
+  // but new animals are born
+  animalAmount = animalAmount * (100 + productivity) / 100;
+
+  //some game points
+  int32_t k = (productivity * (static_cast<int32_t>(size) + static_cast<int32_t>(cover))
+      + health * (static_cast<int32_t>(velocity) + static_cast<int32_t>(safety))) / 2000;
+  biologyDev = biologyDev * (100 + k) / 100;
 }
 
 void Population::addMutation(Population::MutationType type) {
   LeafMutation lm;
-  switch(type){
-    case SIZE:
-      lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
+  switch (type) {
+    case SIZE:lm.size = RandomGenerator::getInstance().randNormalInt(0, 1);
       break;
-    case SAFETY:
-      lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
+    case SAFETY:lm.safety = RandomGenerator::getInstance().randNormalInt(0, 1);
       break;
-    case COVER:
-      lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
+    case COVER:lm.cover = RandomGenerator::getInstance().randNormalInt(0, 1);
       break;
-    case VELOCITY:
-      lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
+    case VELOCITY:lm.velocity = RandomGenerator::getInstance().randNormalInt(0, 1);
       break;
   }
   lm.health = RandomGenerator::getInstance().randNormalInt(0, 5);
@@ -132,7 +164,6 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
   p.mutationTree.getMutation();
   p.mutationTree.print(os);
 }
-
 
 Population::TypeName Population::GetType() const {
   return type;
