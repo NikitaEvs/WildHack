@@ -17,7 +17,7 @@ var class_population =
       [ "HERBIVORE", "class_population.html#a24bd09314a9ea44f019b233c2ff83445acf688afcd4c29dd28de524c97f6159ae", null ],
       [ "CARNIVORE", "class_population.html#a24bd09314a9ea44f019b233c2ff83445abd003672c20b0f569661d67a444422bd", null ]
     ] ],
-    [ "Population", "class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae", null ],
+    [ "Population", "class_population.html#af0e745de4741c50195dde24e26d12dc1", null ],
     [ "Population", "class_population.html#a9f8688b86cb57edc25dc7ff54cc537f0", null ],
     [ "addMutation", "class_population.html#add08ea7b6c56e3b91b55f877b2d0b329", null ],
     [ "applyMutation", "class_population.html#ac5f4122adbbc1762943fd34465627019", null ],
