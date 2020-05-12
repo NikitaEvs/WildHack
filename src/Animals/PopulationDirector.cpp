@@ -7,7 +7,7 @@ void PopulationDirector::setBuilder(std::shared_ptr<PopulationBuilder> b) {
 std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
   builder->setName(name);
   builder->setType();
-  if (builder->getProduct()->type == "herbivore") {
+  if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
     builder->setAmount(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallAnimalAmount()));
     builder->setHealth(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallHealth()));
     builder->setProductivity(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreSmallProductivity()));
@@ -34,7 +34,7 @@ std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
 std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
   builder->setName(name);
   builder->setType();
-  if (builder->getProduct()->type == "herbivore") {
+  if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
     builder->setAmount(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageAnimalAmount()));
     builder->setHealth(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageHealth()));
     builder->setProductivity(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreAverageProductivity()));
@@ -61,7 +61,7 @@ std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
 std::shared_ptr<Population> PopulationDirector::makeBig(std::string name) {
   builder->setName(name);
   builder->setType();
-  if (builder->getProduct()->type == "herbivore") {
+  if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
     builder->setAmount(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigAnimalAmount()));
     builder->setHealth(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigHealth()));
     builder->setProductivity(RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHerbivoreBigProductivity()));
