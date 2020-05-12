@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['param',['param',['../class_population.html#a880c3144a1f55a731ee0cf480ee569ea',1,'Population']]]
+  ['paramtype',['ParamType',['../class_population.html#ae1bfb193a6735c7c13eeb2da1062fada',1,'Population']]]
 ];

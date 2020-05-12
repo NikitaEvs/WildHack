@@ -7,5 +7,5 @@ var searchData=
   ['addmutation',['addMutation',['../class_population.html#a12a4d31eb287a74035959160210bea83',1,'Population']]],
   ['animalamount',['animalAmount',['../class_population.html#ab556270fd121a4b9cbcf16d9152441b7',1,'Population']]],
   ['applymutation',['applyMutation',['../class_population.html#ac5f4122adbbc1762943fd34465627019',1,'Population']]],
-  ['average',['AVERAGE',['../class_population.html#a880c3144a1f55a731ee0cf480ee569eaaaabcd95a6342121fbac2208bdf5053d6',1,'Population']]]
+  ['average',['AVERAGE',['../class_population.html#ae1bfb193a6735c7c13eeb2da1062fadaaaabcd95a6342121fbac2208bdf5053d6',1,'Population']]]
 ];
