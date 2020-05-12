@@ -8,7 +8,6 @@ class MutationComponent {
  public:
   int32_t health = 1;
   int32_t productivity = 1;
-  int32_t wellBeing = 1;
   int32_t size = 0;
   int32_t safety = 0;
   int32_t velocity = 0;

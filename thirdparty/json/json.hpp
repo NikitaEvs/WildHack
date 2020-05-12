@@ -7194,9 +7194,9 @@ class basic_json
     This function checks whether reading the bytes is safe; that is, offset is
     a valid index in the vector, offset+len
 
-    @param[in] size    size of the byte vector
-    @param[in] len     number of bytes to read
-    @param[in] offset  offset where to start reading
+    @ParamType[in] size    size of the byte vector
+    @ParamType[in] len     number of bytes to read
+    @ParamType[in] offset  offset where to start reading
 
     vec:  x x x x x X X X X X
           ^         ^         ^

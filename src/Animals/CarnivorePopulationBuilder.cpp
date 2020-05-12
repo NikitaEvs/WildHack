@@ -20,9 +20,6 @@ class CarnivorePopulationBuilder : public PopulationBuilder {
   void setProductivity(int32_t productivity) override {
     p->SetProductivity(productivity);
   }
-  void setWellBeing(int32_t well_being) override {
-    p->SetWellBeing(well_being);
-  }
   void setBiologyDev(int32_t bio_dev) override {
     p->SetBiologyDev(bio_dev);
   }

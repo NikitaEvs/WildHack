@@ -10,7 +10,6 @@ class PopulationBuilder {
   virtual void setAmount(int32_t amount) = 0;
   virtual void setHealth(int32_t health) = 0;
   virtual void setProductivity(int32_t productivity) = 0;
-  virtual void setWellBeing(int32_t well_being) = 0;
   virtual void setBiologyDev(int32_t bio_dev) = 0;
   virtual void setSize(Population::ParamType size) = 0;
   virtual void setSafety(Population::ParamType safety) = 0;
