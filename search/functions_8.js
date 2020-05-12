@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initialize',['initialize',['../class_config_destroyer.html#a00e67e2e446e26008ae21cfe60b9efbe',1,'ConfigDestroyer::initialize()'],['../class_random_destroyer.html#a7114dc164ed7d280c0a90d216639dab9',1,'RandomDestroyer::initialize()']]]
+  ['leafmutation',['LeafMutation',['../class_leaf_mutation.html#a874a0dbbbefcc2d73e3b31ca5576cd71',1,'LeafMutation']]],
+  ['loadfrom',['loadFrom',['../class_map.html#af7600411ad41493411c2c92325c81fb1',1,'Map']]]
 ];

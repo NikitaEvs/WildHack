@@ -67,6 +67,7 @@ var searchData=
   ['getherbivoreverysmallproductivity',['getHerbivoreVerySmallProductivity',['../class_config.html#a3c1ed65f380505b719cf54659022fd81',1,'Config']]],
   ['getherbivoreverysmallwellbeing',['getHerbivoreVerySmallWellBeing',['../class_config.html#ab2cf944887da7db0657a3386930f99f8',1,'Config']]],
   ['getinstance',['getInstance',['../class_config.html#a52ae1e3685e26ba3689691b627d33647',1,'Config::getInstance()'],['../class_random_generator.html#af91f7dc668da5f2afa193632edb157a8',1,'RandomGenerator::getInstance()']]],
+  ['getmaxamount',['getMaxAmount',['../class_config.html#a7310ee17b4d1fd52348fa204e0b64469',1,'Config']]],
   ['getmutation',['getMutation',['../class_compound_mutation.html#ab72762d082d492548915f55409cee955',1,'CompoundMutation::getMutation()'],['../class_leaf_mutation.html#a1cd1cba5f662f3f1e1929d88f8d706fc',1,'LeafMutation::getMutation()'],['../class_mutation_component.html#a598f2150d61ffcd022b9355477e6a011',1,'MutationComponent::getMutation()']]],
   ['getname',['GetName',['../class_population.html#a0f2f36b113fc5ddb08d70ababdde4218',1,'Population']]],
   ['getplantscount',['getPlantsCount',['../class_cell_type.html#a8a083e49fc55c3cb4e99626839e1e1b4',1,'CellType']]],

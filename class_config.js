@@ -57,6 +57,7 @@ var class_config =
     [ "getHerbivoreVerySmallProductivity", "class_config.html#a3c1ed65f380505b719cf54659022fd81", null ],
     [ "getHerbivoreVerySmallWellBeing", "class_config.html#ab2cf944887da7db0657a3386930f99f8", null ],
     [ "getInstance", "class_config.html#a52ae1e3685e26ba3689691b627d33647", null ],
+    [ "getMaxAmount", "class_config.html#a7310ee17b4d1fd52348fa204e0b64469", null ],
     [ "getSteppePlantsCount", "class_config.html#a934cada8669fc81df6073abf6d093832", null ],
     [ "getSteppeWaterLevel", "class_config.html#af4c0ad53414c709f003cab793a9be01b", null ],
     [ "getTundraPlantsCount", "class_config.html#a779dc6435e1f74f0f20d99ea77e307d3", null ],

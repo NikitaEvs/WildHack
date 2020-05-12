@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dieout',['dieOut',['../class_population.html#a57e295558d665630de657717109280d9',1,'Population']]]
+  ['end',['end',['../class_map.html#ae2cb7db566f828a437ebc9c051e379e3',1,'Map']]]
 ];
