@@ -32,5 +32,5 @@ var searchData=
   ['configfilepath',['configFilePath',['../_config_8h.html#a6a10aab17191e37cff6f5c5cc8069621',1,'Config.h']]],
   ['configjson',['configJSON',['../class_config.html#a240938cbcf0a3ebd6e1a074b8ebbbaeb',1,'Config']]],
   ['configptr',['configPtr',['../class_config.html#a52f184d22d9f87c1183a76e599aa5b86',1,'Config']]],
-  ['cover',['cover',['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]]
+  ['cover',['COVER',['../class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33',1,'Population::COVER()'],['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]]
 ];

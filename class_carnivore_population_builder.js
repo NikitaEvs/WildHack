@@ -12,6 +12,5 @@ var class_carnivore_population_builder =
     [ "setSize", "class_carnivore_population_builder.html#a475e780cc118acf9089896847d1b7ac5", null ],
     [ "setType", "class_carnivore_population_builder.html#a9a67edab31edd714cf03477062801244", null ],
     [ "setVelocity", "class_carnivore_population_builder.html#ac46ede7046132ca0b24de19da52905fa", null ],
-    [ "setWellBeing", "class_carnivore_population_builder.html#a2e1aea49f8d1e085e71d4039312f7f75", null ],
     [ "p", "class_carnivore_population_builder.html#af8a059deed58b20102a31184eb673e59", null ]
 ];

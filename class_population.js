@@ -1,5 +1,11 @@
 var class_population =
 [
+    [ "MutationType", "class_population.html#af8d504f6dd76a906368a533934653b2e", [
+      [ "SIZE", "class_population.html#af8d504f6dd76a906368a533934653b2ea6297e9eb79df881e8f06e34e184f77c1", null ],
+      [ "SAFETY", "class_population.html#af8d504f6dd76a906368a533934653b2ea5d5dd2fd5809c7552a80747691a7aed6", null ],
+      [ "VELOCITY", "class_population.html#af8d504f6dd76a906368a533934653b2eaaccbf6b559252edce6ab8de655989d6c", null ],
+      [ "COVER", "class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33", null ]
+    ] ],
     [ "ParamType", "class_population.html#ae1bfb193a6735c7c13eeb2da1062fada", [
       [ "VERY_SMALL", "class_population.html#ae1bfb193a6735c7c13eeb2da1062fadaad211f09c53a79ab5081394e96fa9f23c", null ],
       [ "SMALL", "class_population.html#ae1bfb193a6735c7c13eeb2da1062fadaaa96d10f4cf6a359cd0bf367eb8b84f91", null ],
@@ -11,9 +17,9 @@ var class_population =
       [ "HERBIVORE", "class_population.html#a24bd09314a9ea44f019b233c2ff83445acf688afcd4c29dd28de524c97f6159ae", null ],
       [ "CARNIVORE", "class_population.html#a24bd09314a9ea44f019b233c2ff83445abd003672c20b0f569661d67a444422bd", null ]
     ] ],
-    [ "Population", "class_population.html#af0e745de4741c50195dde24e26d12dc1", null ],
+    [ "Population", "class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae", null ],
     [ "Population", "class_population.html#a9f8688b86cb57edc25dc7ff54cc537f0", null ],
-    [ "addMutation", "class_population.html#a12a4d31eb287a74035959160210bea83", null ],
+    [ "addMutation", "class_population.html#add08ea7b6c56e3b91b55f877b2d0b329", null ],
     [ "applyMutation", "class_population.html#ac5f4122adbbc1762943fd34465627019", null ],
     [ "dieOut", "class_population.html#a57e295558d665630de657717109280d9", null ],
     [ "GetAnimalAmount", "class_population.html#a3b4d22121a5a26db7d9fb85ecabc6253", null ],
@@ -26,7 +32,6 @@ var class_population =
     [ "GetSize", "class_population.html#a2136b838af123f71436f002f026b0e6a", null ],
     [ "GetType", "class_population.html#a90e81f0337152c605fed35bb894582e5", null ],
     [ "GetVelocity", "class_population.html#ac9c4e5440a0d76455113ef38757bd10a", null ],
-    [ "GetWellBeing", "class_population.html#a635985574e809d436d9abe861776f601", null ],
     [ "GetXPos", "class_population.html#a04e51faa61d241ce37486691e2660748", null ],
     [ "GetYPos", "class_population.html#a7153bd6a359b5ea218909721364a29a7", null ],
     [ "move", "class_population.html#a342799a52e776375f003d395705ca4c4", null ],
@@ -40,7 +45,6 @@ var class_population =
     [ "SetSize", "class_population.html#afee2404640c7c271f01083dea8fd8258", null ],
     [ "SetType", "class_population.html#ac9044971388d45c6206b69aa45b2d48b", null ],
     [ "SetVelocity", "class_population.html#aafee3bc5bf1901810694fe30b6a1016a", null ],
-    [ "SetWellBeing", "class_population.html#a2b955833b0b7154a9abbb569c2c8d46a", null ],
     [ "SetXPos", "class_population.html#ae4801d9641b41d3ce98d535a25b25b09", null ],
     [ "SetYPos", "class_population.html#ac6700553c10db1de8a4914aa6ff33264", null ],
     [ "switchParam", "class_population.html#a2c721b4112243806b229914db8ea786f", null ],
@@ -56,7 +60,6 @@ var class_population =
     [ "size", "class_population.html#a1ec853837a15b425958fae97ebcae901", null ],
     [ "type", "class_population.html#a2e1ee655406edf31ed5cb785f5843558", null ],
     [ "velocity", "class_population.html#af5b36cc15bd1e5c895341336fbfa758c", null ],
-    [ "wellBeing", "class_population.html#a6fe7ca43e1e179d5d9612999717d30c1", null ],
     [ "xPos", "class_population.html#a2006dce5b406bf5eafb51ef33a420909", null ],
     [ "yPos", "class_population.html#a79f5e11a71b3f77455d86ff0705d9f17", null ]
 ];

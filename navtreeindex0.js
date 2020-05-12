@@ -72,7 +72,6 @@ var NAVTREEINDEX0 =
 "class_carnivore_population_builder.html":[0,0,1],
 "class_carnivore_population_builder.html#a088aaf936e36eb2e93a9536cf92f38d4":[0,0,1,4],
 "class_carnivore_population_builder.html#a1d99d48aefc64bb7d2f148b97b2a9149":[0,0,1,3],
-"class_carnivore_population_builder.html#a2e1aea49f8d1e085e71d4039312f7f75":[0,0,1,12],
 "class_carnivore_population_builder.html#a475e780cc118acf9089896847d1b7ac5":[0,0,1,9],
 "class_carnivore_population_builder.html#a4df4dedcc5db0875d062572386782500":[0,0,1,8],
 "class_carnivore_population_builder.html#a7ba71e8d594f7c408b45152ff761f11e":[0,0,1,7],
@@ -82,7 +81,7 @@ var NAVTREEINDEX0 =
 "class_carnivore_population_builder.html#a9c1c455caf599ef63db7e85b87bb91b0":[0,0,1,1],
 "class_carnivore_population_builder.html#aa95e83e0ad68ff2c638ed38bbac6a5a2":[0,0,1,2],
 "class_carnivore_population_builder.html#ac46ede7046132ca0b24de19da52905fa":[0,0,1,11],
-"class_carnivore_population_builder.html#af8a059deed58b20102a31184eb673e59":[0,0,1,13],
+"class_carnivore_population_builder.html#af8a059deed58b20102a31184eb673e59":[0,0,1,12],
 "class_carnivore_population_builder.html#afb68371fa7510b4bc98133882f38d0f2":[0,0,1,5],
 "class_cell_type.html":[0,0,2],
 "class_cell_type.html#a0015adb9924ffb6f6ac83531fca576ef":[0,0,2,17],
@@ -238,9 +237,8 @@ var NAVTREEINDEX0 =
 "class_herbivore_population_builder.html#a9654e3c2c4b298b99904e56a8a853360":[0,0,10,3],
 "class_herbivore_population_builder.html#abadc4afdbd5faf2f4a12191201a60444":[0,0,10,11],
 "class_herbivore_population_builder.html#ac0dff259bc517ca01da7495f679b6b54":[0,0,10,1],
-"class_herbivore_population_builder.html#ad9eb035bda824cea3b7554eb74c0b6d9":[0,0,10,12],
 "class_herbivore_population_builder.html#addc5ec8598c824263b8f3012acaf688e":[0,0,10,2],
-"class_herbivore_population_builder.html#ae0d9555def747132e4411ec1bfe2d9c8":[0,0,10,13],
+"class_herbivore_population_builder.html#ae0d9555def747132e4411ec1bfe2d9c8":[0,0,10,12],
 "class_herbivore_population_builder.html#af65e69fe3305a65be36ce8626982f4bc":[0,0,10,7],
 "class_leaf_mutation.html":[0,0,11],
 "class_leaf_mutation.html#a1cd1cba5f662f3f1e1929d88f8d706fc":[0,0,11,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "class_map.html":[0,0,12],
 "class_map.html#a1197ab65e40dd20b891ba165471e3163":[0,0,12,2],
 "class_map.html#a412669f6463639c3c0a7db82383048e2":[0,0,12,10],
-"class_map.html#a588ca29b9d46d4faf7d1613dcea394c1":[0,0,12,4]
+"class_map.html#a588ca29b9d46d4faf7d1613dcea394c1":[0,0,12,4],
+"class_map.html#a61ad8cc597689094b4f20881866a835d":[0,0,12,12],
+"class_map.html#a6b48ce600f4a1992e96b78739e23737d":[0,0,12,7]
 };

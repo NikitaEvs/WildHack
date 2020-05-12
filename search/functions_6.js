@@ -80,7 +80,6 @@ var searchData=
   ['getwaterlevel',['getWaterLevel',['../class_cell_type.html#a3edc4409fdb190563931e5f895d51d04',1,'CellType']]],
   ['getwaterplantscount',['getWaterPlantsCount',['../class_config.html#a088134f65a7fbb6cd286272628cf8f69',1,'Config']]],
   ['getwaterwaterlevel',['getWaterWaterLevel',['../class_config.html#a1737ada9646baec3acbcebe47a281181',1,'Config']]],
-  ['getwellbeing',['GetWellBeing',['../class_population.html#a635985574e809d436d9abe861776f601',1,'Population']]],
   ['getwidth',['getWidth',['../class_map.html#ad9adc08768c8e113baa8c4e46d69b0fa',1,'Map::getWidth()'],['../class_config.html#a1341ebe5f25f69b6572bf761b8cc4134',1,'Config::getWidth()']]],
   ['getxpos',['GetXPos',['../class_population.html#a04e51faa61d241ce37486691e2660748',1,'Population']]],
   ['getypos',['GetYPos',['../class_population.html#a7153bd6a359b5ea218909721364a29a7',1,'Population']]]

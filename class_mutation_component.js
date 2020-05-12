@@ -8,6 +8,5 @@ var class_mutation_component =
     [ "productivity", "class_mutation_component.html#a7eb8c36530e9dee0342f1d435c281ecc", null ],
     [ "safety", "class_mutation_component.html#a4ead0e18bfcb867a0d42b29174774b70", null ],
     [ "size", "class_mutation_component.html#afc2e3226a54445910521f2cadeb56456", null ],
-    [ "velocity", "class_mutation_component.html#ad4aa288cce6168eb8e52c73f4d3eff15", null ],
-    [ "wellBeing", "class_mutation_component.html#a5c652bdab166ca49f93d44900e762272", null ]
+    [ "velocity", "class_mutation_component.html#ad4aa288cce6168eb8e52c73f4d3eff15", null ]
 ];

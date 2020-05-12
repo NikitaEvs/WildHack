@@ -98,8 +98,8 @@ Collaboration diagram for Population:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_population__coll__graph.png" border="0" usemap="#_population_coll__map" alt="Collaboration graph"/></div>
 <map name="_population_coll__map" id="_population_coll__map">
-<area shape="rect" id="node2" href="class_compound_mutation.html" title="{CompoundMutation\n|&#45; children\l|+ CompoundMutation()\l+ add()\l+ getMutation()\l+ print()\l}" alt="" coords="7,249,162,371"/>
-<area shape="rect" id="node3" href="class_mutation_component.html" title="{MutationComponent\n|+ health\l+ productivity\l+ wellBeing\l+ size\l+ safety\l+ velocity\l+ cover\l|+ MutationComponent()\l+ getMutation()\l+ print()\l}" alt="" coords="5,5,164,200"/>
+<area shape="rect" id="node2" href="class_compound_mutation.html" title="{CompoundMutation\n|&#45; children\l|+ CompoundMutation()\l+ add()\l+ getMutation()\l+ print()\l}" alt="" coords="7,235,162,356"/>
+<area shape="rect" id="node3" href="class_mutation_component.html" title="{MutationComponent\n|+ health\l+ productivity\l+ size\l+ safety\l+ velocity\l+ cover\l|+ MutationComponent()\l+ getMutation()\l+ print()\l}" alt="" coords="5,5,164,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -119,19 +119,25 @@ Public Types</h2></td></tr>
 <a class="el" href="class_population.html#a24bd09314a9ea44f019b233c2ff83445abd003672c20b0f569661d67a444422bd">CARNIVORE</a>
  }</td></tr>
 <tr class="separator:a24bd09314a9ea44f019b233c2ff83445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d504f6dd76a906368a533934653b2e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">MutationType</a> { <a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2ea6297e9eb79df881e8f06e34e184f77c1">SIZE</a>, 
+<a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2ea5d5dd2fd5809c7552a80747691a7aed6">SAFETY</a>, 
+<a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2eaaccbf6b559252edce6ab8de655989d6c">VELOCITY</a>, 
+<a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33">COVER</a>
+ }</td></tr>
+<tr class="separator:af8d504f6dd76a906368a533934653b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af0e745de4741c50195dde24e26d12dc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#af0e745de4741c50195dde24e26d12dc1">Population</a> ()=default</td></tr>
-<tr class="separator:af0e745de4741c50195dde24e26d12dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54eb24ca89470eebe0c27bcb03a0ceae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a54eb24ca89470eebe0c27bcb03a0ceae">Population</a> ()</td></tr>
+<tr class="separator:a54eb24ca89470eebe0c27bcb03a0ceae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8688b86cb57edc25dc7ff54cc537f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a9f8688b86cb57edc25dc7ff54cc537f0">Population</a> (<a class="el" href="class_population.html">Population</a> const &amp;p)=default</td></tr>
 <tr class="separator:a9f8688b86cb57edc25dc7ff54cc537f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a342799a52e776375f003d395705ca4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a342799a52e776375f003d395705ca4c4">move</a> (int32_t x, int32_t y)</td></tr>
 <tr class="separator:a342799a52e776375f003d395705ca4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e295558d665630de657717109280d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a57e295558d665630de657717109280d9">dieOut</a> (int32_t amount)</td></tr>
 <tr class="separator:a57e295558d665630de657717109280d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12a4d31eb287a74035959160210bea83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a12a4d31eb287a74035959160210bea83">addMutation</a> ()</td></tr>
-<tr class="separator:a12a4d31eb287a74035959160210bea83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add08ea7b6c56e3b91b55f877b2d0b329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#add08ea7b6c56e3b91b55f877b2d0b329">addMutation</a> (<a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">MutationType</a> <a class="el" href="class_population.html#a2e1ee655406edf31ed5cb785f5843558">type</a>)</td></tr>
+<tr class="separator:add08ea7b6c56e3b91b55f877b2d0b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f4122adbbc1762943fd34465627019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#ac5f4122adbbc1762943fd34465627019">applyMutation</a> ()</td></tr>
 <tr class="separator:ac5f4122adbbc1762943fd34465627019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90e81f0337152c605fed35bb894582e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_population.html#a24bd09314a9ea44f019b233c2ff83445">TypeName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a90e81f0337152c605fed35bb894582e5">GetType</a> () const</td></tr>
@@ -162,10 +168,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa882a76f6fc9ebcf2b3730898d20eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c17ee31f6134ba80ec504b94cfee707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a6c17ee31f6134ba80ec504b94cfee707">SetProductivity</a> (int32_t <a class="el" href="class_population.html#a3bce753fcfa2e71ce5c06478a82c746d">productivity</a>)</td></tr>
 <tr class="separator:a6c17ee31f6134ba80ec504b94cfee707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a635985574e809d436d9abe861776f601"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a635985574e809d436d9abe861776f601">GetWellBeing</a> () const</td></tr>
-<tr class="separator:a635985574e809d436d9abe861776f601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b955833b0b7154a9abbb569c2c8d46a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a2b955833b0b7154a9abbb569c2c8d46a">SetWellBeing</a> (int32_t well_being)</td></tr>
-<tr class="separator:a2b955833b0b7154a9abbb569c2c8d46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce6f306e8e5750d9bdcbf3608848cfc"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a8ce6f306e8e5750d9bdcbf3608848cfc">GetBiologyDev</a> () const</td></tr>
 <tr class="separator:a8ce6f306e8e5750d9bdcbf3608848cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c6c7c5d588dcd10e028ba412349a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#ab5c6c7c5d588dcd10e028ba412349a9d">SetBiologyDev</a> (int32_t biology_dev)</td></tr>
@@ -210,8 +212,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5332c9229a3500ec542d907dda10f851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bce753fcfa2e71ce5c06478a82c746d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a3bce753fcfa2e71ce5c06478a82c746d">productivity</a></td></tr>
 <tr class="separator:a3bce753fcfa2e71ce5c06478a82c746d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe7ca43e1e179d5d9612999717d30c1"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a6fe7ca43e1e179d5d9612999717d30c1">wellBeing</a></td></tr>
-<tr class="separator:a6fe7ca43e1e179d5d9612999717d30c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fcd5daf9d005ab91112dbc57ca24946"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a4fcd5daf9d005ab91112dbc57ca24946">biologyDev</a></td></tr>
 <tr class="separator:a4fcd5daf9d005ab91112dbc57ca24946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ec853837a15b425958fae97ebcae901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_population.html#ae1bfb193a6735c7c13eeb2da1062fada">ParamType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population.html#a1ec853837a15b425958fae97ebcae901">size</a></td></tr>
@@ -232,6 +232,28 @@ Friends</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00010">10</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="af8d504f6dd76a906368a533934653b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d504f6dd76a906368a533934653b2e">&#9670;&nbsp;</a></span>MutationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">Population::MutationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af8d504f6dd76a906368a533934653b2ea6297e9eb79df881e8f06e34e184f77c1"></a>SIZE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af8d504f6dd76a906368a533934653b2ea5d5dd2fd5809c7552a80747691a7aed6"></a>SAFETY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af8d504f6dd76a906368a533934653b2eaaccbf6b559252edce6ab8de655989d6c"></a>VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33"></a>COVER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00023">23</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+
+</div>
+</div>
 <a id="ae1bfb193a6735c7c13eeb2da1062fada"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1bfb193a6735c7c13eeb2da1062fada">&#9670;&nbsp;</a></span>ParamType</h2>
 
@@ -276,14 +298,11 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af0e745de4741c50195dde24e26d12dc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0e745de4741c50195dde24e26d12dc1">&#9670;&nbsp;</a></span>Population() <span class="overload">[1/2]</span></h2>
+<a id="a54eb24ca89470eebe0c27bcb03a0ceae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54eb24ca89470eebe0c27bcb03a0ceae">&#9670;&nbsp;</a></span>Population() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Population::Population </td>
@@ -292,12 +311,17 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00004">4</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_population_a54eb24ca89470eebe0c27bcb03a0ceae_cgraph.png" border="0" usemap="#class_population_a54eb24ca89470eebe0c27bcb03a0ceae_cgraph" alt=""/></div>
+<map name="class_population_a54eb24ca89470eebe0c27bcb03a0ceae_cgraph" id="class_population_a54eb24ca89470eebe0c27bcb03a0ceae_cgraph">
+<area shape="rect" id="node2" href="class_compound_mutation.html#a62b8ce97bd816a038c187d4e4d82c4d7" title="CompoundMutation::add" alt="" coords="205,5,369,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -328,8 +352,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a12a4d31eb287a74035959160210bea83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12a4d31eb287a74035959160210bea83">&#9670;&nbsp;</a></span>addMutation()</h2>
+<a id="add08ea7b6c56e3b91b55f877b2d0b329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add08ea7b6c56e3b91b55f877b2d0b329">&#9670;&nbsp;</a></span>addMutation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,18 +361,19 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void Population::addMutation </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">Population::MutationType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00028">28</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00035">35</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_population_a12a4d31eb287a74035959160210bea83_cgraph.png" border="0" usemap="#class_population_a12a4d31eb287a74035959160210bea83_cgraph" alt=""/></div>
-<map name="class_population_a12a4d31eb287a74035959160210bea83_cgraph" id="class_population_a12a4d31eb287a74035959160210bea83_cgraph">
+<div class="center"><img src="class_population_add08ea7b6c56e3b91b55f877b2d0b329_cgraph.png" border="0" usemap="#class_population_add08ea7b6c56e3b91b55f877b2d0b329_cgraph" alt=""/></div>
+<map name="class_population_add08ea7b6c56e3b91b55f877b2d0b329_cgraph" id="class_population_add08ea7b6c56e3b91b55f877b2d0b329_cgraph">
 <area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="223,5,427,32"/>
 <area shape="rect" id="node3" href="class_random_generator.html#a7e799f3dc6ceed9113d7e1ca94b71c2d" title="RandomGenerator::randNormalInt" alt="" coords="216,56,435,83"/>
 <area shape="rect" id="node4" href="class_compound_mutation.html#a62b8ce97bd816a038c187d4e4d82c4d7" title="CompoundMutation::add" alt="" coords="243,107,407,133"/>
@@ -372,7 +397,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00040">40</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00056">56</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -401,7 +426,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00024">24</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00031">31</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +445,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00155">155</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00168">168</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +464,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00179">179</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00186">186</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -458,7 +483,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00203">203</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00210">210</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +502,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00161">161</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00174">174</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +521,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00137">137</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00150">150</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +540,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00167">167</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00180">180</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -534,7 +559,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00191">191</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00198">198</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -553,7 +578,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00185">185</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00192">192</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -572,7 +597,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00131">131</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00144">144</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -591,26 +616,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00197">197</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a635985574e809d436d9abe861776f601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a635985574e809d436d9abe861776f601">&#9670;&nbsp;</a></span>GetWellBeing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t Population::GetWellBeing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00173">173</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00204">204</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +635,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00143">143</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00156">156</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +654,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00149">149</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00162">162</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +684,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00020">20</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00027">27</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +704,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00158">158</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00171">171</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +724,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00182">182</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00189">189</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +744,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00206">206</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00213">213</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +764,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00164">164</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00177">177</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -778,7 +784,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00140">140</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00153">153</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -798,7 +804,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00170">170</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00183">183</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -818,7 +824,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00194">194</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00201">201</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +844,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00188">188</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00195">195</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -858,7 +864,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00134">134</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00147">147</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -878,27 +884,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00200">200</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a2b955833b0b7154a9abbb569c2c8d46a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b955833b0b7154a9abbb569c2c8d46a">&#9670;&nbsp;</a></span>SetWellBeing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Population::SetWellBeing </td>
-          <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>well_being</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00176">176</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00207">207</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -918,7 +904,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00146">146</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00159">159</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -938,7 +924,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00152">152</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00165">165</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +962,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00004">4</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00011">11</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1023,7 +1009,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00054">54</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8cpp_source.html#l00068">68</a> of file <a class="el" href="_population_8cpp_source.html">Population.cpp</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1034,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00068">68</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00072">72</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1058,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00072">72</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00075">75</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1082,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00076">76</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00079">79</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1106,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00069">69</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00073">73</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1130,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00061">61</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00065">65</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1154,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00066">66</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00070">70</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1178,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00070">70</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00074">74</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1202,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00074">74</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00077">77</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1226,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00073">73</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00076">76</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1264,7 +1250,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00065">65</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00069">69</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1288,31 +1274,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00075">75</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
-
-</div>
-</div>
-<a id="a6fe7ca43e1e179d5d9612999717d30c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fe7ca43e1e179d5d9612999717d30c1">&#9670;&nbsp;</a></span>wellBeing</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t Population::wellBeing</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00071">71</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00078">78</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1298,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00067">67</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00071">71</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>
@@ -1360,7 +1322,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00067">67</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_8h_source.html#l00071">71</a> of file <a class="el" href="_population_8h_source.html">Population.h</a>.</p>
 
 </div>
 </div>

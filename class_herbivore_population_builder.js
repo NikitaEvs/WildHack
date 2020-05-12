@@ -12,6 +12,5 @@ var class_herbivore_population_builder =
     [ "setSize", "class_herbivore_population_builder.html#a71493e831407292515c3ca66989fd66d", null ],
     [ "setType", "class_herbivore_population_builder.html#a52c4618d882c36a09107f56e2e211d14", null ],
     [ "setVelocity", "class_herbivore_population_builder.html#abadc4afdbd5faf2f4a12191201a60444", null ],
-    [ "setWellBeing", "class_herbivore_population_builder.html#ad9eb035bda824cea3b7554eb74c0b6d9", null ],
     [ "p", "class_herbivore_population_builder.html#ae0d9555def747132e4411ec1bfe2d9c8", null ]
 ];

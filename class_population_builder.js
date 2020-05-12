@@ -10,6 +10,5 @@ var class_population_builder =
     [ "setSafety", "class_population_builder.html#a0a04ff5f182858883ed2843a63ead1ee", null ],
     [ "setSize", "class_population_builder.html#ae92c997079bae55d2a3212d51e35901b", null ],
     [ "setType", "class_population_builder.html#a5672acc94f128deb388fc74faf59a68c", null ],
-    [ "setVelocity", "class_population_builder.html#aa618f3be309a1268753016f2dcbab378", null ],
-    [ "setWellBeing", "class_population_builder.html#a125e1c93e306600d8c559d5cb83d1818", null ]
+    [ "setVelocity", "class_population_builder.html#aa618f3be309a1268753016f2dcbab378", null ]
 ];
