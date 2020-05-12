@@ -36,7 +36,7 @@ TEST(Unit, Population) {
   std::shared_ptr<PopulationBuilder> b = std::make_shared<HerbivorePopulationBuilder>();
   d.setBuilder(b);
   std::shared_ptr<Population> p = d.makeBig("elephant");
-  ASSERT_EQ(p -> size, Population::BIG);
+  ASSERT_EQ(p -> GetSize(), Population::BIG);
 }
 
 TEST(Unit, Mutation) {
