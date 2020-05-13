@@ -22,9 +22,9 @@ void GameEngine::fillMapPattern(std::vector<std::vector<int32_t> > &cells) {
   }
 }
 
-bool GameEngine::botTurn(std::shared_ptr<Handler> first) {
+bool GameEngine::botTurn(std::shared_ptr<Player> bot) {
   try {
-    first->handle();
+    generateBotHandlersChain(bot)->handle();
   } catch (const std::runtime_error &re) {
     if (re.what() == "It was the last handler") {
       return true;
@@ -121,4 +121,9 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
       chain[i - 1]->setNext(chain[i]);
     }
   }
+  return chain[0];
+}
+
+void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> > _players) {
+  players = _players;
 }

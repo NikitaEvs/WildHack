@@ -23,7 +23,9 @@ class GameEngine {
 
   void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
 
-  bool botTurn(std::shared_ptr<Handler> first);
+  bool botTurn(std::shared_ptr<Player> bot);
+
+  void setPlayers(std::vector<std::shared_ptr<Player> > _players);
 
  private:
   std::shared_ptr<Map> map;
