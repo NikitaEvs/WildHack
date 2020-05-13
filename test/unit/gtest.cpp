@@ -46,8 +46,7 @@ TEST(Unit, Mutation) {
       d.setBuilder(b);
       std::shared_ptr<Population> p = d.makeBig("elephant");
 
-      p -> addMutation(Population::MutationType::SIZE);
-      p -> applyMutation();
+      p -> mutate(Population::MutationType::SIZE);
       );
 }
 

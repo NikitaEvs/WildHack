@@ -33,11 +33,9 @@ int main() {
   std::cout << *p;
 
   std::cout << "***Mutation example code***" << std::endl;
-  p->addMutation(Population::MutationType::VELOCITY);
-  p->applyMutation();
+  p->mutate(Population::MutationType::VELOCITY);
   std::cout << *p;
-  p->addMutation(Population::MutationType::SIZE);
-  p->applyMutation();
+  p->mutate(Population::MutationType::SIZE);
   std::cout << *p;
 
   std::cout << "***Generate map example code***" << std::endl;
