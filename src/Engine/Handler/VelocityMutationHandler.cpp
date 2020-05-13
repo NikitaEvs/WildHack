@@ -1,5 +1,5 @@
 #include "VelocityMutationHandler.h"
 
 void VelocityMutationHandler::change() {
-  population->addMutation(Population::VELOCITY);
+  population->mutate(Population::VELOCITY);
 }
