@@ -2,22 +2,6 @@
 #include "RandomGenerator.h"
 #include "Config.h"
 
-void Population::switchParam(ParamType &p, int32_t value) {
-  switch (value) {
-    case -1:
-      if (p > VERY_SMALL) {
-        p = static_cast<ParamType>(static_cast<int32_t>(p) - 1);
-      }
-      break;
-    case 1:
-      if (p < VERY_BIG) {
-        p = static_cast<ParamType>(static_cast<int32_t>(p) + 1);
-      }
-      break;
-    default:break;
-  }
-}
-
 void Population::applyLifeCircle(int32_t _xPos,
                                  int32_t _yPos,
                                  int32_t food,
@@ -59,6 +43,32 @@ void Population::applyLifeCircle(int32_t _xPos,
   int32_t k = (productivity * (static_cast<int32_t>(size) + static_cast<int32_t>(cover))
       + health * (static_cast<int32_t>(velocity) + static_cast<int32_t>(safety))) / 2000;
   biologyDev = biologyDev * (100 + k) / 100;
+}
+
+void Population::mutate(MutationType type) {
+  addMutation(type);
+  applyMutation();
+}
+
+void Population::move(int32_t x_pos, int32_t y_pos) {
+  xPos = x_pos;
+  yPos = y_pos;
+}
+
+void Population::switchParam(ParamType &p, int32_t value) {
+  switch (value) {
+    case -1:
+      if (p > VERY_SMALL) {
+        p = static_cast<ParamType>(static_cast<int32_t>(p) - 1);
+      }
+      break;
+    case 1:
+      if (p < VERY_BIG) {
+        p = static_cast<ParamType>(static_cast<int32_t>(p) + 1);
+      }
+      break;
+    default:break;
+  }
 }
 
 void Population::addMutation(Population::MutationType type) {

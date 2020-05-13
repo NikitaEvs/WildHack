@@ -38,8 +38,9 @@ class Population {
                        int32_t herbivore,
                        ParamType herbSize,
                        ParamType carnSize);
-  void addMutation(MutationType type);
-  void applyMutation();
+
+  void mutate(MutationType type);
+  void move(int32_t x_pos, int32_t y_pos);
 
   friend std::ostream &operator<<(std::ostream &os, Population &p);
 
@@ -68,6 +69,9 @@ class Population {
   ParamType GetCover() const;
   void SetCover(ParamType cover);
  private:
+  void addMutation(MutationType type);
+  void applyMutation();
+
   CompoundMutation mutationTree;
 
   static void switchParam(ParamType &p, int32_t value);
