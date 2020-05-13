@@ -6,7 +6,7 @@ std::shared_ptr<Population> Player::getPopulation(int32_t number) {
 }
 
 void Player::addNewPopulation(std::shared_ptr<Population> new_population) {
-  playerPopulations.push_back(new_population);
+  playerPopulations.push_back(std::move(new_population));
 }
 
 const std::vector<std::shared_ptr<Population>> &Player::GetPlayerPopulations() const {
