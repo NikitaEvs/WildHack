@@ -40,3 +40,57 @@ std::ostream& operator<<(std::ostream &os, const CellType &cell) {
 
   return os;
 }
+
+
+int32_t CellType::getWaterLevel() const {
+  return waterLevel;
+}
+
+void CellType::setWaterLevel(int32_t newWaterLevel) {
+  waterLevel = newWaterLevel;
+}
+
+
+int32_t CellType::getPlantsCount() const {
+  return plantsCount;
+}
+
+void CellType::setPlantsCount(int32_t newPlantsCount) {
+  plantsCount = newPlantsCount;
+}
+
+
+int32_t CellType::getCarnivoreCount() const {
+  return carnivoreCount;
+}
+
+void CellType::setCarnivoreCount(int32_t newCarnivoreCount) {
+  carnivoreCount = newCarnivoreCount;
+}
+
+
+int32_t CellType::getHerbivoreCount() const {
+  return herbivoreCount;
+}
+
+void CellType::setHerbivoreCount(int32_t newHerbivoreCount) {
+  herbivoreCount = newHerbivoreCount;
+}
+
+
+CellType::cellType CellType::getType() const {
+  return type;
+}
+
+void CellType::setType(CellType::cellType newType) {
+  type = newType;
+}
+
+
+CellType::climateType CellType::getClimate() const {
+  return climate;
+}
+
+void CellType::setClimate(CellType::climateType newClimate) {
+  climate = newClimate;
+}

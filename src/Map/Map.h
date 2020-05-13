@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_MAP_MAP_H_
-#define PEACH_SRC_MAP_MAP_H_
+#pragma once
 
 #include <memory>
 #include <vector>
@@ -7,13 +6,10 @@
 #include "CellType.h"
 #include "CellTypeDirector.h"
 #include "CellTypeBuilder.h"
-#include "util/Random.h"
+#include "util/RandomGenerator.h"
 #include "json/json.hpp"
 
 class Map {
- private:
-  std::vector<std::vector<std::shared_ptr<CellType> > > map;
-
  public:
   typedef std::vector<std::vector<std::shared_ptr<CellType> > >::iterator iterator;
 
@@ -32,6 +28,7 @@ class Map {
 
   size_t getHeight();
   size_t getWidth();
-};
 
-#endif //PEACH_SRC_MAP_MAP_H_
+ private:
+  std::vector<std::vector<std::shared_ptr<CellType> > > map;
+};

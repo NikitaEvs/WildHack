@@ -1,34 +1,25 @@
-#ifndef SRC_UTIL_CONFIG_H_
-#define SRC_UTIL_CONFIG_H_
+#pragma once
 
 #include <fstream>
 #include <memory>
 
 #include "json/json.hpp"
+#include "Population.h"
 
 #define configFilePath "../../resources/config/values.json"
 
 class Config;
 
 class ConfigDestroyer {
- private:
-  Config *instance;
  public:
   ~ConfigDestroyer();
   void initialize(Config *initInstance);
+
+ private:
+  Config *instance;
 };
 
 class Config {
- private:
-  nlohmann::json configJSON;
-
- protected:
-  Config() = default;
-  ~Config() {}
-  static Config* configPtr;
-  static ConfigDestroyer destroyer;
-  friend class ConfigDestroyer;
-
  public:
   Config(Config &config) = delete;
   void operator = (const Config &) = delete;
@@ -58,6 +49,7 @@ class Config {
   std::pair<int32_t, int32_t> getTundraPlantsCount();
 
   /* Animals */
+  int32_t  getMaxAmount(Population::TypeName type, Population::ParamType size);
   /* Carnivore */
   /* very small */
   std::pair<int32_t, int32_t> getCarnivoreVerySmallAnimalAmount();
@@ -129,6 +121,14 @@ class Config {
   std::pair<int32_t, int32_t> getHerbivoreVeryBigProductivity();
   std::pair<int32_t, int32_t> getHerbivoreVeryBigWellBeing();
   std::pair<int32_t, int32_t> getHerbivoreVeryBigBiologyDev();
-};
 
-#endif //SRC_UTIL_CONFIG_H_
+ private:
+  nlohmann::json configJSON;
+
+ protected:
+  Config() = default;
+  ~Config() {}
+  static Config* configPtr;
+  static ConfigDestroyer destroyer;
+  friend class ConfigDestroyer;
+};

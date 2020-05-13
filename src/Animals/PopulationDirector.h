@@ -1,10 +1,9 @@
-#ifndef PEACH_SRC_ANIMALS_POPULATIONDIRECTOR_H_
-#define PEACH_SRC_ANIMALS_POPULATIONDIRECTOR_H_
+#pragma once
 
 #include <memory>
 
 #include "Config.h"
-#include "Random.h"
+#include "RandomGenerator.h"
 #include "PopulationBuilder.h"
 #include "HerbivorePopulationBuilder.cpp"
 #include "CarnivorePopulationBuilder.cpp"
@@ -19,5 +18,3 @@ class PopulationDirector{
   std::shared_ptr<Population> makeAverage(std::string name);
   std::shared_ptr<Population> makeBig(std::string name);
 };
-
-#endif //PEACH_SRC_ANIMALS_POPULATIONDIRECTOR_H_

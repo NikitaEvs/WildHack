@@ -1,46 +1,43 @@
 #include "PopulationBuilder.h"
 
 class CarnivorePopulationBuilder : public PopulationBuilder {
- private:
-  std::shared_ptr<Population> p;
  public:
   CarnivorePopulationBuilder() {
     p = std::make_shared<Population>();
   }
   void setType() override {
-    p->type = "carnivore";
+    p->SetType(Population::TypeName::CARNIVORE);
   }
-  void setName(std::string name) {
-    p->name = name;
+  void setName(std::string name) override {
+    p->SetName(name);
   }
-  void setAmount(int32_t a) override {
-    p->animalAmount = a;
+  void setAmount(int32_t amount) override {
+    p->SetAnimalAmount(amount);
   }
-  void setHealth(int32_t h) override {
-    p->health = h;
+  void setHealth(int32_t health) override {
+    p->SetHealth(health);
   }
-  void setProductivity(int32_t pr) override {
-    p->productivity = pr;
+  void setProductivity(int32_t productivity) override {
+    p->SetProductivity(productivity);
   }
-  void setWellBeing(int32_t w) override {
-    p->wellBeing = w;
+  void setBiologyDev(int32_t bio_dev) override {
+    p->SetBiologyDev(bio_dev);
   }
-  void setBiologyDev(int32_t b) override {
-    p->biologyDev = b;
+  void setSize(Population::ParamType size) override {
+    p->SetSize(size);
   }
-  void setSize(Population::param s) override {
-    p->size = s;
+  void setSafety(Population::ParamType safety) override {
+    p->SetSafety(safety);
   }
-  void setSafety(Population::param s) override {
-    p->safety = s;
+  void setVelocity(Population::ParamType velocity) override {
+    p->SetVelocity(velocity);
   }
-  void setVelocity(Population::param v) override {
-    p->velocity = v;;
+  void setCover(Population::ParamType cover) override {
+    p->SetCover(cover);
   }
-  void setCover(Population::param c) override {
-    p->cover = c;
-  }
-  std::shared_ptr<Population> getProduct() {
+  std::shared_ptr<Population> getProduct() override {
     return p;
   }
+ private:
+  std::shared_ptr<Population> p;
 };

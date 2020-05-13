@@ -1,5 +1,4 @@
-#ifndef PEACH_SRC_ANIMALS_MUTATIONS_LEAFMUTATION_H_
-#define PEACH_SRC_ANIMALS_MUTATIONS_LEAFMUTATION_H_
+#pragma once
 
 #include "MutationComponent.h"
 
@@ -9,5 +8,3 @@ class LeafMutation : public MutationComponent {
   void getMutation() override;
   void print(std::ostream &os) override;
 };
-
-#endif //PEACH_SRC_ANIMALS_MUTATIONS_LEAFMUTATION_H_
