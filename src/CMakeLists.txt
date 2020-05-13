@@ -40,6 +40,7 @@ set (ANIMAL_SOURCES
 set (ENGINE_SOURCES
         ${ENGINE_PATH}/GameEngine.h
         ${ENGINE_PATH}/GameEngine.cpp
+        ${ENGINE_PATH}/Handler/Handler.h
         )
 
 set (MUTATION_SOURCES
