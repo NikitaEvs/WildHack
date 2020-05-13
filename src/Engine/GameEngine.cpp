@@ -127,3 +127,19 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
 void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> > _players) {
   players = _players;
 }
+
+void GameEngine::populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos) {
+  population->move(x_pos, y_pos);
+}
+
+void GameEngine::populationMutate(std::shared_ptr<Population> population, Population::MutationType type) {
+  population->mutate(type);
+}
+
+void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t destination_x, int32_t destination_y) {
+  population->SetAnimalAmount(population->GetAnimalAmount() / 2);
+  std::shared_ptr<Population> new_population = std::make_shared<Population>(*(population));
+  new_population->SetXPos(destination_x);
+  new_population->SetYPos(destination_y);
+  players[tempPlayer]->addNewPopulation(new_population);
+}

@@ -27,8 +27,12 @@ class GameEngine {
 
   void setPlayers(std::vector<std::shared_ptr<Player> > _players);
 
+  void populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos);
+  void populationSplit(std::shared_ptr<Population> population, int32_t destination_x, int32_t destination_y);
+  void populationMutate(std::shared_ptr<Population> population, Population::MutationType type);
  private:
   std::shared_ptr<Map> map;
   std::vector<std::shared_ptr<Player> > players;
+  int32_t tempPlayer;
   std::shared_ptr<Handler> generateBotHandlersChain(std::shared_ptr<Player> bot);
 };
