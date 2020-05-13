@@ -13,9 +13,9 @@ void Handler::handle() {
     if (next != nullptr) {
       next->handle();
     } else {
-      throw "It was the last handler";
+      throw std::runtime_error("It was the last handler");
     }
   } else {
-    throw "There is no population to change";
+    throw std::runtime_error("There is no population to change");
   }
 }

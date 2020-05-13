@@ -2,7 +2,7 @@
 
 void MoveHandler::change() {
   if (xPos == -1 || yPos == -1) {
-    throw "Position to move to was not chosen";
+    throw std::runtime_error("Position to move to was not chosen");
   } else {
     //It's my mistake, just will fix population first
     //population->move(xPos, yPos);
