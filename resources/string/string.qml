@@ -19,8 +19,11 @@ QtObject {
     property string add: "Add new task"
     property string name: "Name"
     property string start: "Start time"
-    property string finish: "Finish time"
     property string today: "Today"
+    property string mutate: "Mutate"
+    property string multiply: "Multiply"
+    property string migrate: "Migrate"
+    property string finish: "Finish step"
 
     property string cellPath: "../svg/hexagon.svg"
     property string forest: "../svg/forest.svg"
