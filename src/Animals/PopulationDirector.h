@@ -14,7 +14,8 @@ class PopulationDirector{
 
  public:
   void setBuilder(std::shared_ptr<PopulationBuilder> b);
-  std::shared_ptr<Population> makeSmall(std::string name);
-  std::shared_ptr<Population> makeAverage(std::string name);
-  std::shared_ptr<Population> makeBig(std::string name);
+
+  std::shared_ptr<Population> makeSmall(const std::string &name);
+  std::shared_ptr<Population> makeAverage(const std::string &name);
+  std::shared_ptr<Population> makeBig(const std::string &name);
 };

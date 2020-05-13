@@ -15,5 +15,6 @@ class PopulationBuilder {
   virtual void setSafety(Population::ParamType safety) = 0;
   virtual void setVelocity(Population::ParamType velocity) = 0;
   virtual void setCover(Population::ParamType cover) = 0;
+  virtual void resetPopulation() = 0;
   virtual std::shared_ptr<Population> getProduct() = 0;
 };
