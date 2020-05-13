@@ -18,6 +18,8 @@ class Player {
   void SetName(const std::string &name);
 
   void generatePopulations();
+
+  int32_t getPopulationsNumber();
  private:
   std::vector<std::shared_ptr<Population> > playerPopulations;
   std::string name;

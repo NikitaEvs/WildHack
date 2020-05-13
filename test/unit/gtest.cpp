@@ -9,6 +9,7 @@
 #include "Map/Map.h"
 
 #include "Engine/Player/Player.h"
+#include "Engine/GameEngine.h"
 
 
 TEST(Unit, CreateCell) {
@@ -50,6 +51,22 @@ TEST(Unit, Mutation) {
 
       p -> mutate(Population::MutationType::SIZE);
       );
+}
+
+TEST(Unit, botChain) {
+  ASSERT_NO_FATAL_FAILURE(
+      std::vector<std::shared_ptr<Player> > players;
+      players.assign(1, std::make_shared<Player>());
+      PopulationDirector d;
+      std::shared_ptr<PopulationBuilder> b = std::make_shared<HerbivorePopulationBuilder>();
+      d.setBuilder(b);
+      players[0]->addNewPopulation(d.makeAverage("pig - punk"));
+      players[0]->addNewPopulation(d.makeBig("elephant"));
+      GameEngine engine;
+      engine.setPlayers(players);
+      engine.generateMap();
+      engine.botTurn(players[0]);
+  );
 }
 
 TEST(Unit, Map) {
