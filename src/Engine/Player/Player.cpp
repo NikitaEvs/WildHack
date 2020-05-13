@@ -1,7 +1,7 @@
 #include <vector>
 #include "Player.h"
 
-std::shared_ptr<Population> Player::getPopulation(int number) {
+std::shared_ptr<Population> Player::getPopulation(int32_t number) {
   return playerPopulations[number];
 }
 
