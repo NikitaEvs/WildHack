@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include "Population.h"
+
 class CellType {
  public:
     enum cellType {
@@ -37,13 +39,20 @@ class CellType {
     climateType getClimate() const;
     void setClimate(climateType newClimate);
 
-  friend std::ostream& operator << (std::ostream &os, const CellType &cell);
+    std::shared_ptr<Population> getCurrentPopulation() const;
+
+    void setCurrentPopulation(std::shared_ptr<Population> current_population);
+
+    friend std::ostream& operator << (std::ostream &os, const CellType &cell);
 
  private:
   int32_t waterLevel = 0;
   int32_t plantsCount = 0;
   int32_t carnivoreCount = 0;
   int32_t herbivoreCount = 0;
+
   cellType type;
   climateType climate;
+
+  std::shared_ptr<Population> currentPopulation = nullptr;
 };

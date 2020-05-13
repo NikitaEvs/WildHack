@@ -5,6 +5,9 @@ class HerbivorePopulationBuilder : public PopulationBuilder {
   HerbivorePopulationBuilder() {
     p = std::make_shared<Population>();
   }
+  void resetPopulation() override {
+    p = std::make_shared<Population>();
+  }
   void setType() override {
     p->SetType(Population::TypeName::HERBIVORE);
   }

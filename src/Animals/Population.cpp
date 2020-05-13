@@ -102,14 +102,14 @@ void Population::applyMutation() {
 
 std::ostream &operator<<(std::ostream &os, Population &p) {
   std::string pSize, pSafe, pVel, pCov, pType;
-  switch (p.type) {
+  switch (p.GetType()) {
     case Population::HERBIVORE:pType = "HERBIVORE";
       break;
     case Population::CARNIVORE:pType = "CARNIVORE";
       break;
   }
 
-  switch (p.size) {
+  switch (p.GetSize()) {
     case Population::VERY_SMALL:pSize = "VERY_SMALL";
       break;
     case Population::SMALL:pSize = "SMALL";
@@ -122,7 +122,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.safety) {
+  switch (p.GetSafety()) {
     case Population::VERY_SMALL:pSafe = "VERY_SMALL";
       break;
     case Population::SMALL:pSafe = "SMALL";
@@ -135,7 +135,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.velocity) {
+  switch (p.GetVelocity()) {
     case Population::VERY_SMALL:pVel = "VERY_SMALL";
       break;
     case Population::SMALL:pVel = "SMALL";
@@ -148,7 +148,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.cover) {
+  switch (p.GetCover()) {
     case Population::VERY_SMALL:pCov = "VERY_SMALL";
       break;
     case Population::SMALL:pCov = "SMALL";
@@ -160,32 +160,33 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
     case Population::VERY_BIG:pCov = "VERY_BIG";
       break;
   }
-  os << pType << " " << pSize << " " << p.name << "\n"
-     << "animalAmount " << p.animalAmount << "\n"
-     << "health       " << p.health << "\n"
-     << "productivity " << p.productivity << "\n"
-     << "biologyDev   " << p.biologyDev << "\n"
+  os << pType << " " << pSize << " " << p.GetName() << "\n"
+     << "animalAmount " << p.GetAnimalAmount() << "\n"
+     << "health       " << p.GetHealth() << "\n"
+     << "productivity " << p.GetProductivity() << "\n"
+     << "biologyDev   " << p.GetBiologyDev() << "\n"
      << "safety       " << pSafe << "\n"
      << "velocity     " << pVel << "\n"
      << "cover        " << pCov << "\n"
-     << "xPos         " << p.xPos << "\n"
-     << "yPos         " << p.yPos << "\n";
+     << "xPos         " << p.GetXPos() << "\n"
+     << "yPos         " << p.GetYPos() << "\n";
   os << "MUTATIONS" << std::endl;
   p.mutationTree.getMutation();
   p.mutationTree.print(os);
+  return os;
 }
 
 Population::TypeName Population::GetType() const {
   return type;
 }
-void Population::SetType(Population::TypeName type) {
-  Population::type = type;
+void Population::SetType(Population::TypeName newType) {
+  type = newType;
 }
 const std::string &Population::GetName() const {
   return name;
 }
-void Population::SetName(const std::string &name) {
-  Population::name = name;
+void Population::SetName(const std::string &newName) {
+  name = newName;
 }
 int32_t Population::GetXPos() const {
   return xPos;

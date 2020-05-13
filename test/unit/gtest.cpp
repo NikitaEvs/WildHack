@@ -8,6 +8,7 @@
 #include "Map/CellTypeJSONRepresentationBuilder.h"
 #include "Map/Map.h"
 
+#include "Engine/Player/Player.h"
 #include "Engine/GameEngine.h"
 
 
@@ -74,6 +75,14 @@ TEST(Unit, Map) {
 
   ASSERT_EQ(map.getHeight(), 10);
   ASSERT_EQ(map.getWidth(), 10);
+}
+
+TEST(Unit, CreatePlayer) {
+  Player player;
+  player.SetName("Cat");
+  player.generatePopulations();
+  auto populations = player.GetPlayerPopulations();
+  ASSERT_EQ(populations.size(), 2);
 }
 
 int main(int argc, char **argv) {

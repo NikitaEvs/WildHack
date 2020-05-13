@@ -58,6 +58,11 @@
   },
   "population" : {
     "herbivore" : {
+      "names": [
+        "elephant",
+        "capybara",
+        "horse"
+      ],
       "verySmall": {
         "maxAmount" : 1000,
         "animalAmount" : {
@@ -175,6 +180,11 @@
       }
     },
     "carnivore" : {
+      "names": [
+        "wolf",
+        "lion",
+        "bear"
+      ],
       "verySmall": {
         "maxAmount": 900,
         "animalAmount": {

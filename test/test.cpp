@@ -3,6 +3,7 @@
 #include "Map/CellTypeJSONRepresentationBuilder.h"
 #include "Map/Map.h"
 #include "PopulationDirector.h"
+#include "Engine/Player/Player.h"
 
 #include <iostream>
 #include <string>
@@ -46,6 +47,15 @@ int main() {
       std::cout << map[kI][kJ] -> getType() << " ";
     }
     std::cout << std::endl;
+  }
+
+  std::cout << "***Generate player example code***" << std::endl;
+  Player player;
+  player.SetName("Cat");
+  player.generatePopulations();
+  auto populations = player.GetPlayerPopulations();
+  for (auto &population : populations) {
+    std::cout << *population << std::endl;
   }
 
   return 0;
