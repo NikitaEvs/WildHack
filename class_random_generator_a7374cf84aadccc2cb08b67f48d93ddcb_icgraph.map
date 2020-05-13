@@ -1,3 +1,5 @@
 <map id="RandomGenerator::randInt" name="RandomGenerator::randInt">
-<area shape="rect" id="node2" href="$class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="229,5,335,32"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="229,5,456,47"/>
+<area shape="rect" id="node4" href="$class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="290,71,395,98"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="504,13,653,39"/>
 </map>

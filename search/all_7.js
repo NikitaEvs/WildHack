@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['handle',['handle',['../class_handler.html#ae4a81f0c6e7b6f68ff3bea15dc32c8d7',1,'Handler']]],
+  ['handler',['Handler',['../class_handler.html',1,'']]],
+  ['handler_2ecpp',['Handler.cpp',['../_handler_8cpp.html',1,'']]],
+  ['handler_2eh',['Handler.h',['../_handler_8h.html',1,'']]],
   ['health',['health',['../class_mutation_component.html#ac1f9ccfc6d840f2ad84585ff70d2d4c4',1,'MutationComponent::health()'],['../class_population.html#a5332c9229a3500ec542d907dda10f851',1,'Population::health()']]],
   ['herbivore',['HERBIVORE',['../class_population.html#a24bd09314a9ea44f019b233c2ff83445acf688afcd4c29dd28de524c97f6159ae',1,'Population']]],
   ['herbivorecount',['herbivoreCount',['../class_cell_type.html#a0015adb9924ffb6f6ac83531fca576ef',1,'CellType']]],

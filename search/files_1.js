@@ -12,5 +12,7 @@ var searchData=
   ['compoundmutation_2ecpp',['CompoundMutation.cpp',['../_compound_mutation_8cpp.html',1,'']]],
   ['compoundmutation_2eh',['CompoundMutation.h',['../_compound_mutation_8h.html',1,'']]],
   ['config_2ecpp',['Config.cpp',['../_config_8cpp.html',1,'']]],
-  ['config_2eh',['Config.h',['../_config_8h.html',1,'']]]
+  ['config_2eh',['Config.h',['../_config_8h.html',1,'']]],
+  ['covermutationhandler_2ecpp',['CoverMutationHandler.cpp',['../_cover_mutation_handler_8cpp.html',1,'']]],
+  ['covermutationhandler_2eh',['CoverMutationHandler.h',['../_cover_mutation_handler_8h.html',1,'']]]
 ];

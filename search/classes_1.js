@@ -7,5 +7,6 @@ var searchData=
   ['celltypejsonrepresentationbuilder',['CellTypeJSONRepresentationBuilder',['../class_cell_type_j_s_o_n_representation_builder.html',1,'']]],
   ['compoundmutation',['CompoundMutation',['../class_compound_mutation.html',1,'']]],
   ['config',['Config',['../class_config.html',1,'']]],
-  ['configdestroyer',['ConfigDestroyer',['../class_config_destroyer.html',1,'']]]
+  ['configdestroyer',['ConfigDestroyer',['../class_config_destroyer.html',1,'']]],
+  ['covermutationhandler',['CoverMutationHandler',['../class_cover_mutation_handler.html',1,'']]]
 ];

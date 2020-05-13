@@ -28,9 +28,17 @@ var files =
     ] ],
     [ "Config.cpp", "_config_8cpp.html", null ],
     [ "Config.h", "_config_8h.html", "_config_8h" ],
+    [ "CoverMutationHandler.cpp", "_cover_mutation_handler_8cpp.html", null ],
+    [ "CoverMutationHandler.h", "_cover_mutation_handler_8h.html", [
+      [ "CoverMutationHandler", "class_cover_mutation_handler.html", "class_cover_mutation_handler" ]
+    ] ],
     [ "GameEngine.cpp", "_game_engine_8cpp.html", null ],
     [ "GameEngine.h", "_game_engine_8h.html", [
       [ "GameEngine", "class_game_engine.html", "class_game_engine" ]
+    ] ],
+    [ "Handler.cpp", "_handler_8cpp.html", null ],
+    [ "Handler.h", "_handler_8h.html", [
+      [ "Handler", "class_handler.html", "class_handler" ]
     ] ],
     [ "HerbivorePopulationBuilder.cpp", "_herbivore_population_builder_8cpp.html", [
       [ "HerbivorePopulationBuilder", "class_herbivore_population_builder.html", "class_herbivore_population_builder" ]
@@ -43,8 +51,16 @@ var files =
     [ "Map.h", "_map_8h.html", [
       [ "Map", "class_map.html", "class_map" ]
     ] ],
+    [ "MoveHandler.cpp", "_move_handler_8cpp.html", null ],
+    [ "MoveHandler.h", "_move_handler_8h.html", [
+      [ "MoveHandler", "class_move_handler.html", "class_move_handler" ]
+    ] ],
     [ "MutationComponent.h", "_mutation_component_8h.html", [
       [ "MutationComponent", "class_mutation_component.html", "class_mutation_component" ]
+    ] ],
+    [ "Player.cpp", "_player_8cpp.html", null ],
+    [ "Player.h", "_player_8h.html", [
+      [ "Player", "class_player.html", "class_player" ]
     ] ],
     [ "Population.cpp", "_population_8cpp.html", "_population_8cpp" ],
     [ "Population.h", "_population_8h.html", [
@@ -61,5 +77,17 @@ var files =
     [ "RandomGenerator.h", "_random_generator_8h.html", [
       [ "RandomDestroyer", "class_random_destroyer.html", "class_random_destroyer" ],
       [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ]
+    ] ],
+    [ "SafetyMutationHandler.cpp", "_safety_mutation_handler_8cpp.html", null ],
+    [ "SafetyMutationHandler.h", "_safety_mutation_handler_8h.html", [
+      [ "SafetyMutationHandler", "class_safety_mutation_handler.html", "class_safety_mutation_handler" ]
+    ] ],
+    [ "SizeMutationHandler.cpp", "_size_mutation_handler_8cpp.html", null ],
+    [ "SizeMutationHandler.h", "_size_mutation_handler_8h.html", [
+      [ "SizeMutationHandler", "class_size_mutation_handler.html", "class_size_mutation_handler" ]
+    ] ],
+    [ "VelocityMutationHandler.cpp", "_velocity_mutation_handler_8cpp.html", null ],
+    [ "VelocityMutationHandler.h", "_velocity_mutation_handler_8h.html", [
+      [ "VelocityMutationHandler", "class_velocity_mutation_handler.html", "class_velocity_mutation_handler" ]
     ] ]
 ];

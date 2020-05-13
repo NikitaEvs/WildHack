@@ -9,14 +9,21 @@ var annotated_dup =
     [ "CompoundMutation", "class_compound_mutation.html", "class_compound_mutation" ],
     [ "Config", "class_config.html", "class_config" ],
     [ "ConfigDestroyer", "class_config_destroyer.html", "class_config_destroyer" ],
+    [ "CoverMutationHandler", "class_cover_mutation_handler.html", "class_cover_mutation_handler" ],
     [ "GameEngine", "class_game_engine.html", "class_game_engine" ],
+    [ "Handler", "class_handler.html", "class_handler" ],
     [ "HerbivorePopulationBuilder", "class_herbivore_population_builder.html", "class_herbivore_population_builder" ],
     [ "LeafMutation", "class_leaf_mutation.html", "class_leaf_mutation" ],
     [ "Map", "class_map.html", "class_map" ],
+    [ "MoveHandler", "class_move_handler.html", "class_move_handler" ],
     [ "MutationComponent", "class_mutation_component.html", "class_mutation_component" ],
+    [ "Player", "class_player.html", "class_player" ],
     [ "Population", "class_population.html", "class_population" ],
     [ "PopulationBuilder", "class_population_builder.html", "class_population_builder" ],
     [ "PopulationDirector", "class_population_director.html", "class_population_director" ],
     [ "RandomDestroyer", "class_random_destroyer.html", "class_random_destroyer" ],
-    [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ]
+    [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ],
+    [ "SafetyMutationHandler", "class_safety_mutation_handler.html", "class_safety_mutation_handler" ],
+    [ "SizeMutationHandler", "class_size_mutation_handler.html", "class_size_mutation_handler" ],
+    [ "VelocityMutationHandler", "class_velocity_mutation_handler.html", "class_velocity_mutation_handler" ]
 ];

@@ -82,6 +82,7 @@ $(document).ready(function(){initNavTree('class_game_engine.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game_engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -106,17 +107,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a211964083dab34bc0dc8990353449932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9594111ce7d79a2deff342a3587d3ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a9594111ce7d79a2deff342a3587d3ef0">fillMapPattern</a> (std::vector&lt; std::vector&lt; int32_t &gt; &gt; &amp;cells)</td></tr>
 <tr class="separator:a9594111ce7d79a2deff342a3587d3ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc194512a29a492111f8c56ca861958e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e">botTurn</a> (std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; bot)</td></tr>
+<tr class="separator:adc194512a29a492111f8c56ca861958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f9ec3c0912ab1d5b414657e9709957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#af6f9ec3c0912ab1d5b414657e9709957">setPlayers</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; _players)</td></tr>
+<tr class="separator:af6f9ec3c0912ab1d5b414657e9709957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0f3faa6e3faea4be287214a2db0ba5a8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_handler.html">Handler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8">generateBotHandlersChain</a> (std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; bot)</td></tr>
+<tr class="separator:a0f3faa6e3faea4be287214a2db0ba5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a82428b78040165afbdb653faa3d7e497"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a82428b78040165afbdb653faa3d7e497">map</a></td></tr>
 <tr class="separator:a82428b78040165afbdb653faa3d7e497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9236a6eca14822afc0082455877f27a4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a9236a6eca14822afc0082455877f27a4">populations</a></td></tr>
-<tr class="separator:a9236a6eca14822afc0082455877f27a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa102c1c6eed86a93cb896d95f3edad8e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aa102c1c6eed86a93cb896d95f3edad8e">players</a></td></tr>
+<tr class="separator:aa102c1c6eed86a93cb896d95f3edad8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00011">11</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00018">18</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="affd35ad3f1f76918d0b0201f56b7b125"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#affd35ad3f1f76918d0b0201f56b7b125">&#9670;&nbsp;</a></span>GameEngine()</h2>
@@ -144,6 +154,38 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adc194512a29a492111f8c56ca861958e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc194512a29a492111f8c56ca861958e">&#9670;&nbsp;</a></span>botTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameEngine::botTurn </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt;&#160;</td>
+          <td class="paramname"><em>bot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00025">25</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph.png" border="0" usemap="#class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph" alt=""/></div>
+<map name="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph" id="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="203,74,429,115"/>
+<area shape="rect" id="node3" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="477,5,681,32"/>
+<area shape="rect" id="node4" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="491,56,667,83"/>
+<area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="511,107,647,133"/>
+<area shape="rect" id="node6" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="501,157,657,184"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9594111ce7d79a2deff342a3587d3ef0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9594111ce7d79a2deff342a3587d3ef0">&#9670;&nbsp;</a></span>fillMapPattern()</h2>
 
@@ -170,6 +212,53 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="474,5,678,32"/>
 <area shape="rect" id="node4" href="class_random_generator.html#a7e799f3dc6ceed9113d7e1ca94b71c2d" title="RandomGenerator::randNormalInt" alt="" coords="467,56,685,83"/>
 <area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="508,107,644,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f3faa6e3faea4be287214a2db0ba5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3faa6e3faea4be287214a2db0ba5a8">&#9670;&nbsp;</a></span>generateBotHandlersChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_handler.html">Handler</a> &gt; GameEngine::generateBotHandlersChain </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt;&#160;</td>
+          <td class="paramname"><em>bot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00039">39</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph.png" border="0" usemap="#class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph" alt=""/></div>
+<map name="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph" id="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph">
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="280,5,484,32"/>
+<area shape="rect" id="node3" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="294,56,470,83"/>
+<area shape="rect" id="node4" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="314,107,450,133"/>
+<area shape="rect" id="node5" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="304,157,460,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph.png" border="0" usemap="#class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph" alt=""/></div>
+<map name="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph" id="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="280,13,429,39"/>
 </map>
 </div>
 
@@ -212,6 +301,26 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="af6f9ec3c0912ab1d5b414657e9709957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f9ec3c0912ab1d5b414657e9709957">&#9670;&nbsp;</a></span>setPlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::setPlayers </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>_players</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00127">127</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a82428b78040165afbdb653faa3d7e497"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82428b78040165afbdb653faa3d7e497">&#9670;&nbsp;</a></span>map</h2>
@@ -233,12 +342,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00020">20</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00031">31</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 
 </div>
 </div>
-<a id="a9236a6eca14822afc0082455877f27a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9236a6eca14822afc0082455877f27a4">&#9670;&nbsp;</a></span>populations</h2>
+<a id="aa102c1c6eed86a93cb896d95f3edad8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa102c1c6eed86a93cb896d95f3edad8e">&#9670;&nbsp;</a></span>players</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +356,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_population.html">Population</a>&gt; &gt; GameEngine::populations</td>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_player.html">Player</a>&gt; &gt; GameEngine::players</td>
         </tr>
       </table>
   </td>
@@ -257,7 +366,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00021">21</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00032">32</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 
 </div>
 </div>

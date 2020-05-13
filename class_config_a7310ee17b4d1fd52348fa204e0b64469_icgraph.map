@@ -1,3 +1,5 @@
 <map id="Config::getMaxAmount" name="Config::getMaxAmount">
-<area shape="rect" id="node2" href="$class_population.html#a47ac4812aff1f375b754a0e81310d069" title="Population::applyLifeCircle" alt="" coords="209,5,387,32"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="209,5,436,47"/>
+<area shape="rect" id="node4" href="$class_population.html#a47ac4812aff1f375b754a0e81310d069" title="Population::applyLifeCircle" alt="" coords="234,71,411,98"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="484,13,633,39"/>
 </map>

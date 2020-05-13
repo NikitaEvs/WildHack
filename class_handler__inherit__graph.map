@@ -1,0 +1,7 @@
+<map id="Handler" name="Handler">
+<area shape="rect" id="node2" href="$class_cover_mutation_handler.html" title="{CoverMutationHandler\n||+ setXYPos()\l&#45; change()\l}" alt="" coords="5,226,157,318"/>
+<area shape="rect" id="node3" href="$class_move_handler.html" title="{MoveHandler\n|&#45; xPos\l&#45; yPos\l|+ setXYPos()\l&#45; change()\l}" alt="" coords="181,219,283,325"/>
+<area shape="rect" id="node4" href="$class_safety_mutation_handler.html" title="{SafetyMutationHandler\n||+ setXYPos()\l&#45; change()\l}" alt="" coords="307,226,461,318"/>
+<area shape="rect" id="node5" href="$class_size_mutation_handler.html" title="{SizeMutationHandler\n||+ setXYPos()\l&#45; change()\l}" alt="" coords="486,226,629,318"/>
+<area shape="rect" id="node6" href="$class_velocity_mutation_handler.html" title="{VelocityMutationHandler\n||+ setXYPos()\l&#45; change()\l}" alt="" coords="653,226,817,318"/>
+</map>

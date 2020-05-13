@@ -9,11 +9,19 @@ var hierarchy =
     [ "Config", "class_config.html", null ],
     [ "ConfigDestroyer", "class_config_destroyer.html", null ],
     [ "GameEngine", "class_game_engine.html", null ],
+    [ "Handler", "class_handler.html", [
+      [ "CoverMutationHandler", "class_cover_mutation_handler.html", null ],
+      [ "MoveHandler", "class_move_handler.html", null ],
+      [ "SafetyMutationHandler", "class_safety_mutation_handler.html", null ],
+      [ "SizeMutationHandler", "class_size_mutation_handler.html", null ],
+      [ "VelocityMutationHandler", "class_velocity_mutation_handler.html", null ]
+    ] ],
     [ "Map", "class_map.html", null ],
     [ "MutationComponent", "class_mutation_component.html", [
       [ "CompoundMutation", "class_compound_mutation.html", null ],
       [ "LeafMutation", "class_leaf_mutation.html", null ]
     ] ],
+    [ "Player", "class_player.html", null ],
     [ "Population", "class_population.html", null ],
     [ "PopulationBuilder", "class_population_builder.html", [
       [ "CarnivorePopulationBuilder", "class_carnivore_population_builder.html", null ],

@@ -18,6 +18,7 @@ var searchData=
   ['celltypejsonrepresentationbuilder',['CellTypeJSONRepresentationBuilder',['../class_cell_type_j_s_o_n_representation_builder.html',1,'']]],
   ['celltypejsonrepresentationbuilder_2ecpp',['CellTypeJSONRepresentationBuilder.cpp',['../_cell_type_j_s_o_n_representation_builder_8cpp.html',1,'']]],
   ['celltypejsonrepresentationbuilder_2eh',['CellTypeJSONRepresentationBuilder.h',['../_cell_type_j_s_o_n_representation_builder_8h.html',1,'']]],
+  ['change',['change',['../class_cover_mutation_handler.html#ae052e4dd6179583c40e9015733b3c050',1,'CoverMutationHandler::change()'],['../class_handler.html#aff1516e284b5a1db18dcab4487035b60',1,'Handler::change()'],['../class_move_handler.html#ab2310892a5242254bdc30659e8b02b80',1,'MoveHandler::change()'],['../class_safety_mutation_handler.html#a3e87cd53cda5cee44da27b7547ff00ca',1,'SafetyMutationHandler::change()'],['../class_size_mutation_handler.html#a45e972351faaf6c3b48f1334c3508ce2',1,'SizeMutationHandler::change()'],['../class_velocity_mutation_handler.html#a3f12498602b5429269e7eb5e32c374e2',1,'VelocityMutationHandler::change()']]],
   ['children',['children',['../class_compound_mutation.html#aba4f44f8907ed7fe9b6a3a569bf10c2f',1,'CompoundMutation']]],
   ['climate',['climate',['../class_cell_type.html#a922386323bb131ce37e9fa383bd9d034',1,'CellType']]],
   ['climatetype',['climateType',['../class_cell_type.html#a8a75a915a790c04a27f9415a992b5575',1,'CellType']]],
@@ -32,5 +33,8 @@ var searchData=
   ['configfilepath',['configFilePath',['../_config_8h.html#a6a10aab17191e37cff6f5c5cc8069621',1,'Config.h']]],
   ['configjson',['configJSON',['../class_config.html#a240938cbcf0a3ebd6e1a074b8ebbbaeb',1,'Config']]],
   ['configptr',['configPtr',['../class_config.html#a52f184d22d9f87c1183a76e599aa5b86',1,'Config']]],
-  ['cover',['COVER',['../class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33',1,'Population::COVER()'],['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]]
+  ['cover',['COVER',['../class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33',1,'Population::COVER()'],['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]],
+  ['covermutationhandler',['CoverMutationHandler',['../class_cover_mutation_handler.html',1,'']]],
+  ['covermutationhandler_2ecpp',['CoverMutationHandler.cpp',['../_cover_mutation_handler_8cpp.html',1,'']]],
+  ['covermutationhandler_2eh',['CoverMutationHandler.h',['../_cover_mutation_handler_8h.html',1,'']]]
 ];

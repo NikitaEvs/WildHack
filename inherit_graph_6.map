@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_map.html" title="Map" alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node1" href="$class_handler.html" title="Handler" alt="" coords="5,107,72,133"/>
+<area shape="rect" id="node2" href="$class_cover_mutation_handler.html" title="CoverMutationHandler" alt="" coords="126,5,278,32"/>
+<area shape="rect" id="node3" href="$class_move_handler.html" title="MoveHandler" alt="" coords="153,56,251,83"/>
+<area shape="rect" id="node4" href="$class_safety_mutation_handler.html" title="SafetyMutationHandler" alt="" coords="125,107,279,133"/>
+<area shape="rect" id="node5" href="$class_size_mutation_handler.html" title="SizeMutationHandler" alt="" coords="131,157,273,184"/>
+<area shape="rect" id="node6" href="$class_velocity_mutation_handler.html" title="VelocityMutationHandler" alt="" coords="120,208,284,235"/>
 </map>

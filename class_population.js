@@ -34,6 +34,8 @@ var class_population =
     [ "GetVelocity", "class_population.html#ac9c4e5440a0d76455113ef38757bd10a", null ],
     [ "GetXPos", "class_population.html#a04e51faa61d241ce37486691e2660748", null ],
     [ "GetYPos", "class_population.html#a7153bd6a359b5ea218909721364a29a7", null ],
+    [ "move", "class_population.html#aa41dbf1f17cfb2854ba9593ed59a9d36", null ],
+    [ "mutate", "class_population.html#a7489e6c5d0b35b4220674c2c4baefb6e", null ],
     [ "SetAnimalAmount", "class_population.html#abb37cb987fc3825843a8d759f8d3929a", null ],
     [ "SetBiologyDev", "class_population.html#ab5c6c7c5d588dcd10e028ba412349a9d", null ],
     [ "SetCover", "class_population.html#afddfc680b8f10ce48850e26130b0d683", null ],

@@ -1,0 +1,7 @@
+<map id="GameEngine::botTurn" name="GameEngine::botTurn">
+<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="203,74,429,115"/>
+<area shape="rect" id="node3" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="477,5,681,32"/>
+<area shape="rect" id="node4" href="$class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="491,56,667,83"/>
+<area shape="rect" id="node5" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="511,107,647,133"/>
+<area shape="rect" id="node6" href="$class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="501,157,657,184"/>
+</map>

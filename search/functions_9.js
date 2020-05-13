@@ -8,5 +8,7 @@ var searchData=
   ['maketundracell',['makeTundraCell',['../class_cell_type_director.html#a7094e939502f98835a4fbe4dcaa84cc5',1,'CellTypeDirector']]],
   ['makewatercell',['makeWaterCell',['../class_cell_type_director.html#ab1c11c82989aa93a20d2c85bd0c5ea2b',1,'CellTypeDirector']]],
   ['map',['Map',['../class_map.html#a8316b7f7e131e8b1f098bdb2d8a73000',1,'Map::Map(size_t columnNumber, size_t rowNumber)'],['../class_map.html#a1197ab65e40dd20b891ba165471e3163',1,'Map::Map()=default']]],
+  ['move',['move',['../class_population.html#aa41dbf1f17cfb2854ba9593ed59a9d36',1,'Population']]],
+  ['mutate',['mutate',['../class_population.html#a7489e6c5d0b35b4220674c2c4baefb6e',1,'Population']]],
   ['mutationcomponent',['MutationComponent',['../class_mutation_component.html#ab30b615825276ee18840e0ae3120810c',1,'MutationComponent']]]
 ];
