@@ -9,7 +9,7 @@ class Handler{
   void handle();
   void setNext(std::shared_ptr<Handler> _next);
   void setPopulation(std::shared_ptr<Population> _population);
-  void setXYPos(int32_t x_pos, int32_t y_pos);
+  virtual void setXYPos(int32_t x_pos, int32_t y_pos) = 0;
   ~Handler() = default;
  protected:
   virtual void change() = 0;
