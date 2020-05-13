@@ -32,6 +32,4 @@ void Gui::fillMap() {
 
     map.push_back(rowList);
   }
-
-  int a = 5;
 }
