@@ -26,7 +26,7 @@ bool GameEngine::botTurn(std::shared_ptr<Player> bot) {
   try {
     generateBotHandlersChain(bot)->handle();
   } catch (const std::runtime_error &re) {
-    if (re.what() == "It was the last handler") {
+    if (std::string(re.what()) == "It was the last handler") {
       return true;
     } else {
       std::cerr << re.what();
