@@ -94,3 +94,11 @@ CellType::climateType CellType::getClimate() const {
 void CellType::setClimate(CellType::climateType newClimate) {
   climate = newClimate;
 }
+
+std::shared_ptr<Population> CellType::getCurrentPopulation() const {
+  return currentPopulation;
+}
+
+void CellType::setCurrentPopulation(std::shared_ptr<Population> current_population) {
+  currentPopulation = std::move(current_population);
+}
