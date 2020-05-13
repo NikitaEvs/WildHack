@@ -22,4 +22,7 @@ void Player::SetName(const std::string &name) {
   Player::name = name;
 }
 
+int32_t Player::getPopulationsNumber() {
+  return playerPopulations.size();
+}
 

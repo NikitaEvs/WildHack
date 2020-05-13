@@ -4,6 +4,7 @@ set (MAP_PATH Map)
 set (UTIL_PATH util)
 set (ANIMAL_PATH Animals)
 set (ENGINE_PATH Engine)
+set (HANDLER_PATH Engine/Handler)
 set (MUTATION_PATH Animals/Mutations)
 
 set (MAP_SOURCES
@@ -50,10 +51,26 @@ set (MUTATION_SOURCES
         ${MUTATION_PATH}/CompoundMutation.cpp
         )
 
+set (HANDLER_SOURCES
+        ${HANDLER_PATH}/Handler.h
+        ${HANDLER_PATH}/Handler.cpp
+        ${HANDLER_PATH}/CoverMutationHandler.h
+        ${HANDLER_PATH}/CoverMutationHandler.cpp
+        ${HANDLER_PATH}/VelocityMutationHandler.h
+        ${HANDLER_PATH}/VelocityMutationHandler.cpp
+        ${HANDLER_PATH}/SafetyMutationHandler.h
+        ${HANDLER_PATH}/SafetyMutationHandler.cpp
+        ${HANDLER_PATH}/SizeMutationHandler.h
+        ${HANDLER_PATH}/SizeMutationHandler.cpp
+        ${HANDLER_PATH}/MoveHandler.h
+        ${HANDLER_PATH}/MoveHandler.cpp
+        )
+
 add_library(src SHARED  ${MAP_SOURCES}
                         ${UTIL_SOURCES}
                         ${ANIMAL_SOURCES}
                         ${MUTATION_SOURCES}
                         ${ENGINE_SOURCES}
+                        ${HANDLER_SOURCES}
             )
 

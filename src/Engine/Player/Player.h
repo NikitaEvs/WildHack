@@ -14,6 +14,7 @@ class Player {
   void SetPlayerPopulations(const std::vector<std::shared_ptr<Population>> &player_populations);
   const std::string &GetName() const;
   void SetName(const std::string &name);
+  int32_t getPopulationsNumber();
  private:
   std::vector<std::shared_ptr<Population> > playerPopulations;
   std::string name;
