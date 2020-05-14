@@ -88,3 +88,15 @@ class Population {
   ParamType velocity;
   ParamType cover;
 };
+
+class LightPopulation {
+ public:
+  explicit LightPopulation(Population &population);
+
+  int32_t getXPos();
+  int32_t getYPos();
+  std::string getName();
+ private:
+  std::string name;
+  int32_t xPos = 0, yPos = 0;
+};
