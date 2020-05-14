@@ -22,6 +22,44 @@ void GameEngine::fillMapPattern(std::vector<std::vector<int32_t> > &cells) {
   }
 }
 
+void GameEngine::fillPopulationPattern(std::vector<LightPopulation> &populations) {
+  if (players.empty()) {
+    players.push_back(std::make_shared<Player>(std::string("Cat")));
+  }
+
+  for (const auto& player : players) {
+    if (player -> getPopulationsNumber() == 0) {
+      player -> generatePopulations();
+    }
+
+    for (const auto& population : player -> GetPlayerPopulations()) {
+      int32_t y = RandomGenerator::getInstance().randInt(0, map -> getHeight() - 1);
+      int32_t x = RandomGenerator::getInstance().randInt(0, map -> getWidth() - 1);
+      size_t step = 0;
+
+      while(isPopulationExist(x, y) && step < 10) {
+        y = RandomGenerator::getInstance().randInt(0, map -> getHeight() - 1);
+        x = RandomGenerator::getInstance().randInt(0, map -> getWidth() - 1);
+        std::cout << x << " " << y << std::endl;
+        ++step;
+      }
+      std::cout << " End " << std::endl;
+      std::cout << x << " " << y << std::endl;
+
+
+      if (step == 10) {
+        std::cerr << "Cannot generate populations" << std::endl;
+      }
+
+      population -> SetXPos(x);
+      population -> SetYPos(y);
+      (*map)[y][x] -> setCurrentPopulation(population);
+
+      populations.emplace_back(*population);
+    }
+  }
+}
+
 bool GameEngine::botTurn(std::shared_ptr<Player> bot) {
   try {
     generateBotHandlersChain(bot)->handle();
@@ -124,8 +162,20 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
   return chain[0];
 }
 
-void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> > _players) {
+void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> >& _players) {
   players = _players;
+}
+
+std::shared_ptr<CellType> GameEngine::getCell(size_t posX, size_t posY) {
+  return (*map)[posY][posX];
+}
+
+std::shared_ptr<Population> GameEngine::getPopulation(size_t posX, size_t posY) {
+  return (*map)[posY][posX] -> getCurrentPopulation();
+}
+
+bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
+  return (*map)[posY][posX] -> getCurrentPopulation() != nullptr;
 }
 
 void GameEngine::populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos) {

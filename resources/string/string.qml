@@ -25,9 +25,16 @@ QtObject {
     property string migrate: "Migrate"
     property string finish: "Finish step"
 
-    property string cellPath: "../svg/hexagon.svg"
+    property string cellPath: "../svg/shape.svg"
     property string forest: "../svg/forest.svg"
     property string tundra: "../svg/tundra.svg"
     property string steppe: "../svg/steppe.svg"
     property string water: "../svg/water.svg"
+
+    property string capybara: "../svg/animals/capybara.svg"
+    property string elephant: "../svg/animals/elephant.svg"
+    property string horse: "../svg/animals/horse.svg"
+    property string bear: "../svg/animals/bear.svg"
+    property string lion: "../svg/animals/lion.svg"
+    property string wolf: "../svg/animals/wolf.svg"
 }

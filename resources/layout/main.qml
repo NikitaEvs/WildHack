@@ -31,8 +31,8 @@ ApplicationWindow {
     height: Screen.height / 2
     width: Screen.width / 2
 
-    minimumWidth: Screen.width / 3
-    minimumHeight: Screen.height / 3
+    minimumWidth: Screen.width / 2
+    minimumHeight: Screen.height / 2
 
     StackView {
         id: stack
@@ -121,6 +121,7 @@ ApplicationWindow {
                 onPaint: {
                     var ctx = canvas.getContext("2d");
                     var map = gui.map
+                    var populations = gui.populations
 
                     var cellSize = { "width" : 0, "height" : 0}
 
@@ -131,6 +132,8 @@ ApplicationWindow {
                                              cellSize)
 
                     canvas.cellSize = cellSize
+
+                    drawPopulations(ctx, centerMap, populations, cellSize)
 
                     for (var pointIndex = 0; pointIndex < canvas.additional.length; ++pointIndex) {
                         var point = canvas.additional[pointIndex]["point"]
@@ -145,6 +148,14 @@ ApplicationWindow {
                     loadImage(String.steppe)
                     loadImage(String.tundra)
                     loadImage(String.water)
+
+                    loadImage(String.capybara)
+                    loadImage(String.elephant)
+                    loadImage(String.horse)
+                    loadImage(String.lion)
+                    loadImage(String.wolf)
+                    loadImage(String.bear)
+
                     canvasLoad.text = "true"
                     canvas.additional = []
                 }
@@ -158,23 +169,106 @@ ApplicationWindow {
                     onClicked: {
                         console.log("Clicked on " + mouse.x + " " + mouse.y)
 
+                        canvas.additional = []
+
                         var area = canvas.cellSize["width"]
                         var point = getClickCell(canvas.centerMap, mouse.x, mouse.y, area)
+
+                        gui.x = point["x"]
+                        gui.y = point["y"]
 
                         console.log("Find cell on  " + point["x"] + " " + point["y"])
 
                         if (point["x"] !== -1) {
                             var additionItem = {"point" : point, "filled" : String.cellPath}
                             canvas.additional.push(additionItem)
+                        } else {
+                            bottomBody.currentIndex = 0
+                            return
+                        }
+
+                        var currentPopulation = gui.currentPopulation
+                        if (currentPopulation[0] === -1) {
+                            bottomBody.currentIndex = 2
+                            var currentCell = gui.currentCell
+
+                            var climateStr
+                            var climateInt = currentCell[0]
+
+                            if (climateInt === 0) {
+                                climateStr = "hot"
+                            } else if (climateInt === 1) {
+                                climateStr = "temperate"
+                            } else if (climateInt === 2) {
+                                climateStr = "cold"
+                            }
+
+                            var typeStr
+                            var typeInt = currentCell[1]
+
+                            if (typeInt === 0) {
+                                typeStr = "water"
+                            } else if (typeInt === 1) {
+                                typeStr = "forest"
+                            } else if (typeInt === 2) {
+                                typeStr = "steppe"
+                            } else if (typeInt === 3) {
+                                typeStr = "tundra"
+                            }
+
+                            cellMainText.text = climateStr + " " + typeStr
+
+                            waterText.text = "water level: " + currentCell[2]
+                            plantsCountText.text = "plants count: " + currentCell[3]
+                            carnivoreCountText.text = "carnivore count: " + currentCell[4]
+                            herbivoreCountText.text = "herbivore count: " + currentCell[5]
+
+                        } else {
                             bottomBody.currentIndex = 1
+                            var sizeStr
+                            var sizeInt = currentPopulation[0]
+
+                            if (sizeInt === 0) {
+                                sizeStr = "very small"
+                            } else if (sizeInt === 1) {
+                                sizeStr = "small"
+                            } else if (sizeInt === 2) {
+                                sizeStr = "average"
+                            } else if (sizeInt === 3) {
+                                sizeStr = "big"
+                            } else if (sizeInt === 4) {
+                                sizeStr = "very big";
+                            }
+
+                            var typeStr
+                            var typeInt = currentPopulation[1]
+
+                            if (typeInt === 0) {
+                                typeStr = "hervibore"
+                            } else if (typeInt === 1) {
+                                typeStr = "carnivore"
+                            }
+
+                            var name = currentPopulation[2]
+                            mainText.text = sizeStr + " " + typeStr + " " + name
+
+                            safetyText.text = "Safety: " + getString(currentPopulation[3])
+                            velocityText.text = "Velocity: " + getString(currentPopulation[4])
+                            coverText.text = "Cover: " + getString(currentPopulation[5])
+                            healthText.text = "Health: " + currentPopulation[6]
+                            productivityText.text = "Productivity: " + currentPopulation[7]
+                            bioText.text = "Bio score: " + currentPopulation[8]
+
+
+                            var points = getArea(canvas.centerMap, point)
+
+                            for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
+                                var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
+                                canvas.additional.push(additionItem)
+                            }
+
                         }
 
-                        var points = getArea(canvas.centerMap, point)
-
-                        for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
-                            var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
-                            canvas.additional.push(additionItem)
-                        }
 
                         canvas.requestPaint()
                     }
@@ -212,23 +306,16 @@ ApplicationWindow {
                                 Material.background: "transparent"
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
-                                width: Screen.width / 9
+                                width: bottomBody.width / 10
 
                                 contentItem: Item {
                                     Row {
                                         anchors.fill: parent
-                                        Image {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            fillMode: Image.PreserveAspectFit
-                                            width: parent.width / 2
-                                            source: "../svg/punck.svg"
-                                        }
 
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 2
+                                            width: parent.width
                                             color: "transparent"
 
                                             Text {
@@ -249,23 +336,16 @@ ApplicationWindow {
                                 Material.background: "transparent"
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
-                                width: Screen.width / 9
+                                width: bottomBody.width / 10
 
                                 contentItem: Item {
                                     Row {
                                         anchors.fill: parent
-                                        Image {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            fillMode: Image.PreserveAspectFit
-                                            width: parent.width / 2
-                                            source: "../svg/punck.svg"
-                                        }
 
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 2
+                                            width: parent.width
                                             color: "transparent"
 
                                             Text {
@@ -286,23 +366,16 @@ ApplicationWindow {
                                 Material.background: "transparent"
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
-                                width: Screen.width / 9
+                                width: bottomBody.width / 10
 
                                 contentItem: Item {
                                     Row {
                                         anchors.fill: parent
-                                        Image {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            fillMode: Image.PreserveAspectFit
-                                            width: parent.width / 2
-                                            source: "../svg/punck.svg"
-                                        }
 
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 2
+                                            width: parent.width
                                             color: "transparent"
 
                                             Text {
@@ -316,13 +389,133 @@ ApplicationWindow {
                                         }
                                     }
                                 }
+
+                                onClicked: {
+                                    move.kek()
+                                    move.execute()
+                                }
                             }
 
                             Rectangle {
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
-                                width: Screen.width * 0.53
+                                width: bottomBody.width * 0.6
+                                color: "transparent"
 
+                                Column {
+                                    anchors.fill: parent
+
+                                    Rectangle {
+                                        anchors.left: parent.left
+                                        anchors.right: parent.right
+                                        height: parent.height / 3
+                                        color: "transparent"
+
+                                        Text {
+                                            id: mainText
+                                            anchors.centerIn: parent
+                                            text: "kek"
+                                            font: moveControl.font
+                                            color: Light.foreground
+                                        }
+                                    }
+
+                                    Row {
+                                        anchors.left: parent.left
+                                        anchors.right: parent.right
+                                        height: parent.height * 2 / 3
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: safetyText
+                                                anchors.centerIn: parent
+                                                text: "safety:"
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: velocityText
+                                                anchors.centerIn: parent
+                                                text: "velocity: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: coverText
+                                                anchors.centerIn: parent
+                                                text: "cover: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: healthText
+                                                anchors.centerIn: parent
+                                                text: "health: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: productivityText
+                                                anchors.centerIn: parent
+                                                text: "productivity: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 6
+                                            color: "transparent"
+
+                                            Text {
+                                                id: bioText
+                                                anchors.centerIn: parent
+                                                text: "bio score: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+                                    }
+                                }
                             }
 
                             Button {
@@ -330,23 +523,16 @@ ApplicationWindow {
                                 Material.background: "transparent"
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
-                                width: Screen.width / 9
+                                width: bottomBody.width / 10
 
                                 contentItem: Item {
                                     Row {
                                         anchors.fill: parent
-                                        Image {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            fillMode: Image.PreserveAspectFit
-                                            width: parent.width / 2
-                                            source: "../svg/punck.svg"
-                                        }
 
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 2
+                                            width: parent.width
                                             color: "transparent"
 
                                             Text {
@@ -366,6 +552,98 @@ ApplicationWindow {
 
                     Item {
                         id: cellBody
+
+                        Rectangle {
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            width: bottomBody.width
+                            color: "transparent"
+
+                            Column {
+                                anchors.fill: parent
+
+                                Rectangle {
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    height: parent.height / 3
+                                    color: "transparent"
+
+                                    Text {
+                                        id: cellMainText
+                                        anchors.centerIn: parent
+                                        text: "kek"
+                                        font: moveControl.font
+                                        color: Light.foreground
+                                    }
+                                }
+
+                                Row {
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    height: parent.height * 2 / 3
+
+                                    Rectangle {
+                                        anchors.top: parent.top
+                                        anchors.bottom: parent.bottom
+                                        width: parent.width / 4
+                                        color: "transparent"
+
+                                        Text {
+                                            id: waterText
+                                            anchors.centerIn: parent
+                                            text: "waterLevel:"
+                                            font: moveControl.font
+                                            color: Light.foreground
+                                        }
+                                    }
+
+                                    Rectangle {
+                                        anchors.top: parent.top
+                                        anchors.bottom: parent.bottom
+                                        width: parent.width / 4
+                                        color: "transparent"
+
+                                        Text {
+                                            id: plantsCountText
+                                            anchors.centerIn: parent
+                                            text: "plant count: "
+                                            font: moveControl.font
+                                            color: Light.foreground
+                                        }
+                                    }
+
+                                    Rectangle {
+                                        anchors.top: parent.top
+                                        anchors.bottom: parent.bottom
+                                        width: parent.width / 4
+                                        color: "transparent"
+
+                                        Text {
+                                            id: carnivoreCountText
+                                            anchors.centerIn: parent
+                                            text: "carnivore count: "
+                                            font: moveControl.font
+                                            color: Light.foreground
+                                        }
+                                    }
+
+                                    Rectangle {
+                                        anchors.top: parent.top
+                                        anchors.bottom: parent.bottom
+                                        width: parent.width / 4
+                                        color: "transparent"
+
+                                        Text {
+                                            id: herbivoreCountText
+                                            anchors.centerIn: parent
+                                            text: "herbivore count: "
+                                            font: moveControl.font
+                                            color: Light.foreground
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -389,6 +667,25 @@ ApplicationWindow {
 
     function switchToMainScreen() {
        stack.push(gameLayout);
+    }
+
+    function drawPopulations(ctx, centerMap, pattern, cellSize) {
+        console.log("Pattern size", pattern.length)
+        for (var populationInd = 0; populationInd < pattern.length; ++populationInd) {
+            var name = pattern[populationInd][0]
+            var xPos = pattern[populationInd][1]
+            var yPos = pattern[populationInd][2]
+            console.log(name, " x: ", xPos, " y: ", yPos)
+
+            var x = centerMap[yPos][xPos]["x"] - cellSize["width"] / 2
+            var y = centerMap[yPos][xPos]["y"] - cellSize["height"] / 2
+
+            console.log("I draw ", name)
+
+            var drawPath = "../svg/animals/" + name + ".svg"
+
+            ctx.drawImage(drawPath, x, y, cellSize["width"], cellSize["height"])
+        }
     }
 
     function drawCells(map, ctx, yCenter, xCenter, height, width, size) {
@@ -555,5 +852,21 @@ ApplicationWindow {
         } else {
             return false
         }
+    }
+
+    function getString(index) {
+        var safetyStr
+        if (index === 0) {
+            safetyStr = "very small"
+        } else if (index === 1) {
+            safetyStr = "small"
+        } else if (index === 2) {
+            safetyStr = "average"
+        } else if (index === 3) {
+            safetyStr = "big"
+        } else if (index === 4) {
+            safetyStr = "very big";
+        }
+        return safetyStr
     }
 }

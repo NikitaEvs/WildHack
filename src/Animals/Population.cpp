@@ -248,3 +248,21 @@ Population::ParamType Population::GetCover() const {
 void Population::SetCover(Population::ParamType cover) {
   Population::cover = cover;
 }
+
+LightPopulation::LightPopulation(Population &population) :
+  xPos(population.GetXPos()),
+  yPos(population.GetYPos()),
+  name(population.GetName())
+{}
+
+int32_t LightPopulation::getXPos() {
+  return xPos;
+}
+
+int32_t LightPopulation::getYPos() {
+  return yPos;
+}
+
+std::string LightPopulation::getName() {
+  return name;
+}
