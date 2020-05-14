@@ -67,6 +67,8 @@ class Population {
   ParamType GetVelocity() const;
   void SetVelocity(ParamType velocity);
   ParamType GetCover() const;
+  int32_t GetPlayerNumber() const;
+  void SetPlayerNumber(int32_t player_number);
   void SetCover(ParamType cover);
  private:
   void addMutation(MutationType type);
@@ -87,6 +89,8 @@ class Population {
   ParamType safety;
   ParamType velocity;
   ParamType cover;
+
+  int32_t playerNumber;
 };
 
 class LightPopulation {
