@@ -2,11 +2,11 @@
   "map" : {
     "sizes": {
       "height": {
-        "mean": 7,
+        "mean": 5,
         "deviation": 1
       },
       "width" : {
-        "mean" : 7,
+        "mean" : 5,
         "deviation" : 1
       }
     }
