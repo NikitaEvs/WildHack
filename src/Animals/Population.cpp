@@ -248,6 +248,12 @@ Population::ParamType Population::GetCover() const {
 void Population::SetCover(Population::ParamType cover) {
   Population::cover = cover;
 }
+int32_t Population::GetPlayerNumber() const {
+  return playerNumber;
+}
+void Population::SetPlayerNumber(int32_t player_number) {
+  playerNumber = player_number;
+}
 
 LightPopulation::LightPopulation(Population &population) :
   xPos(population.GetXPos()),
