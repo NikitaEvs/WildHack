@@ -14,15 +14,31 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set (GUI_PATH Interface)
+set (ENGINE_PATH Interface)
 
 set (GUI_SOURCES
         ${GUI_PATH}/Gui.h
         ${GUI_PATH}/Gui.cpp
         )
 
+set (COMMAND_SOURCES
+        ${ENGINE_PATH}/Commands/Command.h
+        ${ENGINE_PATH}/Commands/Command.cpp
+        ${ENGINE_PATH}/Commands/MutateCommand.h
+        ${ENGINE_PATH}/Commands/MutateCommand.cpp
+        ${ENGINE_PATH}/Commands/SplitCommand.h
+        ${ENGINE_PATH}/Commands/SplitCommand.cpp
+        ${ENGINE_PATH}/Commands/MoveCommand.h
+        ${ENGINE_PATH}/Commands/MoveCommand.cpp
+        ${ENGINE_PATH}/Commands/StopCommand.h
+        ${ENGINE_PATH}/Commands/StopCommand.cpp
+        )
+
 project(peachGUI)
 
-add_executable(gui execute.cpp ${QT_RESOURCES} ${GUI_SOURCES})
+add_executable(gui execute.cpp  ${QT_RESOURCES}
+                                ${GUI_SOURCES}
+                                ${COMMAND_SOURCES})
 
 if (GUI_TEST_BUILD)
     add_subdirectory(thirdparty/spix)

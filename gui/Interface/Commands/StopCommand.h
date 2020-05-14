@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "Command.h"
-#include "../GameEngine.h"
+#include "Engine/GameEngine.h"
 #include "Population.h"
 
 class StopCommand : public Command {

@@ -2,11 +2,13 @@
 
 #include <memory>
 
-#include "../GameEngine.h"
+#include "Engine/GameEngine.h"
 
 class Command {
  public:
-  virtual ~Command() = default;
+  Command() = default;
+
+  ~Command() = default;
 
   virtual bool execute() = 0;
 

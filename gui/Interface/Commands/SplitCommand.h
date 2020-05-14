@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Command.h"
-#include "../GameEngine.h"
+#include "Engine/GameEngine.h"
 #include "Population.h"
 
 class SplitCommand : public Command {
