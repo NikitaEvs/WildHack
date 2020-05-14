@@ -2,27 +2,76 @@
 #include "RandomGenerator.h"
 #include "Config.h"
 
-void Population::applyLifeCircle(int32_t _xPos,
-                                 int32_t _yPos,
-                                 int32_t food,
-                                 int32_t water,
-                                 int32_t carnivore,
-                                 int32_t herbivore,
-                                 ParamType herbSize,
-                                 ParamType carnSize) {
-  xPos = _xPos;
-  yPos = _yPos;
+void Population::applyLifeCircle(std::shared_ptr<Map> map) {
+  int32_t food = (*map)[yPos][xPos]->getPlantsCount();
+  int32_t water = (*map)[yPos][xPos]->getWaterLevel();
+  int32_t herbivoreAmount;
+  int32_t carnivoreAmount;
 
+  if(yPos % 2 == 1){
+    if(yPos - 1 >= 0){
+      herbivoreAmount += (*map)[yPos - 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos - 1][xPos]->getCarnivoreCount();
+    }
+    if(yPos + 1 < (*map).getHeight()){
+      herbivoreAmount += (*map)[yPos - 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos - 1][xPos]->getCarnivoreCount();
+    }
+    if(xPos - 1 >= 0){
+      herbivoreAmount += (*map)[yPos][xPos - 1]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos][xPos - 1]->getCarnivoreCount();
+    }
+    if(xPos + 1 < (*map).getWidth()){
+      herbivoreAmount += (*map)[yPos][xPos + 1]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos][xPos + 1]->getCarnivoreCount();
+      if(yPos - 1 >= 0){
+        herbivoreAmount += (*map)[yPos - 1][xPos + 1]->getHerbivoreCount();
+        carnivoreAmount += (*map)[yPos - 1][xPos + 1]->getCarnivoreCount();
+      }
+      if(yPos + 1 < (*map).getHeight()){
+        herbivoreAmount += (*map)[yPos + 1][xPos + 1]->getHerbivoreCount();
+        carnivoreAmount += (*map)[yPos + 1][xPos + 1]->getCarnivoreCount();
+      }
+    }
+  } else {
+    if(yPos - 1 >= 0){
+      herbivoreAmount += (*map)[yPos - 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos - 1][xPos]->getCarnivoreCount();
+    }
+    if(yPos + 1 < (*map).getHeight()){
+      herbivoreAmount += (*map)[yPos - 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos - 1][xPos]->getCarnivoreCount();
+    }
+    if(xPos + 1 < (*map).getWidth()){
+      herbivoreAmount += (*map)[yPos][xPos + 1]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos][xPos + 1]->getCarnivoreCount();
+    }
+    if(xPos - 1 >= 0){
+      herbivoreAmount += (*map)[yPos][xPos - 1]->getHerbivoreCount();
+      carnivoreAmount += (*map)[yPos][xPos - 1]->getCarnivoreCount();
+      if(yPos - 1 >= 0){
+        herbivoreAmount += (*map)[yPos - 1][xPos - 1]->getHerbivoreCount();
+        carnivoreAmount += (*map)[yPos - 1][xPos - 1]->getCarnivoreCount();
+      }
+      if(yPos + 1 < (*map).getHeight()){
+        herbivoreAmount += (*map)[yPos + 1][xPos - 1]->getHerbivoreCount();
+        carnivoreAmount += (*map)[yPos + 1][xPos - 1]->getCarnivoreCount();
+      }
+    }
+  }
+
+  herbivoreAmount /= 6;
+  carnivoreAmount /= 6;
   //if there's no food or water someone must die
   int32_t nutrition = (food + 1.5 * water) / 250;
   if (type == Population::TypeName::CARNIVORE) {
-    nutrition = (herbivore * 100 / Config::getInstance().getMaxAmount(HERBIVORE, herbSize) + water) / 200;
+    nutrition = (herbivoreAmount * 100 / Config::getInstance().getMaxAmount(HERBIVORE, AVERAGE) + water) / 200;
   }
   if (nutrition < 75) {
     animalAmount = (animalAmount * (nutrition + 25)) / 100;
   }
   // carnivore animal can eat some animals from the population
-  int32_t wasEaten = carnivore * 100 / Config::getInstance().getMaxAmount(CARNIVORE, carnSize);
+  int32_t wasEaten = carnivoreAmount * 100 / Config::getInstance().getMaxAmount(CARNIVORE, AVERAGE);
   switch (velocity) {
     case VERY_SMALL:wasEaten = wasEaten * 1 / 10;
       break;
