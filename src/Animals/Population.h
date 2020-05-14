@@ -6,7 +6,7 @@
 
 #include "Mutations/LeafMutation.h"
 #include "Mutations/CompoundMutation.h"
-#include "Map.h"
+
 
 class Population {
  public:
@@ -30,8 +30,6 @@ class Population {
 
   Population() = default;
   Population(Population const &p) = default;
-
-  void applyLifeCircle(std::shared_ptr<Map> map);
 
   void mutate(MutationType type);
   void move(int32_t x_pos, int32_t y_pos);
