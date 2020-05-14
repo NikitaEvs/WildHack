@@ -162,7 +162,7 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
   return chain[0];
 }
 
-void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> > _players) {
+void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> >& _players) {
   players = _players;
 }
 
@@ -176,4 +176,20 @@ std::shared_ptr<Population> GameEngine::getPopulation(size_t posX, size_t posY) 
 
 bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
   return (*map)[posY][posX] -> getCurrentPopulation() != nullptr;
+}
+
+void GameEngine::populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos) {
+  population->move(x_pos, y_pos);
+}
+
+void GameEngine::populationMutate(std::shared_ptr<Population> population, Population::MutationType type) {
+  population->mutate(type);
+}
+
+void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t destination_x, int32_t destination_y) {
+  population->SetAnimalAmount(population->GetAnimalAmount() / 2);
+  std::shared_ptr<Population> new_population = std::make_shared<Population>(*(population));
+  new_population->SetXPos(destination_x);
+  new_population->SetYPos(destination_y);
+  players[tempPlayer]->addNewPopulation(new_population);
 }
