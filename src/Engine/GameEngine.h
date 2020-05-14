@@ -22,10 +22,16 @@ class GameEngine {
   void generateMap();
 
   void fillMapPattern(std::vector<std::vector<int32_t> > &cells);
+  void fillPopulationPattern(std::vector<LightPopulation> &populations);
 
   bool botTurn(std::shared_ptr<Player> bot);
 
   void setPlayers(std::vector<std::shared_ptr<Player> > _players);
+
+  std::shared_ptr<CellType> getCell(size_t posX, size_t posY);
+  std::shared_ptr<Population> getPopulation(size_t posX, size_t posY);
+
+  bool isPopulationExist(size_t posX, size_t posY);
 
  private:
   std::shared_ptr<Map> map;

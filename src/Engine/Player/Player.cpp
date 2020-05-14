@@ -4,6 +4,8 @@
 #include "PopulationDirector.h"
 #include "PopulationBuilder.h"
 
+Player::Player(const std::string &newName) : name(newName) {}
+
 std::shared_ptr<Population> Player::getPopulation(int32_t number) {
   return playerPopulations[number];
 }
@@ -28,7 +30,7 @@ void Player::SetName(const std::string &name) {
   Player::name = name;
 }
 
-int32_t Player::getPopulationsNumber() {
+size_t Player::getPopulationsNumber() {
   return playerPopulations.size();
 }
 
@@ -77,3 +79,4 @@ void Player::generatePopulations() {
       break;
   }
 }
+

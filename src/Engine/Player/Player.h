@@ -8,6 +8,10 @@
 
 class Player {
  public:
+  explicit Player(const std::string& name);
+
+  Player() = default;
+
   std::shared_ptr<Population> getPopulation(int32_t number);
   void addNewPopulation(std::shared_ptr<Population> new_population);
 
@@ -19,7 +23,7 @@ class Player {
 
   void generatePopulations();
 
-  int32_t getPopulationsNumber();
+  size_t getPopulationsNumber();
  private:
   std::vector<std::shared_ptr<Population> > playerPopulations;
   std::string name;
