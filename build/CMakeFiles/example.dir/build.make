@@ -96,7 +96,7 @@ example_EXTERNAL_OBJECTS =
 
 bin/example: CMakeFiles/example.dir/test/test.cpp.o
 bin/example: CMakeFiles/example.dir/build.make
-bin/example: src/libsrc.so
+bin/example: lib/libsrc.so
 bin/example: CMakeFiles/example.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/peach/peach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/example"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/example.dir/link.txt --verbose=$(VERBOSE)

@@ -238,7 +238,7 @@ bin/gui: gui/CMakeFiles/gui.dir/Interface/Models/PlayerScoreModel.cpp.o
 bin/gui: gui/CMakeFiles/gui.dir/build.make
 bin/gui: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
 bin/gui: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.9.5
-bin/gui: src/libsrc.so
+bin/gui: lib/libsrc.so
 bin/gui: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.9.5
 bin/gui: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.5
 bin/gui: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5

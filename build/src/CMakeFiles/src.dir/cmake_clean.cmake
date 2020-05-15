@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "../lib/libsrc.pdb"
+  "../lib/libsrc.so"
   "CMakeFiles/src.dir/Animals/CarnivorePopulationBuilder.cpp.o"
   "CMakeFiles/src.dir/Animals/HerbivorePopulationBuilder.cpp.o"
   "CMakeFiles/src.dir/Animals/Mutations/CompoundMutation.cpp.o"
@@ -21,8 +23,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Map/Map.cpp.o"
   "CMakeFiles/src.dir/util/Config.cpp.o"
   "CMakeFiles/src.dir/util/RandomGenerator.cpp.o"
-  "libsrc.pdb"
-  "libsrc.so"
 )
 
 # Per-language clean rules from dependency scanning.

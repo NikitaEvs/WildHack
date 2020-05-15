@@ -209,7 +209,7 @@ bin/gui_test: gui/CMakeFiles/gui_test.dir/build.make
 bin/gui_test: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
 bin/gui_test: /usr/local/lib/libgtest.a
 bin/gui_test: gui/thirdparty/spix/lib/libSpix.a
-bin/gui_test: src/libsrc.so
+bin/gui_test: lib/libsrc.so
 bin/gui_test: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.9.5
 bin/gui_test: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.9.5
 bin/gui_test: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.5
