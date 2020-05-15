@@ -17,11 +17,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: SetupWorkspace
-          run: |
-            cd ci
-            ./unitTest.sh
-            ./gui.sh
-            ./guiTest.sh
+        run: |
+          cd ci
+          ./unitTest.sh
+          ./gui.sh
+          ./guiTest.sh
 
       - name: Build
         run: |
