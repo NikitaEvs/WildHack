@@ -163,6 +163,16 @@ int32_t GameEngine::getCurrentID() {
   return currentPlayer;
 }
 
+std::vector<std::shared_ptr<LightPlayer> > GameEngine::getLightPlayers() {
+  std::vector<std::shared_ptr<LightPlayer> > lightPlayers;
+
+  for (const auto & player : players) {
+    lightPlayers.push_back(std::make_shared<LightPlayer>(*player));
+  }
+
+  return lightPlayers;
+}
+
 bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
   return (*map)[posY][posX] -> getCurrentPopulation() != nullptr;
 }
@@ -186,10 +196,16 @@ void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t
   players[currentPlayer]->addNewPopulation(new_population);
 }
 
-int32_t GameEngine::registerPlayer() {
+int32_t GameEngine::registerPlayer(const std::string& name) {
   std::shared_ptr<Player> player = std::make_shared<Player>();
   int32_t id = players.size();
   player -> SetId(id);
+
+  if (name == std::string("Bot")) {
+    player -> SetName(name + " " + std::to_string(id));
+  } else {
+    player -> SetName(name);
+  }
 
   player -> generatePopulations();
 
@@ -293,7 +309,7 @@ bool GameEngine::validate() {
   }
   players = newPlayers;
 
-  if ((players.empty()) || (currentStep > maxStep)) {
+  if ((players.size() < 2) || (currentStep > maxStep)) {
     std::cout << "End game!" << std::endl;
     return false;
   }
