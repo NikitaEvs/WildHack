@@ -3,7 +3,6 @@
 #include <QQmlContext>
 
 #include "Interface/Gui.h"
-#include "Interface/Commands/MoveCommand.h"
 
 #include "Interface/Models/PlayerScoreModel.h"
 
