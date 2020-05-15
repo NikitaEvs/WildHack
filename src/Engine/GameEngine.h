@@ -69,12 +69,12 @@ class GameEngine {
 
   std::shared_ptr<Handler> generateBotHandlersChain(std::shared_ptr<Player> bot);
 
-
-
   bool calculate();
   void calculateCells();
   void calculateCell(size_t posX, size_t posY, int32_t carnivore, int32_t herbivore);
   void applyLifeCycles();
   bool validate();
   void notify(bool end = false);
+
+  std::pair<int32_t, int32_t> getDestinationPos(std::shared_ptr<Population> tempPopulation);
 };
