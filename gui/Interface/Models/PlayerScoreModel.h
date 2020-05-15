@@ -15,7 +15,7 @@ class PlayerScoreModel : public QAbstractListModel {
 
   explicit PlayerScoreModel(std::shared_ptr<GameEngine> setEngine, QObject *parent = nullptr);
 
-  int rowCount(const QModelIndex & parent) const;
+  int rowCount(const QModelIndex & parent = QModelIndex()) const override ;
   QVariant data(const QModelIndex & index, int role) const;
 
  public slots:

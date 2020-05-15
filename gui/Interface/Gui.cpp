@@ -200,7 +200,14 @@ void Gui::updatePopulations() {
 void Gui::multiply() {
   std::cout << "Multiply" << std::endl;
 
-  splitCommand -> execute();
+  if (selectedPopulation -> GetAvailableStep() > 0) {
+    selectedPopulation -> SetAvailableStep(selectedPopulation->GetAvailableStep() - 1);
+
+    splitCommand -> setGoal(selectedPopulation);
+    splitCommand -> setDestination(x.toInt(), y.toInt());
+
+    splitCommand->execute();
+  }
 }
 
 void Gui::select() {
@@ -214,6 +221,7 @@ void Gui::migrate() {
 
   if (selectedPopulation -> GetAvailableStep() > 0) {
     selectedPopulation -> SetAvailableStep(selectedPopulation -> GetAvailableStep() - 1);
+
     moveCommand -> setGoal(selectedPopulation);
     std::cout << x.toInt() << " " << y.toInt() << std::endl;
     moveCommand -> setDestination(x.toInt(), y.toInt());
@@ -222,10 +230,16 @@ void Gui::migrate() {
   }
 }
 
-void Gui::mutate(Population::MutationType type) {
-  std::cout << "Mutate" << std::endl;
+void Gui::mutate(int type) {
+  std::cout << "Mutate " << static_cast<int32_t>(type) << std::endl;
 
-  mutateCommand -> execute();
+  if (selectedPopulation -> GetAvailableStep() > 0) {
+    selectedPopulation -> SetAvailableStep(selectedPopulation -> GetAvailableStep() - 1);
+
+    mutateCommand -> setGoal(selectedPopulation);
+    mutateCommand -> setType(static_cast<Population::MutationType>(type));
+    mutateCommand -> execute();
+  }
 }
 
 void Gui::stop() {

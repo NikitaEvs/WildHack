@@ -12,5 +12,5 @@ void MutateCommand::setType(Population::MutationType type) {
 }
 
 bool MutateCommand::execute() {
-
+  receiver -> populationMutate(goal, mutationType);
 }

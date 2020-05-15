@@ -57,7 +57,7 @@ class Gui : public QObject, public Subscriber {
   void select();
   void migrate();
   void multiply();
-  void mutate(Population::MutationType type);
+  void mutate(int type);
   void stop();
   bool checkPopulation(int posX, int posY);
 

@@ -13,5 +13,7 @@ void SplitCommand::setDestination(size_t destinationX, size_t destinationY) {
 }
 
 bool SplitCommand::execute() {
-  return false;
+  receiver -> populationSplit(goal, x, y);
+
+  return true;
 }
