@@ -3,7 +3,7 @@
 #include <utility>
 
 GameEngine::GameEngine() {
-  currentPlayer = registerPlayer();
+  currentPlayer = registerPlayer(std::string("Cat"));
   botID = registerPlayer();
 
   maxStep = Config::getInstance().getMaxStepCount();
@@ -215,6 +215,9 @@ void GameEngine::populationMutate(std::shared_ptr<Population> population, Popula
 void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t destination_x, int32_t destination_y) {
   population->SetAnimalAmount(population->GetAnimalAmount() / 2);
   std::shared_ptr<Population> new_population = std::make_shared<Population>(*(population));
+
+  (*map)[destination_y][destination_x]->setCurrentPopulation(new_population);
+
   new_population->SetXPos(destination_x);
   new_population->SetYPos(destination_y);
   players[currentPlayer]->addNewPopulation(new_population);
