@@ -164,8 +164,8 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
       carnivoreAmount += map[yPos - 1][xPos]->getCarnivoreCount();
     }
     if (yPos + 1 < getHeight()) {
-      herbivoreAmount += map[yPos - 1][xPos]->getHerbivoreCount();
-      carnivoreAmount += map[yPos - 1][xPos]->getCarnivoreCount();
+      herbivoreAmount += map[yPos + 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += map[yPos + 1][xPos]->getCarnivoreCount();
     }
     if (xPos - 1 >= 0) {
       herbivoreAmount += map[yPos][xPos - 1]->getHerbivoreCount();
@@ -189,8 +189,8 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
       carnivoreAmount += map[yPos - 1][xPos]->getCarnivoreCount();
     }
     if (yPos + 1 < getHeight()) {
-      herbivoreAmount += map[yPos - 1][xPos]->getHerbivoreCount();
-      carnivoreAmount += map[yPos - 1][xPos]->getCarnivoreCount();
+      herbivoreAmount += map[yPos + 1][xPos]->getHerbivoreCount();
+      carnivoreAmount += map[yPos + 1][xPos]->getCarnivoreCount();
     }
     if (xPos + 1 < getWidth()) {
       herbivoreAmount += map[yPos][xPos + 1]->getHerbivoreCount();
