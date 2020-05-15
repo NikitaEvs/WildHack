@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/example.dir/test/test.cpp.o  -o bin/example  -Wl,-rpath,/home/cat/peach/build/lib lib/libsrc.so 

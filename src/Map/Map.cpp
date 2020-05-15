@@ -213,15 +213,13 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   herbivoreAmount /= 3;
   carnivoreAmount /= 3;
   //if there's no food or water someone must die
-  int32_t nutrition = (food + 1.5 * water) * 2 / 5;
+  int32_t nutrition = (food + water) / 2;
   if (population->GetType() == Population::TypeName::CARNIVORE) {
     nutrition =
         (herbivoreAmount * 100 / Config::getInstance().getMaxAmount(Population::HERBIVORE, Population::AVERAGE) + water)
             / 2;
   }
-  if (nutrition < 75) {
-    population->SetAnimalAmount((population->GetAnimalAmount() * (nutrition + 25)) / 100);
-  }
+  population->SetAnimalAmount((population->GetAnimalAmount() * nutrition) / 100);
   // carnivore animal can eat some animals from the population
   int32_t
       wasEaten = carnivoreAmount * 100 / Config::getInstance().getMaxAmount(Population::CARNIVORE, Population::AVERAGE);
@@ -239,7 +237,7 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   }
   population->SetAnimalAmount((population->GetAnimalAmount() * (100 - wasEaten)) / 100);
   // but new animals are born
-  population->SetAnimalAmount(std::max(population->GetAnimalAmount() * (100 + population->GetProductivity()) / 100,
+  population->SetAnimalAmount(std::min(population->GetAnimalAmount() * (population->GetProductivity() + 200) / 100,
                                        Config::getInstance().getMaxAmount(population->GetType(),
                                                                           population->GetSize())));
 
