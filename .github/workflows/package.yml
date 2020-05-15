@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON
+          cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON -DCMAKE_INSTALL_PREFIX=gui
           make
 
       - name: Copy
