@@ -33,9 +33,9 @@ QtObject {
 
     property string cellPath: "../svg/shape.svg"
     property string forest: "../svg/forest.svg"
-    property string tundra: "../svg/tundra.svg"
+    property string tundra: "../svg/water.svg"
     property string steppe: "../svg/steppe.svg"
-    property string water: "../svg/water.svg"
+    property string water: "../svg/tundra.svg"
 
     property string capybara: "../svg/animals/capybara.svg"
     property string elephant: "../svg/animals/elephant.svg"
