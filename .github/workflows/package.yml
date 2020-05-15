@@ -29,6 +29,7 @@ jobs:
           cd build
           cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON -DCMAKE_INSTALL_PREFIX=gui
           make
+          make install
 
       - name: Copy
         run: |
