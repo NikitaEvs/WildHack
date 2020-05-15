@@ -212,6 +212,12 @@ int32_t Population::GetPlayerNumber() const {
 void Population::SetPlayerNumber(int32_t player_number) {
   playerNumber = player_number;
 }
+int32_t Population::GetAvailableStep() const {
+  return availableStep;
+}
+void Population::SetAvailableStep(int32_t available_step) {
+  availableStep = available_step;
+}
 
 LightPopulation::LightPopulation(Population &population) :
   xPos(population.GetXPos()),
