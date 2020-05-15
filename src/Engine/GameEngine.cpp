@@ -1,5 +1,15 @@
 #include "GameEngine.h"
 
+GameEngine::GameEngine() {
+  currentPlayer = registerPlayer();
+  botID = registerPlayer();
+
+  maxStep = Config::getInstance().getMaxStepCount();
+  currentStep = 0;
+
+  nextStep();
+}
+
 void GameEngine::generateMap() {
   int32_t height = RandomGenerator::getInstance().randNormalInt(Config::getInstance().getHeight());
   int32_t width = RandomGenerator::getInstance().randNormalInt(Config::getInstance().getWidth());
@@ -23,10 +33,6 @@ void GameEngine::fillMapPattern(std::vector<std::vector<int32_t> > &cells) {
 }
 
 void GameEngine::fillPopulationPattern(std::vector<LightPopulation> &populations) {
-  if (players.empty()) {
-    players.push_back(std::make_shared<Player>(std::string("Cat")));
-  }
-
   for (const auto& player : players) {
     if (player -> getPopulationsNumber() == 0) {
       player -> generatePopulations();
@@ -55,6 +61,14 @@ void GameEngine::fillPopulationPattern(std::vector<LightPopulation> &populations
       population -> SetYPos(y);
       (*map)[y][x] -> setCurrentPopulation(population);
 
+      populations.emplace_back(*population);
+    }
+  }
+}
+
+void GameEngine::getPopulationPattern(std::vector<LightPopulation> &populations) {
+  for (const auto& player : players) {
+    for (const auto &population : player->GetPlayerPopulations()) {
       populations.emplace_back(*population);
     }
   }
@@ -167,11 +181,19 @@ void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> >& _players) {
 }
 
 std::shared_ptr<CellType> GameEngine::getCell(size_t posX, size_t posY) {
-  return (*map)[posY][posX];
+  if ((posX >= 0) && (posY >= 0) && (posX < map -> getWidth()) && (posY < map -> getHeight())) {
+    return (*map)[posY][posX];
+  } else {
+    return nullptr;
+  }
 }
 
 std::shared_ptr<Population> GameEngine::getPopulation(size_t posX, size_t posY) {
   return (*map)[posY][posX] -> getCurrentPopulation();
+}
+
+int32_t GameEngine::getCurrentID() {
+  return currentPlayer;
 }
 
 bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
@@ -179,6 +201,9 @@ bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
 }
 
 void GameEngine::populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos) {
+  (*map)[population -> GetYPos()][population -> GetXPos()] -> setCurrentPopulation(nullptr);
+  (*map)[y_pos][x_pos] -> setCurrentPopulation(population);
+
   population->move(x_pos, y_pos);
 }
 
@@ -191,5 +216,131 @@ void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t
   std::shared_ptr<Population> new_population = std::make_shared<Population>(*(population));
   new_population->SetXPos(destination_x);
   new_population->SetYPos(destination_y);
-  players[tempPlayer]->addNewPopulation(new_population);
+  players[currentPlayer]->addNewPopulation(new_population);
+}
+
+int32_t GameEngine::registerPlayer() {
+  std::shared_ptr<Player> player = std::make_shared<Player>();
+  int32_t id = players.size();
+  player -> SetId(id);
+
+  player -> generatePopulations();
+
+  players.push_back(std::move(player));
+
+  return id;
+}
+
+void GameEngine::setMaxStep(int32_t setMaxStep) {
+  maxStep = setMaxStep;
+}
+
+void GameEngine::nextStep() {
+  if (currentPlayer == botID) {
+    botTurn(players[currentPlayer]);
+    finishStep();
+  }
+}
+
+void GameEngine::finishStep() {
+  bool end = calculate();
+  notify(end);
+
+  if (!end) {
+    ++currentStep;
+    ++currentPlayer;
+    currentPlayer %= players.size();
+    nextStep();
+  }
+}
+
+bool GameEngine::calculate() {
+  calculateCells();
+  applyLifeCycles();
+  return !validate();
+}
+
+void GameEngine::calculateCells() {
+  for (auto &row : *map) {
+    for (auto &cell : row) {
+      cell -> setHerbivoreCount(0);
+      cell -> setCarnivoreCount(0);
+    }
+  }
+
+  for (const auto & player : players) {
+    for (const auto & population : player -> GetPlayerPopulations()) {
+      int32_t xPos = population -> GetXPos();
+      int32_t yPos = population -> GetYPos();
+
+      int32_t herbivore = 0, carnivore = 0;
+
+      if (population -> GetType() == Population::TypeName::CARNIVORE) {
+        carnivore += population -> GetAnimalAmount();
+      } else {
+        herbivore += population -> GetAnimalAmount();
+      }
+
+      calculateCell(xPos, yPos, carnivore, herbivore);
+      calculateCell(xPos + 1, yPos, carnivore, herbivore);
+      calculateCell(xPos - 1, yPos, carnivore, herbivore);
+      calculateCell(xPos, yPos + 1, carnivore, herbivore);
+      calculateCell(xPos, yPos - 1, carnivore, herbivore);
+    }
+  }
+}
+
+void GameEngine::calculateCell(size_t posX, size_t posY, int32_t carnivore, int32_t herbivore) {
+  auto cell = getCell(posX, posY);
+
+  if (cell) {
+    cell -> setCarnivoreCount(cell -> getCarnivoreCount() + carnivore);
+    cell -> setHerbivoreCount(cell -> getHerbivoreCount() + herbivore);
+  }
+}
+
+void GameEngine::applyLifeCycles() {
+  for (auto & player : players) {
+    for (auto &population : player -> GetPlayerPopulations()) {
+      population -> SetAvailableStep(1);
+      map -> applyLifeCircle(population);
+    }
+  }
+}
+
+/* It's really ineffective function */
+bool GameEngine::validate() {
+  std::vector<std::shared_ptr<Player> > newPlayers;
+  for (const auto & player : players) {
+    std::vector<std::shared_ptr<Population> > newPopulations;
+    for (const auto &population : player -> GetPlayerPopulations()) {
+      if (population -> GetAnimalAmount() > 0) {
+        newPopulations.push_back(population);
+      }
+    }
+    player -> SetPlayerPopulations(newPopulations);
+
+    if (!newPopulations.empty()) {
+      newPlayers.push_back(player);
+    }
+  }
+  players = newPlayers;
+
+  if ((players.empty()) || (currentStep > maxStep)) {
+    std::cout << "End game!" << std::endl;
+    return false;
+  }
+  return true;
+}
+
+void GameEngine::notify(bool end) {
+  manager -> notifyDataChanged(end);
+}
+
+std::shared_ptr<Manager> GameEngine::getManager() {
+  return manager;
+}
+
+void GameEngine::setManager(std::shared_ptr<Manager> setManager) {
+  manager = std::move(setManager);
 }
