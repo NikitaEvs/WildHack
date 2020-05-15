@@ -26,6 +26,9 @@ class Config {
   static Config& getInstance();
   void readFile();
 
+  /* GamePlay variables */
+  int32_t getMaxStepCount();
+
   /* Map variables */
   std::pair<int32_t, int32_t> getHeight();
   std::pair<int32_t, int32_t> getWidth();

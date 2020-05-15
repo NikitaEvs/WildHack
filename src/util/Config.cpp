@@ -25,6 +25,11 @@ void Config::readFile() {
   fileIn >> configJSON;
 }
 
+/* GamePlay variables */
+int32_t Config::getMaxStepCount() {
+  return configJSON["gamePlay"]["maxStep"];
+}
+
 /* Map variables */
 
 std::pair<int32_t, int32_t> Config::getHeight() {
