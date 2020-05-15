@@ -237,14 +237,16 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
     case Population::VERY_BIG:wasEaten = wasEaten / 10;
       break;
   }
-  population->SetAnimalAmount((population->GetAnimalAmount() *(100 - wasEaten)) / 100);
+  population->SetAnimalAmount((population->GetAnimalAmount() * (100 - wasEaten)) / 100);
   // but new animals are born
-  population->SetAnimalAmount(population->GetAnimalAmount() * (100 + population->GetProductivity()) / 100);
+  population->SetAnimalAmount(std::max(population->GetAnimalAmount() * (100 + population->GetProductivity()) / 100,
+                                       Config::getInstance().getMaxAmount(population->GetType(),
+                                                                          population->GetSize())));
 
   //some game points
   int32_t k = (population->GetProductivity()
       * (static_cast<int32_t>(population->GetSize()) + static_cast<int32_t>(population->GetCover()))
       + population->GetHealth()
           * (static_cast<int32_t>(population->GetVelocity()) + static_cast<int32_t>(population->GetSafety()))) / 20;
-  population->SetBiologyDev(population->GetBiologyDev() * (100 + k) / 100);
+  population->SetBiologyDev(k);
 }
