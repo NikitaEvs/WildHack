@@ -80,10 +80,10 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
   for (int32_t i = 0; i < populationAmount; ++i) {
     std::shared_ptr<Population> tempPopulation = std::move(bot->getPopulation(i));
     std::shared_ptr<Handler> link;
-    int32_t x;
-    int32_t y;
-    int32_t dX;
-    int32_t dY;
+    int32_t x = tempPopulation->GetXPos();
+    int32_t y = tempPopulation->GetYPos();
+    int32_t dX, dY;
+    std::pair<int32_t , int32_t> pos;
     int32_t handlerType = RandomGenerator::getInstance().randInt(0, 4);
     if (tempPopulation->GetAnimalAmount() * 10
         > Config::getInstance().getMaxAmount(tempPopulation->GetType(), tempPopulation->GetSize()) * 8) {
@@ -103,53 +103,20 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
         link->setPopulation(tempPopulation);
         break;
       case 4:link = std::make_shared<MoveHandler>();
-        x = tempPopulation->GetXPos();
-        y = tempPopulation->GetYPos();
-        dX = RandomGenerator::getInstance().randInt(0, 1);
-        dY = RandomGenerator::getInstance().randInt(-1, 1);
-        if (dX == 0 && dY == 0) {
-          dX = 1;
-          dY = -1;
-        }
-        if (x + dX < 0) {
-          dX = 1;
-        }
-        if (x >= map->getWidth()) {
-          dX = -1;
-        }
-        if (y + dY < 0) {
-          dY = 1;
-        }
-        if (y >= map->getHeight()) {
-          dY = -1;
-        }
+        pos = getDestinationPos(tempPopulation);
+        dX = pos.first;
+        dY = pos.second;
         link->setXYPos(x + dX, y + dY);
         link->setPopulation(tempPopulation);
         break;
-      case 5:std::shared_ptr<Population> newPopulation = std::make_shared<Population>(*(tempPopulation));
+      case 5:
+        std::shared_ptr<Population> newPopulation = std::make_shared<Population>(*(tempPopulation));
         newPopulation->SetAnimalAmount(newPopulation->GetAnimalAmount() / 2);
         tempPopulation->SetAnimalAmount(tempPopulation->GetAnimalAmount() / 2);
         link = std::make_shared<MoveHandler>();
-        x = tempPopulation->GetXPos();
-        y = tempPopulation->GetYPos();
-        dX = RandomGenerator::getInstance().randInt(-1, 1);
-        dY = RandomGenerator::getInstance().randInt(-1, 1);
-        if (dX == 0 && dY == 0) {
-          dX = 1;
-          dY = -1;
-        }
-        if (x + dX < 0) {
-          dX = 1;
-        }
-        if (x >= map->getWidth()) {
-          dX = -1;
-        }
-        if (y + dY < 0) {
-          dY = 1;
-        }
-        if (y >= map->getHeight()) {
-          dY = -1;
-        }
+        pos = getDestinationPos(newPopulation);
+        dX = pos.first;
+        dY = pos.second;
         link->setXYPos(x + dX, y + dY);
         link->setPopulation(newPopulation);
         break;
@@ -192,4 +159,28 @@ void GameEngine::populationSplit(std::shared_ptr<Population> population, int32_t
   new_population->SetXPos(destination_x);
   new_population->SetYPos(destination_y);
   players[tempPlayer]->addNewPopulation(new_population);
+}
+
+std::pair<int32_t, int32_t> GameEngine::getDestinationPos(std::shared_ptr<Population> tempPopulation) {
+  int32_t xPos = tempPopulation->GetXPos();
+  int32_t yPos = tempPopulation->GetYPos();
+  int32_t dX = RandomGenerator::getInstance().randInt(-1, 1);
+  int32_t dY = RandomGenerator::getInstance().randInt(-1, 1);
+  if (yPos + dY < 0) {
+    dY = RandomGenerator::getInstance().randInt(0, 1);
+  }
+  if (yPos + 1 >= map->getHeight()) {
+    dY = RandomGenerator::getInstance().randInt(-1, 0);
+  }
+  if (dY != 0) {
+    if (yPos % 2 == 1) {
+      dX = RandomGenerator::getInstance().randInt(0, 1);
+    } else {
+      dX = RandomGenerator::getInstance().randInt(-1, 0);
+    }
+  }
+  if (xPos + dX < 0 || xPos + dX >= map->getWidth()) {
+    dX = 0;
+  }
+  return std::make_pair(dX, dY);
 }
