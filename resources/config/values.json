@@ -5,12 +5,12 @@
   "map" : {
     "sizes": {
       "height": {
-        "mean": 5,
-        "deviation": 1
+        "mean": 10,
+        "deviation": 3
       },
       "width" : {
-        "mean" : 5,
-        "deviation" : 1
+        "mean" : 10,
+        "deviation" : 3
       }
     }
   },

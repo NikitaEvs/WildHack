@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Gui_t {
-    QByteArrayData data[28];
-    char stringdata0[274];
+    QByteArrayData data[27];
+    char stringdata0[249];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,28 +46,27 @@ QT_MOC_LITERAL(11, 129, 6), // "select"
 QT_MOC_LITERAL(12, 136, 7), // "migrate"
 QT_MOC_LITERAL(13, 144, 8), // "multiply"
 QT_MOC_LITERAL(14, 153, 6), // "mutate"
-QT_MOC_LITERAL(15, 160, 24), // "Population::MutationType"
-QT_MOC_LITERAL(16, 185, 4), // "type"
-QT_MOC_LITERAL(17, 190, 4), // "stop"
-QT_MOC_LITERAL(18, 195, 15), // "checkPopulation"
-QT_MOC_LITERAL(19, 211, 4), // "posX"
-QT_MOC_LITERAL(20, 216, 4), // "posY"
-QT_MOC_LITERAL(21, 221, 3), // "map"
-QT_MOC_LITERAL(22, 225, 11), // "populations"
-QT_MOC_LITERAL(23, 237, 17), // "currentPopulation"
-QT_MOC_LITERAL(24, 255, 11), // "currentCell"
-QT_MOC_LITERAL(25, 267, 1), // "x"
-QT_MOC_LITERAL(26, 269, 1), // "y"
-QT_MOC_LITERAL(27, 271, 2) // "id"
+QT_MOC_LITERAL(15, 160, 4), // "type"
+QT_MOC_LITERAL(16, 165, 4), // "stop"
+QT_MOC_LITERAL(17, 170, 15), // "checkPopulation"
+QT_MOC_LITERAL(18, 186, 4), // "posX"
+QT_MOC_LITERAL(19, 191, 4), // "posY"
+QT_MOC_LITERAL(20, 196, 3), // "map"
+QT_MOC_LITERAL(21, 200, 11), // "populations"
+QT_MOC_LITERAL(22, 212, 17), // "currentPopulation"
+QT_MOC_LITERAL(23, 230, 11), // "currentCell"
+QT_MOC_LITERAL(24, 242, 1), // "x"
+QT_MOC_LITERAL(25, 244, 1), // "y"
+QT_MOC_LITERAL(26, 246, 2) // "id"
 
     },
     "Gui\0mapChanged\0\0populationsChanged\0"
     "currentPopulationChanged\0currentCellChanged\0"
     "xChanged\0yChanged\0idChanged\0requestUpdate\0"
     "endGame\0select\0migrate\0multiply\0mutate\0"
-    "Population::MutationType\0type\0stop\0"
-    "checkPopulation\0posX\0posY\0map\0populations\0"
-    "currentPopulation\0currentCell\0x\0y\0id"
+    "type\0stop\0checkPopulation\0posX\0posY\0"
+    "map\0populations\0currentPopulation\0"
+    "currentCell\0x\0y\0id"
 };
 #undef QT_MOC_LITERAL
 
@@ -100,8 +99,8 @@ static const uint qt_meta_data_Gui[] = {
       12,    0,   99,    2, 0x0a /* Public */,
       13,    0,  100,    2, 0x0a /* Public */,
       14,    1,  101,    2, 0x0a /* Public */,
-      17,    0,  104,    2, 0x0a /* Public */,
-      18,    2,  105,    2, 0x0a /* Public */,
+      16,    0,  104,    2, 0x0a /* Public */,
+      17,    2,  105,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -118,18 +117,18 @@ static const uint qt_meta_data_Gui[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 15,   16,
+    QMetaType::Void, QMetaType::Int,   15,
     QMetaType::Void,
-    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   19,   20,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   18,   19,
 
  // properties: name, type, flags
+      20, QMetaType::QVariantList, 0x00495103,
       21, QMetaType::QVariantList, 0x00495103,
       22, QMetaType::QVariantList, 0x00495103,
       23, QMetaType::QVariantList, 0x00495103,
-      24, QMetaType::QVariantList, 0x00495103,
+      24, QMetaType::QVariant, 0x00495103,
       25, QMetaType::QVariant, 0x00495103,
-      26, QMetaType::QVariant, 0x00495103,
-      27, QMetaType::QVariant, 0x00495003,
+      26, QMetaType::QVariant, 0x00495003,
 
  // properties: notify_signal_id
        0,
@@ -161,7 +160,7 @@ void Gui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **
         case 9: _t->select(); break;
         case 10: _t->migrate(); break;
         case 11: _t->multiply(); break;
-        case 12: _t->mutate((*reinterpret_cast< Population::MutationType(*)>(_a[1]))); break;
+        case 12: _t->mutate((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 13: _t->stop(); break;
         case 14: { bool _r = _t->checkPopulation((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;

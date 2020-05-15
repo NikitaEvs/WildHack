@@ -119,6 +119,7 @@ ApplicationWindow {
                 property variant additional
 
                 property variant migrateMode
+                property variant splitMode
                 property variant selectedNode
 
                 onPaint: {
@@ -161,6 +162,7 @@ ApplicationWindow {
 
                     canvasLoad.text = "true"
                     canvas.migrateMode = false
+                    canvas.splitMode = false
                     canvas.additional = []
                 }
 
@@ -191,6 +193,17 @@ ApplicationWindow {
 
                             return
                         }
+
+                        if (canvas.splitMode && checkPointerExist(canvas.additional, point["x"], point["y"])) {
+                            gui.multiply()
+
+                            canvas.splitMode = false
+                            canvas.additional = []
+                            canvas.requestPaint()
+
+                            return
+                        }
+
                         canvas.additional = []
 
                         if (point["x"] !== -1) {
@@ -526,6 +539,8 @@ ApplicationWindow {
                                 }
 
                                 onClicked: {
+                                    gui.select()
+
                                     mutateDialog.open()
                                 }
                             }
@@ -560,7 +575,18 @@ ApplicationWindow {
                                 }
 
                                 onClicked: {
-                                    gui.multiply()
+                                    gui.select()
+
+                                    var points = getArea(canvas.centerMap, canvas.selectedNode)
+
+                                    for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
+                                        var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
+                                        canvas.additional.push(additionItem)
+                                    }
+
+                                    canvas.splitMode = true
+
+                                    canvas.requestPaint()
                                 }
                             }
 
@@ -728,6 +754,7 @@ ApplicationWindow {
     Connections {
         target: gui
         onEndGame: {
+            playerModel.populate()
             endDialog.open()
         }
     }
@@ -745,34 +772,46 @@ ApplicationWindow {
             color: "transparent"
 
             Column {
+                anchors.fill: parent
                 ListView {
                     id: playerList
+                    anchors.top: endDialog.top
                     width: endView.width
                     height: endView.height * 5 / 6
+                    clip: true
 
                     model: playerModel
                     delegate: Pane {
-                        width: parent.width
-                        height: parent.height / 5
+                        width: playerList.width
+                        height: playerList.height / 5
 
                         Row {
+                            width: parent.width
+                            height: parent.height
+
                             Rectangle {
                                 height: parent.height
                                 width: playerList.width / 2
+                                color: "transparent"
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: model.name
+                                    font: endButton.font
+                                    color: Light.foreground
                                 }
                             }
 
                             Rectangle {
                                 height: parent.height
                                 width: playerList.width / 2
+                                color: "transparent"
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: model.score
+                                    font: endButton.font
+                                    color: Light.foreground
                                 }
                             }
                         }
@@ -787,6 +826,7 @@ ApplicationWindow {
                     Material.background: "transparent"
 
                     onClicked: {
+                        endDialog.close()
                         stack.pop()
                     }
                 }
@@ -826,6 +866,7 @@ ApplicationWindow {
 
                     onClicked: {
                         mutateDialog.close()
+                        gui.mutate(0)
                     }
                 }
             }
@@ -841,6 +882,7 @@ ApplicationWindow {
 
                     onClicked: {
                         mutateDialog.close()
+                        gui.mutate(1)
                     }
                 }
             }
@@ -856,6 +898,7 @@ ApplicationWindow {
 
                     onClicked: {
                         mutateDialog.close()
+                        gui.mutate(3)
                     }
                 }
             }
@@ -871,6 +914,7 @@ ApplicationWindow {
 
                     onClicked: {
                         mutateDialog.close()
+                        gui.mutate(2)
                     }
                 }
             }
