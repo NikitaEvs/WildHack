@@ -43,6 +43,9 @@ set (ENGINE_SOURCES
         ${ENGINE_PATH}/GameEngine.cpp
         ${ENGINE_PATH}/Player/Player.h
         ${ENGINE_PATH}/Player/Player.cpp
+        ${ENGINE_PATH}/Manager.h
+        ${ENGINE_PATH}/Manager.cpp
+        ${ENGINE_PATH}/Subscriber.h
         )
 
 set (MUTATION_SOURCES
