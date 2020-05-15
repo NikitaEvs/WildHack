@@ -1,4 +1,7 @@
 {
+  "gamePlay": {
+    "maxStep": 100
+  },
   "map" : {
     "sizes": {
       "height": {

@@ -24,6 +24,12 @@ QtObject {
     property string multiply: "Multiply"
     property string migrate: "Migrate"
     property string finish: "Finish step"
+    property string choose: "Choose a new mutation"
+    property string mutateSize: "Mutate size"
+    property string mutateSafety: "Mutate safety"
+    property string mutateCover: "Mutate cover"
+    property string mutateVelocity: "Mutate velocity"
+    property string endGame: "End gane"
 
     property string cellPath: "../svg/shape.svg"
     property string forest: "../svg/forest.svg"
