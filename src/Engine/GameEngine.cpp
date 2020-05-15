@@ -84,32 +84,35 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
     int32_t y = tempPopulation->GetYPos();
     int32_t dX, dY;
     std::pair<int32_t , int32_t> pos;
-    int32_t handlerType = RandomGenerator::getInstance().randInt(0, 4);
+    int32_t mutationType;
+    int32_t handlerType = RandomGenerator::getInstance().randInt(1, 3);
     if (tempPopulation->GetAnimalAmount() * 10
-        > Config::getInstance().getMaxAmount(tempPopulation->GetType(), tempPopulation->GetSize()) * 8) {
-      handlerType = 5;
+        > Config::getInstance().getMaxAmount(tempPopulation->GetType(), tempPopulation->GetSize()) * 6) {
+      handlerType = 3;
     }
     switch (handlerType) {
-      case 0:link = std::make_shared<CoverMutationHandler>();
+      case 1:
+         mutationType = RandomGenerator::getInstance().randInt(0, 3);
+        switch (mutationType) {
+          case 0:link = std::make_shared<CoverMutationHandler>();
+            break;
+          case 1:link = std::make_shared<SafetyMutationHandler>();
+            break;
+          case 2:link = std::make_shared<SizeMutationHandler>();
+            break;
+          case 3:link = std::make_shared<VelocityMutationHandler>();
+            break;
+        }
         link->setPopulation(tempPopulation);
         break;
-      case 1:link = std::make_shared<SafetyMutationHandler>();
-        link->setPopulation(tempPopulation);
-        break;
-      case 2:link = std::make_shared<SizeMutationHandler>();
-        link->setPopulation(tempPopulation);
-        break;
-      case 3:link = std::make_shared<VelocityMutationHandler>();
-        link->setPopulation(tempPopulation);
-        break;
-      case 4:link = std::make_shared<MoveHandler>();
+      case 2:link = std::make_shared<MoveHandler>();
         pos = getDestinationPos(tempPopulation);
         dX = pos.first;
         dY = pos.second;
         link->setXYPos(x + dX, y + dY);
         link->setPopulation(tempPopulation);
         break;
-      case 5:
+      case 3:
         std::shared_ptr<Population> newPopulation = std::make_shared<Population>(*(tempPopulation));
         newPopulation->SetAnimalAmount(newPopulation->GetAnimalAmount() / 2);
         tempPopulation->SetAnimalAmount(tempPopulation->GetAnimalAmount() / 2);
