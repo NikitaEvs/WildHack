@@ -370,7 +370,7 @@ std::pair<int32_t, int32_t> GameEngine::getDestinationPos(std::shared_ptr<Popula
   if (xPos + dX < 0 || xPos + dX >= map->getWidth()) {
     dX = 0;
   }
-  if ((*map)[xPos + dX][yPos + dY]->getCarnivoreCount() > 0 || (*map)[xPos + dX][yPos + dY]->getHerbivoreCount() > 0) {
+  if ((*map)[yPos + dY][xPos + dX]->getCarnivoreCount() > 0 || (*map)[xPos + dX][yPos + dY]->getHerbivoreCount() > 0) {
     dX = 0;
     dY = 0;
   }

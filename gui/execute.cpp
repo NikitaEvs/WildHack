@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 
   gameEngine -> setManager(manager);
 
-  PlayerScoreModel model;
+  PlayerScoreModel model(gameEngine);
 
   engine.rootContext() -> setContextProperty("playerModel", &model);
   engine.rootContext() -> setContextProperty("gui", gui.get());
