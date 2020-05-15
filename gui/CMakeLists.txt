@@ -71,3 +71,6 @@ target_link_libraries(gui
         Qt5::Quick
         src
         )
+
+set_property(TARGET gui PROPERTY INSTALL_RPATH_USE_LINK_PATH TRUE)
+install(TARGETS gui DESTINATION ${CMAKE_INSTALL_PREFIX})
