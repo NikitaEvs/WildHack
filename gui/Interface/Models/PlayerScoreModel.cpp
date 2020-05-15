@@ -29,5 +29,7 @@ QHash<int, QByteArray> PlayerScoreModel::roleNames() const {
 }
 
 void PlayerScoreModel::populate() {
-
+//  beginInsertRows(QModelIndex(), rowCount(), rowCount());
+//
+//  endInsertRows();
 }

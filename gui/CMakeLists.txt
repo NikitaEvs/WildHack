@@ -23,16 +23,16 @@ set (GUI_SOURCES
         )
 
 set (COMMAND_SOURCES
-        ${ENGINE_PATH}/Commands/Command.h
-        ${ENGINE_PATH}/Commands/Command.cpp
-        ${ENGINE_PATH}/Commands/MutateCommand.h
-        ${ENGINE_PATH}/Commands/MutateCommand.cpp
-        ${ENGINE_PATH}/Commands/SplitCommand.h
-        ${ENGINE_PATH}/Commands/SplitCommand.cpp
-        ${ENGINE_PATH}/Commands/MoveCommand.h
-        ${ENGINE_PATH}/Commands/MoveCommand.cpp
-        ${ENGINE_PATH}/Commands/StopCommand.h
-        ${ENGINE_PATH}/Commands/StopCommand.cpp
+        ${ENGINE_PATH}/GUICommands/GUICommand.h
+        ${ENGINE_PATH}/GUICommands/GUICommand.cpp
+        ${ENGINE_PATH}/GUICommands/MutateCommand.h
+        ${ENGINE_PATH}/GUICommands/MutateCommand.cpp
+        ${ENGINE_PATH}/GUICommands/SplitCommand.h
+        ${ENGINE_PATH}/GUICommands/SplitCommand.cpp
+        ${ENGINE_PATH}/GUICommands/MoveCommand.h
+        ${ENGINE_PATH}/GUICommands/MoveCommand.cpp
+        ${ENGINE_PATH}/GUICommands/StopCommand.h
+        ${ENGINE_PATH}/GUICommands/StopCommand.cpp
         )
 
 set (MODELS_SOURCES
@@ -60,7 +60,7 @@ if (GUI_TEST_BUILD)
     find_package(Qt5 COMPONENTS Core Quick REQUIRED)
     find_package(GTest REQUIRED)
 
-    add_executable(gui_test Test/guiTest.cpp "../resources/layout/qml.qrc" ${GUI_SOURCES})
+    add_executable(gui_test Test/guiTest.cpp "../resources/layout/qml.qrc" ${GUI_SOURCES} ${COMMAND_SOURCES})
     target_compile_definitions(gui_test PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
     target_link_libraries(gui_test PRIVATE Qt5::Widgets Qt5::Qml Qt5::Core Qt5::Quick GTest::GTest Spix src)
 endif(GUI_TEST_BUILD)

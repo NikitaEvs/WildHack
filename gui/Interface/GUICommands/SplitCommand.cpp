@@ -1,7 +1,7 @@
 #include "SplitCommand.h"
 
 SplitCommand::SplitCommand(std::shared_ptr<GameEngine> engine) :
-                           Command(std::move(engine)) {}
+                           GUICommand(std::move(engine)) {}
 
 void SplitCommand::setGoal(std::shared_ptr<Population> setGoal) {
   goal = std::move(setGoal);

@@ -2,11 +2,11 @@
 
 #include <memory>
 
-#include "Command.h"
+#include "GUICommand.h"
 #include "Engine/GameEngine.h"
 #include "Population.h"
 
-class StopCommand : public Command {
+class StopCommand : public GUICommand {
  public:
   StopCommand(std::shared_ptr<GameEngine> engine);
 

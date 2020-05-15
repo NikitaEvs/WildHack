@@ -8,10 +8,10 @@
 #include "Engine/GameEngine.h"
 #include "Engine/Subscriber.h"
 
-#include "Commands/MoveCommand.h"
-#include "Commands/MutateCommand.h"
-#include "Commands/SplitCommand.h"
-#include "Commands/StopCommand.h"
+#include "GUICommands/MoveCommand.h"
+#include "GUICommands/MutateCommand.h"
+#include "GUICommands/SplitCommand.h"
+#include "GUICommands/StopCommand.h"
 
 class Gui : public QObject, public Subscriber {
   Q_OBJECT

@@ -284,10 +284,6 @@ void GameEngine::calculateCells() {
       }
 
       calculateCell(xPos, yPos, carnivore, herbivore);
-      calculateCell(xPos + 1, yPos, carnivore, herbivore);
-      calculateCell(xPos - 1, yPos, carnivore, herbivore);
-      calculateCell(xPos, yPos + 1, carnivore, herbivore);
-      calculateCell(xPos, yPos - 1, carnivore, herbivore);
     }
   }
 }
@@ -370,7 +366,7 @@ std::pair<int32_t, int32_t> GameEngine::getDestinationPos(std::shared_ptr<Popula
   if (xPos + dX < 0 || xPos + dX >= map->getWidth()) {
     dX = 0;
   }
-  if ((*map)[yPos + dY][xPos + dX]->getCarnivoreCount() > 0 || (*map)[xPos + dX][yPos + dY]->getHerbivoreCount() > 0) {
+  if ((*map)[yPos + dY][xPos + dX]->getCarnivoreCount() > 0 || (*map)[yPos + dY][xPos + dX]->getHerbivoreCount() > 0) {
     dX = 0;
     dY = 0;
   }

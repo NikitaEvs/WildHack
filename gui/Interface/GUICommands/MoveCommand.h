@@ -2,21 +2,22 @@
 
 #include <memory>
 
-#include "Command.h"
+#include "GUICommand.h"
 #include "Engine/GameEngine.h"
 #include "Population.h"
 
-class MutateCommand : public Command {
+class MoveCommand : public GUICommand {
  public:
-  explicit MutateCommand(std::shared_ptr<GameEngine> engine);
+  MoveCommand() = default;
 
   void setGoal(std::shared_ptr<Population> setGoal);
 
-  void setType(Population::MutationType type);
+  void setDestination(size_t destinationX, size_t destinationY);
 
   bool execute() override;
 
  private:
   std::shared_ptr<Population> goal;
-  Population::MutationType mutationType;
+
+  size_t x = 0, y = 0;
 };

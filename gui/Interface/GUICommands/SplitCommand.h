@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Command.h"
+#include "GUICommand.h"
 #include "Engine/GameEngine.h"
 #include "Population.h"
 
-class SplitCommand : public Command {
+class SplitCommand : public GUICommand {
  public:
   explicit SplitCommand(std::shared_ptr<GameEngine> engine);
 

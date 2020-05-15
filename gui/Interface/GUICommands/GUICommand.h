@@ -4,13 +4,13 @@
 
 #include "Engine/GameEngine.h"
 
-class Command {
+class GUICommand {
  public:
-  explicit Command(std::shared_ptr<GameEngine> engine);
+  explicit GUICommand(std::shared_ptr<GameEngine> engine);
 
-  Command() = default;
+  GUICommand() = default;
 
-  ~Command() = default;
+  ~GUICommand() = default;
 
   virtual bool execute() = 0;
 
