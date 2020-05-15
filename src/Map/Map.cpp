@@ -155,8 +155,8 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   int32_t yPos = population->GetYPos();
   int32_t food = map[yPos][xPos]->getPlantsCount();
   int32_t water = map[yPos][xPos]->getWaterLevel();
-  int32_t herbivoreAmount;
-  int32_t carnivoreAmount;
+  int32_t herbivoreAmount = 0;
+  int32_t carnivoreAmount = 0;
 
   if (yPos % 2 == 1) {
     if (yPos - 1 >= 0) {
@@ -210,8 +210,8 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
     }
   }
 
-  herbivoreAmount /= 6;
-  carnivoreAmount /= 6;
+  herbivoreAmount /= 3;
+  carnivoreAmount /= 3;
   //if there's no food or water someone must die
   int32_t nutrition = (food + 1.5 * water) * 2 / 5;
   if (population->GetType() == Population::TypeName::CARNIVORE) {
