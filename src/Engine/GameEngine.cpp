@@ -85,7 +85,7 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
     int32_t dX, dY;
     std::pair<int32_t , int32_t> pos;
     int32_t mutationType;
-    int32_t handlerType = RandomGenerator::getInstance().randInt(1, 3);
+    int32_t handlerType = RandomGenerator::getInstance().randInt(1, 2);
     if (tempPopulation->GetAnimalAmount() * 10
         > Config::getInstance().getMaxAmount(tempPopulation->GetType(), tempPopulation->GetSize()) * 6) {
       handlerType = 3;
