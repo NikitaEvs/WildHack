@@ -39,6 +39,7 @@ class GameEngine {
   std::shared_ptr<CellType> getCell(size_t posX, size_t posY);
   std::shared_ptr<Population> getPopulation(size_t posX, size_t posY);
   int32_t getCurrentID();
+  std::vector<std::shared_ptr<LightPlayer> > getLightPlayers();
 
   bool isPopulationExist(size_t posX, size_t posY);
 
@@ -46,7 +47,7 @@ class GameEngine {
   void populationSplit(std::shared_ptr<Population> population, int32_t destination_x, int32_t destination_y);
   void populationMutate(std::shared_ptr<Population> population, Population::MutationType type);
 
-  int32_t registerPlayer();
+  int32_t registerPlayer(const std::string& name = "Bot");
 
   void setMaxStep(int32_t maxStep);
 
