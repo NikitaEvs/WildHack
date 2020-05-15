@@ -334,10 +334,10 @@ std::pair<int32_t, int32_t> GameEngine::getDestinationPos(std::shared_ptr<Popula
   int32_t dX = RandomGenerator::getInstance().randInt(-1, 1);
   int32_t dY = RandomGenerator::getInstance().randInt(-1, 1);
   if (yPos + dY < 0) {
-    dY = RandomGenerator::getInstance().randInt(0, 1);
+    dY = 1;
   }
   if (yPos + 1 >= map->getHeight()) {
-    dY = RandomGenerator::getInstance().randInt(-1, 0);
+    dY = -1;
   }
   if (dY != 0) {
     if (yPos % 2 == 1) {
