@@ -248,5 +248,5 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
       * (static_cast<int32_t>(population->GetSize()) + static_cast<int32_t>(population->GetCover()))
       + population->GetHealth()
           * (static_cast<int32_t>(population->GetVelocity()) + static_cast<int32_t>(population->GetSafety()))) / 20;
-  population->SetBiologyDev(population->GetBiologyDev() * (100 + k) / 100);
+  population->SetBiologyDev(k);
 }
