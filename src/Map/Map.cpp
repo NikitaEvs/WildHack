@@ -92,11 +92,13 @@ void Map::generate() {
         switch (prevType) {
           case CellType::WATER:prevType = CellType::STEPPE;
             break;
-          case CellType::STEPPE:prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::WATER
-                                                                                             : CellType::FOREST;
+          case CellType::STEPPE:
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::WATER
+                                                                         : CellType::FOREST;
             break;
-          case CellType::FOREST:prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE
-                                                                                             : CellType::TUNDRA;
+          case CellType::FOREST:
+            prevType = RandomGenerator::getInstance().randInt(0, 1) == 1 ? CellType::STEPPE
+                                                                         : CellType::TUNDRA;
             break;
           case CellType::TUNDRA:prevType = CellType::FOREST;
             break;
@@ -211,11 +213,11 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   herbivoreAmount /= 6;
   carnivoreAmount /= 6;
   //if there's no food or water someone must die
-  int32_t nutrition = (food + 1.5 * water) / 250;
+  int32_t nutrition = (food + 1.5 * water) * 2 / 5;
   if (population->GetType() == Population::TypeName::CARNIVORE) {
     nutrition =
         (herbivoreAmount * 100 / Config::getInstance().getMaxAmount(Population::HERBIVORE, Population::AVERAGE) + water)
-            / 200;
+            / 2;
   }
   if (nutrition < 75) {
     population->SetAnimalAmount((population->GetAnimalAmount() * (nutrition + 25)) / 100);
@@ -243,6 +245,6 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   int32_t k = (population->GetProductivity()
       * (static_cast<int32_t>(population->GetSize()) + static_cast<int32_t>(population->GetCover()))
       + population->GetHealth()
-          * (static_cast<int32_t>(population->GetVelocity()) + static_cast<int32_t>(population->GetSafety()))) / 2000;
+          * (static_cast<int32_t>(population->GetVelocity()) + static_cast<int32_t>(population->GetSafety()))) / 20;
   population->SetBiologyDev(population->GetBiologyDev() * (100 + k) / 100);
 }
