@@ -27,33 +27,32 @@ void GameEngine::fillPopulationPattern(std::vector<LightPopulation> &populations
     players.push_back(std::make_shared<Player>(std::string("Cat")));
   }
 
-  for (const auto& player : players) {
-    if (player -> getPopulationsNumber() == 0) {
-      player -> generatePopulations();
+  for (const auto &player : players) {
+    if (player->getPopulationsNumber() == 0) {
+      player->generatePopulations();
     }
 
-    for (const auto& population : player -> GetPlayerPopulations()) {
-      int32_t y = RandomGenerator::getInstance().randInt(0, map -> getHeight() - 1);
-      int32_t x = RandomGenerator::getInstance().randInt(0, map -> getWidth() - 1);
+    for (const auto &population : player->GetPlayerPopulations()) {
+      int32_t y = RandomGenerator::getInstance().randInt(0, map->getHeight() - 1);
+      int32_t x = RandomGenerator::getInstance().randInt(0, map->getWidth() - 1);
       size_t step = 0;
 
-      while(isPopulationExist(x, y) && step < 10) {
-        y = RandomGenerator::getInstance().randInt(0, map -> getHeight() - 1);
-        x = RandomGenerator::getInstance().randInt(0, map -> getWidth() - 1);
+      while (isPopulationExist(x, y) && step < 10) {
+        y = RandomGenerator::getInstance().randInt(0, map->getHeight() - 1);
+        x = RandomGenerator::getInstance().randInt(0, map->getWidth() - 1);
         std::cout << x << " " << y << std::endl;
         ++step;
       }
       std::cout << " End " << std::endl;
       std::cout << x << " " << y << std::endl;
 
-
       if (step == 10) {
         std::cerr << "Cannot generate populations" << std::endl;
       }
 
-      population -> SetXPos(x);
-      population -> SetYPos(y);
-      (*map)[y][x] -> setCurrentPopulation(population);
+      population->SetXPos(x);
+      population->SetYPos(y);
+      (*map)[y][x]->setCurrentPopulation(population);
 
       populations.emplace_back(*population);
     }
@@ -83,7 +82,7 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
     int32_t x = tempPopulation->GetXPos();
     int32_t y = tempPopulation->GetYPos();
     int32_t dX, dY;
-    std::pair<int32_t , int32_t> pos;
+    std::pair<int32_t, int32_t> pos;
     int32_t mutationType;
     int32_t handlerType = RandomGenerator::getInstance().randInt(1, 2);
     if (tempPopulation->GetAnimalAmount() * 10
@@ -91,8 +90,7 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
       handlerType = 3;
     }
     switch (handlerType) {
-      case 1:
-         mutationType = RandomGenerator::getInstance().randInt(0, 3);
+      case 1:mutationType = RandomGenerator::getInstance().randInt(0, 3);
         switch (mutationType) {
           case 0:link = std::make_shared<CoverMutationHandler>();
             break;
@@ -111,17 +109,33 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
         dY = pos.second;
         link->setXYPos(x + dX, y + dY);
         link->setPopulation(tempPopulation);
+        if (tempPopulation->GetType() == Population::HERBIVORE) {
+          (*map)[x][y]->setHerbivoreCount(0);
+          (*map)[x + dX][y + dY]->setHerbivoreCount(1);
+        } else {
+          (*map)[x][y]->setCarnivoreCount(0);
+          (*map)[x + dX][y + dY]->setCarnivoreCount(1);
+        }
         break;
-      case 3:
-        std::shared_ptr<Population> newPopulation = std::make_shared<Population>(*(tempPopulation));
-        newPopulation->SetAnimalAmount(newPopulation->GetAnimalAmount() / 2);
-        tempPopulation->SetAnimalAmount(tempPopulation->GetAnimalAmount() / 2);
-        link = std::make_shared<MoveHandler>();
-        pos = getDestinationPos(newPopulation);
+      case 3:pos = getDestinationPos(tempPopulation);
         dX = pos.first;
         dY = pos.second;
-        link->setXYPos(x + dX, y + dY);
-        link->setPopulation(newPopulation);
+        if (dX == 0 && dY == 0) {
+          link = std::make_shared<VelocityMutationHandler>();
+          link->setPopulation(tempPopulation);
+        } else {
+          std::shared_ptr<Population> newPopulation = std::make_shared<Population>(*(tempPopulation));
+          newPopulation->SetAnimalAmount(newPopulation->GetAnimalAmount() / 2);
+          tempPopulation->SetAnimalAmount(tempPopulation->GetAnimalAmount() / 2);
+          link = std::make_shared<MoveHandler>();
+          link->setXYPos(x + dX, y + dY);
+          link->setPopulation(newPopulation);
+          if (tempPopulation->GetType() == Population::HERBIVORE) {
+            (*map)[x + dX][y + dY]->setHerbivoreCount(1);
+          } else {
+            (*map)[x + dX][y + dY]->setCarnivoreCount(1);
+          }
+        }
         break;
     }
     chain.push_back(link);
@@ -132,7 +146,7 @@ std::shared_ptr<Handler> GameEngine::generateBotHandlersChain(std::shared_ptr<Pl
   return chain[0];
 }
 
-void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> >& _players) {
+void GameEngine::setPlayers(std::vector<std::shared_ptr<Player> > &_players) {
   players = _players;
 }
 
@@ -141,11 +155,11 @@ std::shared_ptr<CellType> GameEngine::getCell(size_t posX, size_t posY) {
 }
 
 std::shared_ptr<Population> GameEngine::getPopulation(size_t posX, size_t posY) {
-  return (*map)[posY][posX] -> getCurrentPopulation();
+  return (*map)[posY][posX]->getCurrentPopulation();
 }
 
 bool GameEngine::isPopulationExist(size_t posX, size_t posY) {
-  return (*map)[posY][posX] -> getCurrentPopulation() != nullptr;
+  return (*map)[posY][posX]->getCurrentPopulation() != nullptr;
 }
 
 void GameEngine::populationMove(std::shared_ptr<Population> population, int32_t x_pos, int32_t y_pos) {
@@ -184,6 +198,10 @@ std::pair<int32_t, int32_t> GameEngine::getDestinationPos(std::shared_ptr<Popula
   }
   if (xPos + dX < 0 || xPos + dX >= map->getWidth()) {
     dX = 0;
+  }
+  if ((*map)[xPos + dX][yPos + dY]->getCarnivoreCount() > 0 || (*map)[xPos + dX][yPos + dY]->getHerbivoreCount() > 0) {
+    dX = 0;
+    dY = 0;
   }
   return std::make_pair(dX, dY);
 }
