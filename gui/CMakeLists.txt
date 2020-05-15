@@ -15,6 +15,7 @@ set(CMAKE_AUTOUIC ON)
 
 set (GUI_PATH Interface)
 set (ENGINE_PATH Interface)
+set (MODEL_PATH Interface/Models)
 
 set (GUI_SOURCES
         ${GUI_PATH}/Gui.h
@@ -34,11 +35,17 @@ set (COMMAND_SOURCES
         ${ENGINE_PATH}/Commands/StopCommand.cpp
         )
 
+set (MODELS_SOURCES
+        ${MODEL_PATH}/PlayerScoreModel.h
+        ${MODEL_PATH}/PlayerScoreModel.cpp
+        )
+
 project(peachGUI)
 
 add_executable(gui execute.cpp  ${QT_RESOURCES}
                                 ${GUI_SOURCES}
-                                ${COMMAND_SOURCES})
+                                ${COMMAND_SOURCES}
+                                ${MODELS_SOURCES})
 
 if (GUI_TEST_BUILD)
     add_subdirectory(thirdparty/spix)

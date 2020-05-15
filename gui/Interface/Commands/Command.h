@@ -6,6 +6,8 @@
 
 class Command {
  public:
+  explicit Command(std::shared_ptr<GameEngine> engine);
+
   Command() = default;
 
   ~Command() = default;
@@ -14,6 +16,10 @@ class Command {
 
   void setReceiver(std::shared_ptr<GameEngine> engine);
 
- private:
+  void setID(int32_t setID);
+
+ protected:
   std::shared_ptr<GameEngine> receiver = nullptr;
+
+  int32_t id = 0;
 };

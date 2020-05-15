@@ -6,18 +6,27 @@
 #include <qt5/QtCore/QVariantList>
 
 #include "Engine/GameEngine.h"
+#include "Engine/Subscriber.h"
 
-class Gui : public QObject {
+#include "Commands/MoveCommand.h"
+#include "Commands/MutateCommand.h"
+#include "Commands/SplitCommand.h"
+#include "Commands/StopCommand.h"
+
+class Gui : public QObject, public Subscriber {
   Q_OBJECT
   Q_PROPERTY(QVariantList map READ getMap WRITE setMap NOTIFY mapChanged)
   Q_PROPERTY(QVariantList populations READ getPopulations WRITE setPopulations NOTIFY populationsChanged)
   Q_PROPERTY(QVariantList currentPopulation READ getCurrentPopulation WRITE setCurrentPopulation NOTIFY currentPopulationChanged)
   Q_PROPERTY(QVariantList currentCell READ getCurrentCell WRITE setCurrentCell NOTIFY currentCellChanged)
+
   Q_PROPERTY(QVariant x READ getX WRITE setX NOTIFY xChanged)
   Q_PROPERTY(QVariant y READ getY WRITE setY NOTIFY yChanged)
 
+  Q_PROPERTY(QVariant id READ getID WRITE setID NOTIFY idChanged)
+
  public:
-  explicit Gui(QObject *parent = nullptr);
+  explicit Gui(std::shared_ptr<GameEngine> setEngine, QObject *parent = nullptr);
 
   const QVariantList & getMap();
   void setMap(const QVariantList &setMap);
@@ -37,11 +46,20 @@ class Gui : public QObject {
   const QVariant & getY();
   void setY(const QVariant &setY);
 
+  const QVariant & getID();
+  void setID(const QVariant &setID);
+
   std::shared_ptr<GameEngine> getEngine();
 
+  void update(bool end) override;
+
  public slots:
-//  void multiply();
-//  void migrate();
+  void select();
+  void migrate();
+  void multiply();
+  void mutate(Population::MutationType type);
+  void stop();
+  bool checkPopulation(int posX, int posY);
 
  signals:
   void mapChanged();
@@ -50,6 +68,9 @@ class Gui : public QObject {
   void currentCellChanged();
   void xChanged();
   void yChanged();
+  void idChanged();
+  void requestUpdate();
+  void endGame();
 
  private:
   QVariantList map;
@@ -61,8 +82,19 @@ class Gui : public QObject {
   QVariant x;
   QVariant y;
 
+  QVariant id;
+
   std::shared_ptr<GameEngine> engine;
+
+  std::shared_ptr<Population> selectedPopulation;
+
+  std::shared_ptr<MoveCommand> moveCommand;
+  std::shared_ptr<SplitCommand> splitCommand;
+  std::shared_ptr<MutateCommand> mutateCommand;
+  std::shared_ptr<StopCommand> stopCommand;
 
   void fillMap();
   void fillPopulations();
+
+  void updatePopulations();
 };

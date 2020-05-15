@@ -8,9 +8,11 @@
 
 class MutateCommand : public Command {
  public:
-  MutateCommand(std::shared_ptr<GameEngine> engine,
-                std::shared_ptr<Population> population,
-                Population::MutationType type);
+  explicit MutateCommand(std::shared_ptr<GameEngine> engine);
+
+  void setGoal(std::shared_ptr<Population> setGoal);
+
+  void setType(Population::MutationType type);
 
   bool execute() override;
 

@@ -1,21 +1,16 @@
 #include "MoveCommand.h"
 
-MoveCommand::MoveCommand(QObject *parent) :
-                         QObject(parent) {}
-
 void MoveCommand::setDestination(size_t destinationX, size_t destinationY) {
   x = destinationX;
   y = destinationY;
 }
 
-void MoveCommand::setGoal(std::shared_ptr<Population> population) {
-  goal = std::move(population);
+void MoveCommand::setGoal(std::shared_ptr<Population> setGoal) {
+  goal = std::move(setGoal);
 }
 
 bool MoveCommand::execute() {
-  std::cout << "kek" << std::endl;
-}
-
-void MoveCommand::kek() {
-  std::cout << "kek" << std::endl;
+  std::cout << "Move" << std::endl;
+  receiver -> populationMove(goal, x, y);
+  return true;
 }
