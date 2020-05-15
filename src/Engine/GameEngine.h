@@ -42,4 +42,5 @@ class GameEngine {
   std::vector<std::shared_ptr<Player> > players;
   int32_t tempPlayer;
   std::shared_ptr<Handler> generateBotHandlersChain(std::shared_ptr<Player> bot);
+  std::pair<int32_t, int32_t> getDestinationPos(std::shared_ptr<Population> tempPopulation);
 };

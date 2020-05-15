@@ -226,18 +226,18 @@ void Map::applyLifeCircle(std::shared_ptr<Population> population) {
   int32_t
       wasEaten = carnivoreAmount * 100 / Config::getInstance().getMaxAmount(Population::CARNIVORE, Population::AVERAGE);
   switch (population->GetVelocity()) {
-    case Population::VERY_SMALL:wasEaten = wasEaten * 1 / 10;
+    case Population::VERY_SMALL:wasEaten = wasEaten / 2;
       break;
-    case Population::SMALL:wasEaten = wasEaten * 1 / 5;
+    case Population::SMALL:wasEaten = wasEaten * 2 / 5;
       break;
     case Population::AVERAGE:wasEaten = wasEaten * 3 / 10;
       break;
-    case Population::BIG:wasEaten = wasEaten * 2 / 5;
+    case Population::BIG:wasEaten = wasEaten / 5;
       break;
-    case Population::VERY_BIG:wasEaten = wasEaten * 1 / 2;
+    case Population::VERY_BIG:wasEaten = wasEaten / 10;
       break;
   }
-  population->SetAnimalAmount((population->GetAnimalAmount() * wasEaten) / 100);
+  population->SetAnimalAmount((population->GetAnimalAmount() *(100 - wasEaten)) / 100);
   // but new animals are born
   population->SetAnimalAmount(population->GetAnimalAmount() * (100 + population->GetProductivity()) / 100);
 
