@@ -1,5 +1,8 @@
 <map id="Config::getMaxAmount" name="Config::getMaxAmount">
-<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="209,5,436,47"/>
-<area shape="rect" id="node4" href="$class_population.html#a47ac4812aff1f375b754a0e81310d069" title="Population::applyLifeCircle" alt="" coords="234,71,411,98"/>
-<area shape="rect" id="node3" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="484,13,633,39"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="209,49,436,90"/>
+<area shape="rect" id="node7" href="$class_map.html#a9ad935bf6ef02ff09412a35a006ff3cb" title="Map::applyLifeCircle" alt="" coords="252,115,393,141"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="484,56,633,83"/>
+<area shape="rect" id="node4" href="$class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="681,56,839,83"/>
+<area shape="rect" id="node5" href="$class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="887,5,1067,32"/>
+<area shape="rect" id="node6" href="$class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="895,56,1058,83"/>
 </map>

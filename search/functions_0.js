@@ -5,6 +5,7 @@ var searchData=
   ['addcell',['addCell',['../class_map.html#ae5df99bf3400db9046680a970cb75d6a',1,'Map']]],
   ['addmutation',['addMutation',['../class_population.html#add08ea7b6c56e3b91b55f877b2d0b329',1,'Population']]],
   ['addnewpopulation',['addNewPopulation',['../class_player.html#abf1e47e6334e9b59e48fae928c3a2a13',1,'Player']]],
-  ['applylifecircle',['applyLifeCircle',['../class_population.html#a47ac4812aff1f375b754a0e81310d069',1,'Population']]],
+  ['applylifecircle',['applyLifeCircle',['../class_map.html#a9ad935bf6ef02ff09412a35a006ff3cb',1,'Map']]],
+  ['applylifecycles',['applyLifeCycles',['../class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef',1,'GameEngine']]],
   ['applymutation',['applyMutation',['../class_population.html#ac5f4122adbbc1762943fd34465627019',1,'Population']]]
 ];

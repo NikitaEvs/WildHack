@@ -1,0 +1,20 @@
+<map id="GameEngine::GameEngine" name="GameEngine::GameEngine">
+<area shape="rect" id="node2" href="$class_game_engine.html#a924157ee09a0d8c9bb8be0aba5ca135d" title="GameEngine::registerPlayer" alt="" coords="233,23,419,49"/>
+<area shape="rect" id="node3" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="990,5,1126,32"/>
+<area shape="rect" id="node4" href="$class_config.html#a4b0baf7ee891c8a7816c43fa3505c1d6" title="Config::getMaxStepCount" alt="" coords="239,183,413,209"/>
+<area shape="rect" id="node5" href="$class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="247,132,405,159"/>
+<area shape="rect" id="node6" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="473,132,623,159"/>
+<area shape="rect" id="node12" href="$class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="467,208,629,235"/>
+<area shape="rect" id="node7" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="677,125,904,166"/>
+<area shape="rect" id="node8" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="1212,69,1416,96"/>
+<area shape="rect" id="node9" href="$class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="1226,145,1402,172"/>
+<area shape="rect" id="node10" href="$class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="980,208,1136,235"/>
+<area shape="rect" id="node11" href="$class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="952,107,1164,133"/>
+<area shape="rect" id="node13" href="$class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="712,259,869,285"/>
+<area shape="rect" id="node19" href="$class_game_engine.html#a5f7b90f610353e53314706763befdd77" title="GameEngine::notify" alt="" coords="722,309,859,336"/>
+<area shape="rect" id="node14" href="$class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="965,259,1151,285"/>
+<area shape="rect" id="node17" href="$class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef" title="GameEngine::applyLifeCycles" alt="" coords="959,309,1157,336"/>
+<area shape="rect" id="node18" href="$class_game_engine.html#a832389a71c861ad3917a781e3064d407" title="GameEngine::validate" alt="" coords="983,360,1133,387"/>
+<area shape="rect" id="node15" href="$class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="1224,259,1404,285"/>
+<area shape="rect" id="node16" href="$class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="1464,259,1611,285"/>
+</map>

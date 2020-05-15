@@ -140,6 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4deb9a731a1a1d70bb5b3ba5ff55cde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b073806b092e8baf13bb373561b63e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type.html#a7b073806b092e8baf13bb373561b63e1">setClimate</a> (<a class="el" href="class_cell_type.html#a8a75a915a790c04a27f9415a992b5575">climateType</a> newClimate)</td></tr>
 <tr class="separator:a7b073806b092e8baf13bb373561b63e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45649888424e9dc8533d01d63d73d73f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type.html#a45649888424e9dc8533d01d63d73d73f">getCurrentPopulation</a> () const</td></tr>
+<tr class="separator:a45649888424e9dc8533d01d63d73d73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadac294280498c72c5d89b705b1be580"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type.html#aadac294280498c72c5d89b705b1be580">setCurrentPopulation</a> (std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; current_population)</td></tr>
+<tr class="separator:aadac294280498c72c5d89b705b1be580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -155,6 +159,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5167adc510a687d70df99e642726f460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a922386323bb131ce37e9fa383bd9d034"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cell_type.html#a8a75a915a790c04a27f9415a992b5575">climateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type.html#a922386323bb131ce37e9fa383bd9d034">climate</a></td></tr>
 <tr class="separator:a922386323bb131ce37e9fa383bd9d034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ccc8db305a6f7ccf8ec7a2f8527d71d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell_type.html#a9ccc8db305a6f7ccf8ec7a2f8527d71d">currentPopulation</a> = nullptr</td></tr>
+<tr class="separator:a9ccc8db305a6f7ccf8ec7a2f8527d71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -163,7 +169,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00007">7</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00009">9</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a315d6424a492e3b68c9b6b7236b83ed5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a315d6424a492e3b68c9b6b7236b83ed5">&#9670;&nbsp;</a></span>cellType</h2>
@@ -183,7 +189,7 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a id="a315d6424a492e3b68c9b6b7236b83ed5ad89521faa32ca2cb2bd0c9774311134b"></a>TUNDRA&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00009">9</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00011">11</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +210,7 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a id="a8a75a915a790c04a27f9415a992b5575a7e24c7bbd17d5a30ceea9f90c03c73f1"></a>COLD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00016">16</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00018">18</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -244,6 +250,25 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cell_type_8cpp_source.html#l00090">90</a> of file <a class="el" href="_cell_type_8cpp_source.html">CellType.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a45649888424e9dc8533d01d63d73d73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45649888424e9dc8533d01d63d73d73f">&#9670;&nbsp;</a></span>getCurrentPopulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; CellType::getCurrentPopulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cell_type_8cpp_source.html#l00098">98</a> of file <a class="el" href="_cell_type_8cpp_source.html">CellType.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,6 +385,26 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_cell_type_8cpp_source.html#l00094">94</a> of file <a class="el" href="_cell_type_8cpp_source.html">CellType.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aadac294280498c72c5d89b705b1be580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadac294280498c72c5d89b705b1be580">&#9670;&nbsp;</a></span>setCurrentPopulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CellType::setCurrentPopulation </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td>
+          <td class="paramname"><em>current_population</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cell_type_8cpp_source.html#l00102">102</a> of file <a class="el" href="_cell_type_8cpp_source.html">CellType.cpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +548,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00045">45</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00051">51</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -527,7 +572,31 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00048">48</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00055">55</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+
+</div>
+</div>
+<a id="a9ccc8db305a6f7ccf8ec7a2f8527d71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ccc8db305a6f7ccf8ec7a2f8527d71d">&#9670;&nbsp;</a></span>currentPopulation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_population.html">Population</a>&gt; CellType::currentPopulation = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00057">57</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +620,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00046">46</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00052">52</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -575,7 +644,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00044">44</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00050">50</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -599,7 +668,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00047">47</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00054">54</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>
@@ -623,7 +692,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00043">43</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_cell_type_8h_source.html#l00049">49</a> of file <a class="el" href="_cell_type_8h_source.html">CellType.h</a>.</p>
 
 </div>
 </div>

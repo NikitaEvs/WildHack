@@ -9,5 +9,7 @@ var searchData=
   ['randomgenerator_2eh',['RandomGenerator.h',['../_random_generator_8h.html',1,'']]],
   ['randomptr',['randomPtr',['../class_random_generator.html#a6d1c776fbba9693094de6049b6b3efa9',1,'RandomGenerator']]],
   ['readfile',['readFile',['../class_config.html#aee79aa142bbf8c2e2a853e43ff304d00',1,'Config']]],
-  ['reset',['reset',['../class_cell_type_builder.html#a3705088cb2c2e23806f2270b538233f7',1,'CellTypeBuilder::reset()'],['../class_cell_type_j_s_o_n_representation_builder.html#af46036cf67e40976232909a83a59ae96',1,'CellTypeJSONRepresentationBuilder::reset()']]]
+  ['registerplayer',['registerPlayer',['../class_game_engine.html#a924157ee09a0d8c9bb8be0aba5ca135d',1,'GameEngine']]],
+  ['reset',['reset',['../class_cell_type_builder.html#a3705088cb2c2e23806f2270b538233f7',1,'CellTypeBuilder::reset()'],['../class_cell_type_j_s_o_n_representation_builder.html#af46036cf67e40976232909a83a59ae96',1,'CellTypeJSONRepresentationBuilder::reset()']]],
+  ['resetpopulation',['resetPopulation',['../class_carnivore_population_builder.html#abe228ee0ffb90df92e355a8e7437b30a',1,'CarnivorePopulationBuilder::resetPopulation()'],['../class_herbivore_population_builder.html#ab385c898d826a4fd1b2480ef5d0706a3',1,'HerbivorePopulationBuilder::resetPopulation()'],['../class_population_builder.html#a9a6354fbe54ec63073b734857d9d8f2a',1,'PopulationBuilder::resetPopulation()']]]
 ];

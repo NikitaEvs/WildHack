@@ -102,12 +102,12 @@ Collaboration diagram for PopulationDirector:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d24769ed5ec57fd44f2bec68e37f73b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#a8d24769ed5ec57fd44f2bec68e37f73b">setBuilder</a> (std::shared_ptr&lt; <a class="el" href="class_population_builder.html">PopulationBuilder</a> &gt; b)</td></tr>
 <tr class="separator:a8d24769ed5ec57fd44f2bec68e37f73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94f67d60d675ef2eaaedcef5207bda0a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#a94f67d60d675ef2eaaedcef5207bda0a">makeSmall</a> (std::string name)</td></tr>
-<tr class="separator:a94f67d60d675ef2eaaedcef5207bda0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade2e0a3756fdb15ec0639dc8fe33e88"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#aade2e0a3756fdb15ec0639dc8fe33e88">makeAverage</a> (std::string name)</td></tr>
-<tr class="separator:aade2e0a3756fdb15ec0639dc8fe33e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f362ab0b7aef98db3fb89cef95f2f4f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#a1f362ab0b7aef98db3fb89cef95f2f4f">makeBig</a> (std::string name)</td></tr>
-<tr class="separator:a1f362ab0b7aef98db3fb89cef95f2f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53acfd87a484b13ba2072692ea671428"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#a53acfd87a484b13ba2072692ea671428">makeSmall</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a53acfd87a484b13ba2072692ea671428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325122f0b2ada24934b5e68786e1850e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#a325122f0b2ada24934b5e68786e1850e">makeAverage</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a325122f0b2ada24934b5e68786e1850e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add13a35ada0e9560feb1aeac46a33af6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_director.html#add13a35ada0e9560feb1aeac46a33af6">makeBig</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:add13a35ada0e9560feb1aeac46a33af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -118,8 +118,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_population_director_8h_source.html#l00011">11</a> of file <a class="el" href="_population_director_8h_source.html">PopulationDirector.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aade2e0a3756fdb15ec0639dc8fe33e88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aade2e0a3756fdb15ec0639dc8fe33e88">&#9670;&nbsp;</a></span>makeAverage()</h2>
+<a id="a325122f0b2ada24934b5e68786e1850e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325122f0b2ada24934b5e68786e1850e">&#9670;&nbsp;</a></span>makeAverage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,28 +127,36 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; PopulationDirector::makeAverage </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_director_8cpp_source.html#l00032">32</a> of file <a class="el" href="_population_director_8cpp_source.html">PopulationDirector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_director_8cpp_source.html#l00035">35</a> of file <a class="el" href="_population_director_8cpp_source.html">PopulationDirector.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_population_director_aade2e0a3756fdb15ec0639dc8fe33e88_cgraph.png" border="0" usemap="#class_population_director_aade2e0a3756fdb15ec0639dc8fe33e88_cgraph" alt=""/></div>
-<map name="class_population_director_aade2e0a3756fdb15ec0639dc8fe33e88_cgraph" id="class_population_director_aade2e0a3756fdb15ec0639dc8fe33e88_cgraph">
+<div class="center"><img src="class_population_director_a325122f0b2ada24934b5e68786e1850e_cgraph.png" border="0" usemap="#class_population_director_a325122f0b2ada24934b5e68786e1850e_cgraph" alt=""/></div>
+<map name="class_population_director_a325122f0b2ada24934b5e68786e1850e_cgraph" id="class_population_director_a325122f0b2ada24934b5e68786e1850e_cgraph">
 <area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="183,5,387,32"/>
 <area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="217,56,353,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_population_director_a325122f0b2ada24934b5e68786e1850e_icgraph.png" border="0" usemap="#class_population_director_a325122f0b2ada24934b5e68786e1850e_icgraph" alt=""/></div>
+<map name="class_population_director_a325122f0b2ada24934b5e68786e1850e_icgraph" id="class_population_director_a325122f0b2ada24934b5e68786e1850e_icgraph">
+<area shape="rect" id="node2" href="class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="183,13,368,39"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1f362ab0b7aef98db3fb89cef95f2f4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f362ab0b7aef98db3fb89cef95f2f4f">&#9670;&nbsp;</a></span>makeBig()</h2>
+<a id="add13a35ada0e9560feb1aeac46a33af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add13a35ada0e9560feb1aeac46a33af6">&#9670;&nbsp;</a></span>makeBig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,28 +164,36 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; PopulationDirector::makeBig </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_population_director_8cpp_source.html#l00057">57</a> of file <a class="el" href="_population_director_8cpp_source.html">PopulationDirector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_population_director_8cpp_source.html#l00063">63</a> of file <a class="el" href="_population_director_8cpp_source.html">PopulationDirector.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_population_director_a1f362ab0b7aef98db3fb89cef95f2f4f_cgraph.png" border="0" usemap="#class_population_director_a1f362ab0b7aef98db3fb89cef95f2f4f_cgraph" alt=""/></div>
-<map name="class_population_director_a1f362ab0b7aef98db3fb89cef95f2f4f_cgraph" id="class_population_director_a1f362ab0b7aef98db3fb89cef95f2f4f_cgraph">
+<div class="center"><img src="class_population_director_add13a35ada0e9560feb1aeac46a33af6_cgraph.png" border="0" usemap="#class_population_director_add13a35ada0e9560feb1aeac46a33af6_cgraph" alt=""/></div>
+<map name="class_population_director_add13a35ada0e9560feb1aeac46a33af6_cgraph" id="class_population_director_add13a35ada0e9560feb1aeac46a33af6_cgraph">
 <area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="183,5,387,32"/>
 <area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="217,56,353,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_population_director_add13a35ada0e9560feb1aeac46a33af6_icgraph.png" border="0" usemap="#class_population_director_add13a35ada0e9560feb1aeac46a33af6_icgraph" alt=""/></div>
+<map name="class_population_director_add13a35ada0e9560feb1aeac46a33af6_icgraph" id="class_population_director_add13a35ada0e9560feb1aeac46a33af6_icgraph">
+<area shape="rect" id="node2" href="class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="183,13,368,39"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a94f67d60d675ef2eaaedcef5207bda0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94f67d60d675ef2eaaedcef5207bda0a">&#9670;&nbsp;</a></span>makeSmall()</h2>
+<a id="a53acfd87a484b13ba2072692ea671428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53acfd87a484b13ba2072692ea671428">&#9670;&nbsp;</a></span>makeSmall()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +201,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; PopulationDirector::makeSmall </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
@@ -196,10 +212,18 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_population_director_a94f67d60d675ef2eaaedcef5207bda0a_cgraph.png" border="0" usemap="#class_population_director_a94f67d60d675ef2eaaedcef5207bda0a_cgraph" alt=""/></div>
-<map name="class_population_director_a94f67d60d675ef2eaaedcef5207bda0a_cgraph" id="class_population_director_a94f67d60d675ef2eaaedcef5207bda0a_cgraph">
+<div class="center"><img src="class_population_director_a53acfd87a484b13ba2072692ea671428_cgraph.png" border="0" usemap="#class_population_director_a53acfd87a484b13ba2072692ea671428_cgraph" alt=""/></div>
+<map name="class_population_director_a53acfd87a484b13ba2072692ea671428_cgraph" id="class_population_director_a53acfd87a484b13ba2072692ea671428_cgraph">
 <area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="183,5,387,32"/>
 <area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="217,56,353,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_population_director_a53acfd87a484b13ba2072692ea671428_icgraph.png" border="0" usemap="#class_population_director_a53acfd87a484b13ba2072692ea671428_icgraph" alt=""/></div>
+<map name="class_population_director_a53acfd87a484b13ba2072692ea671428_icgraph" id="class_population_director_a53acfd87a484b13ba2072692ea671428_icgraph">
+<area shape="rect" id="node2" href="class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="183,13,368,39"/>
 </map>
 </div>
 
@@ -222,6 +246,14 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_population_director_8cpp_source.html#l00003">3</a> of file <a class="el" href="_population_director_8cpp_source.html">PopulationDirector.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_population_director_a8d24769ed5ec57fd44f2bec68e37f73b_icgraph.png" border="0" usemap="#class_population_director_a8d24769ed5ec57fd44f2bec68e37f73b_icgraph" alt=""/></div>
+<map name="class_population_director_a8d24769ed5ec57fd44f2bec68e37f73b_icgraph" id="class_population_director_a8d24769ed5ec57fd44f2bec68e37f73b_icgraph">
+<area shape="rect" id="node2" href="class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="183,13,368,39"/>
+</map>
+</div>
 
 </div>
 </div>

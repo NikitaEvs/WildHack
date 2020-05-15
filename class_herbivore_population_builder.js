@@ -2,6 +2,7 @@ var class_herbivore_population_builder =
 [
     [ "HerbivorePopulationBuilder", "class_herbivore_population_builder.html#a36d4bb353416659532217faf88f5f03c", null ],
     [ "getProduct", "class_herbivore_population_builder.html#ac0dff259bc517ca01da7495f679b6b54", null ],
+    [ "resetPopulation", "class_herbivore_population_builder.html#ab385c898d826a4fd1b2480ef5d0706a3", null ],
     [ "setAmount", "class_herbivore_population_builder.html#addc5ec8598c824263b8f3012acaf688e", null ],
     [ "setBiologyDev", "class_herbivore_population_builder.html#a9654e3c2c4b298b99904e56a8a853360", null ],
     [ "setCover", "class_herbivore_population_builder.html#a356b1f4a2788c39a5731da5f9317ffd0", null ],

@@ -4,6 +4,7 @@ var class_map =
     [ "Map", "class_map.html#a8316b7f7e131e8b1f098bdb2d8a73000", null ],
     [ "Map", "class_map.html#a1197ab65e40dd20b891ba165471e3163", null ],
     [ "addCell", "class_map.html#ae5df99bf3400db9046680a970cb75d6a", null ],
+    [ "applyLifeCircle", "class_map.html#a9ad935bf6ef02ff09412a35a006ff3cb", null ],
     [ "begin", "class_map.html#a588ca29b9d46d4faf7d1613dcea394c1", null ],
     [ "end", "class_map.html#ae2cb7db566f828a437ebc9c051e379e3", null ],
     [ "generate", "class_map.html#aeba547488265ea0a47be09ba26bc6e13", null ],

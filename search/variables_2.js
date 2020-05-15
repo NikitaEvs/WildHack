@@ -7,5 +7,8 @@ var searchData=
   ['climate',['climate',['../class_cell_type.html#a922386323bb131ce37e9fa383bd9d034',1,'CellType']]],
   ['configjson',['configJSON',['../class_config.html#a240938cbcf0a3ebd6e1a074b8ebbbaeb',1,'Config']]],
   ['configptr',['configPtr',['../class_config.html#a52f184d22d9f87c1183a76e599aa5b86',1,'Config']]],
-  ['cover',['cover',['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]]
+  ['cover',['cover',['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]],
+  ['currentplayer',['currentPlayer',['../class_game_engine.html#ad11b424e304b55fd33bd25949a6293af',1,'GameEngine']]],
+  ['currentpopulation',['currentPopulation',['../class_cell_type.html#a9ccc8db305a6f7ccf8ec7a2f8527d71d',1,'CellType']]],
+  ['currentstep',['currentStep',['../class_game_engine.html#a276a524cf5d080e0b8654e1db91e96b3',1,'GameEngine']]]
 ];

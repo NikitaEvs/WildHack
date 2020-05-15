@@ -1,2 +1,6 @@
 <map id="CellType.h" name="CellType.h">
+<area shape="rect" id="node5" href="$_population_8h.html" title="Population.h" alt="" coords="341,80,435,107"/>
+<area shape="rect" id="node6" href="$_leaf_mutation_8h.html" title="Mutations/LeafMutation.h" alt="" coords="74,155,243,181"/>
+<area shape="rect" id="node10" href="$_compound_mutation_8h.html" title="Mutations/CompoundMutation.h" alt="" coords="267,155,474,181"/>
+<area shape="rect" id="node7" href="$_mutation_component_8h.html" title="MutationComponent.h" alt="" coords="83,229,234,256"/>
 </map>

@@ -16,6 +16,9 @@ var hierarchy =
       [ "SizeMutationHandler", "class_size_mutation_handler.html", null ],
       [ "VelocityMutationHandler", "class_velocity_mutation_handler.html", null ]
     ] ],
+    [ "LightPlayer", "class_light_player.html", null ],
+    [ "LightPopulation", "class_light_population.html", null ],
+    [ "Manager", "class_manager.html", null ],
     [ "Map", "class_map.html", null ],
     [ "MutationComponent", "class_mutation_component.html", [
       [ "CompoundMutation", "class_compound_mutation.html", null ],
@@ -29,5 +32,6 @@ var hierarchy =
     ] ],
     [ "PopulationDirector", "class_population_director.html", null ],
     [ "RandomDestroyer", "class_random_destroyer.html", null ],
-    [ "RandomGenerator", "class_random_generator.html", null ]
+    [ "RandomGenerator", "class_random_generator.html", null ],
+    [ "Subscriber", "class_subscriber.html", null ]
 ];

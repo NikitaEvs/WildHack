@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['makeaverage',['makeAverage',['../class_population_director.html#aade2e0a3756fdb15ec0639dc8fe33e88',1,'PopulationDirector']]],
-  ['makebig',['makeBig',['../class_population_director.html#a1f362ab0b7aef98db3fb89cef95f2f4f',1,'PopulationDirector']]],
+  ['makeaverage',['makeAverage',['../class_population_director.html#a325122f0b2ada24934b5e68786e1850e',1,'PopulationDirector']]],
+  ['makebig',['makeBig',['../class_population_director.html#add13a35ada0e9560feb1aeac46a33af6',1,'PopulationDirector']]],
   ['makeforestcell',['makeForestCell',['../class_cell_type_director.html#a2729d0f9c767ad2018382ccd342be110',1,'CellTypeDirector']]],
-  ['makesmall',['makeSmall',['../class_population_director.html#a94f67d60d675ef2eaaedcef5207bda0a',1,'PopulationDirector']]],
+  ['makesmall',['makeSmall',['../class_population_director.html#a53acfd87a484b13ba2072692ea671428',1,'PopulationDirector']]],
   ['makesteppecell',['makeSteppeCell',['../class_cell_type_director.html#a62b507cee42e8e58c7e645751632fcec',1,'CellTypeDirector']]],
   ['maketundracell',['makeTundraCell',['../class_cell_type_director.html#a7094e939502f98835a4fbe4dcaa84cc5',1,'CellTypeDirector']]],
   ['makewatercell',['makeWaterCell',['../class_cell_type_director.html#ab1c11c82989aa93a20d2c85bd0c5ea2b',1,'CellTypeDirector']]],

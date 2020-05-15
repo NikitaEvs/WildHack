@@ -1,0 +1,4 @@
+<map id="LightPlayer::LightPlayer" name="LightPlayer::LightPlayer">
+<area shape="rect" id="node2" href="$class_player.html#a58ebcf621dabc426fa3f65194f95adb7" title="Player::calculateScore" alt="" coords="213,5,367,32"/>
+<area shape="rect" id="node3" href="$class_player.html#a780ea0e905ee5c0073d884ae2b51c5e3" title="Player::GetName" alt="" coords="229,56,351,83"/>
+</map>

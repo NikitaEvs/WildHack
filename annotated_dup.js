@@ -14,6 +14,9 @@ var annotated_dup =
     [ "Handler", "class_handler.html", "class_handler" ],
     [ "HerbivorePopulationBuilder", "class_herbivore_population_builder.html", "class_herbivore_population_builder" ],
     [ "LeafMutation", "class_leaf_mutation.html", "class_leaf_mutation" ],
+    [ "LightPlayer", "class_light_player.html", "class_light_player" ],
+    [ "LightPopulation", "class_light_population.html", "class_light_population" ],
+    [ "Manager", "class_manager.html", "class_manager" ],
     [ "Map", "class_map.html", "class_map" ],
     [ "MoveHandler", "class_move_handler.html", "class_move_handler" ],
     [ "MutationComponent", "class_mutation_component.html", "class_mutation_component" ],
@@ -25,5 +28,6 @@ var annotated_dup =
     [ "RandomGenerator", "class_random_generator.html", "class_random_generator" ],
     [ "SafetyMutationHandler", "class_safety_mutation_handler.html", "class_safety_mutation_handler" ],
     [ "SizeMutationHandler", "class_size_mutation_handler.html", "class_size_mutation_handler" ],
+    [ "Subscriber", "class_subscriber.html", "class_subscriber" ],
     [ "VelocityMutationHandler", "class_velocity_mutation_handler.html", "class_velocity_mutation_handler" ]
 ];

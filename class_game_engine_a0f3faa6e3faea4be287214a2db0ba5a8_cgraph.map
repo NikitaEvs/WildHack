@@ -1,6 +1,7 @@
 <map id="GameEngine::generateBotHandlersChain" name="GameEngine::generateBotHandlersChain">
-<area shape="rect" id="node2" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="280,5,484,32"/>
-<area shape="rect" id="node3" href="$class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="294,56,470,83"/>
-<area shape="rect" id="node4" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="314,107,450,133"/>
-<area shape="rect" id="node5" href="$class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="304,157,460,184"/>
+<area shape="rect" id="node2" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="540,8,744,35"/>
+<area shape="rect" id="node3" href="$class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="554,110,730,136"/>
+<area shape="rect" id="node4" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="318,84,454,111"/>
+<area shape="rect" id="node5" href="$class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="308,135,464,162"/>
+<area shape="rect" id="node6" href="$class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="280,34,492,60"/>
 </map>

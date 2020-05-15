@@ -1,5 +1,11 @@
 <map id="RandomGenerator::randInt" name="RandomGenerator::randInt">
-<area shape="rect" id="node2" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="229,5,456,47"/>
-<area shape="rect" id="node4" href="$class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="290,71,395,98"/>
-<area shape="rect" id="node3" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="504,13,653,39"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#a879f1b9f6b303e1ff16bf4455b49300f" title="GameEngine::fillPopulation\lPattern" alt="" coords="246,5,425,47"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="489,89,716,131"/>
+<area shape="rect" id="node8" href="$class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="229,122,441,149"/>
+<area shape="rect" id="node9" href="$class_map.html#aeba547488265ea0a47be09ba26bc6e13" title="Map::generate" alt="" coords="283,173,388,199"/>
+<area shape="rect" id="node10" href="$class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="243,223,428,250"/>
+<area shape="rect" id="node4" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="764,97,913,123"/>
+<area shape="rect" id="node5" href="$class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="961,97,1119,123"/>
+<area shape="rect" id="node6" href="$class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="1167,46,1347,73"/>
+<area shape="rect" id="node7" href="$class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="1175,97,1338,123"/>
 </map>

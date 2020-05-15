@@ -47,6 +47,10 @@ var files =
     [ "LeafMutation.h", "_leaf_mutation_8h.html", [
       [ "LeafMutation", "class_leaf_mutation.html", "class_leaf_mutation" ]
     ] ],
+    [ "Manager.cpp", "_manager_8cpp.html", null ],
+    [ "Manager.h", "_manager_8h.html", [
+      [ "Manager", "class_manager.html", "class_manager" ]
+    ] ],
     [ "Map.cpp", "_map_8cpp.html", null ],
     [ "Map.h", "_map_8h.html", [
       [ "Map", "class_map.html", "class_map" ]
@@ -60,11 +64,13 @@ var files =
     ] ],
     [ "Player.cpp", "_player_8cpp.html", null ],
     [ "Player.h", "_player_8h.html", [
-      [ "Player", "class_player.html", "class_player" ]
+      [ "Player", "class_player.html", "class_player" ],
+      [ "LightPlayer", "class_light_player.html", "class_light_player" ]
     ] ],
     [ "Population.cpp", "_population_8cpp.html", "_population_8cpp" ],
     [ "Population.h", "_population_8h.html", [
-      [ "Population", "class_population.html", "class_population" ]
+      [ "Population", "class_population.html", "class_population" ],
+      [ "LightPopulation", "class_light_population.html", "class_light_population" ]
     ] ],
     [ "PopulationBuilder.h", "_population_builder_8h.html", [
       [ "PopulationBuilder", "class_population_builder.html", "class_population_builder" ]
@@ -85,6 +91,9 @@ var files =
     [ "SizeMutationHandler.cpp", "_size_mutation_handler_8cpp.html", null ],
     [ "SizeMutationHandler.h", "_size_mutation_handler_8h.html", [
       [ "SizeMutationHandler", "class_size_mutation_handler.html", "class_size_mutation_handler" ]
+    ] ],
+    [ "Subscriber.h", "_subscriber_8h.html", [
+      [ "Subscriber", "class_subscriber.html", "class_subscriber" ]
     ] ],
     [ "VelocityMutationHandler.cpp", "_velocity_mutation_handler_8cpp.html", null ],
     [ "VelocityMutationHandler.h", "_velocity_mutation_handler_8h.html", [

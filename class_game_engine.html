@@ -101,41 +101,96 @@ Collaboration diagram for GameEngine:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affd35ad3f1f76918d0b0201f56b7b125"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#affd35ad3f1f76918d0b0201f56b7b125">GameEngine</a> ()=default</td></tr>
-<tr class="separator:affd35ad3f1f76918d0b0201f56b7b125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c430f74d72e2745646fdbffbd97930"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930">GameEngine</a> ()</td></tr>
+<tr class="separator:a64c430f74d72e2745646fdbffbd97930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5260074158d1f1f826e71caa2397e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a0a5260074158d1f1f826e71caa2397e8">init</a> ()</td></tr>
+<tr class="separator:a0a5260074158d1f1f826e71caa2397e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a211964083dab34bc0dc8990353449932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a211964083dab34bc0dc8990353449932">generateMap</a> ()</td></tr>
 <tr class="separator:a211964083dab34bc0dc8990353449932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9594111ce7d79a2deff342a3587d3ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a9594111ce7d79a2deff342a3587d3ef0">fillMapPattern</a> (std::vector&lt; std::vector&lt; int32_t &gt; &gt; &amp;cells)</td></tr>
 <tr class="separator:a9594111ce7d79a2deff342a3587d3ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879f1b9f6b303e1ff16bf4455b49300f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a879f1b9f6b303e1ff16bf4455b49300f">fillPopulationPattern</a> (std::vector&lt; <a class="el" href="class_light_population.html">LightPopulation</a> &gt; &amp;populations)</td></tr>
+<tr class="separator:a879f1b9f6b303e1ff16bf4455b49300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f90b63e7edce538e6c7d364508e7fe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5f90b63e7edce538e6c7d364508e7fe0">getPopulationPattern</a> (std::vector&lt; <a class="el" href="class_light_population.html">LightPopulation</a> &gt; &amp;populations)</td></tr>
+<tr class="separator:a5f90b63e7edce538e6c7d364508e7fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc194512a29a492111f8c56ca861958e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e">botTurn</a> (std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; bot)</td></tr>
 <tr class="separator:adc194512a29a492111f8c56ca861958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f9ec3c0912ab1d5b414657e9709957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#af6f9ec3c0912ab1d5b414657e9709957">setPlayers</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; _players)</td></tr>
-<tr class="separator:af6f9ec3c0912ab1d5b414657e9709957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c52d9e50eb46cbe02bb99565c69f27f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a2c52d9e50eb46cbe02bb99565c69f27f">setPlayers</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;_players)</td></tr>
+<tr class="separator:a2c52d9e50eb46cbe02bb99565c69f27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cac4e0c0676bda2a5302fed1cdc68af"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cell_type.html">CellType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af">getCell</a> (size_t posX, size_t posY)</td></tr>
+<tr class="separator:a3cac4e0c0676bda2a5302fed1cdc68af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5317a3c0b6fb0ced5aac6eae9640f133"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5317a3c0b6fb0ced5aac6eae9640f133">getPopulation</a> (size_t posX, size_t posY)</td></tr>
+<tr class="separator:a5317a3c0b6fb0ced5aac6eae9640f133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4a194f47952d9ebbacdf4f9517ae78"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aac4a194f47952d9ebbacdf4f9517ae78">getCurrentID</a> ()</td></tr>
+<tr class="separator:aac4a194f47952d9ebbacdf4f9517ae78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19557f7661b28ae1bb62bd459297fbd8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_light_player.html">LightPlayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a19557f7661b28ae1bb62bd459297fbd8">getLightPlayers</a> ()</td></tr>
+<tr class="separator:a19557f7661b28ae1bb62bd459297fbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee32b1584821cf8e86127ec47b9ddbbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aee32b1584821cf8e86127ec47b9ddbbb">isPopulationExist</a> (size_t posX, size_t posY)</td></tr>
+<tr class="separator:aee32b1584821cf8e86127ec47b9ddbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54de0d480e66278ec918432489b712b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a54de0d480e66278ec918432489b712b2">populationMove</a> (std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; population, int32_t x_pos, int32_t y_pos)</td></tr>
+<tr class="separator:a54de0d480e66278ec918432489b712b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe0fb319bedf1ce6e1c6b82c8b51fdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#afbe0fb319bedf1ce6e1c6b82c8b51fdd">populationSplit</a> (std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; population, int32_t destination_x, int32_t destination_y)</td></tr>
+<tr class="separator:afbe0fb319bedf1ce6e1c6b82c8b51fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9dd9a39fb3be739b88654837e788597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aa9dd9a39fb3be739b88654837e788597">populationMutate</a> (std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; population, <a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">Population::MutationType</a> type)</td></tr>
+<tr class="separator:aa9dd9a39fb3be739b88654837e788597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924157ee09a0d8c9bb8be0aba5ca135d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a924157ee09a0d8c9bb8be0aba5ca135d">registerPlayer</a> (const std::string &amp;name=&quot;Bot&quot;)</td></tr>
+<tr class="separator:a924157ee09a0d8c9bb8be0aba5ca135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac361b033067d46c752be8c5f659d378a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ac361b033067d46c752be8c5f659d378a">setMaxStep</a> (int32_t <a class="el" href="class_game_engine.html#aaa327fce6b29078444bf5fddd983b342">maxStep</a>)</td></tr>
+<tr class="separator:ac361b033067d46c752be8c5f659d378a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3115117eecee9393718c9f1d1ae1eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb">nextStep</a> ()</td></tr>
+<tr class="separator:a8e3115117eecee9393718c9f1d1ae1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72234df51b4178769c409a221aa2a718"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718">finishStep</a> ()</td></tr>
+<tr class="separator:a72234df51b4178769c409a221aa2a718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9992429042d70ce697cfa69dcff05f30"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_manager.html">Manager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a9992429042d70ce697cfa69dcff05f30">getManager</a> ()</td></tr>
+<tr class="separator:a9992429042d70ce697cfa69dcff05f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1317793da84d4095e4f0d4676b3b31ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a1317793da84d4095e4f0d4676b3b31ae">setManager</a> (std::shared_ptr&lt; <a class="el" href="class_manager.html">Manager</a> &gt; setManager)</td></tr>
+<tr class="separator:a1317793da84d4095e4f0d4676b3b31ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0f3faa6e3faea4be287214a2db0ba5a8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_handler.html">Handler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8">generateBotHandlersChain</a> (std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; bot)</td></tr>
 <tr class="separator:a0f3faa6e3faea4be287214a2db0ba5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf33fb4a3264e79d0784f3d5244db4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f">calculate</a> ()</td></tr>
+<tr class="separator:a5cf33fb4a3264e79d0784f3d5244db4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fc5e9b3eacfac5892405e05f9d5491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491">calculateCells</a> ()</td></tr>
+<tr class="separator:a46fc5e9b3eacfac5892405e05f9d5491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade107def853adfdc55737bef27b8122b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b">calculateCell</a> (size_t posX, size_t posY, int32_t carnivore, int32_t herbivore)</td></tr>
+<tr class="separator:ade107def853adfdc55737bef27b8122b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9eb675af075fe08a5c5556a210ffeef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef">applyLifeCycles</a> ()</td></tr>
+<tr class="separator:ac9eb675af075fe08a5c5556a210ffeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832389a71c861ad3917a781e3064d407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a832389a71c861ad3917a781e3064d407">validate</a> ()</td></tr>
+<tr class="separator:a832389a71c861ad3917a781e3064d407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7b90f610353e53314706763befdd77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5f7b90f610353e53314706763befdd77">notify</a> (bool end=false)</td></tr>
+<tr class="separator:a5f7b90f610353e53314706763befdd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62032d5192567b234806a3c50170e06"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int32_t, int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06">getDestinationPos</a> (std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; tempPopulation)</td></tr>
+<tr class="separator:ab62032d5192567b234806a3c50170e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a82428b78040165afbdb653faa3d7e497"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a82428b78040165afbdb653faa3d7e497">map</a></td></tr>
 <tr class="separator:a82428b78040165afbdb653faa3d7e497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126fd6395c7f066fdcce4552e739e6bd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_manager.html">Manager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a126fd6395c7f066fdcce4552e739e6bd">manager</a></td></tr>
+<tr class="separator:a126fd6395c7f066fdcce4552e739e6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa102c1c6eed86a93cb896d95f3edad8e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aa102c1c6eed86a93cb896d95f3edad8e">players</a></td></tr>
 <tr class="separator:aa102c1c6eed86a93cb896d95f3edad8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11b424e304b55fd33bd25949a6293af"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ad11b424e304b55fd33bd25949a6293af">currentPlayer</a></td></tr>
+<tr class="separator:ad11b424e304b55fd33bd25949a6293af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276a524cf5d080e0b8654e1db91e96b3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a276a524cf5d080e0b8654e1db91e96b3">currentStep</a></td></tr>
+<tr class="separator:a276a524cf5d080e0b8654e1db91e96b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa327fce6b29078444bf5fddd983b342"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aaa327fce6b29078444bf5fddd983b342">maxStep</a></td></tr>
+<tr class="separator:aaa327fce6b29078444bf5fddd983b342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08626cea10b08d033e5f6d09f600693"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ab08626cea10b08d033e5f6d09f600693">botID</a></td></tr>
+<tr class="separator:ab08626cea10b08d033e5f6d09f600693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00018">18</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00023">23</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="affd35ad3f1f76918d0b0201f56b7b125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affd35ad3f1f76918d0b0201f56b7b125">&#9670;&nbsp;</a></span>GameEngine()</h2>
+<a id="a64c430f74d72e2745646fdbffbd97930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c430f74d72e2745646fdbffbd97930">&#9670;&nbsp;</a></span>GameEngine()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GameEngine::GameEngine </td>
@@ -144,16 +199,76 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00005">5</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a64c430f74d72e2745646fdbffbd97930_cgraph.png" border="0" usemap="#class_game_engine_a64c430f74d72e2745646fdbffbd97930_cgraph" alt=""/></div>
+<map name="class_game_engine_a64c430f74d72e2745646fdbffbd97930_cgraph" id="class_game_engine_a64c430f74d72e2745646fdbffbd97930_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a924157ee09a0d8c9bb8be0aba5ca135d" title="GameEngine::registerPlayer" alt="" coords="233,23,419,49"/>
+<area shape="rect" id="node3" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="990,5,1126,32"/>
+<area shape="rect" id="node4" href="class_config.html#a4b0baf7ee891c8a7816c43fa3505c1d6" title="Config::getMaxStepCount" alt="" coords="239,183,413,209"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="247,132,405,159"/>
+<area shape="rect" id="node6" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="473,132,623,159"/>
+<area shape="rect" id="node12" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="467,208,629,235"/>
+<area shape="rect" id="node7" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="677,125,904,166"/>
+<area shape="rect" id="node8" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="1212,69,1416,96"/>
+<area shape="rect" id="node9" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="1226,145,1402,172"/>
+<area shape="rect" id="node10" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="980,208,1136,235"/>
+<area shape="rect" id="node11" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="952,107,1164,133"/>
+<area shape="rect" id="node13" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="712,259,869,285"/>
+<area shape="rect" id="node19" href="class_game_engine.html#a5f7b90f610353e53314706763befdd77" title="GameEngine::notify" alt="" coords="722,309,859,336"/>
+<area shape="rect" id="node14" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="965,259,1151,285"/>
+<area shape="rect" id="node17" href="class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef" title="GameEngine::applyLifeCycles" alt="" coords="959,309,1157,336"/>
+<area shape="rect" id="node18" href="class_game_engine.html#a832389a71c861ad3917a781e3064d407" title="GameEngine::validate" alt="" coords="983,360,1133,387"/>
+<area shape="rect" id="node15" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="1224,259,1404,285"/>
+<area shape="rect" id="node16" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="1464,259,1611,285"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac9eb675af075fe08a5c5556a210ffeef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9eb675af075fe08a5c5556a210ffeef">&#9670;&nbsp;</a></span>applyLifeCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::applyLifeCycles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00304">304</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_ac9eb675af075fe08a5c5556a210ffeef_icgraph.png" border="0" usemap="#class_game_engine_ac9eb675af075fe08a5c5556a210ffeef_icgraph" alt=""/></div>
+<map name="class_game_engine_ac9eb675af075fe08a5c5556a210ffeef_icgraph" id="class_game_engine_ac9eb675af075fe08a5c5556a210ffeef_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="252,5,409,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="457,5,620,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="668,5,825,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="873,5,1053,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="adc194512a29a492111f8c56ca861958e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc194512a29a492111f8c56ca861958e">&#9670;&nbsp;</a></span>botTurn()</h2>
 
@@ -170,17 +285,194 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00025">25</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00078">78</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph.png" border="0" usemap="#class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph" alt=""/></div>
 <map name="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph" id="class_game_engine_adc194512a29a492111f8c56ca861958e_cgraph">
-<area shape="rect" id="node2" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="203,74,429,115"/>
-<area shape="rect" id="node3" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="477,5,681,32"/>
-<area shape="rect" id="node4" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="491,56,667,83"/>
-<area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="511,107,647,133"/>
-<area shape="rect" id="node6" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="501,157,657,184"/>
+<area shape="rect" id="node2" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="203,77,429,118"/>
+<area shape="rect" id="node3" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="737,8,941,35"/>
+<area shape="rect" id="node4" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="751,110,927,136"/>
+<area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="515,84,651,111"/>
+<area shape="rect" id="node6" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="505,135,661,162"/>
+<area shape="rect" id="node7" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="477,34,689,60"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_adc194512a29a492111f8c56ca861958e_icgraph.png" border="0" usemap="#class_game_engine_adc194512a29a492111f8c56ca861958e_icgraph" alt=""/></div>
+<map name="class_game_engine_adc194512a29a492111f8c56ca861958e_icgraph" id="class_game_engine_adc194512a29a492111f8c56ca861958e_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="203,56,360,83"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="408,5,588,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="417,56,579,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5cf33fb4a3264e79d0784f3d5244db4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf33fb4a3264e79d0784f3d5244db4f">&#9670;&nbsp;</a></span>calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameEngine::calculate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00259">259</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_cgraph.png" border="0" usemap="#class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_cgraph" alt=""/></div>
+<map name="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_cgraph" id="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="217,5,403,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef" title="GameEngine::applyLifeCycles" alt="" coords="211,56,409,83"/>
+<area shape="rect" id="node6" href="class_game_engine.html#a832389a71c861ad3917a781e3064d407" title="GameEngine::validate" alt="" coords="235,107,385,133"/>
+<area shape="rect" id="node3" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="457,5,637,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="685,5,832,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_icgraph.png" border="0" usemap="#class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_icgraph" alt=""/></div>
+<map name="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_icgraph" id="class_game_engine_a5cf33fb4a3264e79d0784f3d5244db4f_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="211,5,373,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="421,5,579,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="627,5,807,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade107def853adfdc55737bef27b8122b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade107def853adfdc55737bef27b8122b">&#9670;&nbsp;</a></span>calculateCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::calculateCell </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>carnivore</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>herbivore</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00295">295</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_ade107def853adfdc55737bef27b8122b_cgraph.png" border="0" usemap="#class_game_engine_ade107def853adfdc55737bef27b8122b_cgraph" alt=""/></div>
+<map name="class_game_engine_ade107def853adfdc55737bef27b8122b_cgraph" id="class_game_engine_ade107def853adfdc55737bef27b8122b_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="233,5,380,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_ade107def853adfdc55737bef27b8122b_icgraph.png" border="0" usemap="#class_game_engine_ade107def853adfdc55737bef27b8122b_icgraph" alt=""/></div>
+<map name="class_game_engine_ade107def853adfdc55737bef27b8122b_icgraph" id="class_game_engine_ade107def853adfdc55737bef27b8122b_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="233,5,420,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="468,5,625,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="673,5,836,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="884,5,1041,32"/>
+<area shape="rect" id="node6" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="1089,5,1269,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46fc5e9b3eacfac5892405e05f9d5491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46fc5e9b3eacfac5892405e05f9d5491">&#9670;&nbsp;</a></span>calculateCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::calculateCells </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00265">265</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_cgraph.png" border="0" usemap="#class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_cgraph" alt=""/></div>
+<map name="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_cgraph" id="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="240,5,420,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="468,5,615,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_icgraph.png" border="0" usemap="#class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_icgraph" alt=""/></div>
+<map name="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_icgraph" id="class_game_engine_a46fc5e9b3eacfac5892405e05f9d5491_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="240,5,397,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="445,5,608,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="656,5,813,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="861,5,1041,32"/>
 </map>
 </div>
 
@@ -202,7 +494,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00011">11</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00023">23</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -212,6 +504,86 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="474,5,678,32"/>
 <area shape="rect" id="node4" href="class_random_generator.html#a7e799f3dc6ceed9113d7e1ca94b71c2d" title="RandomGenerator::randNormalInt" alt="" coords="467,56,685,83"/>
 <area shape="rect" id="node5" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="508,107,644,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a879f1b9f6b303e1ff16bf4455b49300f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879f1b9f6b303e1ff16bf4455b49300f">&#9670;&nbsp;</a></span>fillPopulationPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::fillPopulationPattern </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_light_population.html">LightPopulation</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>populations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00037">37</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a879f1b9f6b303e1ff16bf4455b49300f_cgraph.png" border="0" usemap="#class_game_engine_a879f1b9f6b303e1ff16bf4455b49300f_cgraph" alt=""/></div>
+<map name="class_game_engine_a879f1b9f6b303e1ff16bf4455b49300f_cgraph" id="class_game_engine_a879f1b9f6b303e1ff16bf4455b49300f_cgraph">
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="232,5,436,32"/>
+<area shape="rect" id="node3" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="246,56,422,83"/>
+<area shape="rect" id="node4" href="class_game_engine.html#aee32b1584821cf8e86127ec47b9ddbbb" title="GameEngine::isPopulation\lExist" alt="" coords="246,107,422,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72234df51b4178769c409a221aa2a718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72234df51b4178769c409a221aa2a718">&#9670;&nbsp;</a></span>finishStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::finishStep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00247">247</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a72234df51b4178769c409a221aa2a718_cgraph.png" border="0" usemap="#class_game_engine_a72234df51b4178769c409a221aa2a718_cgraph" alt=""/></div>
+<map name="class_game_engine_a72234df51b4178769c409a221aa2a718_cgraph" id="class_game_engine_a72234df51b4178769c409a221aa2a718_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="216,68,373,95"/>
+<area shape="rect" id="node8" href="class_game_engine.html#a5f7b90f610353e53314706763befdd77" title="GameEngine::notify" alt="" coords="226,119,363,145"/>
+<area shape="rect" id="node9" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="216,169,373,196"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="427,56,614,83"/>
+<area shape="rect" id="node6" href="class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef" title="GameEngine::applyLifeCycles" alt="" coords="421,107,620,133"/>
+<area shape="rect" id="node7" href="class_game_engine.html#a832389a71c861ad3917a781e3064d407" title="GameEngine::validate" alt="" coords="445,5,596,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="691,53,871,80"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="975,49,1122,76"/>
+<area shape="rect" id="node10" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="446,169,595,196"/>
+<area shape="rect" id="node11" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="668,187,895,229"/>
+<area shape="rect" id="node12" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="1203,113,1407,140"/>
+<area shape="rect" id="node13" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="1217,176,1393,203"/>
+<area shape="rect" id="node14" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="981,252,1117,279"/>
+<area shape="rect" id="node15" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="971,303,1127,329"/>
+<area shape="rect" id="node16" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="943,151,1155,177"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a72234df51b4178769c409a221aa2a718_icgraph.png" border="0" usemap="#class_game_engine_a72234df51b4178769c409a221aa2a718_icgraph" alt=""/></div>
+<map name="class_game_engine_a72234df51b4178769c409a221aa2a718_icgraph" id="class_game_engine_a72234df51b4178769c409a221aa2a718_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="216,5,373,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="421,5,601,32"/>
 </map>
 </div>
 
@@ -241,16 +613,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00039">39</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00092">92</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph.png" border="0" usemap="#class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph" alt=""/></div>
 <map name="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph" id="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_cgraph">
-<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="280,5,484,32"/>
-<area shape="rect" id="node3" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="294,56,470,83"/>
-<area shape="rect" id="node4" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="314,107,450,133"/>
-<area shape="rect" id="node5" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="304,157,460,184"/>
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="540,8,744,35"/>
+<area shape="rect" id="node3" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="554,110,730,136"/>
+<area shape="rect" id="node4" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="318,84,454,111"/>
+<area shape="rect" id="node5" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="308,135,464,162"/>
+<area shape="rect" id="node6" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="280,34,492,60"/>
 </map>
 </div>
 <div class="dynheader">
@@ -258,7 +631,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph.png" border="0" usemap="#class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph" alt=""/></div>
 <map name="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph" id="class_game_engine_a0f3faa6e3faea4be287214a2db0ba5a8_icgraph">
-<area shape="rect" id="node2" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="280,13,429,39"/>
+<area shape="rect" id="node2" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="280,56,429,83"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="477,56,635,83"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="683,5,863,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="691,56,854,83"/>
 </map>
 </div>
 
@@ -279,7 +655,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00003">3</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00015">15</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -301,8 +677,520 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af6f9ec3c0912ab1d5b414657e9709957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6f9ec3c0912ab1d5b414657e9709957">&#9670;&nbsp;</a></span>setPlayers()</h2>
+<a id="a3cac4e0c0676bda2a5302fed1cdc68af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cac4e0c0676bda2a5302fed1cdc68af">&#9670;&nbsp;</a></span>getCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_cell_type.html">CellType</a> &gt; GameEngine::getCell </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00169">169</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a3cac4e0c0676bda2a5302fed1cdc68af_icgraph.png" border="0" usemap="#class_game_engine_a3cac4e0c0676bda2a5302fed1cdc68af_icgraph" alt=""/></div>
+<map name="class_game_engine_a3cac4e0c0676bda2a5302fed1cdc68af_icgraph" id="class_game_engine_a3cac4e0c0676bda2a5302fed1cdc68af_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="200,5,380,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="428,5,615,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="663,5,820,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="868,5,1031,32"/>
+<area shape="rect" id="node6" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="1079,5,1236,32"/>
+<area shape="rect" id="node7" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="1284,5,1464,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aac4a194f47952d9ebbacdf4f9517ae78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4a194f47952d9ebbacdf4f9517ae78">&#9670;&nbsp;</a></span>getCurrentID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::getCurrentID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00181">181</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab62032d5192567b234806a3c50170e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62032d5192567b234806a3c50170e06">&#9670;&nbsp;</a></span>getDestinationPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int32_t, int32_t &gt; GameEngine::getDestinationPos </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td>
+          <td class="paramname"><em>tempPopulation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00352">352</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_ab62032d5192567b234806a3c50170e06_cgraph.png" border="0" usemap="#class_game_engine_ab62032d5192567b234806a3c50170e06_cgraph" alt=""/></div>
+<map name="class_game_engine_ab62032d5192567b234806a3c50170e06_cgraph" id="class_game_engine_ab62032d5192567b234806a3c50170e06_cgraph">
+<area shape="rect" id="node2" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="265,5,469,32"/>
+<area shape="rect" id="node3" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="279,56,455,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_ab62032d5192567b234806a3c50170e06_icgraph.png" border="0" usemap="#class_game_engine_ab62032d5192567b234806a3c50170e06_icgraph" alt=""/></div>
+<map name="class_game_engine_ab62032d5192567b234806a3c50170e06_icgraph" id="class_game_engine_ab62032d5192567b234806a3c50170e06_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="265,49,492,90"/>
+<area shape="rect" id="node3" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="540,56,689,83"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="737,56,895,83"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="943,5,1123,32"/>
+<area shape="rect" id="node6" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="951,56,1114,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a19557f7661b28ae1bb62bd459297fbd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19557f7661b28ae1bb62bd459297fbd8">&#9670;&nbsp;</a></span>getLightPlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_light_player.html">LightPlayer</a> &gt; &gt; GameEngine::getLightPlayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00185">185</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9992429042d70ce697cfa69dcff05f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9992429042d70ce697cfa69dcff05f30">&#9670;&nbsp;</a></span>getManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_manager.html">Manager</a> &gt; GameEngine::getManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00344">344</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5317a3c0b6fb0ced5aac6eae9640f133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5317a3c0b6fb0ced5aac6eae9640f133">&#9670;&nbsp;</a></span>getPopulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt; GameEngine::getPopulation </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00177">177</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f90b63e7edce538e6c7d364508e7fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f90b63e7edce538e6c7d364508e7fe0">&#9670;&nbsp;</a></span>getPopulationPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::getPopulationPattern </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_light_population.html">LightPopulation</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>populations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00070">70</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a5260074158d1f1f826e71caa2397e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5260074158d1f1f826e71caa2397e8">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee32b1584821cf8e86127ec47b9ddbbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee32b1584821cf8e86127ec47b9ddbbb">&#9670;&nbsp;</a></span>isPopulationExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameEngine::isPopulationExist </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>posY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00195">195</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_aee32b1584821cf8e86127ec47b9ddbbb_icgraph.png" border="0" usemap="#class_game_engine_aee32b1584821cf8e86127ec47b9ddbbb_icgraph" alt=""/></div>
+<map name="class_game_engine_aee32b1584821cf8e86127ec47b9ddbbb_icgraph" id="class_game_engine_aee32b1584821cf8e86127ec47b9ddbbb_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a879f1b9f6b303e1ff16bf4455b49300f" title="GameEngine::fillPopulation\lPattern" alt="" coords="229,5,408,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e3115117eecee9393718c9f1d1ae1eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3115117eecee9393718c9f1d1ae1eb">&#9670;&nbsp;</a></span>nextStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::nextStep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00240">240</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_cgraph.png" border="0" usemap="#class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_cgraph" alt=""/></div>
+<map name="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_cgraph" id="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_cgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="217,152,367,179"/>
+<area shape="rect" id="node9" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="211,207,373,233"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="421,130,648,171"/>
+<area shape="rect" id="node4" href="class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="956,120,1160,147"/>
+<area shape="rect" id="node5" href="class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="970,196,1146,223"/>
+<area shape="rect" id="node6" href="class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="734,5,870,32"/>
+<area shape="rect" id="node7" href="class_config.html#a7310ee17b4d1fd52348fa204e0b64469" title="Config::getMaxAmount" alt="" coords="724,56,880,83"/>
+<area shape="rect" id="node8" href="class_game_engine.html#ab62032d5192567b234806a3c50170e06" title="GameEngine::getDestinationPos" alt="" coords="696,157,908,184"/>
+<area shape="rect" id="node10" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="456,279,613,305"/>
+<area shape="rect" id="node16" href="class_game_engine.html#a5f7b90f610353e53314706763befdd77" title="GameEngine::notify" alt="" coords="466,207,603,233"/>
+<area shape="rect" id="node11" href="class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491" title="GameEngine::calculateCells" alt="" coords="709,360,895,387"/>
+<area shape="rect" id="node14" href="class_game_engine.html#ac9eb675af075fe08a5c5556a210ffeef" title="GameEngine::applyLifeCycles" alt="" coords="703,259,901,285"/>
+<area shape="rect" id="node15" href="class_game_engine.html#a832389a71c861ad3917a781e3064d407" title="GameEngine::validate" alt="" coords="727,309,877,336"/>
+<area shape="rect" id="node12" href="class_game_engine.html#ade107def853adfdc55737bef27b8122b" title="GameEngine::calculateCell" alt="" coords="968,360,1148,387"/>
+<area shape="rect" id="node13" href="class_game_engine.html#a3cac4e0c0676bda2a5302fed1cdc68af" title="GameEngine::getCell" alt="" coords="1208,360,1355,387"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_icgraph.png" border="0" usemap="#class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_icgraph" alt=""/></div>
+<map name="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_icgraph" id="class_game_engine_a8e3115117eecee9393718c9f1d1ae1eb_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="211,5,391,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="219,56,382,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f7b90f610353e53314706763befdd77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7b90f610353e53314706763befdd77">&#9670;&nbsp;</a></span>notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::notify </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>end</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00340">340</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a5f7b90f610353e53314706763befdd77_icgraph.png" border="0" usemap="#class_game_engine_a5f7b90f610353e53314706763befdd77_icgraph" alt=""/></div>
+<map name="class_game_engine_a5f7b90f610353e53314706763befdd77_icgraph" id="class_game_engine_a5f7b90f610353e53314706763befdd77_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="191,5,353,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="401,5,559,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="607,5,787,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a54de0d480e66278ec918432489b712b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54de0d480e66278ec918432489b712b2">&#9670;&nbsp;</a></span>populationMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::populationMove </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td>
+          <td class="paramname"><em>population</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00199">199</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa9dd9a39fb3be739b88654837e788597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9dd9a39fb3be739b88654837e788597">&#9670;&nbsp;</a></span>populationMutate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::populationMutate </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td>
+          <td class="paramname"><em>population</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_population.html#af8d504f6dd76a906368a533934653b2e">Population::MutationType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00206">206</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afbe0fb319bedf1ce6e1c6b82c8b51fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbe0fb319bedf1ce6e1c6b82c8b51fdd">&#9670;&nbsp;</a></span>populationSplit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::populationSplit </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td>
+          <td class="paramname"><em>population</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>destination_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>destination_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00210">210</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a924157ee09a0d8c9bb8be0aba5ca135d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924157ee09a0d8c9bb8be0aba5ca135d">&#9670;&nbsp;</a></span>registerPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::registerPlayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;Bot&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00218">218</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a924157ee09a0d8c9bb8be0aba5ca135d_icgraph.png" border="0" usemap="#class_game_engine_a924157ee09a0d8c9bb8be0aba5ca135d_icgraph" alt=""/></div>
+<map name="class_game_engine_a924157ee09a0d8c9bb8be0aba5ca135d_icgraph" id="class_game_engine_a924157ee09a0d8c9bb8be0aba5ca135d_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="239,5,419,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1317793da84d4095e4f0d4676b3b31ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1317793da84d4095e4f0d4676b3b31ae">&#9670;&nbsp;</a></span>setManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::setManager </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_manager.html">Manager</a> &gt;&#160;</td>
+          <td class="paramname"><em>setManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00348">348</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac361b033067d46c752be8c5f659d378a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac361b033067d46c752be8c5f659d378a">&#9670;&nbsp;</a></span>setMaxStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::setMaxStep </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>maxStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00236">236</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c52d9e50eb46cbe02bb99565c69f27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c52d9e50eb46cbe02bb99565c69f27f">&#9670;&nbsp;</a></span>setPlayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,18 +1198,152 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void GameEngine::setPlayers </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>_players</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00127">127</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00165">165</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a832389a71c861ad3917a781e3064d407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832389a71c861ad3917a781e3064d407">&#9670;&nbsp;</a></span>validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameEngine::validate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8cpp_source.html#l00314">314</a> of file <a class="el" href="_game_engine_8cpp_source.html">GameEngine.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_engine_a832389a71c861ad3917a781e3064d407_icgraph.png" border="0" usemap="#class_game_engine_a832389a71c861ad3917a781e3064d407_icgraph" alt=""/></div>
+<map name="class_game_engine_a832389a71c861ad3917a781e3064d407_icgraph" id="class_game_engine_a832389a71c861ad3917a781e3064d407_icgraph">
+<area shape="rect" id="node2" href="class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f" title="GameEngine::calculate" alt="" coords="204,5,361,32"/>
+<area shape="rect" id="node3" href="class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="409,5,572,32"/>
+<area shape="rect" id="node4" href="class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="620,5,777,32"/>
+<area shape="rect" id="node5" href="class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="825,5,1005,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab08626cea10b08d033e5f6d09f600693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08626cea10b08d033e5f6d09f600693">&#9670;&nbsp;</a></span>botID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::botID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00069">69</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<a id="ad11b424e304b55fd33bd25949a6293af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11b424e304b55fd33bd25949a6293af">&#9670;&nbsp;</a></span>currentPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::currentPlayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00066">66</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<a id="a276a524cf5d080e0b8654e1db91e96b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276a524cf5d080e0b8654e1db91e96b3">&#9670;&nbsp;</a></span>currentStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::currentStep</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00067">67</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<a id="a126fd6395c7f066fdcce4552e739e6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126fd6395c7f066fdcce4552e739e6bd">&#9670;&nbsp;</a></span>manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_manager.html">Manager</a>&gt; GameEngine::manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00062">62</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
 <a id="a82428b78040165afbdb653faa3d7e497"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82428b78040165afbdb653faa3d7e497">&#9670;&nbsp;</a></span>map</h2>
 
@@ -342,7 +1364,31 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00031">31</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00061">61</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa327fce6b29078444bf5fddd983b342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa327fce6b29078444bf5fddd983b342">&#9670;&nbsp;</a></span>maxStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine::maxStep</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00068">68</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 
 </div>
 </div>
@@ -366,7 +1412,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00032">32</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00064">64</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['calculate',['calculate',['../class_game_engine.html#a5cf33fb4a3264e79d0784f3d5244db4f',1,'GameEngine']]],
+  ['calculatecell',['calculateCell',['../class_game_engine.html#ade107def853adfdc55737bef27b8122b',1,'GameEngine']]],
+  ['calculatecells',['calculateCells',['../class_game_engine.html#a46fc5e9b3eacfac5892405e05f9d5491',1,'GameEngine']]],
+  ['calculatescore',['calculateScore',['../class_player.html#a58ebcf621dabc426fa3f65194f95adb7',1,'Player']]],
   ['carnivore',['CARNIVORE',['../class_population.html#a24bd09314a9ea44f019b233c2ff83445abd003672c20b0f569661d67a444422bd',1,'Population']]],
   ['carnivorecount',['carnivoreCount',['../class_cell_type.html#a7edae20585a2453cfff95146b144627a',1,'CellType']]],
   ['carnivorepopulationbuilder',['CarnivorePopulationBuilder',['../class_carnivore_population_builder.html',1,'CarnivorePopulationBuilder'],['../class_carnivore_population_builder.html#a9a922366735334ca51bf38c573227c8a',1,'CarnivorePopulationBuilder::CarnivorePopulationBuilder()']]],
@@ -36,5 +40,8 @@ var searchData=
   ['cover',['COVER',['../class_population.html#af8d504f6dd76a906368a533934653b2ea0e1bb9ee64eda5c12957731e413a6a33',1,'Population::COVER()'],['../class_mutation_component.html#a2ea8811579a67495c632867f9843b168',1,'MutationComponent::cover()'],['../class_population.html#a15609198e34508625f919b4b32656d28',1,'Population::cover()']]],
   ['covermutationhandler',['CoverMutationHandler',['../class_cover_mutation_handler.html',1,'']]],
   ['covermutationhandler_2ecpp',['CoverMutationHandler.cpp',['../_cover_mutation_handler_8cpp.html',1,'']]],
-  ['covermutationhandler_2eh',['CoverMutationHandler.h',['../_cover_mutation_handler_8h.html',1,'']]]
+  ['covermutationhandler_2eh',['CoverMutationHandler.h',['../_cover_mutation_handler_8h.html',1,'']]],
+  ['currentplayer',['currentPlayer',['../class_game_engine.html#ad11b424e304b55fd33bd25949a6293af',1,'GameEngine']]],
+  ['currentpopulation',['currentPopulation',['../class_cell_type.html#a9ccc8db305a6f7ccf8ec7a2f8527d71d',1,'CellType']]],
+  ['currentstep',['currentStep',['../class_game_engine.html#a276a524cf5d080e0b8654e1db91e96b3',1,'GameEngine']]]
 ];

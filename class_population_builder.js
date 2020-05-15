@@ -1,6 +1,7 @@
 var class_population_builder =
 [
     [ "getProduct", "class_population_builder.html#a1f0a7402852304ef7c546de2510c0917", null ],
+    [ "resetPopulation", "class_population_builder.html#a9a6354fbe54ec63073b734857d9d8f2a", null ],
     [ "setAmount", "class_population_builder.html#a7eebf5c6eabbba61bd20a21605b7c72a", null ],
     [ "setBiologyDev", "class_population_builder.html#a9105e656add77ee110acb91eccba7dc7", null ],
     [ "setCover", "class_population_builder.html#a80d86e1343041ae4046a93f3e5a89f3b", null ],

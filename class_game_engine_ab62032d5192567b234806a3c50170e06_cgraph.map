@@ -1,0 +1,4 @@
+<map id="GameEngine::getDestinationPos" name="GameEngine::getDestinationPos">
+<area shape="rect" id="node2" href="$class_random_generator.html#af91f7dc668da5f2afa193632edb157a8" title="RandomGenerator::getInstance" alt="" coords="265,5,469,32"/>
+<area shape="rect" id="node3" href="$class_random_generator.html#a7374cf84aadccc2cb08b67f48d93ddcb" title="RandomGenerator::randInt" alt="" coords="279,56,455,83"/>
+</map>

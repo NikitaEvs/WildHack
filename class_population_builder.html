@@ -94,8 +94,8 @@ Inheritance diagram for PopulationBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_population_builder__inherit__graph.png" border="0" usemap="#_population_builder_inherit__map" alt="Inheritance graph"/></div>
 <map name="_population_builder_inherit__map" id="_population_builder_inherit__map">
-<area shape="rect" id="node2" href="class_carnivore_population_builder.html" title="{CarnivorePopulationBuilder\n|&#45; p\l|+ CarnivorePopulationBuilder()\l+ setType()\l+ setName()\l+ setAmount()\l+ setHealth()\l+ setProductivity()\l+ setBiologyDev()\l+ setSize()\l+ setSafety()\l+ setVelocity()\l+ setCover()\l+ getProduct()\l}" alt="" coords="5,277,204,516"/>
-<area shape="rect" id="node3" href="class_herbivore_population_builder.html" title="{HerbivorePopulationBuilder\n|&#45; p\l|+ HerbivorePopulationBuilder()\l+ setType()\l+ setName()\l+ setAmount()\l+ setHealth()\l+ setProductivity()\l+ setBiologyDev()\l+ setSize()\l+ setSafety()\l+ setVelocity()\l+ setCover()\l+ getProduct()\l}" alt="" coords="228,277,427,516"/>
+<area shape="rect" id="node2" href="class_carnivore_population_builder.html" title="{CarnivorePopulationBuilder\n|&#45; p\l|+ CarnivorePopulationBuilder()\l+ resetPopulation()\l+ setType()\l+ setName()\l+ setAmount()\l+ setHealth()\l+ setProductivity()\l+ setBiologyDev()\l+ setSize()\l+ setSafety()\l+ setVelocity()\l+ setCover()\l+ getProduct()\l}" alt="" coords="5,292,204,545"/>
+<area shape="rect" id="node3" href="class_herbivore_population_builder.html" title="{HerbivorePopulationBuilder\n|&#45; p\l|+ HerbivorePopulationBuilder()\l+ resetPopulation()\l+ setType()\l+ setName()\l+ setAmount()\l+ setHealth()\l+ setProductivity()\l+ setBiologyDev()\l+ setSize()\l+ setSafety()\l+ setVelocity()\l+ setCover()\l+ getProduct()\l}" alt="" coords="228,292,427,545"/>
 </map>
 </div>
 <div class="dynheader">
@@ -128,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa618f3be309a1268753016f2dcbab378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80d86e1343041ae4046a93f3e5a89f3b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_builder.html#a80d86e1343041ae4046a93f3e5a89f3b">setCover</a> (<a class="el" href="class_population.html#ae1bfb193a6735c7c13eeb2da1062fada">Population::ParamType</a> cover)=0</td></tr>
 <tr class="separator:a80d86e1343041ae4046a93f3e5a89f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6354fbe54ec63073b734857d9d8f2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_builder.html#a9a6354fbe54ec63073b734857d9d8f2a">resetPopulation</a> ()=0</td></tr>
+<tr class="separator:a9a6354fbe54ec63073b734857d9d8f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f0a7402852304ef7c546de2510c0917"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="class_population.html">Population</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_population_builder.html#a1f0a7402852304ef7c546de2510c0917">getProduct</a> ()=0</td></tr>
 <tr class="separator:a1f0a7402852304ef7c546de2510c0917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -159,6 +161,33 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_carnivore_population_builder.html#a9c1c455caf599ef63db7e85b87bb91b0">CarnivorePopulationBuilder</a>, and <a class="el" href="class_herbivore_population_builder.html#ac0dff259bc517ca01da7495f679b6b54">HerbivorePopulationBuilder</a>.</p>
+
+</div>
+</div>
+<a id="a9a6354fbe54ec63073b734857d9d8f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6354fbe54ec63073b734857d9d8f2a">&#9670;&nbsp;</a></span>resetPopulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PopulationBuilder::resetPopulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_carnivore_population_builder.html#abe228ee0ffb90df92e355a8e7437b30a">CarnivorePopulationBuilder</a>, and <a class="el" href="class_herbivore_population_builder.html#ab385c898d826a4fd1b2480ef5d0706a3">HerbivorePopulationBuilder</a>.</p>
 
 </div>
 </div>

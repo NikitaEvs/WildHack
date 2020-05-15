@@ -1,4 +1,16 @@
 <map id="operator&lt;&lt;" name="operator&lt;&lt;">
-<area shape="rect" id="node2" href="$class_compound_mutation.html#ab72762d082d492548915f55409cee955" title="CompoundMutation::getMutation" alt="" coords="139,5,349,32"/>
-<area shape="rect" id="node3" href="$class_compound_mutation.html#acd69d3a0af85f89534c6627d8e8a109d" title="CompoundMutation::print" alt="" coords="160,56,328,83"/>
+<area shape="rect" id="node2" href="$class_population.html#a90e81f0337152c605fed35bb894582e5" title="Population::GetType" alt="" coords="173,5,315,32"/>
+<area shape="rect" id="node3" href="$class_population.html#a2136b838af123f71436f002f026b0e6a" title="Population::GetSize" alt="" coords="175,56,313,83"/>
+<area shape="rect" id="node4" href="$class_population.html#aa1649c6ef860e78fa8f3e21991bc1931" title="Population::GetSafety" alt="" coords="169,107,319,133"/>
+<area shape="rect" id="node5" href="$class_population.html#ac9c4e5440a0d76455113ef38757bd10a" title="Population::GetVelocity" alt="" coords="165,157,323,184"/>
+<area shape="rect" id="node6" href="$class_population.html#a1b43dbc2d77c5b81d6bbb88e1ca0c396" title="Population::GetCover" alt="" coords="171,208,317,235"/>
+<area shape="rect" id="node7" href="$class_population.html#a0f2f36b113fc5ddb08d70ababdde4218" title="Population::GetName" alt="" coords="171,259,317,285"/>
+<area shape="rect" id="node8" href="$class_population.html#a3b4d22121a5a26db7d9fb85ecabc6253" title="Population::GetAnimalAmount" alt="" coords="145,309,343,336"/>
+<area shape="rect" id="node9" href="$class_population.html#a73683cfd408a9dc6cd01dd1d124dcd99" title="Population::GetHealth" alt="" coords="169,360,319,387"/>
+<area shape="rect" id="node10" href="$class_population.html#aa882a76f6fc9ebcf2b3730898d20eb0a" title="Population::GetProductivity" alt="" coords="153,411,335,437"/>
+<area shape="rect" id="node11" href="$class_population.html#a8ce6f306e8e5750d9bdcbf3608848cfc" title="Population::GetBiologyDev" alt="" coords="155,461,333,488"/>
+<area shape="rect" id="node12" href="$class_population.html#a04e51faa61d241ce37486691e2660748" title="Population::GetXPos" alt="" coords="172,512,316,539"/>
+<area shape="rect" id="node13" href="$class_population.html#a7153bd6a359b5ea218909721364a29a7" title="Population::GetYPos" alt="" coords="172,563,316,589"/>
+<area shape="rect" id="node14" href="$class_compound_mutation.html#ab72762d082d492548915f55409cee955" title="CompoundMutation::getMutation" alt="" coords="139,613,349,640"/>
+<area shape="rect" id="node15" href="$class_compound_mutation.html#acd69d3a0af85f89534c6627d8e8a109d" title="CompoundMutation::print" alt="" coords="160,664,328,691"/>
 </map>

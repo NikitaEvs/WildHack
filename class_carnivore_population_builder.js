@@ -2,6 +2,7 @@ var class_carnivore_population_builder =
 [
     [ "CarnivorePopulationBuilder", "class_carnivore_population_builder.html#a9a922366735334ca51bf38c573227c8a", null ],
     [ "getProduct", "class_carnivore_population_builder.html#a9c1c455caf599ef63db7e85b87bb91b0", null ],
+    [ "resetPopulation", "class_carnivore_population_builder.html#abe228ee0ffb90df92e355a8e7437b30a", null ],
     [ "setAmount", "class_carnivore_population_builder.html#aa95e83e0ad68ff2c638ed38bbac6a5a2", null ],
     [ "setBiologyDev", "class_carnivore_population_builder.html#a1d99d48aefc64bb7d2f148b97b2a9149", null ],
     [ "setCover", "class_carnivore_population_builder.html#a088aaf936e36eb2e93a9536cf92f38d4", null ],

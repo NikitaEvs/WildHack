@@ -3,13 +3,17 @@
 <area shape="rect" id="node4" href="$class_cell_type_director.html#a2729d0f9c767ad2018382ccd342be110" title="CellTypeDirector::makeForestCell" alt="" coords="193,56,413,83"/>
 <area shape="rect" id="node5" href="$class_cell_type_director.html#a62b507cee42e8e58c7e645751632fcec" title="CellTypeDirector::makeSteppeCell" alt="" coords="191,107,415,133"/>
 <area shape="rect" id="node6" href="$class_cell_type_director.html#a7094e939502f98835a4fbe4dcaa84cc5" title="CellTypeDirector::makeTundraCell" alt="" coords="191,157,414,184"/>
-<area shape="rect" id="node7" href="$class_game_engine.html#a211964083dab34bc0dc8990353449932" title="GameEngine::generateMap" alt="" coords="213,208,393,235"/>
-<area shape="rect" id="node9" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="189,259,416,301"/>
-<area shape="rect" id="node11" href="$class_population.html#a47ac4812aff1f375b754a0e81310d069" title="Population::applyLifeCircle" alt="" coords="214,325,391,352"/>
-<area shape="rect" id="node12" href="$class_population_director.html#a94f67d60d675ef2eaaedcef5207bda0a" title="PopulationDirector\l::makeSmall" alt="" coords="238,377,367,418"/>
-<area shape="rect" id="node13" href="$class_population_director.html#aade2e0a3756fdb15ec0639dc8fe33e88" title="PopulationDirector\l::makeAverage" alt="" coords="238,442,367,483"/>
-<area shape="rect" id="node14" href="$class_population_director.html#a1f362ab0b7aef98db3fb89cef95f2f4f" title="PopulationDirector\l::makeBig" alt="" coords="238,507,367,549"/>
+<area shape="rect" id="node7" href="$class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="903,221,1083,248"/>
+<area shape="rect" id="node8" href="$class_game_engine.html#a211964083dab34bc0dc8990353449932" title="GameEngine::generateMap" alt="" coords="213,259,393,285"/>
+<area shape="rect" id="node10" href="$class_game_engine.html#a0f3faa6e3faea4be287214a2db0ba5a8" title="GameEngine::generateBotHandlers\lChain" alt="" coords="189,310,416,351"/>
+<area shape="rect" id="node14" href="$class_map.html#a9ad935bf6ef02ff09412a35a006ff3cb" title="Map::applyLifeCircle" alt="" coords="232,376,373,403"/>
+<area shape="rect" id="node15" href="$class_player.html#a099b722ad8ef76dfc478145ad0915f4b" title="Player::generatePopulations" alt="" coords="464,517,649,544"/>
+<area shape="rect" id="node16" href="$class_population_director.html#a53acfd87a484b13ba2072692ea671428" title="PopulationDirector\l::makeSmall" alt="" coords="238,478,367,519"/>
+<area shape="rect" id="node17" href="$class_population_director.html#a325122f0b2ada24934b5e68786e1850e" title="PopulationDirector\l::makeAverage" alt="" coords="238,543,367,585"/>
+<area shape="rect" id="node18" href="$class_population_director.html#add13a35ada0e9560feb1aeac46a33af6" title="PopulationDirector\l::makeBig" alt="" coords="238,609,367,650"/>
 <area shape="rect" id="node3" href="$class_cell_type_director.html#acc99fb0043267e60d253b554c2874a9e" title="CellTypeDirector::CellType\lDirector" alt="" coords="467,74,647,115"/>
-<area shape="rect" id="node8" href="$class_game_engine.html#a9594111ce7d79a2deff342a3587d3ef0" title="GameEngine::fillMapPattern" alt="" coords="464,208,649,235"/>
-<area shape="rect" id="node10" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="482,267,631,293"/>
+<area shape="rect" id="node9" href="$class_game_engine.html#a9594111ce7d79a2deff342a3587d3ef0" title="GameEngine::fillMapPattern" alt="" coords="464,259,649,285"/>
+<area shape="rect" id="node11" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="482,313,631,340"/>
+<area shape="rect" id="node12" href="$class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="697,299,855,325"/>
+<area shape="rect" id="node13" href="$class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="911,299,1074,325"/>
 </map>

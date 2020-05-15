@@ -1,3 +1,6 @@
 <map id="GameEngine::generateBotHandlersChain" name="GameEngine::generateBotHandlersChain">
-<area shape="rect" id="node2" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="280,13,429,39"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#adc194512a29a492111f8c56ca861958e" title="GameEngine::botTurn" alt="" coords="280,56,429,83"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#a8e3115117eecee9393718c9f1d1ae1eb" title="GameEngine::nextStep" alt="" coords="477,56,635,83"/>
+<area shape="rect" id="node4" href="$class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine::GameEngine" alt="" coords="683,5,863,32"/>
+<area shape="rect" id="node5" href="$class_game_engine.html#a72234df51b4178769c409a221aa2a718" title="GameEngine::finishStep" alt="" coords="691,56,854,83"/>
 </map>
