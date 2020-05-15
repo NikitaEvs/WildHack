@@ -299,6 +299,8 @@ bool GameEngine::validate() {
     for (const auto &population : player -> GetPlayerPopulations()) {
       if (population -> GetAnimalAmount() > 0) {
         newPopulations.push_back(population);
+      } else {
+        (*map)[population -> GetYPos()][population -> GetXPos()]->setCurrentPopulation(nullptr);
       }
     }
     player -> SetPlayerPopulations(newPopulations);
