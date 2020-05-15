@@ -4,16 +4,22 @@
 
 #include "Engine/GameEngine.h"
 
-class Command {
+class GUICommand {
  public:
-  Command() = default;
+  explicit GUICommand(std::shared_ptr<GameEngine> engine);
 
-  ~Command() = default;
+  GUICommand() = default;
+
+  ~GUICommand() = default;
 
   virtual bool execute() = 0;
 
   void setReceiver(std::shared_ptr<GameEngine> engine);
 
- private:
+  void setID(int32_t setID);
+
+ protected:
   std::shared_ptr<GameEngine> receiver = nullptr;
+
+  int32_t id = 0;
 };

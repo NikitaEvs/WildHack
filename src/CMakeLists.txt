@@ -43,6 +43,9 @@ set (ENGINE_SOURCES
         ${ENGINE_PATH}/GameEngine.cpp
         ${ENGINE_PATH}/Player/Player.h
         ${ENGINE_PATH}/Player/Player.cpp
+        ${ENGINE_PATH}/Manager.h
+        ${ENGINE_PATH}/Manager.cpp
+        ${ENGINE_PATH}/Subscriber.h
         )
 
 set (MUTATION_SOURCES
@@ -74,3 +77,6 @@ add_library(src SHARED  ${MAP_SOURCES}
                         ${HANDLER_SOURCES}
             )
 
+set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)

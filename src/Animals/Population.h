@@ -62,6 +62,8 @@ class Population {
   int32_t GetPlayerNumber() const;
   void SetPlayerNumber(int32_t player_number);
   void SetCover(ParamType cover);
+  int32_t GetAvailableStep() const;
+  void SetAvailableStep(int32_t available_step);
  private:
   void addMutation(MutationType type);
   void applyMutation();
@@ -83,6 +85,7 @@ class Population {
   ParamType cover;
 
   int32_t playerNumber;
+  int32_t availableStep = 1;
 };
 
 class LightPopulation {

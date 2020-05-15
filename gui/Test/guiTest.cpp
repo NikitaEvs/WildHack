@@ -8,6 +8,7 @@
 #include <QtWidgets/QApplication>
 
 #include "Gui.h"
+#include "Engine/GameEngine.h"
 
 class GUITest;
 static GUITest* srv;
@@ -49,9 +50,10 @@ int main(int argc, char* argv[])
   QGuiApplication app(argc, argv);
   QQmlApplicationEngine engine;
 
-  Gui gui;
+  std::shared_ptr<GameEngine> gameEngine = std::make_shared<GameEngine>();
+  std::shared_ptr<Gui> gui = std::make_shared<Gui>(gameEngine);
 
-  engine.rootContext() -> setContextProperty("gui", &gui);
+  engine.rootContext() -> setContextProperty("gui", gui.get());
   engine.load(QUrl(QStringLiteral("../../resources/layout/main.qml")));
   if (engine.rootObjects().isEmpty())
     return -1;

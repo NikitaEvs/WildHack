@@ -28,11 +28,11 @@ ApplicationWindow {
     Material.primary: Light.primary
     Material.foreground: Light.foreground
 
-    height: Screen.height / 2
-    width: Screen.width / 2
+    height: Screen.height / 1.1
+    width: Screen.width / 1.1
 
-    minimumWidth: Screen.width / 2
-    minimumHeight: Screen.height / 2
+    minimumWidth: Screen.width / 1.1
+    minimumHeight: Screen.height / 1.1
 
     StackView {
         id: stack
@@ -118,6 +118,10 @@ ApplicationWindow {
 
                 property variant additional
 
+                property variant migrateMode
+                property variant splitMode
+                property variant selectedNode
+
                 onPaint: {
                     var ctx = canvas.getContext("2d");
                     var map = gui.map
@@ -157,6 +161,8 @@ ApplicationWindow {
                     loadImage(String.bear)
 
                     canvasLoad.text = "true"
+                    canvas.migrateMode = false
+                    canvas.splitMode = false
                     canvas.additional = []
                 }
 
@@ -169,15 +175,36 @@ ApplicationWindow {
                     onClicked: {
                         console.log("Clicked on " + mouse.x + " " + mouse.y)
 
-                        canvas.additional = []
-
                         var area = canvas.cellSize["width"]
                         var point = getClickCell(canvas.centerMap, mouse.x, mouse.y, area)
+                        canvas.selectedNode = point
 
                         gui.x = point["x"]
                         gui.y = point["y"]
 
                         console.log("Find cell on  " + point["x"] + " " + point["y"])
+
+                        if (canvas.migrateMode && checkPointerExist(canvas.additional, point["x"], point["y"])) {
+                            gui.migrate()
+
+                            canvas.migrateMode = false
+                            canvas.additional = []
+                            canvas.requestPaint()
+
+                            return
+                        }
+
+                        if (canvas.splitMode && checkPointerExist(canvas.additional, point["x"], point["y"])) {
+                            gui.multiply()
+
+                            canvas.splitMode = false
+                            canvas.additional = []
+                            canvas.requestPaint()
+
+                            return
+                        }
+
+                        canvas.additional = []
 
                         if (point["x"] !== -1) {
                             var additionItem = {"point" : point, "filled" : String.cellPath}
@@ -225,6 +252,17 @@ ApplicationWindow {
 
                         } else {
                             bottomBody.currentIndex = 1
+
+                            if (gui.id !== currentPopulation[11]) {
+                                mutationControl.visible = false
+                                multiplyControl.visible = false
+                                moveControl.visible = false
+                            } else {
+                                mutationControl.visible = true
+                                multiplyControl.visible = true
+                                moveControl.visible = true
+                            }
+
                             var sizeStr
                             var sizeInt = currentPopulation[0]
 
@@ -250,7 +288,7 @@ ApplicationWindow {
                             }
 
                             var name = currentPopulation[2]
-                            mainText.text = sizeStr + " " + typeStr + " " + name
+                            mainText.text = currentPopulation[10] + " " + sizeStr + " " + typeStr + " " + name
 
                             safetyText.text = "Safety: " + getString(currentPopulation[3])
                             velocityText.text = "Velocity: " + getString(currentPopulation[4])
@@ -258,18 +296,17 @@ ApplicationWindow {
                             healthText.text = "Health: " + currentPopulation[6]
                             productivityText.text = "Productivity: " + currentPopulation[7]
                             bioText.text = "Bio score: " + currentPopulation[8]
-
-
-                            var points = getArea(canvas.centerMap, point)
-
-                            for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
-                                var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
-                                canvas.additional.push(additionItem)
-                            }
-
+                            stepText.text = "Steps: " + currentPopulation[9]
                         }
 
 
+                        canvas.requestPaint()
+                    }
+                }
+
+                Connections {
+                    target: gui
+                    onRequestUpdate: {
                         canvas.requestPaint()
                     }
                 }
@@ -300,101 +337,6 @@ ApplicationWindow {
                         Row {
                             anchors.top: parent.top
                             anchors.bottom: parent.bottom
-
-                            Button {
-                                id: mutationControl
-                                Material.background: "transparent"
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                width: bottomBody.width / 10
-
-                                contentItem: Item {
-                                    Row {
-                                        anchors.fill: parent
-
-                                        Rectangle {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            width: parent.width
-                                            color: "transparent"
-
-                                            Text {
-                                                text: qsTr(String.mutate)
-                                                anchors.centerIn: parent
-
-                                                font: mutationControl.font
-                                                opacity: enabled ? 1.0 : 0.3
-                                                color: mutationControl.down ? Light.accent : Light.foreground
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            Button {
-                                id: multiplyControl
-                                Material.background: "transparent"
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                width: bottomBody.width / 10
-
-                                contentItem: Item {
-                                    Row {
-                                        anchors.fill: parent
-
-                                        Rectangle {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            width: parent.width
-                                            color: "transparent"
-
-                                            Text {
-                                                text: qsTr(String.multiply)
-                                                anchors.centerIn: parent
-
-                                                font: multiplyControl.font
-                                                opacity: enabled ? 1.0 : 0.3
-                                                color: multiplyControl.down ? Light.accent : Light.foreground
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            Button {
-                                id: moveControl
-                                Material.background: "transparent"
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                width: bottomBody.width / 10
-
-                                contentItem: Item {
-                                    Row {
-                                        anchors.fill: parent
-
-                                        Rectangle {
-                                            anchors.top: parent.top
-                                            anchors.bottom: parent.bottom
-                                            width: parent.width
-                                            color: "transparent"
-
-                                            Text {
-                                                text: qsTr(String.migrate)
-                                                anchors.centerIn: parent
-
-                                                font: moveControl.font
-                                                opacity: enabled ? 1.0 : 0.3
-                                                color: moveControl.down ? Light.accent : Light.foreground
-                                            }
-                                        }
-                                    }
-                                }
-
-                                onClicked: {
-                                    move.kek()
-                                    move.execute()
-                                }
-                            }
 
                             Rectangle {
                                 anchors.top: parent.top
@@ -428,7 +370,7 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
@@ -443,7 +385,7 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
@@ -458,7 +400,7 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
@@ -473,7 +415,7 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
@@ -488,7 +430,7 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
@@ -503,13 +445,28 @@ ApplicationWindow {
                                         Rectangle {
                                             anchors.top: parent.top
                                             anchors.bottom: parent.bottom
-                                            width: parent.width / 6
+                                            width: parent.width / 7
                                             color: "transparent"
 
                                             Text {
                                                 id: bioText
                                                 anchors.centerIn: parent
                                                 text: "bio score: "
+                                                font: moveControl.font
+                                                color: Light.foreground
+                                            }
+                                        }
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width / 7
+                                            color: "transparent"
+
+                                            Text {
+                                                id: stepText
+                                                anchors.centerIn: parent
+                                                text: "steps: "
                                                 font: moveControl.font
                                                 color: Light.foreground
                                             }
@@ -545,6 +502,136 @@ ApplicationWindow {
                                             }
                                         }
                                     }
+                                }
+
+                                onClicked: {
+                                    gui.stop()
+                                }
+                            }
+
+                            Button {
+                                id: mutationControl
+                                Material.background: "transparent"
+                                anchors.top: parent.top
+                                anchors.bottom: parent.bottom
+                                width: bottomBody.width / 10
+
+                                contentItem: Item {
+                                    Row {
+                                        anchors.fill: parent
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width
+                                            color: "transparent"
+
+                                            Text {
+                                                text: qsTr(String.mutate)
+                                                anchors.centerIn: parent
+
+                                                font: mutationControl.font
+                                                opacity: enabled ? 1.0 : 0.3
+                                                color: mutationControl.down ? Light.accent : Light.foreground
+                                            }
+                                        }
+                                    }
+                                }
+
+                                onClicked: {
+                                    gui.select()
+
+                                    mutateDialog.open()
+                                }
+                            }
+
+                            Button {
+                                id: multiplyControl
+                                Material.background: "transparent"
+                                anchors.top: parent.top
+                                anchors.bottom: parent.bottom
+                                width: bottomBody.width / 10
+
+                                contentItem: Item {
+                                    Row {
+                                        anchors.fill: parent
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width
+                                            color: "transparent"
+
+                                            Text {
+                                                text: qsTr(String.multiply)
+                                                anchors.centerIn: parent
+
+                                                font: multiplyControl.font
+                                                opacity: enabled ? 1.0 : 0.3
+                                                color: multiplyControl.down ? Light.accent : Light.foreground
+                                            }
+                                        }
+                                    }
+                                }
+
+                                onClicked: {
+                                    gui.select()
+
+                                    var points = getArea(canvas.centerMap, canvas.selectedNode)
+
+                                    for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
+                                        var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
+                                        canvas.additional.push(additionItem)
+                                    }
+
+                                    canvas.splitMode = true
+
+                                    canvas.requestPaint()
+                                }
+                            }
+
+                            Button {
+                                id: moveControl
+                                Material.background: "transparent"
+                                anchors.top: parent.top
+                                anchors.bottom: parent.bottom
+                                width: bottomBody.width / 10
+
+                                contentItem: Item {
+                                    Row {
+                                        anchors.fill: parent
+
+                                        Rectangle {
+                                            anchors.top: parent.top
+                                            anchors.bottom: parent.bottom
+                                            width: parent.width
+                                            color: "transparent"
+
+                                            Text {
+                                                text: qsTr(String.migrate)
+                                                anchors.centerIn: parent
+
+                                                font: moveControl.font
+                                                opacity: enabled ? 1.0 : 0.3
+                                                color: moveControl.down ? Light.accent : Light.foreground
+                                            }
+                                        }
+                                    }
+                                }
+
+                                onClicked: {
+                                    gui.select()
+
+                                    var points = getArea(canvas.centerMap, canvas.selectedNode)
+
+                                    for (var pointIndex = 0; pointIndex < points.length; ++pointIndex) {
+                                        var additionItem = {"point" : points[pointIndex], "filled" : String.cellPath}
+                                        canvas.additional.push(additionItem)
+                                    }
+
+                                    canvas.migrateMode = true
+
+                                    canvas.requestPaint()
                                 }
                             }
                         }
@@ -664,6 +751,175 @@ ApplicationWindow {
         }
     }
 
+    Connections {
+        target: gui
+        onEndGame: {
+            playerModel.populate()
+            endDialog.open()
+        }
+    }
+
+    Dialog {
+        id: endDialog
+        width: Screen.width / 2
+        height: Screen.height / 2
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+
+        contentItem: Rectangle {
+            id: endView
+            anchors.fill: parent
+            color: "transparent"
+
+            Column {
+                anchors.fill: parent
+                ListView {
+                    id: playerList
+                    anchors.top: endDialog.top
+                    width: endView.width
+                    height: endView.height * 5 / 6
+                    clip: true
+
+                    model: playerModel
+                    delegate: Pane {
+                        width: playerList.width
+                        height: playerList.height / 5
+
+                        Row {
+                            width: parent.width
+                            height: parent.height
+
+                            Rectangle {
+                                height: parent.height
+                                width: playerList.width / 2
+                                color: "transparent"
+
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: model.name
+                                    font: endButton.font
+                                    color: Light.foreground
+                                }
+                            }
+
+                            Rectangle {
+                                height: parent.height
+                                width: playerList.width / 2
+                                color: "transparent"
+
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: model.score
+                                    font: endButton.font
+                                    color: Light.foreground
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Button {
+                    id: endButton
+                    text: qsTr(String.endGame)
+                    width: endView.width
+                    height: endView.height / 6
+                    Material.background: "transparent"
+
+                    onClicked: {
+                        endDialog.close()
+                        stack.pop()
+                    }
+                }
+            }
+        }
+    }
+
+    Dialog {
+        id: mutateDialog
+        width: Screen.width / 2
+        height: Screen.height / 2
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+
+        contentItem: Column {
+            Pane {
+                width: parent.width
+                height: parent.height / 5
+
+                Text {
+                    text: qsTr(String.choose)
+                    anchors.centerIn: parent
+                    font: mutateSize.font
+                    color: Light.foreground
+                }
+            }
+
+            Pane {
+                width: parent.width
+                height: parent.height / 5
+
+                Button {
+                    id: mutateSize
+                    text: qsTr(String.mutateSize)
+                    anchors.fill: parent
+                    Material.background: "transparent"
+
+                    onClicked: {
+                        mutateDialog.close()
+                        gui.mutate(0)
+                    }
+                }
+            }
+
+            Pane {
+                width: parent.width
+                height: parent.height / 5
+
+                Button {
+                    text: qsTr(String.mutateSafety)
+                    anchors.fill: parent
+                    Material.background: "transparent"
+
+                    onClicked: {
+                        mutateDialog.close()
+                        gui.mutate(1)
+                    }
+                }
+            }
+
+            Pane {
+                width: parent.width
+                height: parent.height / 5
+
+                Button {
+                    text: qsTr(String.mutateCover)
+                    anchors.fill: parent
+                    Material.background: "transparent"
+
+                    onClicked: {
+                        mutateDialog.close()
+                        gui.mutate(3)
+                    }
+                }
+            }
+
+            Pane {
+                width: parent.width
+                height: parent.height / 5
+
+                Button {
+                    text: qsTr(String.mutateVelocity)
+                    anchors.fill: parent
+                    Material.background: "transparent"
+
+                    onClicked: {
+                        mutateDialog.close()
+                        gui.mutate(2)
+                    }
+                }
+            }
+        }
+    }
 
     function switchToMainScreen() {
        stack.push(gameLayout);
@@ -847,11 +1103,26 @@ ApplicationWindow {
 
     function checkCell(map, posX, posY) {
         console.log("Size:", map.length, map[0].length)
-        if ((posY < map.length) && (posX < map[0].length) && (posX >= 0) && (posY >= 0)) {
+        if ((posY < map.length) && (posX < map[0].length) && (posX >= 0) && (posY >= 0) && gui.checkPopulation(posX, posY)) {
             return true
         } else {
             return false
         }
+    }
+
+    function checkPointerExist(additional, posX, posY) {
+        var flgExist = false
+
+        for (var index = 0; index < additional.length; ++index) {
+            var x = additional[index]["point"]["x"]
+            var y = additional[index]["point"]["y"]
+
+            if ((posX === x) && (posY === y)) {
+                flgExist = true
+            }
+        }
+
+        return flgExist
     }
 
     function getString(index) {
