@@ -29,6 +29,8 @@ class Map {
   size_t getHeight();
   size_t getWidth();
 
+  void applyLifeCircle(std::shared_ptr<Population> population);
+
  private:
   std::vector<std::vector<std::shared_ptr<CellType> > > map;
 };

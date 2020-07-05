@@ -25,6 +25,11 @@ void Config::readFile() {
   fileIn >> configJSON;
 }
 
+/* GamePlay variables */
+int32_t Config::getMaxStepCount() {
+  return configJSON["gamePlay"]["maxStep"];
+}
+
 /* Map variables */
 
 std::pair<int32_t, int32_t> Config::getHeight() {
@@ -104,11 +109,17 @@ std::pair<int32_t, int32_t> Config::getTundraPlantsCount() {
 }
 /* ANIMALS */
 
+
+
 std::pair<int32_t, int32_t> Config::getHerbivoreAverageAnimalAmount() {
   int32_t mean = configJSON["population"]["herbivore"]["average"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["herbivore"]["average"]["animalAmount"]["deviation"];
 
   return std::make_pair(mean, deviation);
+}
+
+std::vector<std::string> Config::getHerbivoreNames() {
+  return configJSON["population"]["herbivore"]["names"];
 }
 std::pair<int32_t, int32_t> Config::getHerbivoreAverageHealth() {
   int32_t mean = configJSON["population"]["herbivore"]["average"]["health"]["mean"];
@@ -263,7 +274,9 @@ std::pair<int32_t, int32_t> Config::getHerbivoreBigBiologyDev() {
   return std::make_pair(mean, deviation);
 }
 
-
+std::vector<std::string> Config::getCarnivoreNames() {
+  return configJSON["population"]["carnivore"]["names"];
+}
 std::pair<int32_t, int32_t> Config::getCarnivoreAverageAnimalAmount() {
   int32_t mean = configJSON["population"]["carnivore"]["average"]["animalAmount"]["mean"];
   int32_t deviation = configJSON["population"]["carnivore"]["average"]["animalAmount"]["deviation"];

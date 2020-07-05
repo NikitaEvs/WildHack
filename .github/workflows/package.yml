@@ -1,0 +1,44 @@
+name: package
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      - dev
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: SetupWorkspace
+        run: |
+          cd ci
+          ./unitTest.sh
+          ./gui.sh
+          ./guiTest.sh
+
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake .. -DGUI_BUILD=ON -DGUI_TEST_BUILD=ON -DCMAKE_INSTALL_PREFIX=gui
+          make
+          make install
+
+      - name: Copy
+        run: |
+          cp -r build game/
+          cp -r resources game/
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: release
+          FOLDER: game

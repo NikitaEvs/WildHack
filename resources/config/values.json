@@ -1,13 +1,16 @@
 {
+  "gamePlay": {
+    "maxStep": 100
+  },
   "map" : {
     "sizes": {
       "height": {
-        "mean": 7,
-        "deviation": 1
+        "mean": 10,
+        "deviation": 3
       },
       "width" : {
-        "mean" : 7,
-        "deviation" : 1
+        "mean" : 10,
+        "deviation" : 3
       }
     }
   },
@@ -58,6 +61,11 @@
   },
   "population" : {
     "herbivore" : {
+      "names": [
+        "elephant",
+        "capybara",
+        "horse"
+      ],
       "verySmall": {
         "maxAmount" : 1000,
         "animalAmount" : {
@@ -175,6 +183,11 @@
       }
     },
     "carnivore" : {
+      "names": [
+        "wolf",
+        "lion",
+        "bear"
+      ],
       "verySmall": {
         "maxAmount": 900,
         "animalAmount": {

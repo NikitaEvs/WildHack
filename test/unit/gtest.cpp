@@ -8,6 +8,9 @@
 #include "Map/CellTypeJSONRepresentationBuilder.h"
 #include "Map/Map.h"
 
+#include "Engine/Player/Player.h"
+#include "Engine/GameEngine.h"
+
 
 TEST(Unit, CreateCell) {
   CellTypeDirector director;
@@ -46,9 +49,24 @@ TEST(Unit, Mutation) {
       d.setBuilder(b);
       std::shared_ptr<Population> p = d.makeBig("elephant");
 
-      p -> addMutation(Population::MutationType::SIZE);
-      p -> applyMutation();
+      p -> mutate(Population::MutationType::SIZE);
       );
+}
+
+TEST(Unit, botChain) {
+  ASSERT_NO_FATAL_FAILURE(
+      std::vector<std::shared_ptr<Player> > players;
+      players.assign(1, std::make_shared<Player>());
+      PopulationDirector d;
+      std::shared_ptr<PopulationBuilder> b = std::make_shared<HerbivorePopulationBuilder>();
+      d.setBuilder(b);
+      players[0]->addNewPopulation(d.makeAverage("pig - punk"));
+      players[0]->addNewPopulation(d.makeBig("elephant"));
+      GameEngine engine;
+      engine.setPlayers(players);
+      engine.generateMap();
+      engine.botTurn(players[0]);
+  );
 }
 
 TEST(Unit, Map) {
@@ -57,6 +75,14 @@ TEST(Unit, Map) {
 
   ASSERT_EQ(map.getHeight(), 10);
   ASSERT_EQ(map.getWidth(), 10);
+}
+
+TEST(Unit, CreatePlayer) {
+  Player player;
+  player.SetName("Cat");
+  player.generatePopulations();
+  auto populations = player.GetPlayerPopulations();
+  ASSERT_EQ(populations.size(), 2);
 }
 
 int main(int argc, char **argv) {

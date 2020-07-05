@@ -1,10 +1,10 @@
 #include "PopulationDirector.h"
 
-void PopulationDirector::setBuilder(std::shared_ptr<PopulationBuilder> b) {
-  builder = b;
+void PopulationDirector::setBuilder(std::shared_ptr<PopulationBuilder> newBuilder) {
+  builder = std::move(newBuilder);
 }
 
-std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
+std::shared_ptr<Population> PopulationDirector::makeSmall(const std::string &name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
@@ -26,10 +26,13 @@ std::shared_ptr<Population> PopulationDirector::makeSmall(std::string name) {
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::SMALL);
   }
-  return builder->getProduct();
+  auto oldPtr = std::move(builder -> getProduct());
+  builder -> resetPopulation();
+
+  return oldPtr;
 }
 
-std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
+std::shared_ptr<Population> PopulationDirector::makeAverage(const std::string &name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
@@ -51,10 +54,13 @@ std::shared_ptr<Population> PopulationDirector::makeAverage(std::string name) {
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::AVERAGE);
   }
-  return builder->getProduct();
+  auto oldPtr = std::move(builder -> getProduct());
+  builder -> resetPopulation();
+
+  return oldPtr;
 }
 
-std::shared_ptr<Population> PopulationDirector::makeBig(std::string name) {
+std::shared_ptr<Population> PopulationDirector::makeBig(const std::string &name) {
   builder->setName(name);
   builder->setType();
   if (builder->getProduct()->GetType() == Population::TypeName::HERBIVORE) {
@@ -76,5 +82,8 @@ std::shared_ptr<Population> PopulationDirector::makeBig(std::string name) {
     builder->setVelocity(Population::AVERAGE);
     builder->setCover(Population::AVERAGE);
   }
-  return builder->getProduct();
+  auto oldPtr = std::move(builder -> getProduct());
+  builder -> resetPopulation();
+
+  return oldPtr;
 }

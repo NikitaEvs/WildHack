@@ -2,6 +2,17 @@
 #include "RandomGenerator.h"
 #include "Config.h"
 
+
+void Population::mutate(MutationType type) {
+  addMutation(type);
+  applyMutation();
+}
+
+void Population::move(int32_t x_pos, int32_t y_pos) {
+  xPos = x_pos;
+  yPos = y_pos;
+}
+
 void Population::switchParam(ParamType &p, int32_t value) {
   switch (value) {
     case -1:
@@ -16,49 +27,6 @@ void Population::switchParam(ParamType &p, int32_t value) {
       break;
     default:break;
   }
-}
-
-void Population::applyLifeCircle(int32_t _xPos,
-                                 int32_t _yPos,
-                                 int32_t food,
-                                 int32_t water,
-                                 int32_t carnivore,
-                                 int32_t herbivore,
-                                 ParamType herbSize,
-                                 ParamType carnSize) {
-  xPos = _xPos;
-  yPos = _yPos;
-
-  //if there's no food or water someone must die
-  int32_t nutrition = (food + 1.5 * water) / 250;
-  if (type == Population::TypeName::CARNIVORE) {
-    nutrition = (herbivore * 100 / Config::getInstance().getMaxAmount(HERBIVORE, herbSize) + water) / 200;
-  }
-  if (nutrition < 75) {
-    animalAmount = (animalAmount * (nutrition + 25)) / 100;
-  }
-  // carnivore animal can eat some animals from the population
-  int32_t wasEaten = carnivore * 100 / Config::getInstance().getMaxAmount(CARNIVORE, carnSize);
-  switch (velocity) {
-    case VERY_SMALL:wasEaten = wasEaten * 1 / 10;
-      break;
-    case SMALL:wasEaten = wasEaten * 1 / 5;
-      break;
-    case AVERAGE:wasEaten = wasEaten * 3 / 10;
-      break;
-    case BIG:wasEaten = wasEaten * 2 / 5;
-      break;
-    case VERY_BIG:wasEaten = wasEaten * 1 / 2;
-      break;
-  }
-  animalAmount = (animalAmount * wasEaten) / 100;
-  // but new animals are born
-  animalAmount = animalAmount * (100 + productivity) / 100;
-
-  //some game points
-  int32_t k = (productivity * (static_cast<int32_t>(size) + static_cast<int32_t>(cover))
-      + health * (static_cast<int32_t>(velocity) + static_cast<int32_t>(safety))) / 2000;
-  biologyDev = biologyDev * (100 + k) / 100;
 }
 
 void Population::addMutation(Population::MutationType type) {
@@ -92,14 +60,14 @@ void Population::applyMutation() {
 
 std::ostream &operator<<(std::ostream &os, Population &p) {
   std::string pSize, pSafe, pVel, pCov, pType;
-  switch (p.type) {
+  switch (p.GetType()) {
     case Population::HERBIVORE:pType = "HERBIVORE";
       break;
     case Population::CARNIVORE:pType = "CARNIVORE";
       break;
   }
 
-  switch (p.size) {
+  switch (p.GetSize()) {
     case Population::VERY_SMALL:pSize = "VERY_SMALL";
       break;
     case Population::SMALL:pSize = "SMALL";
@@ -112,7 +80,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.safety) {
+  switch (p.GetSafety()) {
     case Population::VERY_SMALL:pSafe = "VERY_SMALL";
       break;
     case Population::SMALL:pSafe = "SMALL";
@@ -125,7 +93,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.velocity) {
+  switch (p.GetVelocity()) {
     case Population::VERY_SMALL:pVel = "VERY_SMALL";
       break;
     case Population::SMALL:pVel = "SMALL";
@@ -138,7 +106,7 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
       break;
   }
 
-  switch (p.cover) {
+  switch (p.GetCover()) {
     case Population::VERY_SMALL:pCov = "VERY_SMALL";
       break;
     case Population::SMALL:pCov = "SMALL";
@@ -150,32 +118,33 @@ std::ostream &operator<<(std::ostream &os, Population &p) {
     case Population::VERY_BIG:pCov = "VERY_BIG";
       break;
   }
-  os << pType << " " << pSize << " " << p.name << "\n"
-     << "animalAmount " << p.animalAmount << "\n"
-     << "health       " << p.health << "\n"
-     << "productivity " << p.productivity << "\n"
-     << "biologyDev   " << p.biologyDev << "\n"
+  os << pType << " " << pSize << " " << p.GetName() << "\n"
+     << "animalAmount " << p.GetAnimalAmount() << "\n"
+     << "health       " << p.GetHealth() << "\n"
+     << "productivity " << p.GetProductivity() << "\n"
+     << "biologyDev   " << p.GetBiologyDev() << "\n"
      << "safety       " << pSafe << "\n"
      << "velocity     " << pVel << "\n"
      << "cover        " << pCov << "\n"
-     << "xPos         " << p.xPos << "\n"
-     << "yPos         " << p.yPos << "\n";
+     << "xPos         " << p.GetXPos() << "\n"
+     << "yPos         " << p.GetYPos() << "\n";
   os << "MUTATIONS" << std::endl;
   p.mutationTree.getMutation();
   p.mutationTree.print(os);
+  return os;
 }
 
 Population::TypeName Population::GetType() const {
   return type;
 }
-void Population::SetType(Population::TypeName type) {
-  Population::type = type;
+void Population::SetType(Population::TypeName newType) {
+  type = newType;
 }
 const std::string &Population::GetName() const {
   return name;
 }
-void Population::SetName(const std::string &name) {
-  Population::name = name;
+void Population::SetName(const std::string &newName) {
+  name = newName;
 }
 int32_t Population::GetXPos() const {
   return xPos;
@@ -236,4 +205,34 @@ Population::ParamType Population::GetCover() const {
 }
 void Population::SetCover(Population::ParamType cover) {
   Population::cover = cover;
+}
+int32_t Population::GetPlayerNumber() const {
+  return playerNumber;
+}
+void Population::SetPlayerNumber(int32_t player_number) {
+  playerNumber = player_number;
+}
+int32_t Population::GetAvailableStep() const {
+  return availableStep;
+}
+void Population::SetAvailableStep(int32_t available_step) {
+  availableStep = available_step;
+}
+
+LightPopulation::LightPopulation(Population &population) :
+  xPos(population.GetXPos()),
+  yPos(population.GetYPos()),
+  name(population.GetName())
+{}
+
+int32_t LightPopulation::getXPos() {
+  return xPos;
+}
+
+int32_t LightPopulation::getYPos() {
+  return yPos;
+}
+
+std::string LightPopulation::getName() {
+  return name;
 }

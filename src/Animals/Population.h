@@ -7,6 +7,7 @@
 #include "Mutations/LeafMutation.h"
 #include "Mutations/CompoundMutation.h"
 
+
 class Population {
  public:
   enum ParamType {
@@ -30,16 +31,8 @@ class Population {
   Population() = default;
   Population(Population const &p) = default;
 
-  void applyLifeCircle(int32_t _xPos,
-                       int32_t _yPos,
-                       int32_t food,
-                       int32_t water,
-                       int32_t carnivore,
-                       int32_t herbivore,
-                       ParamType herbSize,
-                       ParamType carnSize);
-  void addMutation(MutationType type);
-  void applyMutation();
+  void mutate(MutationType type);
+  void move(int32_t x_pos, int32_t y_pos);
 
   friend std::ostream &operator<<(std::ostream &os, Population &p);
 
@@ -66,8 +59,15 @@ class Population {
   ParamType GetVelocity() const;
   void SetVelocity(ParamType velocity);
   ParamType GetCover() const;
+  int32_t GetPlayerNumber() const;
+  void SetPlayerNumber(int32_t player_number);
   void SetCover(ParamType cover);
+  int32_t GetAvailableStep() const;
+  void SetAvailableStep(int32_t available_step);
  private:
+  void addMutation(MutationType type);
+  void applyMutation();
+
   CompoundMutation mutationTree;
 
   static void switchParam(ParamType &p, int32_t value);
@@ -83,4 +83,19 @@ class Population {
   ParamType safety;
   ParamType velocity;
   ParamType cover;
+
+  int32_t playerNumber;
+  int32_t availableStep = 1;
+};
+
+class LightPopulation {
+ public:
+  explicit LightPopulation(Population &population);
+
+  int32_t getXPos();
+  int32_t getYPos();
+  std::string getName();
+ private:
+  std::string name;
+  int32_t xPos = 0, yPos = 0;
 };

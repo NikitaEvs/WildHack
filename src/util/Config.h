@@ -26,6 +26,9 @@ class Config {
   static Config& getInstance();
   void readFile();
 
+  /* GamePlay variables */
+  int32_t getMaxStepCount();
+
   /* Map variables */
   std::pair<int32_t, int32_t> getHeight();
   std::pair<int32_t, int32_t> getWidth();
@@ -51,6 +54,7 @@ class Config {
   /* Animals */
   int32_t  getMaxAmount(Population::TypeName type, Population::ParamType size);
   /* Carnivore */
+  std::vector<std::string> getCarnivoreNames();
   /* very small */
   std::pair<int32_t, int32_t> getCarnivoreVerySmallAnimalAmount();
   std::pair<int32_t, int32_t> getCarnivoreVerySmallHealth();
@@ -87,6 +91,7 @@ class Config {
   std::pair<int32_t, int32_t> getCarnivoreVeryBigBiologyDev();
 
   /* Herbivore */
+  std::vector<std::string> getHerbivoreNames();
   /* very small */
   std::pair<int32_t, int32_t> getHerbivoreVerySmallAnimalAmount();
   std::pair<int32_t, int32_t> getHerbivoreVerySmallHealth();
