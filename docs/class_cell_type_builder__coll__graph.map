@@ -1,4 +1,0 @@
-<map id="CellTypeBuilder" name="CellTypeBuilder">
-<area shape="rect" id="node2" href="$class_abstract_cell_type_builder.html" title="{AbstractCellTypeBuilder\n||+ AbstractCellTypeBuilder()\l+ ~AbstractCellTypeBuilder()\l+ setType()\l+ setClimate()\l+ setPlantFood()\l+ setWaterLevel()\l}" alt="" coords="5,5,196,156"/>
-<area shape="rect" id="node3" href="$class_cell_type.html" title="{CellType\n|+ waterLevel\l+ plantsCount\l+ carnivoreCount\l+ herbivoreCount\l+ type\l+ climate\l|}" alt="" coords="221,5,343,156"/>
-</map>

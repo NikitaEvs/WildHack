@@ -1,4 +1,0 @@
-<map id="AbstractCellTypeBuilder" name="AbstractCellTypeBuilder">
-<area shape="rect" id="node2" href="$class_cell_type_builder.html" title="{CellTypeBuilder\n|&#45; cellPtr\l|+ CellTypeBuilder()\l+ ~CellTypeBuilder()\l+ reset()\l+ setType()\l+ setClimate()\l+ setPlantFood()\l+ setWaterLevel()\l+ getProduct()\l}" alt="" coords="5,204,148,384"/>
-<area shape="rect" id="node3" href="$class_cell_type_j_s_o_n_representation_builder.html" title="{CellTypeJSONRepresentation\lBuilder\n|&#45; cellJson\l|+ reset()\l+ setType()\l+ setClimate()\l+ setPlantFood()\l+ setWaterLevel()\l+ getProduct()\l}" alt="" coords="172,211,371,377"/>
-</map>

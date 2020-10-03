@@ -1,8 +1,0 @@
-<map id="Map.h" name="Map.h">
-<area shape="rect" id="node4" href="$_cell_type_8h.html" title="CellType.h" alt="" coords="569,229,655,256"/>
-<area shape="rect" id="node8" href="$_cell_type_director_8h.html" title="CellTypeDirector.h" alt="" coords="245,80,376,107"/>
-<area shape="rect" id="node12" href="$_random_8h.html" title="Random.h" alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node15" href="$_cell_type_builder_8h.html" title="CellTypeBuilder.h" alt="" coords="475,80,600,107"/>
-<area shape="rect" id="node9" href="$_config_8h.html" title="Config.h" alt="" coords="265,155,335,181"/>
-<area shape="rect" id="node14" href="$_abstract_cell_type_builder_8h.html" title="AbstractCellTypeBuilder.h" alt="" coords="462,155,637,181"/>
-</map>

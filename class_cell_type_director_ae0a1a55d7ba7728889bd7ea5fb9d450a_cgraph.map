@@ -1,9 +1,0 @@
-<map id="CellTypeDirector::CellTypeDirector" name="CellTypeDirector::CellTypeDirector">
-<area shape="rect" id="node2" href="$class_cell_type_director.html#aedd999e7e5fd9ab60a0290ec26972d2b" title="CellTypeDirector::setBuilder" alt="" coords="252,5,439,32"/>
-<area shape="rect" id="node3" href="$class_cell_type_director.html#ab1c11c82989aa93a20d2c85bd0c5ea2b" title="CellTypeDirector::makeWaterCell" alt="" coords="236,107,455,133"/>
-<area shape="rect" id="node6" href="$class_cell_type_director.html#a2729d0f9c767ad2018382ccd342be110" title="CellTypeDirector::makeForestCell" alt="" coords="235,157,455,184"/>
-<area shape="rect" id="node7" href="$class_cell_type_director.html#a62b507cee42e8e58c7e645751632fcec" title="CellTypeDirector::makeSteppeCell" alt="" coords="233,208,457,235"/>
-<area shape="rect" id="node8" href="$class_cell_type_director.html#a7094e939502f98835a4fbe4dcaa84cc5" title="CellTypeDirector::makeTundraCell" alt="" coords="234,56,457,83"/>
-<area shape="rect" id="node4" href="$class_random.html#a2aa30d2f678fc76f75efc60356c6ea4d" title="Random::getInstance" alt="" coords="505,107,652,133"/>
-<area shape="rect" id="node5" href="$class_config.html#a52ae1e3685e26ba3689691b627d33647" title="Config::getInstance" alt="" coords="511,157,647,184"/>
-</map>

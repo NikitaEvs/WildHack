@@ -1,6 +1,0 @@
-<map id="AbstractCellTypeBuilder::~AbstractCellTypeBuilder" name="AbstractCellTypeBuilder::~AbstractCellTypeBuilder">
-<area shape="rect" id="node2" href="$class_abstract_cell_type_builder.html#a2d0688eae04d5722f075ad83a646626f" title="AbstractCellTypeBuilder\l::setType" alt="" coords="232,5,395,47"/>
-<area shape="rect" id="node3" href="$class_abstract_cell_type_builder.html#adb621d303f9e941d93980bc3fe8259f0" title="AbstractCellTypeBuilder\l::setClimate" alt="" coords="232,71,395,112"/>
-<area shape="rect" id="node4" href="$class_abstract_cell_type_builder.html#acc30c8bd4c9a373ae0a9fb73d1ec8925" title="AbstractCellTypeBuilder\l::setPlantFood" alt="" coords="232,136,395,177"/>
-<area shape="rect" id="node5" href="$class_abstract_cell_type_builder.html#adcc3923d3a727958223a59decef8a900" title="AbstractCellTypeBuilder\l::setWaterLevel" alt="" coords="232,201,395,243"/>
-</map>
