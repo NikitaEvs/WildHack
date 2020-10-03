@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/NikitaEvs/peach/workflows/unit_tests/badge.svg)](https://github.com/NikitaEvs/peach/actions)
 [![Actions Status](https://github.com/NikitaEvs/peach/workflows/gui_test/badge.svg)](https://github.com/NikitaEvs/peach/actions)
 
-_The game about abimals and more_
+_The game about animals and more_
 
 ![Start view](.github/pictures/punk.png)
 
