@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/NikitaEvs/peach/workflows/unit_tests/badge.svg)](https://github.com/NikitaEvs/peach/actions)
 [![Actions Status](https://github.com/NikitaEvs/peach/workflows/gui_test/badge.svg)](https://github.com/NikitaEvs/peach/actions)
 
-_Игра про животных и не только_
+_The game about abimals and more_
 
 ![Start view](.github/pictures/punk.png)
 
@@ -13,9 +13,9 @@ _Игра про животных и не только_
 
 ![Mutations](.github/pictures/mutation.png)
 
-Игровая механика описана [здесь](docs/gameplay.md)
+Game mechanics described [here](docs/gameplay.md)
 
-Запуск [примера](test/test.cpp) с генерацией клеток, популяций и карты
+Running [the example](test/test.cpp) with cells, map and population generation
 
 ```shell script
 mkdir build
@@ -26,10 +26,10 @@ cd bin
 ./example
 ```
 
-К тому же, возможна сборка Unit тестов, GUI приложения, а также GUI тестов, но это требует множества
-зависимостей (скрипты по установке можно найти [здесь](ci)). 
+In addition, it is possible to build Unit tests, GUI applications, and GUI tests, but this requires many
+dependencies (installation scripts can be found [here](ci)). 
 
-Сборка и запуск Unit тестов (требуются зависимости, которые устанавливаются скриптом [unitTest.sh](ci/unitTest.sh))
+Build and run Unit tests (requires dependencies that are installed by the script [unitTest.sh](ci/unitTest.sh))
 
 ```shell script
 mkdir build
@@ -40,9 +40,9 @@ cd bin
 ./gtest
 ```
 
-Сборка и запуск GUI (требуются зависимости, которые устанавливаются скриптом [gui.sh](ci/gui.sh))
+Building and running the GUI (requires dependencies that are installed by the script [gui.sh](ci/gui.sh))
 
-Теперь можно поиграть!
+Now you can play!
 
 ```shell script
 mkdir build
@@ -53,9 +53,9 @@ cd bin
 ./gui --style material
 ```
 
-При желании можно настроить игровой мир в конфигурационном [файле](resources/config/values.json)
+If desired, you can customize the game world in the configuration [file](resources/config/values.json)
 
-Сборка и запуск GUI тестов (требуются зависимости, которые устанавливаются скриптом [guiTest.sh](ci/guiTest.sh))
+Build and run GUI tests (requires dependencies that are installed by the script [guiTest.sh](ci/guiTest.sh))
 
 ```shell script
 mkdir build
@@ -67,6 +67,6 @@ cd bin
 ```
 
 ---
-Описание используемых паттернов можно найти [здесь](docs/patterns.md)
+A description of the patterns used can be found [here](docs/patterns.md)
 
-Документацию можно найти [здесь](https://nikitaevs.github.io/peach)
+Documentation can be found [here](https://nikitaevs.github.io/peach)
